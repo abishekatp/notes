@@ -2,6 +2,13 @@
 This repository contains my notes on each topic I am learning. I hope this may help someone.
 
 ## Index 
+### Data Structure and Algorithms(Blogs)
+* [Index](/DSA/Index.md)
+
+
+
+
+
 ### Theory of Computation(Personal notes)
 * [Index](/TOC/010_Index.md)
 * [DFA, NFA, Regular Lnaguages](/TOC/101_DFA_NFA_RL.md)
