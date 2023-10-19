@@ -1,0 +1,2 @@
+# Philosophy
+In these series of blogs I am trying to write my thoughts on the philosophical topics I am exploring. I am reading the book "PLATO COMPLETE WORKS" edited by Jhon M. Cooper. As I read through this book(or any other book that I will be reading in the future) I will try to write my thoughts on some of those topics that interests me.
