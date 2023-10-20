@@ -1,6 +1,6 @@
 # Data Structures and Algorithms
 
-Here I am trying put together my thoughts on some of the topics in the data structures and algorithms as a series of blogs. I will be mostly focussing on core logic of each topic and proving the correctness of those logics. I will also add a pseudocode whereever it is possible. 
+Here I am trying put together my thoughts on some of the topics in the data structures and algorithms as a series of blogs. I will be mostly focussing on core logic of each topic and proving the correctness of those logics. I will also add a pseudocode wherever it is possible. 
 
 ### Reference
 

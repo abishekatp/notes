@@ -1,2 +1,3 @@
 # Philosophy
-In these series of blogs I am trying to write my thoughts on the philosophical topics I am learning and exploring. I will try to write my thoughts on some of those topics that interests me.
+
+This directory will contain blogs that are related to philosophical topics that I am interested in.
