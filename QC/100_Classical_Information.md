@@ -47,28 +47,55 @@ $$ |ON\rangle = \begin{pmatrix} 0 \\ 1\end{pmatrix} $$
 $$ \langle OFF| = \begin{pmatrix} 0 & 1\end{pmatrix} $$
 $$ \langle ON| = \begin{pmatrix} 1 & 0\end{pmatrix} $$
 
-* Together when we join them together they will form a word `braket`. The following way of notation is called an inner product of states ON(represented as row vector) and OFF(represented as column vector). This operation will give you scalar value as a result(That's what you will expect when you are mulplying row vector with a column vector). 
+* Similary we define a state of binary sytem using simlar notations. Here state OFF of system corresponds to a binary state 0 and ON coresponds to a state 1. I am only giving examples of column vectors here. This way of representing a state is called deterministic state. Where there can only two possible state with definite answer for a binary system.
 
-$$ \langle ON||OFF\rangle$$
-or simpley 
-$$ \langle ON|OFF\rangle$$
-
-* Similary we define a state of binary sytem using simlar notations. Here state OFF of system corresponds to a binary state 0 and ON coresponds to a state ON. I am only giving examples of column vectors here. So this way of representing a state is called deterministic state. Where there can only two possible state with definite answer.
+* This following vectors called the standar basis vector for binary system. Using these two vectors we can represent any deterministic or probabilistic state of system. We can write any other vector of this form as linear combination of these two vectors. We can stadard basis vecor for any classical state set in similar way.
 
 $$ |0\rangle = \begin{pmatrix} 1 \\ 0\end{pmatrix} $$
 $$ |1\rangle = \begin{pmatrix} 0 \\ 1\end{pmatrix} $$
 
-* This is called the standar basis vector for binary system. Using these two vectors we can represent any deterministic or probabilistic state of system. We can write any other vector of this form as linear combination of these two vectors.
+#### what does the combination of the `bra` and `ket` represent?
+
+* Together when we join them together they will form a word `braket`. The following way of notation is called an inner product of states ON(represented as row vector) and OFF(represented as column vector). This operation will give you scalar value as a result(That's what you will expect when you are mulplying row vector with a column vector). 
+
+$$ \langle ON||OFF\rangle$$
+
+or simply
+
+$$ 
+\langle ON|OFF\rangle = 
+\begin{pmatrix} 0 & 1\end{pmatrix} \begin{pmatrix} 1 \\ 0\end{pmatrix} = 0 
+$$
+
+* Another combination can be `ketbra` notation(This name may be made up by me). where we multiply a column vector by a row vector. This way when we multiply two states in the binary system we will get a two dimensional matrix representing some connection between these two states.
+
+$$ 
+|ON\rangle \langle OFF| = 
+\begin{pmatrix} 1 \\ 0\end{pmatrix} 
+\begin{pmatrix} 0 & 1\end{pmatrix} = 
+\begin{pmatrix} 0 & 1\\ 0 & 0\end{pmatrix}
+$$
+
+* If you notice here the resultant matrix has 1 at the `row= 1 and column = 2`. It represents that column vector contains 1 at the row 1 and row vector contains 1 at the column 2. We will explore this logic further in the matrix operations section of this blog. 
+
+
+
 
 ### Where does the probabilty comes into the picture?
 
 * We don't always know the current state of the clssical system for sure. Sometime the state of the classical system can be unknown. If your friend is holding a torch light inside a room. You won't know the state of the torch light untill you go and see inside the room. Untill then the probabilty of torch being ON will be 1/2 and being OFF can be 1/2. Then you can represent the state of the torch light using following column vector. 
 
-$$ |state\rangle = \begin{pmatrix} \frac{1}{2} \\ \frac{1}{2} \end{pmatrix} = \frac{1}{2} |OFF\rangle + \frac{1}{2} |ON\rangle$$
+$$ 
+|state\rangle = 
+\begin{pmatrix} \frac{1}{2} \\ \frac{1}{2} \end{pmatrix} = 
+\frac{1}{2} |OFF\rangle + 
+\frac{1}{2} |ON\rangle
+$$
 
 * This is because we don't always know the state of some classical system with confident. We can represent these uncertainty using a probabilistic vectors. Here we associate some probability for system being in each of the classical state. For example in the above state 
 
-$ Pr(light=OFF)= \frac{1}{2} $ and  $ Pr(light=ON) = \frac{1}{2} $
+$ Pr(light=OFF)= \frac{1}{2} $ and  
+$ Pr(light=ON) = \frac{1}{2} $
 
 * Here you can also see that some probabilistic state of the classical system is represented by a linear combination of column vectors from the standard basis set. This is what I was trying to explain about standard basis vectors previously.
 
@@ -76,7 +103,7 @@ $ Pr(light=OFF)= \frac{1}{2} $ and  $ Pr(light=ON) = \frac{1}{2} $
 
 * The similar kind of thing can happen in our computers also. So when we represent a classical information using state $ |state\rangle $ it can have some higer probability of being 0 than 1 or vice versa. When we introduce probabilic state into our classical information we can easily handle these kind of situations.
 
-* **One important thing about representing a probabilistic state by a column vector is: when we some all the values in the vector it should give the sum 1. This is because the total probability of a system can be at most one. All the entries of the column vector should contain non-negative real numbers.**
+* **Note: One important thing about representing a probabilistic state by a column vector is: when we some all the values in the vector it should give the sum 1. This is because the total probability of a system can be at most one. All the entries of the column vector should contain non-negative real numbers.**
 
 
 ## What do we mean by measuring the state of a system?
@@ -97,9 +124,82 @@ $ Pr(light=OFF)= \frac{1}{2} $ and  $ Pr(light=ON) = \frac{1}{2} $
 
 * As name suggests these operations create a deterministic changes in the system. For example the action of switching on the torch light is a deterministic operation which changes the state of a torch light from OFF to the state ON. 
 
-* Suppose there is single push button in the torch. If you click on it, it will It will switch on the light. If you again click on it, it will switch off the torch light. This is very common operation on any classical system called `NOT` operation formally.
+* Suppose there is single push button in the torch light. If you click on the button, it will switch on the light. If you click on it again, then it will switch off the light. This is very common operation on classical binary system called `NOT` operation formally. When you apply this operation it will change current state to the other possible state in a set. If current state is 0 then it will become 1 and vice versa. We can repersent this operation using following matrix.
+
+$$ NOT = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} $$
+
+$$ 
+NOT|0\rangle = 
+\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} 
+\begin{pmatrix} 1 \\ 0 \end{pmatrix} = 
+\begin{pmatrix} 0 \\ 1 \end{pmatrix}
+$$
+
+$$ 
+NOT|1\rangle = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} 
+\begin{pmatrix} 0 \\ 1 \end{pmatrix} =
+\begin{pmatrix} 1 \\ 0 \end{pmatrix}
+$$
+
+* Here $ NOT|0\rangle $ is matrix multiplication NOT applied on a column vector for state 0 of a binary system.
+
+#### How can we compute some matrix operation M for some function f?
+
+* We have seen that the matrices in the matrix operation represent some mathematical function applied on some classical state. How can we find this matrix when we know the kind of function we want to apply. $ |f(a)\rangle$ is a function applied to some vector a, where the fucntion is `f:Σ->Σ`.
+
+* We have seen about `ketbra` operation in dirac notation section. When we know what is the output for each input, then we can apply the `ketbra` opertion for each of these output(as column vector) and input(as a row vector) vectors. After that if we sum all the resultant 2 dimensional matrices we will get a matrix M that represent the input output relationship that we need.
+
+$$ M = \sum_{a ∈ Σ} |f(a)\rangle \langle a|$$
 
 
+* For example the following equations compute the matrix for NOT operation on the torch light that we have discussed previously. Here Σ = {OFF, ON} or you can think of equivalent binary operation. Our function will be f(ON) = OFF and f(OFF) = ON.
+
+
+$$ 
+NOT = \sum_{a ∈ Σ} |f(a)\rangle \langle a| = 
+|ON\rangle \langle OFF| + 
+|OFF\rangle \langle ON| = 
+\begin{pmatrix} 0 & 1 \\ 1  & 0 \end{pmatrix}
+$$
+
+
+### What is probabilistic operation?
+
+* Not all operations are deterministic. Some of the operation can change the state of the classical system in a probabilistic way. For example If you take a torch light example. Think of this torch light as a smart torch light. It will change the brightness of the light based on the darkness of the enviroment using some sensors.
+
+* So to make this idea simple we will say the torch light is represented by two classical system. One representing status of torch light `Σ = {OFF, ON}` and another system representing the brightness of torch light `Σ1 = {LOW, HIGH}`. Now this `Σ1` depends on the environmental conditions. So the operations applied on this system will be probabilistic.
+
+$$ |LOW\rangle = \begin{pmatrix} 1 \\ 0\end{pmatrix} $$
+$$ |HIGH\rangle = \begin{pmatrix} 0 \\ 1\end{pmatrix} $$
+
+* When probability of darkness is larger, then the probability of state HIGH will be higher. For example $ Pr(HIGH) = \frac{3}{4} $ and $ Pr(LOW) = \frac{1}{4} $.
+
+* So now the current classical state is LOW means it is flipped to the state HIGH with probability $ \frac{3}{4} $. We can represent this operation using the folowing matrix. We just assume that if current classical state is HIGH, then the result will be Pr(HIGH) = 1 and Pr(LOW)=0.
+
+$$ \begin{pmatrix} 3/4 & 1 \\ 1/4 & 0 \end{pmatrix} $$
+
+* **Note: Similar rules as we discussed in the probabilistic vector applies to probabilistic operations alos. The sum of values in each column of the matrix should add up to 1. Each entry of the matrix should be non-negative real numbers**
+
+* Stochastic matrix: This probability matrix that obeys the above mentioned rules is called stochastic matrix. These matrices will always map the probability vector to another probability vector as an output.
+
+* Another way of thinking about these probability matris is such that they are multiple determinist matrix operation each appliede with some probability. So we can always represent the probabilist operation as a linear combination of deterministic operation with some probability associated with each deterministic operation. For example the previous probabilistic operation can be written as linear combination of following deterministic operations.
+
+$$ 
+\begin{pmatrix} 3/4 & 1 \\ 1/4 & 0 \end{pmatrix} =  
+\frac{3}{4}\begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} +
+\frac{1}{4}\begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} +
+\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}
+$$
+
+#### composition of matrix operations
+
+* All the properties of matrix multiplication is valid here. Assume that $M_1$ and $M_2$ are the matrix operations applied on some state vector. The fact that matrix multiplication is associative and but not cummutative results in following equivalities and inequivalities.
+
+$$ (M_1 M_2)a = M_1 (M_2a)$$
+because matrix multiplication is associative. So first applying $M_2$ opeation then applying $M_1$ operation is same as applying the result matrix matrix multiplication $M_1 M_2$ to the state a.
+
+$$ (M_1 M_2)a \neq (M_2 M_1)a$$
+because matrix multiplication is not cummutative.
 
 
 ## Notes

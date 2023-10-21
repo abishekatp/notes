@@ -6,8 +6,15 @@ This repository contains my notes or blogs on each topic I am learning. I hope t
 * Once someone told me that, even if there are already lot of contents on the same topic, everyone can't learn from a single way of explanation. Even a slightly different way of explaining things will be very much helpful for someone who is in the wavelength as the person who is trying to explain things(As I am a member of that set Haa.). Other than the above mentioned points it is very fun to write about something.
 
 ## Index 
+### Quantum Computation(Blogs)
+* [Index](/QC/010_Index.md)
+* [Classical Information](/QC/100_Classical_Information.md)
+
+
+
+
 ### Data Structure and Algorithms(Blogs)
-* [Index](/DSA/Index.md)
+* [Index](/DSA/010_Index.md)
 
 
 
