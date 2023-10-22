@@ -8,7 +8,9 @@ This repository contains my notes or blogs on each topic I am learning. I hope t
 ## Index 
 ### Quantum Computation(Blogs)
 * [Index](/QC/010_Index.md)
-* [Classical Information](/QC/100_Classical_Information.md)
+* [Classical Information(SS)](/QC/100_SS_Classical_Information.md)
+* [Quantum Information(SS)](/QC/105_SS_Quantum_Information.md)
+* [Classical Information(MS)](/QC/130_MS_Classical_Information.md)
 
 
 
