@@ -1,4 +1,5 @@
-# Classical Information
+# Classical Information(Single System)
+ In this blog we are going to see about classical information about some classical system. Here by single system I mean single classical system as a separate entityt. We are not going to see about interaction betweeen multiple systems. But about the classical states of a single classical system. We will see a Bit as an individual classsical system in this blog.
 
 ## What is Classical Information?
 
@@ -6,13 +7,13 @@ Before we start learning about Quantum information we have to first understand t
 
 > Classical information is a knowledge about the classical sytems which can be in one of their possible classical states.
 
-### What is Classical Sytems and Clasical States?
+## What is Classical Sytems and Clasical States?
 
 * Classical system is any system we see in our day to day life which can be in one of it's possible states. For example the fan is a classical system which is in one of following states at any moment of time: Σ = {HIGH, MEDIUM, LOW and OFF}. The torch light is a classical system which can be in one of the following states: Σ = {OFF, ON}. Our digital systems are very similar to this torch light analogy. In a digital computer the information is stored and processed in the form of Bits which can be either in a state 0 or a state 1. We use the symbol Σ to represent the set of possible states.
 
 * You can think of classical states as a behaviour of classical system. Classical state can be represented by a non-empty finite set. Some systems can have infinitely many classical states but we will focus on system with finitely many states now. We will be mainly focussing on a Bits since we will use them represent the classical information in our digital systems.
 
-### Why do we use Bits(Binary digits or {0, 1}) to represent them?
+## Why do we use Bits(Binary digits or {0, 1}) to represent them?
 
 * The first thing that come to my mind when we say classical information is bits. Bits is a fundamental way we represent and process the classical information in our computers. All the numbers, charactors and everything you see in the computer is represented by a bits under the wood. 
 
@@ -22,7 +23,7 @@ Before we start learning about Quantum information we have to first understand t
 
 * Eg. You can think of single system of classical world as a classical torch light example which can be in either ON or OFF state. This can be represented by a binary numbers 1(ON) and 0(OFF) correspondingly.
 
-### How can we represent state of a system mathematically?
+## How can we represent state of a system mathematically?
 
 * We can think of some different ways to represent classical states of a classical system. For example each state of a system can be represented by some characters like {a,b,c,...}. We may try to represent each character by numbers like {1,2,3,...}. But will these approaches be helpful for mathematically processing classical information. Not every way we think of can be a optimal or scalable answer to this problem.
 
@@ -30,7 +31,7 @@ Before we start learning about Quantum information we have to first understand t
 
 * The first way we are going see is representing each classical state of a system by a column vector(another way representing is a row vector). If particular system has n states then we will create a column vector of length n to represent a state. The position i of the column vector will be 1 and all the other position will contain 0 to represent a classical state s(i) where 1 <= i <= n. 
 
-### What is a column vector and Dirac notation for it?
+## What is a column vector and Dirac notation for it?
 
 * We are going to introduce a notation called dirac notation to give some label to each state of the classical system for example If you take our torch light example it can be in one of two states OFF or ON. Then we will represent these to state as given below using column vector. These notations are specifically useful in clearly differentiating row and column vectors. 
 
@@ -40,7 +41,7 @@ $$ |ON\rangle = \begin{pmatrix} 0 \\ 1\end{pmatrix} $$
 
 * Here the weiredly looking label for **OFF or ON** is spelled like `ket OFF` or `ket ON` respectively. This is a part of Dirac notation. Here **OFF** is represented by a first position of a vector and ON is represented by a second position of a vector. This will give us direct analogy for representing binary system using similar notations.
 
-### What is a row vector and Dirac notation for it?
+## What is a row vector and Dirac notation for it?
 
 * Soon we will use the row vectors also to represent a state in some scenarios. We will use another part of Dirac notation for that. The given below another weiredly looking label for **OFF or ON** is spelled like `bra OFF` or `bra ON` respectively. 
 
@@ -54,7 +55,7 @@ $$ \langle ON| = \begin{pmatrix} 1 & 0\end{pmatrix} $$
 $$ |0\rangle = \begin{pmatrix} 1 \\ 0\end{pmatrix} $$
 $$ |1\rangle = \begin{pmatrix} 0 \\ 1\end{pmatrix} $$
 
-#### what does the combination of the `bra` and `ket` represent?
+### what does the combination of the `bra` and `ket` represent?
 
 * Together when we join them together they will form a word `braket`. The following way of notation is called an inner product of states ON(represented as row vector) and OFF(represented as column vector). This operation will give you scalar value as a result(That's what you will expect when you are mulplying row vector with a column vector). 
 
@@ -81,7 +82,7 @@ $$
 
 
 
-### Where does the probabilty comes into the picture?
+## Where does the probabilty comes into the picture?
 
 * We don't always know the current state of the clssical system for sure. Sometime the state of the classical system can be unknown. If your friend is holding a torch light inside a room. You won't know the state of the torch light untill you go and see inside the room. Untill then the probabilty of torch being ON will be 1/2 and being OFF can be 1/2. Then you can represent the state of the torch light using following column vector. 
 
@@ -112,7 +113,7 @@ $ Pr(light=ON) = \frac{1}{2} $
 
 * As soon as we go and measure the state of the system the state will go from a probabilistic state to one of the possible deterministic states. As soon as we go inside the room and check the torch light, it will be either **OFF or ON**.
 
-### What is matrix operation and why do we use it?
+## What is matrix operation and why do we use it?
   So we have seen what is classical information and we can represent them either as deterministic vector or probabilistic vector. We also discussed that the state of the system might change over time. How can the state of the system will change. It might be because of the reason that someone interacted with the system.
 * In our torch light example it might be you friend who is switching OFF or ON the torch light. This particular interaction with a system can be represented by a mathematical operations formally. There can be two kind of operations namely deterministic operation or probabilistic operation. We will see them one by one now.
 
@@ -143,7 +144,7 @@ $$
 
 * Here $ NOT|0\rangle $ is matrix multiplication NOT applied on a column vector for state 0 of a binary system.
 
-#### How can we compute some matrix operation M for some function f?
+#### How can we compute some matrix M that is equivalent of applying function f?
 
 * We have seen that the matrices in the matrix operation represent some mathematical function applied on some classical state. How can we find this matrix when we know the kind of function we want to apply. $ |f(a)\rangle$ is a function applied to some vector a, where the fucntion is `f:Σ->Σ`.
 
@@ -191,7 +192,7 @@ $$
 \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}
 $$
 
-#### composition of matrix operations
+### composition of matrix operations
 
 * All the properties of matrix multiplication is valid here. Assume that $M_1$ and $M_2$ are the matrix operations applied on some state vector. The fact that matrix multiplication is associative and but not cummutative results in following equivalities and inequivalities.
 
@@ -203,14 +204,6 @@ because matrix multiplication is not cummutative.
 
 
 ## Notes
-
-### What is Unitary Matrix?
-
-Unitary matrix is a square matrix with complext numbers as its entries, wehere the invers of the unitary matrix is equal to the conjugate transpose of a matrix. When you multiply a unitary matix with its conjugate transpose matrix you will get a identity matrix as a result(what you would have expected when multiplying a matrix with its inverse).
-
-### What is Conjugate Transpose? 
-
-Conjugate transpose of a matrix is a normal transpose operation on a matrix together with computing the complex conjugate of each complex number in the matrix.
 
 ### What is Orthonormal Basis & Standard Basis?
 
