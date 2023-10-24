@@ -8,11 +8,11 @@ In this blog we are going to explore about the Quantum Information. This is abou
 
 * Similar to how classical information is represented by a Bit in the digital world. The quantum information is represented by a Qbit in the quantum world. The Quantum information can be thought of a behavious of a quantum system(for e.g Qbit) at any mombent of time. 
 
-* The qbit is also having finite and non-emtpy set of classical states {0, 1}. Apart from this qbit can be in one of the many quantum states. In the next section we will see some of the possible states that qbit can be.
+* **Qbit**: Similar to the bit the qbit is also having finite and non-emtpy set of classical states {0, 1}. Apart from this qbit can also be in one of the many quantum states. In the next section we will see some of the possible states that qbit can be.
 
 ## How do we represent a qbit?
 
-* Similar to the classical bit we will represent a qbit using a state vector. But unlike deterministic or probabilistic states, the qunatum state vector will have complex number entries.
+* Similar to the classical bit we will represent a qbit using a column vector. But unlike deterministic or probabilistic states, the qunatum state vector can have a complex number entries also. (Note that since we allow complex numbers in the quantum state vector, it can also have negative real number in the entries)
 
 * Just making this small change in the state vector is enough to bring us from a classical world to a quantum world. In the following way we can reresent a state of the any quantum system in general.
 
@@ -23,11 +23,13 @@ $$ v = \begin{pmatrix} \alpha _1 \\ . \\ . \\ . \\ \alpha _n \end{pmatrix} $$
 
 $$ Euclidean \; norm \; ||v|| = \sqrt{\sum_{k=1}^n (\alpha _k)^2} $$
 
-> **Note: Two important rules about quantum states vector is that they should have complex entries and Euclidean norm of the quantum state vector should be 1(Or we can say the sum of absolute values squared of each entry of quantum state vector should be equal to 1. The Euclidean norm just applies square root operation on top of it).**
+> **Rules: Two important rules about quantum states vector is that their entries should be a complex number and Euclidean norm of the quantum state vector should be 1(Or we can say the sum of absolute values squared of each entry of quantum state vector should be equal to 1. Remember that the Euclidean norm just applies square root operation on top of it).**
 
 
 
-* In the given below examples, we have quantum state vectors with n=2(which means there are two possible classical states). The first two are the two possible classical states which we can also consider a quantum state because their imaginary parts are just happened to be 0. Still these two vectors are the standard basis for quantum state vectors also. So this means any quantum state can be written as linear combination of the two standard basis vectors. 
+* In the given below examples, we have quantum state vectors with n=2(which means there are two possible classical states for that quantum system). The first two listed are the two possible classical states which we can also consider a quantum state because their entries imaginary parts are just happened to be 0. Still these two vectors are the standard basis for quantum state vectors also. So this means any quantum state can be written as linear combination of the two standard basis vectors. 
+
+* This linear combination is called 'superposition' in quantum world. That means any quantum state can be written as superposition of it's classical states(which usually is the standard basis)
 
 * The second two are the some of the commonly used quantum states. The last one is just a random quantum state which doesn't have any special meaning. We will use the symbol $\psi$ for representing any arbitrary quantum state.
 
@@ -56,10 +58,10 @@ $$
 $$
 
 
-* In the above equations we writing a quantum state as a linear combination of basis vectors. (note: In quantum systems linear combination and superpositon are synonymous to each other). Also if you notice both these states only differ by a sign of a imaginary part. To differentiate then we will use some speacial operations on them. We will see more about operation on quantum system in coming sections.
+* In the above equations we writing a quantum state as a linear combination of basis vectors. (note: As we discussed in quantum systems linear combination and superpositon are synonymous to each other). Also if you notice both these states only differ by a sign of a imaginary part. To differentiate then we will use some speacial operations on them. We will see more about operation on quantum system in coming sections.
 
 
-> Notice that for all the five of these quantum states have a Eucliean norm of 1(then only it will be a valid quantum state). 
+> Notice that for all the five of these quantum states have a Eucliean norm of 1(then only we can say that it is a valid quantum state). 
 > $$|| |0\rangle || = || |1\rangle || = || |+\rangle || = || |-\rangle || = || |\psi\rangle || = 1$$
 >I will just show for one quantum state how we can compute the Euclidean norm.
 >$$ || |\psi\rangle || = 
@@ -74,7 +76,7 @@ $$
 
 * If each entry of the quantum state associates some probability value to some classical state, then why do we need a quantum state vector? we can just use the probabilistic state vector to represent a quantum state right? We will soon see that the operations that we can apply on quantum states is not same as that we can apply on probabilistic states.
 
-* You might have already noticed that quantum state vector can also have negative real number as a entry. This is because negative real number is also a valid complex number with imaginary part set to 0. These differences will create new possibilities of the operations that we can apply on the quantum systems(both theoretically and practically).
+* You might have already noticed that quantum state vector can also have negative real number as a entry. This is because negative real number is also a valid complex number with imaginary part set to 0. These differences will create new possibilities of the operations that we can apply on the quantum systems(both theoretically and practically).(note: by practically I mean using qunatum physics as the base we can develop circuits which can physically represent these quantum operations similart to AND, OR, and NOT gates in classical world)
 
 ### Can we represent quantum state vector for system with more than two states
 
@@ -109,16 +111,16 @@ $$
 
 * The standard basis measurement links the absolute value squared of each entry of a quantum state vector to the probability that we will get specific calssical state as a result. The probability for specific classical state will be get from the entry of the quantum state vector that corresponds to it. This is called Born rule of quantum mechanics.
 
-#### what does the classical state with probability mean?
+#### what does the classical state with associated probability mean?
 
-* So when we measure the quantum system we won't always get a same result. But rather we may get different answers for each measurement. But these answers will be based on the probability associated with the quantum state that we are trying to measure. 
+* So when we measure the quantum system we won't always get a same result. But rather we may get different answers for different measurements. But these answers will be based on the probability associated classical states that is represented by the quantum state. 
 
-* $|+\rangle$ or $|-\rangle$ then both of these quantum states has the $Pr(result = |0\rangle) =  \frac{1}{2}$ and $Pr(result = |1\rangle) =  \frac{1}{2}$. So when you try to measure these quantum states you will get a classical state $|0\rangle$ for half of the times and $|1\rangle$ for other time. 
+* $|+\rangle$ or $|-\rangle$ then both of these quantum states has the $Pr(result = |0\rangle) =  \frac{1}{2}$ and $Pr(result = |1\rangle) =  \frac{1}{2}$. So when you try to measure these quantum states you will get a classical state $|0\rangle$ for half of the times and $|1\rangle$ for other time.(for exmaple if you measure the qbit for 100 times, then 50 times you will get classical state 0 (represented by $|0\rangle$) anf 50 times you will get 1. but it will be in some random order.)
 
-* because of this we can't differentiate the $|+\rangle$ and $|-\rangle$ state using standard basis measurement.
+* because of this we can't differentiate the $|+\rangle$ and $|-\rangle$ state using standard basis measurement. We will see in future there are some operations on these quantum states that will differentiate them.
 
 
-## What is a unitary operation on qbit?
+## What is a Operation and Unitary operation?
 
 * Simialer to the deterministic and probabilistic operations on the classical system. We can apply some operations on the quantum system. These operations will change the state of system from one quantum state to another quantum state.(Sometimes the operation on a quantum system may change the system to a classical state with some probability. The action of measuring itself is a one of that kind).
 
@@ -166,7 +168,9 @@ $$
 
 * Here note that previously we discussed that we can't differentiate the $|+\rangle$ and $|-\rangle$ using the standard basis measurement. But when we apply Hadamard operation to those quantum state we will get differnt outputs as a result. So Hadamard operation differentiates the states $|+\rangle$ and $|-\rangle$.
 
-### Composition of unitary operations
+* All these operations are simple matrix multiplications. So try to visualize them as matrix multiplications. For example H is two dimensional matrix and $|0\rangle$ is a column vector. When you multiply them together you will get another column vector as a result which $|+\rangle$.
+
+### Composition of unitary operations(Matrix Associative property)
 
 * Like we did in the classical operations, the composition of unitary operations can be applied to the quantum states. For exmaple If you apply H operation then S operation, then again H operation, it can be represented by a matrix `R = HSH`.
 
@@ -188,10 +192,7 @@ $$ A|0\rangle = |2\rangle, \; A|1\rangle = |0\rangle, \; A|2\rangle = |1\rangle$
 
 $$ U = \frac{1}{2} \begin{pmatrix} 1 & 1 & 1 & 1 \\ 1 & i & -1 & -i \\ 1 & -1 & 1 & -1 \\ 1 & -i & -1 & i \end{pmatrix}$$
 
-
-
-
-
+* **Why?**: The way we are going to represent multiple systems will require us to have a state vector which represents more than two possible states for the combined system(combination of single systems which we have studied in this lesson). That why I have shown here the way we can represent quantum vector with more than two classical states. 
 
 
 

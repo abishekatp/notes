@@ -1,4 +1,4 @@
 
 # Classical Information(Multiple systems)
 
-## What does multiple systems means?
+## What does the multiple systems mean?

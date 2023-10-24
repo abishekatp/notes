@@ -192,7 +192,7 @@ $$
 \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}
 $$
 
-### composition of matrix operations
+### composition of matrix operations(Matrix Associative property)
 
 * All the properties of matrix multiplication is valid here. Assume that $M_1$ and $M_2$ are the matrix operations applied on some state vector. The fact that matrix multiplication is associative and but not cummutative results in following equivalities and inequivalities.
 
