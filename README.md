@@ -9,14 +9,15 @@ This repository contains my notes or blogs on each topic I am learning. I hope t
 ### Quantum Computation(Blogs)
 * [Index](/QC/010_Index.md)
 * [Classical Information(SS)](/QC/100_SS_Classical_Information.md)
-* [Quantum Information(SS)](/QC/105_SS_Quantum_Information.md)
-* [Classical Information(MS)](/QC/130_MS_Classical_Information.md)
+* [Quantum Information(SS)](/QC/101_SS_Quantum_Information.md)
+* [Classical Information(MS)](/QC/131_MS_Classical_Information.md)
 
 
 
 
 ### Data Structure and Algorithms(Blogs)
 * [Index](/DSA/010_Index.md)
+* [The Algorithm and The Problem](/DSA/100_The_Algorithm_And_The_Problem.md)
 
 
 
