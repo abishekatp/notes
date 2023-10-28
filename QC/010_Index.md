@@ -1,3 +1,3 @@
 # Quantum Computation
 
-This directory will contain the blogs that are related to Quantum computation. Even though some of the Physics and Mathematics(part of them from MIT OCW lectures and VIT-Vellore) I have learned from various other resources and time periods might have affected my understanding on this subject my main reference has been this freely available tutorial by [IBM Qiskit](https://learning.quantum-computing.ibm.com/course/basics-of-quantum-information/single-systems). Thank you for that guys.
+This directory will contain the blogs that are related to Quantum computation. My main reference has been this freely available text and video content in [IBM Qiskit](https://learning.quantum-computing.ibm.com/course/basics-of-quantum-information/single-systems) by Prof John Watrous. 

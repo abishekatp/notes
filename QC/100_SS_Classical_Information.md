@@ -9,11 +9,11 @@ Before we start learning about Quantum information we have to first understand t
 
 ## What is Classical Sytems and Clasical States?
 
-* Classical system is any system we see in our day to day life which can be in one of it's possible states. For example the fan is a classical system which is in one of following states at any moment of time: Σ = {HIGH, MEDIUM, LOW and OFF}. The torch light is a classical system which can be in one of the following states: Σ = {OFF, ON}. Our digital systems are very similar to this torch light analogy. In a digital computer the information is stored and processed in the form of Bits which can be either in a state 0 or a state 1. We use the symbol Σ to represent the set of possible states.
+* Classical system is any system we see in our day to day life which can be in one of it's possible states. For example the fan is a classical system which is in one of following states at any moment of time: $\Sigma$ = {HIGH, MEDIUM, LOW and OFF}. The torch light is a classical system which can be in one of the following states: $\Sigma$ = {OFF, ON}. Our digital systems are very similar to this torch light analogy. In a digital computer the information is stored and processed in the form of Bits which can be either in a state 0 or a state 1. We use the symbol $\Sigma$ to represent the set of possible states.
 
 * You can think of classical states as a behaviour of classical system. Classical state can be represented by a non-empty finite set. Some systems can have infinitely many classical states but we will focus on system with finitely many states now. We will be mainly focussing on a Bits since we will use them represent the classical information in our digital systems.
 
-## Why do we use Bits(Binary digits or {0, 1}) to represent them?
+## Why do we use Bits(Binary digits or {0, 1}) to represent information in computers?
 
 * The first thing that come to my mind when we say classical information is bits. Bits is a fundamental way we represent and process the classical information in our computers. All the numbers, charactors and everything you see in the computer is represented by a bits under the wood. 
 
@@ -55,7 +55,7 @@ $$ \langle ON| = \begin{pmatrix} 1 & 0\end{pmatrix} $$
 $$ |0\rangle = \begin{pmatrix} 1 \\ 0\end{pmatrix} $$
 $$ |1\rangle = \begin{pmatrix} 0 \\ 1\end{pmatrix} $$
 
-### what does the combination of the `bra` and `ket` represent?
+### what does the combination of the `bra` and `ket` dirac notations represent?
 
 * Together when we join them together they will form a word `braket`. The following way of notation is called an inner product of states ON(represented as row vector) and OFF(represented as column vector). This operation will give you scalar value as a result(That's what you will expect when you are mulplying row vector with a column vector). 
 
@@ -82,7 +82,7 @@ $$
 
 
 
-## Where does the probabilty comes into the picture?
+## Where does the probabilty come into the picture of classical world?
 
 * We don't always know the current state of the clssical system for sure. Sometime the state of the classical system can be unknown. If your friend is holding a torch light inside a room. You won't know the state of the torch light untill you go and see inside the room. Untill then the probabilty of torch being ON will be 1/2 and being OFF can be 1/2. Then you can represent the state of the torch light using following column vector. 
 
@@ -107,13 +107,13 @@ $ Pr(light=ON) = \frac{1}{2} $
 * **Note: One important thing about representing a probabilistic state by a column vector is: when we some all the values in the vector it should give the sum 1. This is because the total probability of a system can be at most one. All the entries of the column vector should contain non-negative real numbers.**
 
 
-## What do we mean by measuring the state of a system?
+## What do we mean by measuring the state of a classical single system?
 
 * In previous section we have seen that we don't know the actual state of a torch light until we go inside room and see it's status. This action of checking the state of a system is called measuring the state of the system formally. Untill we mesure the state of the system, the state can be represented by some probabilistic vector based on our knowledge about the system.
 
 * As soon as we go and measure the state of the system the state will go from a probabilistic state to one of the possible deterministic states. As soon as we go inside the room and check the torch light, it will be either **OFF or ON**.
 
-## What is matrix operation and why do we use it?
+## What is matrix operation on classical system and why do we use it?
   So we have seen what is classical information and we can represent them either as deterministic vector or probabilistic vector. We also discussed that the state of the system might change over time. How can the state of the system will change. It might be because of the reason that someone interacted with the system.
 * In our torch light example it might be you friend who is switching OFF or ON the torch light. This particular interaction with a system can be represented by a mathematical operations formally. There can be two kind of operations namely deterministic operation or probabilistic operation. We will see them one by one now.
 
@@ -150,14 +150,14 @@ $$
 
 * We have seen about `ketbra` operation in dirac notation section. When we know what is the output for each input, then we can apply the `ketbra` opertion for each of these output(as column vector) and input(as a row vector) vectors. After that if we sum all the resultant 2 dimensional matrices we will get a matrix M that represent the input output relationship that we need.
 
-$$ M = \sum_{a ∈ Σ} |f(a)\rangle \langle a|$$
+$$ M = \sum_{a ∈ \Sigma} |f(a)\rangle \langle a|$$
 
 
-* For example the following equations compute the matrix for NOT operation on the torch light that we have discussed previously. Here Σ = {OFF, ON} or you can think of equivalent binary operation. Our function will be f(ON) = OFF and f(OFF) = ON.
+* For example the following equations compute the matrix for NOT operation on the torch light that we have discussed previously. Here $\Sigma$ = {OFF, ON} or you can think of equivalent binary operation. Our function will be f(ON) = OFF and f(OFF) = ON.
 
 
 $$ 
-NOT = \sum_{a ∈ Σ} |f(a)\rangle \langle a| = 
+NOT = \sum_{a ∈ \Sigma} |f(a)\rangle \langle a| = 
 |ON\rangle \langle OFF| + 
 |OFF\rangle \langle ON| = 
 \begin{pmatrix} 0 & 1 \\ 1  & 0 \end{pmatrix}
@@ -168,10 +168,12 @@ $$
 
 * Not all operations are deterministic. Some of the operation can change the state of the classical system in a probabilistic way. For example If you take a torch light example. Think of this torch light as a smart torch light. It will change the brightness of the light based on the darkness of the enviroment using some sensors.
 
-* So to make this idea simple we will say the torch light is represented by two classical system. One representing status of torch light `Σ = {OFF, ON}` and another system representing the brightness of torch light `Σ1 = {LOW, HIGH}`. Now this `Σ1` depends on the environmental conditions. So the operations applied on this system will be probabilistic.
+* So to make this idea simple we will say the torch light is represented by two classical system. One representing status of torch light `Σ = {OFF, ON}` and another single system representing the brightness of torch light `Σ1 = {LOW, HIGH}`. Now this `Σ1` depends on the environmental conditions. So the operations applied on this new system $\Sigma 1$ will be probabilistic. 
 
 $$ |LOW\rangle = \begin{pmatrix} 1 \\ 0\end{pmatrix} $$
 $$ |HIGH\rangle = \begin{pmatrix} 0 \\ 1\end{pmatrix} $$
+
+> Don't think about the relationships between $\Sigma$ and $\Sigma 1$. We will see about their relationship and how we can represent them together in a blog about multiple systems. As of now consider $\Sigma$ and $\Sigma 1$ are two separate individual classical systems.
 
 * When probability of darkness is larger, then the probability of state HIGH will be higher. For example $ Pr(HIGH) = \frac{3}{4} $ and $ Pr(LOW) = \frac{1}{4} $.
 
