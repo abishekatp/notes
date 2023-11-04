@@ -8,7 +8,7 @@
 
 * We have seen previously that the single system can represent some information using its classical states. For example we have seen torch light example with the classical states $\Sigma$ = {OFF, ON} and more formal single system was a Bit with classical states $\Sigma$ = {0, 1}.
 
-* Remember that these single systems have a finite non empty set of classical states. So this means any particular classical system of this kind can only represent finite amount information. If you think about our world, it is made up of many complex systems(in our case it is called multiple systems). Intutively the complex systems are the combination of many same or different kind of single system. How can we mathematically reprsent these complex systems? so that we can process those information mathematically.
+* Remember that the single system have a finite non empty set of classical states. So this means any particular classical system of this kind can only represent finite amount information. If you think about our world, it is made up of many complex systems(in our case it is called multiple systems). Intutively the complex systems are the combination of many same or different kind of single system. How can we mathematically reprsent these multiple systems? so that we can process those information mathematically.
 
 * For example, in the blog about single system and specifically in the torch light example, Individually we have used classical systems of torch light with the following classical state sets:
  $$\Sigma_1 = \{ OFF, ON \}$$  
@@ -25,9 +25,9 @@
 
 ## How do we find classical state set multiple systems?
 
-* So we have said that multiple system is formed by two or more individual systems. If each individual system has its own associated classical states, then the multiple system is represented by a cartesian product of classical state sets of these individual systems.
+* So we have said that multiple systems is formed by two or more single system. If each of the single system has its own associated classical states set, then the multiple systems are represented by the cartesian product of classical state set of each of the single systems.
 
-* For example In our torch light example we had two individual systems with classical state sets $\Sigma_1$ and $\Sigma_2$. We can represent a classical states of a torch light using the cartesian product of these individual system as follows. 
+* For example In our torch light example we had two single systems with classical state sets $\Sigma_1$ and $\Sigma_2$. We can represent a classical states of a torch light using the cartesian product of these single systems as follows. 
 
 $$\Sigma = \Sigma_1 \times \Sigma_2 = \{ (OFF, LOW), (OFF, HIGH), (ON, LOW), (ON, HIGH)\}$$
 
@@ -50,7 +50,7 @@ $$\Sigma_1 \times \Sigma_2 \times ... \times \Sigma_n =
 
 ## How can we represent the state of the multiple systems mathematically?
 
-* Now we know that we can use the cardesian product to get classical state set of the multiple systems. Then how can we reporesent the state of the joined system mathematically? Its simple we are going to use same idea as single system, We are going to use a column vector to represent a classical state of the multiple sytems. But here the column vector entries will be corresponding to the cartesian product set of the individual systems.
+* Now we know that we can use the cardesian product to get classical state set of the multiple systems. Then how can we represent the state of the joined system mathematically? Its simple, we are going to use same idea as a single system, We are going to use a column vector to represent a classical state of the multiple sytems. But here the column vector entries will correspond to the classical state set(which we got using the cartesian product) of the multiple systems.
 
 * For example the classical state of the torch light that is ON and with LOW brightness can be represented by the following column vector(we have added labels for each entry of the column vector. These labels corresponds to a classical state of the torch light).
 
@@ -63,7 +63,7 @@ $$ |light\rangle =
 
 ### Representing multiple Bits using column vector
 
-* More formal example will be Bit. Remember that it has two classical states 0 or 1. Consider two such Bits $X_1$ and $X_2$ together represents some information. Here the classical state set $\Sigma_1$ and $\Sigma_2$ corresponds to the classical systems $X_1$ and $X_2$. 
+* More formal example will be Bit. Remember that it has two classical states 0 or 1. Consider two such bits $X_1$ and $X_2$ together represents some information. Here the classical state set $\Sigma_1$ and $\Sigma_2$ corresponds to the bits $X_1$ and $X_2$. 
 $$
 \Sigma_1 = \{ 0,1\} \; and \; 
 \Sigma_2 = \{ 0,1 \}
@@ -109,11 +109,12 @@ $$
 
 ## What do we mean by Independence and Correlation of multiple systems?
 
-* We have seen that the multiple system is just a combination of single systems. Two systems are said to be independent if learning the classical state of the each of the system doesn't depen on the other one. First we will the independence between two systems then we can easily generalise that idea for the mulitple systems with more than two individual systems.
+* We have seen that the multiple system is just a combination of single systems. Two systems are said to be independent if learning the classical state of the each of the system doesn't depend on the other one. In other words learning the classical state of the any one system doesn't give any information about the other system.
+* First we will the independence between two systems then we can easily generalise that idea for the mulitple systems with more than two individual systems.
 
 ### Independence between two single systems
 
-* First we will define the multiple systems $(X_1, X_2)$ represented by a probabilistic column vector $|\psi\rangle$. Here both $X_1$ and $X_2$ are classical systems that represent a Bit with classical state set $\Sigma_1 = \{0,1\}$ and $\Sigma_2 = \{0,1\}$ as we discussed in the previous section.
+* First we will define the multiple systems $(X_1, X_2)$ represented by a probabilistic column vector $|\psi\rangle$. Here both $X_1$ and $X_2$ are classical bit with classical state set $\Sigma_1 = \{0,1\}$ and $\Sigma_2 = \{0,1\}$ as we discussed in the previously.
 
 * Here the current probabilistic state of Bits $X_1$ and $X_2$ are represented by the column vectors $|\psi_1\rangle$ and $|\psi_2\rangle$ respectively. We can define these vectors mathematically as follows.
 
@@ -125,18 +126,110 @@ $$|\psi\rangle = \sum_{(a,b) \in \Sigma_1 \times \Sigma_2} r_{ab} |ab\rangle$$
 
 * Here $p_a$ and $q_b$ are probability value associated with each classicate state of the Bits $X_1$ and $X_2$. The probability value $r_{ab}$ is the probability associated with each classical state of the joint system $(X_1,X_2)$. 
 
-* Even though we already know this I want to remaind that $|a\rangle$ and $|b\rangle$ are column vectors that represents the classical states of the systems $X_1$ and $X_2$. The column vector $|ab\rangle$ is the column vector that corresponds to the classicate state of the joint system $(X_1, X_2)$.
+* Even though already we know this I want to remaind that $|a\rangle$ and $|b\rangle$ are column vectors that represents the classical states of the systems $X_1$ and $X_2$. The column vector $|ab\rangle$ corresponds to the classicate state of the joint system $(X_1, X_2)$.
 
-* We say that these two systems $X_1$ and $X_2$ are independent when they are probabilistically independent from each other.
+* We say that these two systems $X_1$ and $X_2$ are independent when they are probabilistically independent from each other. Then Correlation between two systems is defined as lack of independence. If two systems are not independent, then they are correlated.
 
 #### What is the probabilistic independence?
 
-* We take the same systems $X_1$ and $X_2 to explain this idea. We say that the systems $X_1$ and $X_2$ are probabilistically independent when the probability associated with individual system doesn't depend on each other. We can define this formally as follows,
+* Two events are said to be independent if probability outcome of an one event doesn't affect the probability outcome of the other event. 
+
+* We take the same systems $X_1$ and $X_2 to explain this idea. We say that the systems $X_1$ and $X_2$ are probabilistically independent when the probability associated with the system doesn't depend on each other. We can define this formally as follows,
 
 $$ P((X_1,X_2) = (a, b)) = P(X_1=a)P(X_2=b)$$
 
-* This equation tells that the probability that the joint system $(X_1,X_2)$ is in a state $(a,b)$ is the multiplication of the probabilities that states of $X_1 = a$ and $X_2 = b$.
+* This equation tells that the probability that the joint system $(X_1,X_2)$ is in a state $(a,b)$ is the multiplication of the probabilities that states of $X_1 = a$ and $X_2 = b$. We can define this for the probability $r_{ab}$ as follows.
+$$ r_{ab} = p_a q_b$$
 
-* Now we can apply the column vectors we have defined to this formula to get this formal definition in terms of Dirac notation.
+* This will be true for each classical state $a \in \Sigma_1$ and $ b \in \Sigma_2$. That means regardless of whatever state the single system $X_1$ and $X_2$ are in the probability associated with the multiple systems $(X_1,X_2)$ is always the multiplication of the probability associated with each of the single system. We can define this idea more formally using the tensor product.
 
-### What is Tensor Product?
+### How does tensor product represents independence?
+
+* So to define the independece of the single systems that make up the multiple systems can be done using the Dirac notation and tensor product. If we can write down the classical state of the multiple systems as a tensor produc of classical state of each of the single system then we can say that each of these single system as independent systems.
+
+* We can take the same definition of probability vectors $|\psi_1\rangle$ and $|\psi_2\rangle$ that corresponds to a single systems $X_1$ and $X_2$ respectively. The probability vector $|\psi\rangle$ that corresponds to a multiple systems $(X_1, X_2)$. Then we say that $|\psi_1\rangle$ and $|\psi_2\rangle$ independent if we show the following.
+
+$$ |\psi\rangle = |\psi_1\rangle \otimes |\psi_2\rangle$$
+
+* Here the $|\psi\rangle$ is called the product vector. Here remember that the dirac notation `ket` represents column vector. So the tensor product is more of a natural way of multiplying a column vector( or row vector) with another column vector(or row vector). 
+
+
+> **Notations for tensor product**: The following are the equivalent notation for representing tensor product of two vectors $|a\rangle$ and $|b\rangle$.
+> $$|a\rangle \otimes |b\rangle \equiv |a\rangle|b\rangle \equiv |ab\rangle \equiv |a \otimes b\rangle
+\equiv |(a,b)\rangle \equiv |a,b\rangle$$
+>  Here the most common notations are $|a\rangle \otimes |b\rangle$, $|a\rangle|b\rangle$ and $|ab\rangle$.
+
+* The tensor product of two vecotors $|\psi_1\rangle$ and $|\psi_2\rangle$ can be done in a following way.
+
+
+$$
+|\psi_1\rangle \otimes |\psi_2\rangle = 
+\begin{pmatrix} a_1 \\ a_2 \\ ... \\ a_n\end{pmatrix} \otimes
+\begin{pmatrix}b_1 \\ b_2 \\ ... \\ b_n \end{pmatrix} = 
+\begin{pmatrix} a_1b_1 \\ a_1b_2 \\ ... \\a_1b_n \\ a_2b_1 \\ a_2b_2\\ ... \\ a_2b_n \\ ...\\ a_nb_1 \\ ... \\ a_nb_n\end{pmatrix}
+$$
+
+> **Bilinearity of tensor product:** Tensor product is bilinear that means it is linear with respect both first and second arugument. The following equations describe this better. Suppose if we have column vectors $|a\rangle$, $|b\rangle$ and $|c\rangle$, then we can define the bilinearity as follows.
+>Linear in first argument
+>$$(|a\rangle + |b\rangle) \otimes |c\rangle = |a\rangle \otimes |c\rangle + |b\rangle \otimes |c\rangle$$
+>$$(k|a\rangle) \otimes |b\rangle = k(|a\rangle \otimes |b\rangle)$$
+>Linear in second argument
+>$$|a\rangle  \otimes  (|b\rangle + |c\rangle) = |a\rangle \otimes |b\rangle + |a\rangle \otimes |c\rangle$$
+>$$|a\rangle \otimes (k|b\rangle) = k(|a\rangle \otimes |b\rangle)$$
+
+#### Example of Independence
+
+* So we use the bits $X_1$ and $X_2$ here also. Suppose we have the probability vector $|\psi\rangle$ that represent the multiple systems $(X_1,X_2)$. Then in the following derivation we are trying to derive that $|\psi\rangle = |\psi_1\rangle |\psi_2\rangle$
+
+$$
+\begin{split}
+|\psi\rangle & = \frac{4}{9}|00\rangle + \frac{2}{9}|01\rangle + \frac{2}{9}|10\rangle + \frac{1}{9}|11\rangle 
+
+\\ &\equiv \frac{4}{9}|0\rangle|0\rangle + \frac{2}{9}|0\rangle|1\rangle + \frac{2}{9}|1\rangle|0\rangle + \frac{1}{9}|1\rangle|1\rangle
+
+\\ &= \frac{2}{3}|0\rangle \left( \frac{2}{3} |0\rangle + \frac{1}{3} |1\rangle \right) + \frac{1}{3}|1\rangle \left(\frac{2}{3} |0\rangle + \frac{1}{3} |1\rangle \right) 
+
+\\ &= \left(\frac{2}{3}|0\rangle + \frac{1}{3}|1\rangle \right) \otimes \left(\frac{2}{3} |0\rangle + \frac{1}{3} |1\rangle \right)
+
+\\ &= |\psi_1\rangle \otimes |\psi_2\rangle = |\psi_1\rangle|\psi_2\rangle
+\end{split}
+$$
+
+>**Important:** Here learning the classical state of the bit $X_1$ doesn't give any information about the bit $X_2$. This is how we defined the independence. 
+>* Regardless of whatever the classical state the bit $X_1$, the probability associated with the bit $X_2$ is same. The probabilistic state of the $X_2$ is always $\left(\frac{2}{3} |0\rangle + \frac{1}{3} |1\rangle \right)$.
+
+
+
+* In the above derivation you can see how we can find the probabilities associated with single systems $X_1$ and $X_2$ in a formal way. we could have factored the term $\frac{4}{9} =\frac{2}{3} \times \frac{2}{3} = \frac{2}{9} \times 2$. But we have done in a specific way to make sure that the sum of probabilities of single system should add upto 1. Note that $\frac{2}{2} +\frac{1}{3} = 1$. (**Note**: Remember that the probability should add upto 1 in any probability vector.)
+
+* Also If you multiply the probabilities associated with $|0\rangle$ and $|0\rangle$ then you will the the probability for the $|00\rangle$. (e.g. $\frac{2}{3} \times \frac{2}{3} = \frac{4}{9}$)
+
+
+#### Example of Correlation
+
+* Suppose we have the following probability vector $|\psi\rangle$ that represents some probabilistic state of $(X_1,X_2)$. We will try to write it as the product of two probability vectors.
+
+$$
+\begin{split}
+|\psi\rangle & = \equiv \frac{3}{7}|0\rangle|0\rangle + \frac{1}{7}|0\rangle|1\rangle + \frac{2}{7}|1\rangle|0\rangle + \frac{1}{7}|1\rangle|1\rangle
+
+\\ &= |0\rangle \left( \frac{3}{7} |0\rangle + \frac{1}{7}|1\rangle \right) + |1\rangle  \left( \frac{2}{7} |0\rangle +  \frac{1}{7} |1\rangle \right) 
+\end{split}
+$$
+
+* Here we can't go any further so we can't wirte this probability vector as a tensor product of two individual probability vectors. That means these two bits are correlated.
+
+>Another way of thinking about this is, Here learning the calssical state of $X_1$ does give us some information about the classical state of $X_2$. the probability vecotor for $X_2$ is differs, when $X_1$ is in classical state $|0\rangle$ and in the state $|1\rangle$
+
+* Another good example of correlation is the following vector. Here the $|X_1\rangle$ and $|X_2\rangle$ can always be in the same state either $|0\rangle$ or $|1\rangle$.
+
+$$ |\psi\rangle = \frac{1}{2}|00\rangle + \frac{1}{2}|11\rangle$$
+
+* Here the probability value 1/2 has no special importance. It can be any fraction as long as the probability values add upto 1.
+
+
+### Independence of three or more systems
+
+Independence of three or more systems can be define similar to the independence between two systems. If the multiple system $(X_1,X_2,...,X_n)$ is represented by probability vectors $|\psi\rangle$ and single systems $X_1,X_2,...,X_n$ are individually represented by the probability vectors $|\psi_1\rangle, |\psi_2\rangle, ..., |\psi_n\rangle$, then we say these single systems are independent when we can write the $|\psi\rangle$ as the product of the probability vectors $|\psi_1\rangle, |\psi_2\rangle, ..., |\psi_n\rangle$. It is formally defined as follows,
+
+$$|\psi\rangle = |\psi_1\rangle \otimes |\psi_2\rangle \otimes ... \otimes |\psi_n\rangle$$
