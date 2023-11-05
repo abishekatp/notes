@@ -177,6 +177,16 @@ $$
 >$$|a\rangle  \otimes  (|b\rangle + |c\rangle) = |a\rangle \otimes |b\rangle + |a\rangle \otimes |c\rangle$$
 >$$|a\rangle \otimes (k|b\rangle) = k(|a\rangle \otimes |b\rangle)$$
 
+
+* Another way to define the probability vector $|\psi\rangle$ is by defining individual elements of the vector separately for each $a \in \Sigma_1$ and $b \in \Sigma_2$.
+
+$$ \langle ab|\psi\rangle = \langle a|\psi_1\rangle \langle b|\psi_2\rangle$$
+
+* Here note that in the LHS we are multiply two row vector(using a `bra` notation) $\langle a|$ and $\langle b|$ to get a classical state vector for the joint system $(X_1,X_2)$. Then we are multiplying resulting vector with a current state(in `ket` notation) $|\psi\rangle$ to get a real number result. The resulting real number will be the probability associated with the classical state $|ab\rangle$. 
+
+* Similarly in the RHS also we are multiplying row vector $\langle a|$ or $\langle b|$ with the column vector $|\psi_1\rangle$ or $|\psi_2\rangle$ respectively to get a probaility values.
+
+
 #### Example of Independence
 
 * So we use the bits $X_1$ and $X_2$ here also. Suppose we have the probability vector $|\psi\rangle$ that represent the multiple systems $(X_1,X_2)$. Then in the following derivation we are trying to derive that $|\psi\rangle = |\psi_1\rangle |\psi_2\rangle$
@@ -233,3 +243,26 @@ $$ |\psi\rangle = \frac{1}{2}|00\rangle + \frac{1}{2}|11\rangle$$
 Independence of three or more systems can be define similar to the independence between two systems. If the multiple system $(X_1,X_2,...,X_n)$ is represented by probability vectors $|\psi\rangle$ and single systems $X_1,X_2,...,X_n$ are individually represented by the probability vectors $|\psi_1\rangle, |\psi_2\rangle, ..., |\psi_n\rangle$, then we say these single systems are independent when we can write the $|\psi\rangle$ as the product of the probability vectors $|\psi_1\rangle, |\psi_2\rangle, ..., |\psi_n\rangle$. It is formally defined as follows,
 
 $$|\psi\rangle = |\psi_1\rangle \otimes |\psi_2\rangle \otimes ... \otimes |\psi_n\rangle$$
+
+*  Similar to the two systems we can also define a linearity with respect each argument of the three or more systems when all the other arguments are fixed. This is called multilinearity.
+
+* In the same way we defined the probability vector $|\psi\rangle$ in alternate way in two systems case, Here also we can do that for each $a_1 \in \Sigma_1$, $a_2 \in \Sigma_2$,...,$a_n \in \Sigma_n$ in the following way,
+
+$$ \langle a_1 a_2 ... a_n|\psi\rangle = \langle a_1|\psi_1\rangle \langle a_2|\psi_2\rangle...\langle a_n|\psi_n\rangle$$
+
+* One more thing to note is we can recursively define the tensor product of n vector. The logic goes like this to compute the tensor product n vectors, first get the tesnor product of n-1 vectors and multiply it with n'th vector. To compute the tendor product of n-1 vector first get the tesnor product of n-2 vectors and then multiply it with the (n-2)'th vector. This will go on like this until there are just two vectors to multiply. The initial state of this recursive product is given below.
+
+$$|\psi\rangle = (|\psi_1\rangle \otimes |\psi_2\rangle \otimes ... \otimes |\psi_{n-1}) \otimes |\psi_n\rangle$$
+
+
+## What does the measurement mean in the multiple systems settings?
+
+* It is similar to the measurement of a single system but here we measure the classical state of the joint system. We have said that we can consider a multiple system as a single system. If we think in that way, then before measuring the joint system, it will be in some probabilitic state. As soon as we measure it, we will know the classical state of the joint system.(In a way the action of measurement is also an operation applied on the probability vector. We will see difference between )
+
+$$ |\psi\rangle = \frac{1}{2}|00\rangle + \frac{1}{2}|11\rangle$$
+
+* For example when we measure the above vector we will get the classical state $|00\rangle$ with probability $\frac{1}{2}$ and classical state $|11\rangle$ with probability $\frac{1}{2}$. So as soon as we measure it we will get one of these states as result.
+
+### Partial Measurement
+
+* What if we just measure the subset of the multiple systems? measuring the subset of the multiple systems is similar to measuring just one of the two systems. We can think of subset of systems that we measure as a single system and all the remaining systems as another single system. So we will first see the two system case, then generalise that idea to more than two systems.
