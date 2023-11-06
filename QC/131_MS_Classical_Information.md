@@ -118,11 +118,17 @@ $$
 
 * Here the current probabilistic state of Bits $X_1$ and $X_2$ are represented by the column vectors $|\psi_1\rangle$ and $|\psi_2\rangle$ respectively. We can define these vectors mathematically as follows.
 
-$$|\psi_1\rangle = \sum_{a \in \Sigma_1} p_a |a\rangle$$
+$$
+\begin{equation} \tag{1}
+\begin{split}
+|\psi_1\rangle = \sum_{a \in \Sigma_1} p_a |a\rangle \\
 
-$$|\psi_2\rangle = \sum_{b \in \Sigma_2} q_b |b\rangle$$
+|\psi_2\rangle = \sum_{b \in \Sigma_2} q_b |b\rangle  \\ 
 
-$$|\psi\rangle = \sum_{(a,b) \in \Sigma_1 \times \Sigma_2} r_{ab} |ab\rangle$$
+|\psi\rangle = \sum_{(a,b) \in \Sigma_1 \times \Sigma_2} r_{ab} |ab\rangle
+\end{split}
+\end{equation}
+$$
 
 * Here $p_a$ and $q_b$ are probability value associated with each classicate state of the Bits $X_1$ and $X_2$. The probability value $r_{ab}$ is the probability associated with each classical state of the joint system $(X_1,X_2)$. 
 
@@ -257,12 +263,73 @@ $$|\psi\rangle = (|\psi_1\rangle \otimes |\psi_2\rangle \otimes ... \otimes |\ps
 
 ## What does the measurement mean in the multiple systems settings?
 
-* It is similar to the measurement of a single system but here we measure the classical state of the joint system. We have said that we can consider a multiple system as a single system. If we think in that way, then before measuring the joint system, it will be in some probabilitic state. As soon as we measure it, we will know the classical state of the joint system.(In a way the action of measurement is also an operation applied on the probability vector. We will see difference between )
+* It is similar to the measurement of a single system but here we measure the classical state of the joint system. 
+
+* Remember that we can consider multiple systems together as a single system. If we think multiple systems as a combined single system, then before measuring it will be in some probabilitic state. As soon as we measure it, it will collapse into some classical state.(In a way the action of measurement is also an operation applied on the probability vector. We will see more about operations in next section).
 
 $$ |\psi\rangle = \frac{1}{2}|00\rangle + \frac{1}{2}|11\rangle$$
 
-* For example when we measure the above vector we will get the classical state $|00\rangle$ with probability $\frac{1}{2}$ and classical state $|11\rangle$ with probability $\frac{1}{2}$. So as soon as we measure it we will get one of these states as result.
+* For example when we measure the above vector we will get the classical state $|00\rangle$ with probability $\frac{1}{2}$ and classical state $|11\rangle$ with probability $\frac{1}{2}$. So as soon as we measure it, the state of the system will be one of these classical states.
 
 ### Partial Measurement
 
-* What if we just measure the subset of the multiple systems? measuring the subset of the multiple systems is similar to measuring just one of the two systems. We can think of subset of systems that we measure as a single system and all the remaining systems as another single system. So we will first see the two system case, then generalise that idea to more than two systems.
+* What if we just measure the subset of the multiple systems? First we will take two systems. Measuring the subset of the multiple systems is similar to measuring just one of the two systems. We can think of subset of systems that we measure as one system and all the remaining systems as a second system. So we will first see the two system case, then we can easily generalise that idea to the case where we measure the subset of the three or more systems.
+
+* Let's take the same example as joint system  $(X_1,X_2)$ that represent two bits. Here suppose we only measure the state of the system $X_1$ then the following equation should be true. $X_1$ and $X_2$ are single systems with classical state set $\Sigma_1$ and $\Sigma_2$.
+
+$$ \begin{equation}\tag{2}
+Pr(X_1=a) = \sum_{b \in \Sigma_2} Pr((X_1,X_2) = (a,b))
+\end{equation}
+$$
+
+* This equation tells that the probablity that the state of the $X_1 = a $ should be equal to the sum of probabilities of the joint system $(X_1,X_2)=(a,b)$ for each $b \in \Sigma_2$. This intutively means the probability of $X_1 = a$ will be true regardless of whatever the classical state of the $X_2$. This particular formula is called the reduced(or marginal) probability.
+
+* The above equation must be true. Otherwise if the state of the $X_1$ changes based on whether or not we measure the $X_2$, then it will allow us faster than light communication. For example lets assume that we are measuring the $X_1$ in the Earth and some other person is measuring the $X_2$ from the planet which is 100 light years away from earth which is called E_100.
+
+* If someone from planet E_100 want to send information to Earth it will take at least 100 light years in the normal settings. But if the state of the $X_1$ depends on the measurement of the state of the $X_2$, then some one from the Earth can continuously measure the $X_1$. If the person from the Planet E_100 measures the $X_2$, then at that moment the person in the earth will measure different value for $X_1$. This allowed us send a signal to the earth faster than light. As of now it is not possible based on our understanding about the physics. So the above equation must be true.
+
+> Note: If we just measure $X_1$, then it will give us some information about the state of the $X_2$ when $X_1$ and $X_2$ are correlated and will give no information about the state of $X_2$ when two systems are independent. This has nothing to do with the measurement of the two systems depending on each other. Regardless of whether or not we measure the $X_2$ the $X_1$ will always give same result and vice versa is also true.
+
+* We said that if we measure the $X_1$ system, then sometimes it will give us some information about the state of the $X_2$. To represent this specific relation between $X_1$ and $X_2$ we will use the following conditional probabiltiy formula.
+
+$$\begin{equation}\tag{3}
+Pr(X_2=b | X_1=a) = \frac{Pr((X_1,X_2)=(a,b))}{Pr(X_1=a)}
+\end{equation}
+$$
+
+* The probabilty that $X_2=b$ based on the measurement that $X_1=a$ is defined by the above conditional probability formula. In the numerator we have the probabilty for the specific case where $(X_1,X_2)=(a,b)$. In the denominator we have the probability of $X_1=a$ and $X_2=c$ for each $c \in \Sigma_2$. When we see the example we will understand that the denominator is for the normalization(making the sum of probabilities to equal to 1) of the vector in the numerator.
+
+* The case where $Pr(X_1=a) = 0$ won't be a problem, because in that case we won't check for the probability vector of $X_2$ based on the condition that $X_1=a$. This is due to the reason that $X_1=a$ is never going to happen when the probability of that event is 0. 
+
+####  Representing the partial measurement using probability vectors and dirac notation
+* Now we will see how we can define the partial measurement using dirac notation and probability vectors. Lets first consider the following vector that corresponds to two bits which we have already seen in equation $(1)$.
+
+$$ |\psi\rangle = \sum_{(a,b) \in \Sigma_1 \times \Sigma_2} p_{ab}|ab\rangle$$
+
+* Now if we know that the $X_1=a$, then what will happen to our knowledge about the probability vector for the second bit $X_2$? When two systems are independent then we won't have any information about $X_2$ until we measure it, but when two systems are correlated we will get some information about the $X_2$ before measuring it. So after measuring the $X_1$, the state vector will change. To get that new state vector we have to find two values that correspond to the numerator and denominator of the equation $(3)$.
+
+* First the numerator is a vector that corresponds to each possible pair (a,b) where we already measured that $X_1=a$ and we don't know the state of the $X_2$. Since we don't know the state of $X_2$, it will have some probability associated with each classical state $b \in \Sigma_2$. This is defined by the following vector.
+
+$$\phi = \sum_{b \in \Sigma_2} p_{ab}|b\rangle$$
+
+* We have said that the vector is probability vector when its entries sum to 1. To make the $|\phi\rangle$ probability vector we need to normalise it. To do that we sum over all the probability values of the vector $|\phi\rangle$ and divide the vector by that sum. the follwoing equation finds that sum.
+
+$$k = \sum_{c \in \Sigma_2}p_{ac}$$
+
+* Here the `c` is used for sake of using differnet notation. Otherwise this values is equal to the sum of all the $p_{ab}$ values in the vector $|\phi\rangle$.
+
+* Now we can define the new vector that reflects our knowledge about the system $X_2$ after measuring the state of $X_1=a$.
+
+$$
+|\pi_a\rangle = \frac{|\phi\rangle}{k} = 
+\frac{\sum_{b \in \Sigma_2} p_{ab}|b\rangle}
+{\sum_{c \in \Sigma_2}p_{ac}}
+$$
+
+* So now the new state of the joint system $(X_1,X_2)$ will become $|a\rangle \otimes |\pi_a\rangle$.
+
+
+
+## Operations on probabilistic states of multiple systems
+
+
