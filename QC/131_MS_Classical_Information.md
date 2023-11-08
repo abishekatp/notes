@@ -142,7 +142,11 @@ $$
 
 * We take the same systems $X_1$ and $X_2 to explain this idea. We say that the systems $X_1$ and $X_2$ are probabilistically independent when the probability associated with the system doesn't depend on each other. We can define this formally as follows,
 
-$$ P((X_1,X_2) = (a, b)) = P(X_1=a)P(X_2=b)$$
+$$ 
+\begin{equation} \tag{2}
+P((X_1,X_2) = (a, b)) = P(X_1=a)P(X_2=b)
+\end{equation}
+$$
 
 * This equation tells that the probability that the joint system $(X_1,X_2)$ is in a state $(a,b)$ is the multiplication of the probabilities that states of $X_1 = a$ and $X_2 = b$. We can define this for the probability $r_{ab}$ as follows.
 $$ r_{ab} = p_a q_b$$
@@ -197,7 +201,10 @@ $$ \langle ab|\psi\rangle = \langle a|\psi_1\rangle \langle b|\psi_2\rangle$$
 
 * So we use the bits $X_1$ and $X_2$ here also. Suppose we have the probability vector $|\psi\rangle$ that represent the multiple systems $(X_1,X_2)$. Then in the following derivation we are trying to derive that $|\psi\rangle = |\psi_1\rangle |\psi_2\rangle$
 
+
 $$
+\begin{equation} \tag{Ex-1}
+
 \begin{split}
 |\psi\rangle & = \frac{4}{9}|00\rangle + \frac{2}{9}|01\rangle + \frac{2}{9}|10\rangle + \frac{1}{9}|11\rangle 
 
@@ -209,6 +216,7 @@ $$
 
 \\ &= |\psi_1\rangle \otimes |\psi_2\rangle = |\psi_1\rangle|\psi_2\rangle
 \end{split}
+\end{equation}
 $$
 
 >**Important:** Here learning the classical state of the bit $X_1$ doesn't give any information about the bit $X_2$. This is how we defined the independence. 
@@ -218,24 +226,28 @@ $$
 
 * In the above derivation you can see how we can find the probabilities associated with single systems $X_1$ and $X_2$ in a formal way. we could have factored the term $\frac{4}{9} =\frac{2}{3} \times \frac{2}{3} = \frac{2}{9} \times 2$. But we have done in a specific way to make sure that the sum of probabilities of single system should add upto 1. Note that $\frac{2}{2} +\frac{1}{3} = 1$. (**Note**: Remember that the probability should add upto 1 in any probability vector.)
 
-* Also If you multiply the probabilities associated with $|0\rangle$ and $|0\rangle$ then you will the the probability for the $|00\rangle$. (e.g. $\frac{2}{3} \times \frac{2}{3} = \frac{4}{9}$)
+* Also If you multiply the probabilities associated with $|0\rangle$ of $|\psi_1\rangle$ and $|0\rangle$ of $|\psi_2\rangle$ then you will get the probability for the $|00\rangle$ as $\frac{2}{3} \times \frac{2}{3} = \frac{4}{9}$. Like this you can cross check each valid combination of individual systems.
+
+* If we can write the probability vector of the joint system as the tensor product of probability vectors associated with each individual systems, then we can find the probability associated with each classical state of each individual system without depending on the other systems like we did above.
 
 
 #### Example of Correlation
 
-* Suppose we have the following probability vector $|\psi\rangle$ that represents some probabilistic state of $(X_1,X_2)$. We will try to write it as the product of two probability vectors.
+* Suppose we have the following probability vector $|\psi\rangle$ that represents some probabilistic state of $(X_1,X_2)$. We will try to write it as the tensor product of two probability vectors.
 
 $$
+\begin{equation} \tag{Ex-2}
 \begin{split}
 |\psi\rangle & = \equiv \frac{3}{7}|0\rangle|0\rangle + \frac{1}{7}|0\rangle|1\rangle + \frac{2}{7}|1\rangle|0\rangle + \frac{1}{7}|1\rangle|1\rangle
 
 \\ &= |0\rangle \left( \frac{3}{7} |0\rangle + \frac{1}{7}|1\rangle \right) + |1\rangle  \left( \frac{2}{7} |0\rangle +  \frac{1}{7} |1\rangle \right) 
 \end{split}
+\end{equation}
 $$
 
 * Here we can't go any further so we can't wirte this probability vector as a tensor product of two individual probability vectors. That means these two bits are correlated.
 
->Another way of thinking about this is, Here learning the calssical state of $X_1$ does give us some information about the classical state of $X_2$. the probability vecotor for $X_2$ is differs, when $X_1$ is in classical state $|0\rangle$ and in the state $|1\rangle$
+>Another way of thinking about this is, Here learning the calssical state of $X_1$ does give us some information about the classical state of $X_2$. the probability vecotor for $X_2$ is different for two cases where $X_1$ is in the state $|0\rangle$ and in the state $|1\rangle$
 
 * Another good example of correlation is the following vector. Here the $|X_1\rangle$ and $|X_2\rangle$ can always be in the same state either $|0\rangle$ or $|1\rangle$.
 
@@ -243,22 +255,35 @@ $$ |\psi\rangle = \frac{1}{2}|00\rangle + \frac{1}{2}|11\rangle$$
 
 * Here the probability value 1/2 has no special importance. It can be any fraction as long as the probability values add upto 1.
 
+*
 
 ### Independence of three or more systems
 
 Independence of three or more systems can be define similar to the independence between two systems. If the multiple system $(X_1,X_2,...,X_n)$ is represented by probability vectors $|\psi\rangle$ and single systems $X_1,X_2,...,X_n$ are individually represented by the probability vectors $|\psi_1\rangle, |\psi_2\rangle, ..., |\psi_n\rangle$, then we say these single systems are independent when we can write the $|\psi\rangle$ as the product of the probability vectors $|\psi_1\rangle, |\psi_2\rangle, ..., |\psi_n\rangle$. It is formally defined as follows,
 
-$$|\psi\rangle = |\psi_1\rangle \otimes |\psi_2\rangle \otimes ... \otimes |\psi_n\rangle$$
+$$
+\begin{equation} \tag{3}
+|\psi\rangle = |\psi_1\rangle \otimes |\psi_2\rangle \otimes ... \otimes |\psi_n\rangle
+\end{equation}
+$$
 
 *  Similar to the two systems we can also define a linearity with respect each argument of the three or more systems when all the other arguments are fixed. This is called multilinearity.
 
 * In the same way we defined the probability vector $|\psi\rangle$ in alternate way in two systems case, Here also we can do that for each $a_1 \in \Sigma_1$, $a_2 \in \Sigma_2$,...,$a_n \in \Sigma_n$ in the following way,
 
-$$ \langle a_1 a_2 ... a_n|\psi\rangle = \langle a_1|\psi_1\rangle \langle a_2|\psi_2\rangle...\langle a_n|\psi_n\rangle$$
+$$
+\begin{equation} \tag{4}
+ \langle a_1 a_2 ... a_n|\psi\rangle = \langle a_1|\psi_1\rangle \langle a_2|\psi_2\rangle...\langle a_n|\psi_n\rangle
+ \end{equation}
+ $$
 
 * One more thing to note is we can recursively define the tensor product of n vector. The logic goes like this to compute the tensor product n vectors, first get the tesnor product of n-1 vectors and multiply it with n'th vector. To compute the tendor product of n-1 vector first get the tesnor product of n-2 vectors and then multiply it with the (n-2)'th vector. This will go on like this until there are just two vectors to multiply. The initial state of this recursive product is given below.
 
-$$|\psi\rangle = (|\psi_1\rangle \otimes |\psi_2\rangle \otimes ... \otimes |\psi_{n-1}) \otimes |\psi_n\rangle$$
+$$
+\begin{equation} \tag{5}
+|\psi\rangle = (|\psi_1\rangle \otimes |\psi_2\rangle \otimes ... \otimes |\psi_{n-1}) \otimes |\psi_n\rangle
+\end{equation}
+$$
 
 
 ## What does the measurement mean in the multiple systems settings?
@@ -277,12 +302,12 @@ $$ |\psi\rangle = \frac{1}{2}|00\rangle + \frac{1}{2}|11\rangle$$
 
 * Let's take the same example as joint system  $(X_1,X_2)$ that represent two bits. Here suppose we only measure the state of the system $X_1$ then the following equation should be true. $X_1$ and $X_2$ are single systems with classical state set $\Sigma_1$ and $\Sigma_2$.
 
-$$ \begin{equation}\tag{2}
+$$ \begin{equation}\tag{6}
 Pr(X_1=a) = \sum_{b \in \Sigma_2} Pr((X_1,X_2) = (a,b))
 \end{equation}
 $$
 
-* This equation tells that the probablity that the state of the $X_1 = a $ should be equal to the sum of probabilities of the joint system $(X_1,X_2)=(a,b)$ for each $b \in \Sigma_2$. This intutively means the probability of $X_1 = a$ will be true regardless of whatever the classical state of the $X_2$. This particular formula is called the reduced(or marginal) probability.
+* This equation tells that the probablity that the state of the $X_1 = a $ should be equal to the sum of probabilities of the joint system $(X_1,X_2)=(a,b)$ for each $b \in \Sigma_2$. This intutively means the probability of $X_1 = a$ will be true regardless of whatever the classical state of the $X_2$. This particular formula is called the `reduced(or marginal)` probability.
 
 * The above equation must be true. Otherwise if the state of the $X_1$ changes based on whether or not we measure the $X_2$, then it will allow us faster than light communication. For example lets assume that we are measuring the $X_1$ in the Earth and some other person is measuring the $X_2$ from the planet which is 100 light years away from earth which is called E_100.
 
@@ -292,7 +317,7 @@ $$
 
 * We said that if we measure the $X_1$ system, then sometimes it will give us some information about the state of the $X_2$. To represent this specific relation between $X_1$ and $X_2$ we will use the following conditional probabiltiy formula.
 
-$$\begin{equation}\tag{3}
+$$\begin{equation}\tag{7}
 Pr(X_2=b | X_1=a) = \frac{Pr((X_1,X_2)=(a,b))}{Pr(X_1=a)}
 \end{equation}
 $$
@@ -302,32 +327,113 @@ $$
 * The case where $Pr(X_1=a) = 0$ won't be a problem, because in that case we won't check for the probability vector of $X_2$ based on the condition that $X_1=a$. This is due to the reason that $X_1=a$ is never going to happen when the probability of that event is 0. 
 
 ####  Representing the partial measurement using probability vectors and dirac notation
-* Now we will see how we can define the partial measurement using dirac notation and probability vectors. Lets first consider the following vector that corresponds to two bits which we have already seen in equation $(1)$.
+* In this section we will explore the idea of partial measurement using state vectors and dirac notations. Lets first consider the following vector that corresponds to two bits which we have already seen in equation equation-1.
 
-$$ |\psi\rangle = \sum_{(a,b) \in \Sigma_1 \times \Sigma_2} p_{ab}|ab\rangle$$
+$$ |\psi\rangle = \sum_{(a,b) \in \Sigma_1 \times \Sigma_2} r_{ab}|ab\rangle$$
 
-* Now if we know that the $X_1=a$, then what will happen to our knowledge about the probability vector for the second bit $X_2$? When two systems are independent then we won't have any information about $X_2$ until we measure it, but when two systems are correlated we will get some information about the $X_2$ before measuring it. So after measuring the $X_1$, the state vector will change. To get that new state vector we have to find two values that correspond to the numerator and denominator of the equation $(3)$.
+* If we have measured that the $X_1=a$, then what will happen to our knowledge about the probability vector for the second bit $X_2$? When two systems are independent then we won't have any information about $X_2$ until we measure it, but when two systems are correlated we will get some information about the $X_2$ before measuring it. To formally represent the change of our knowledge about $X_2$ we need to find two values that correspond to the numerator and denominator of the equation-7.
 
 * First the numerator is a vector that corresponds to each possible pair (a,b) where we already measured that $X_1=a$ and we don't know the state of the $X_2$. Since we don't know the state of $X_2$, it will have some probability associated with each classical state $b \in \Sigma_2$. This is defined by the following vector.
 
-$$\phi = \sum_{b \in \Sigma_2} p_{ab}|b\rangle$$
+$$
+\begin{equation} \tag{8}
+\phi_a = \sum_{b \in \Sigma_2} r_{ab}|b\rangle
+\end{equation}
+$$
 
-* We have said that the vector is probability vector when its entries sum to 1. To make the $|\phi\rangle$ probability vector we need to normalise it. To do that we sum over all the probability values of the vector $|\phi\rangle$ and divide the vector by that sum. the follwoing equation finds that sum.
+* We have said that the vector is probability vector when its entries sum to 1. To make the $|\phi_a\rangle$ probability vector we need to normalise it. To do that we sum over all the probability values of the each entry of the vector $|\phi_a\rangle$ and divide the vector by that sum. the follwoing equation finds that sum.
 
-$$k = \sum_{c \in \Sigma_2}p_{ac}$$
+$$
+\begin{equation} \tag{9}
+k = \sum_{c \in \Sigma_2}r_{ac}
+\end{equation}
+$$
 
-* Here the `c` is used for sake of using differnet notation. Otherwise this values is equal to the sum of all the $p_{ab}$ values in the vector $|\phi\rangle$.
+* Here the `c` is used for sake of using differnet notation. Otherwise this values is equal to the sum of all the $r_{ab}$ values in the vector $|\phi_a\rangle$.
 
 * Now we can define the new vector that reflects our knowledge about the system $X_2$ after measuring the state of $X_1=a$.
 
 $$
+\begin{equation} \tag{10}
 |\pi_a\rangle = \frac{|\phi\rangle}{k} = 
-\frac{\sum_{b \in \Sigma_2} p_{ab}|b\rangle}
-{\sum_{c \in \Sigma_2}p_{ac}}
+\frac{\sum_{b \in \Sigma_2} r_{ab}|b\rangle}
+{\sum_{c \in \Sigma_2}r_{ac}}
+\end{equation}
 $$
 
-* So now the new state of the joint system $(X_1,X_2)$ will become $|a\rangle \otimes |\pi_a\rangle$.
+* So now the new state of the joint system $(X_1,X_2)$ will be the tensor product $|a\rangle \otimes |\pi_a\rangle$. Here the value of $X_1$ is $|a\rangle$ which we got from the measurement and the state of $X_2$ is $|\pi_a\rangle$.
 
+#### Reduced or Marginal state of X
+* We have seen the reduced or marginal probability in the equation-6. How can we represent the reduced or marginal state of the system $X_1$. To understand this we can drop all the states associated to the $X_2$ in the $|\psi\rangle$(from equation-1) and simplify it. Now we will get the marginal state of $X_1$. This can be formally defined as follows,
+
+$$ 
+\begin{equation} \tag{11}
+\sum_{a \in \Sigma_1} \left(\sum_{b \in \Sigma_2} r_{ab} \right) |a\rangle
+\end{equation}
+$$
+
+* For example take a vector from the Ex-1
+
+$$
+\begin{split}
+|\psi\rangle &= \frac{4}{9}|0\rangle|0\rangle + \frac{2}{9}|0\rangle|1\rangle + \frac{2}{9}|1\rangle|0\rangle + \frac{1}{9}|1\rangle|1\rangle \\
+
+&= |0\rangle \left(   \frac{4}{9}|0\rangle + \frac{2}{9}|1\rangle \right) + |1\rangle \left( \frac{2}{9}|0\rangle + \frac{1}{9}|1\rangle  \right) \\
+\end{split}
+$$
+
+* Now here just drop the states that corresponds to the system $X_2$ and sum only their probability coefficients.**(This may not be the valid mathematical way of doing this but this approach will give the vector that is represented by the equation-11)**.
+
+$$
+\begin{equation} \tag{Ex-3}
+   marginal \; state of X_1 = \frac{6}{9}|0\rangle + \frac{3}{9}|1\rangle
+\end{equation}
+$$
+
+#### Example of partial measurement
+
+* Assume that the probabilistic state of the joint system $(X_1,X_1)$ is represented by the following probability vector. $X_1$ is the bit with the classical state set $\Sigma_1$ and $X_2$ is the system that represent four suits of cards in the deck of cards with calssical state set $\Sigma_2$. Note that the two systems are not independent in this specific example.
+
+$$\Sigma_1=\{0,1\} \;\; \Sigma_2={C,D,H,S}$$
+
+$$where \;\; C- Clubs, D-Diamonds, H-Hearts, S-Spades$$
+
+$$
+\begin{split}
+|\psi\rangle & = \equiv \frac{3}{15}|0\rangle|C\rangle + \frac{1}{15}|0\rangle|D\rangle + \frac{2}{15}|0\rangle|H\rangle  + \frac{3}{15}|1\rangle|C\rangle + \frac{1}{15}|1\rangle|D\rangle + \frac{2}{15}|1\rangle|H\rangle
+
+\\ &= |0\rangle \left( \frac{3}{7} |0\rangle + \frac{1}{7}|1\rangle \right) + |1\rangle  \left( \frac{2}{7} |0\rangle +  \frac{1}{7} |1\rangle \right) 
+\end{split}
+$$
+
+* Based on the equation-8 and equation-9 we can get the probability that the $X_1 = 0$ by summing over all the probability values of the system $X_2$ when the state of the $X_1$ is $|0\rangle$. That is
+
+$$Pr(X_1 = 0)  = \frac{3}{7} + \frac{1}{7} = \frac{4}{7}$$
+
+* Now if we measured that the state of $X_1$ as $|0\rangle$ then the probability vector of the $X_2$ is given by the equation-10. In that the probability sum in the denominator is what we calculated above and vector in the numerator is the term that is right after the state $|0\rangle$ in the above probability vector after grouping the terms. so the $|\pi_0\rangle$ is as follows.
+
+$$
+\begin{equation} \tag{Ex-4}
+|\pi_0| = \frac{\left( \frac{3}{7} |0\rangle + \frac{1}{7}|1\rangle \right)}
+{\frac{4}{7}}
+=\left( \frac{3}{4} |0\rangle + \frac{1}{4}|1\rangle \right)
+\end{equation}
+$$
+
+
+* Similary the probability that the $X_1 = 1$ and the probability vector that represents the state of $X_2$ after measuring $X_1 = 1$ as follows.
+
+$$
+Pr(X_1 = 1)  = \frac{2}{7} + \frac{1}{7} = \frac{3}{7}  
+$$
+
+$$
+\begin{equation} \tag{Ex-4}
+|\pi_0| = \frac{\left( \frac{2}{7} |0\rangle + \frac{1}{7}|1\rangle \right)}
+{\frac{3}{7}}
+=\left( \frac{2}{3} |0\rangle + \frac{1}{3}|1\rangle \right)
+\end{equation}
+$$
 
 
 ## Operations on probabilistic states of multiple systems
