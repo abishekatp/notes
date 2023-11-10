@@ -6,7 +6,7 @@ In this blog we are going to explore about the Quantum Information. This is abou
 
 ## What is Quantom Information?
 
-* Similar to how classical information is represented by a Bit in the digital world. The quantum information is represented by a Qbit in the quantum world. The Quantum information can be thought of a behavious of a quantum system(for e.g Qbit) at any mombent of time. 
+* Similar to how classical information of digital systems is represented by a Bit, The quantum information is represented by a Qbit in the quantum systems(such as quantum computers). The Quantum information means the state of a quantum system(for e.g Qbit) at any moment of time. 
 
 * **Qbit**: Similar to the bit the qbit is also having finite and non-emtpy set of classical states {0, 1}. Apart from this qbit can also be in one of the many quantum states. In the next section we will see some of the possible states that qbit can be.
 

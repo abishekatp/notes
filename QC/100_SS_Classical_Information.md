@@ -5,13 +5,15 @@
 
 Before we start learning about Quantum information we have to first understand the concept of classical information. Why should we do that? We have lived in classical world for some time now. So First we will clearly define what we know about classical information. Then later we can easily take the analogies from the classical world to the quantum world.
 
-> Classical information is a knowledge about the classical sytems which can be in one of their possible classical states.
+> Classical information is a knowledge about the state of the classical system. These states are called classical states. 
 
 ## What is Classical Sytems and Clasical States?
 
-* Classical system is any system we see in our day to day life which can be in one of it's possible states. For example the fan is a classical system which is in one of following states at any moment of time: $\Sigma$ = {HIGH, MEDIUM, LOW and OFF}. The torch light is a classical system which can be in one of the following states: $\Sigma$ = {OFF, ON}. Our digital systems are very similar to this torch light analogy. In a digital computer the information is stored and processed in the form of Bits which can be either in a state 0 or a state 1. We use the symbol $\Sigma$ to represent the set of possible states.
+* Classical system is any system we see in our day to day life which can be in one of it's possible states. For example the fan is a classical system which is in one of the following states at any moment of time: $\Sigma$ = {HIGH, MEDIUM, LOW and OFF}. The torch light is a classical system which can be in one of the following states: $\Sigma$ = {OFF, ON}. Our digital systems(like computers, smart watches and many more) are very similar to this torch light analogy. In a digital computer the information is stored and processed in the form of Bits which can be either in a state 0 or a state 1. We use the symbol $\Sigma$ to represent the set of possible states.
 
-* You can think of classical states as a behaviour of classical system. Classical state can be represented by a non-empty finite set. Some systems can have infinitely many classical states but we will focus on system with finitely many states now. We will be mainly focussing on a Bits since we will use them represent the classical information in our digital systems.
+* The classical state set is the set of possible states of the classical system. The classical state can be represented by a non-empty finite set. Some systems can have infinitely many classical states but we will focus on system with finite number of classical states now. We will be mainly focussing on a Bits since we will use them represent the classical information in our digital systems.
+
+> Note that the term classical is used here to differentiate the information that can be represented by a quantum systems.
 
 ## Why do we use Bits(Binary digits or {0, 1}) to represent information in computers?
 
