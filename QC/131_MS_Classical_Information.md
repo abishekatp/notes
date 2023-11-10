@@ -327,11 +327,11 @@ $$
 * The case where $Pr(X_1=a) = 0$ won't be a problem, because in that case we won't check for the probability vector of $X_2$ based on the condition that $X_1=a$. This is due to the reason that $X_1=a$ is never going to happen when the probability of that event is 0. 
 
 ####  Representing the partial measurement using probability vectors and dirac notation
-* In this section we will explore the idea of partial measurement using state vectors and dirac notations. Lets first consider the following vector that corresponds to two bits which we have already seen in equation equation-1.
+* In this section we will explore the idea of partial measurement using state vectors and dirac notations. Lets first consider the following vector that corresponds to two bits which we have already seen in equation `equation-1`.
 
 $$ |\psi\rangle = \sum_{(a,b) \in \Sigma_1 \times \Sigma_2} r_{ab}|ab\rangle$$
 
-* If we have measured that the $X_1=a$, then what will happen to our knowledge about the probability vector for the second bit $X_2$? When two systems are independent then we won't have any information about $X_2$ until we measure it, but when two systems are correlated we will get some information about the $X_2$ before measuring it. To formally represent the change of our knowledge about $X_2$ we need to find two values that correspond to the numerator and denominator of the equation-7.
+* If we have measured that the $X_1=a$, then what will happen to our knowledge about the probability vector for the second bit $X_2$? When two systems are independent then we won't have any information about $X_2$ until we measure it, but when two systems are correlated we will get some information about the $X_2$ before measuring it. To formally represent the change of our knowledge about $X_2$ we need to find two values that correspond to the numerator and denominator of the `equation-7`.
 
 * First the numerator is a vector that corresponds to each possible pair (a,b) where we already measured that $X_1=a$ and we don't know the state of the $X_2$. Since we don't know the state of $X_2$, it will have some probability associated with each classical state $b \in \Sigma_2$. This is defined by the following vector.
 
@@ -364,7 +364,7 @@ $$
 * So now the new state of the joint system $(X_1,X_2)$ will be the tensor product $|a\rangle \otimes |\pi_a\rangle$. Here the value of $X_1$ is $|a\rangle$ which we got from the measurement and the state of $X_2$ is $|\pi_a\rangle$.
 
 #### Reduced or Marginal state of X
-* We have seen the reduced or marginal probability in the equation-6. How can we represent the reduced or marginal state of the system $X_1$. To understand this we can drop all the states associated to the $X_2$ in the $|\psi\rangle$(from equation-1) and simplify it. Now we will get the marginal state of $X_1$. This can be formally defined as follows,
+* We have seen the reduced or marginal probability in the `equation-6`. How can we represent the reduced or marginal state of the system $X_1$. To understand this we can drop all the states associated to the $X_2$ in the $|\psi\rangle$(from `equation-1`) and simplify it. Now we will get the marginal state of $X_1$. This can be formally defined as follows,
 
 $$ 
 \begin{equation} \tag{11}
@@ -372,7 +372,7 @@ $$
 \end{equation}
 $$
 
-* For example take a vector from the Ex-1
+* For example take a vector from the `Ex-1`
 
 $$
 \begin{split}
@@ -382,7 +382,7 @@ $$
 \end{split}
 $$
 
-* Now here just drop the states that corresponds to the system $X_2$ and sum only their probability coefficients.**(This may not be the valid mathematical way of doing this but this approach will give the vector that is represented by the equation-11)**.
+* Now here just drop the states that corresponds to the system $X_2$ and sum only their probability coefficients.(**This may not be the valid mathematical way of doing this but this approach will give the vector that is represented by the** `equation-11`).
 
 $$
 \begin{equation} \tag{Ex-3}
@@ -392,31 +392,40 @@ $$
 
 #### Example of partial measurement
 
-* Assume that the probabilistic state of the joint system $(X_1,X_1)$ is represented by the following probability vector. $X_1$ is the bit with the classical state set $\Sigma_1$ and $X_2$ is the system that represent four suits of cards in the deck of cards with calssical state set $\Sigma_2$. Note that the two systems are not independent in this specific example.
+* Assume that the probabilistic state of the joint system $(X_1,X_1)$ is represented by the following probability vector. $X_1$ is the bit with the classical state set $\Sigma_1$ and $X_2$ is the system that represent four suits of cards in the deck of cards with calssical state set $\Sigma_2$. (Here $X_1,X_2$ are not independent systems).
 
-$$\Sigma_1=\{0,1\} \;\; \Sigma_2={C,D,H,S}$$
+$$\Sigma_1=\{0,1\} \;\; \Sigma_2=\{C,D,H,S\}$$
 
 $$where \;\; C- Clubs, D-Diamonds, H-Hearts, S-Spades$$
 
 $$
 \begin{split}
-|\psi\rangle & = \equiv \frac{3}{15}|0\rangle|C\rangle + \frac{1}{15}|0\rangle|D\rangle + \frac{2}{15}|0\rangle|H\rangle  + \frac{3}{15}|1\rangle|C\rangle + \frac{1}{15}|1\rangle|D\rangle + \frac{2}{15}|1\rangle|H\rangle
+|\psi\rangle & = 
+\equiv \frac{3}{15}|0\rangle|C\rangle + 
+\frac{4}{15}|0\rangle|D\rangle + 
+\frac{2}{15}|0\rangle|H\rangle  + 
+\frac{5}{15}|1\rangle|C\rangle + 
+\frac{1}{15}|1\rangle|S\rangle
 
-\\ &= |0\rangle \left( \frac{3}{7} |0\rangle + \frac{1}{7}|1\rangle \right) + |1\rangle  \left( \frac{2}{7} |0\rangle +  \frac{1}{7} |1\rangle \right) 
+\\ &= 
+|0\rangle \left( \frac{3}{15} |C\rangle + \frac{4}{15}|D\rangle  + \frac{2}{15}|H\rangle \right) + 
+|1\rangle  \left( \frac{5}{15} |C\rangle +  \frac{1}{15} |S\rangle \right) 
 \end{split}
 $$
 
-* Based on the equation-8 and equation-9 we can get the probability that the $X_1 = 0$ by summing over all the probability values of the system $X_2$ when the state of the $X_1$ is $|0\rangle$. That is
+* Based on the `equation-8` and `equation-9` we can get the probability that the $X_1 = 0$ by summing over all the probability values of the system $X_2$ when the state of the $X_1$ is $|0\rangle$. That is
 
-$$Pr(X_1 = 0)  = \frac{3}{7} + \frac{1}{7} = \frac{4}{7}$$
+$$Pr(X_1 = 0)  = \frac{3}{15} + \frac{4}{15} + \frac{2}{15} = \frac{9}{15}$$
 
-* Now if we measured that the state of $X_1$ as $|0\rangle$ then the probability vector of the $X_2$ is given by the equation-10. In that the probability sum in the denominator is what we calculated above and vector in the numerator is the term that is right after the state $|0\rangle$ in the above probability vector after grouping the terms. so the $|\pi_0\rangle$ is as follows.
+* Now if we measured that the state of $X_1$ as $|0\rangle$ then the probability vector of the $X_2$ is given by the `equation-10`. In that the probability sum in the denominator is what we calculated above and vector in the numerator is the term that is right after the state $|0\rangle$ in the second step of the above derivation after grouping the terms. so the $|\pi_0\rangle$ is written as follows.
 
 $$
 \begin{equation} \tag{Ex-4}
-|\pi_0| = \frac{\left( \frac{3}{7} |0\rangle + \frac{1}{7}|1\rangle \right)}
-{\frac{4}{7}}
-=\left( \frac{3}{4} |0\rangle + \frac{1}{4}|1\rangle \right)
+|\pi_0| = \frac{
+    \left( \frac{3}{15} |C\rangle + \frac{4}{15}|D\rangle  + \frac{2}{15}|H\rangle \right)
+}{\frac{9}{15}}
+=
+\left( \frac{3}{9} |C\rangle + \frac{4}{9}|D\rangle  + \frac{2}{9}|H\rangle \right)
 \end{equation}
 $$
 
@@ -424,18 +433,392 @@ $$
 * Similary the probability that the $X_1 = 1$ and the probability vector that represents the state of $X_2$ after measuring $X_1 = 1$ as follows.
 
 $$
-Pr(X_1 = 1)  = \frac{2}{7} + \frac{1}{7} = \frac{3}{7}  
+Pr(X_1 = 1)  = \frac{5}{15} + \frac{1}{15} = \frac{6}{15}  
 $$
 
 $$
 \begin{equation} \tag{Ex-4}
-|\pi_0| = \frac{\left( \frac{2}{7} |0\rangle + \frac{1}{7}|1\rangle \right)}
-{\frac{3}{7}}
-=\left( \frac{2}{3} |0\rangle + \frac{1}{3}|1\rangle \right)
+|\pi_0| = \frac{
+    \left( \frac{5}{15} |C\rangle +  \frac{1}{15} |S\rangle \right)
+}{\frac{3}{7}}
+=
+\left( \frac{5}{6} |C\rangle +  \frac{1}{6} |S\rangle \right)
 \end{equation}
 $$
 
+**note: In the above equations I am not simplyfying any of the fraction values**(e.g $
+\frac{3}{15} = \frac{1}{5}$), **This is because we can easily check the probability sum equals to 1 wherever it is applicable.**
 
-## Operations on probabilistic states of multiple systems
+
+#### What about partial measurement of independent multiple systems?
+
+* Note that in the `Ex-4` the two systems are not independent systems. So when we measured the system $X_1$ it give us some information about the state of the system $X_2$. 
+
+* When two systems are independent then measuring one of systems doen't provide any information about the second system before the measurement of the second system.
+
+* Lets take an example given in `Ex-1`. For that joint system $(X_1,X_2)$ before and after measuring the system $X_1$ the probability associated with each state of the $X_2$ remains the same. That's the reason we call them independent systems.
 
 
+## Operations on multiple systems
+
+* When we think multiple systems as a combined single system then the operations on multiple systems can be defined using stochastic matrix similar to the single system. Here the rows and columns of the stochastic matrix corresponds to the entries of the classical state set of the joint system. Remember that we can get the calssical state set of the joint system using the cartesian product of the classical state sets of the individual systems.
+
+* Lets take usual example of two bits joint system $(X_1, X_2)$. The rows and columns of the stochastic matrix for this joint system will corresponds to a cartesian product set $\Sigma_1 \times \Sigma_2$.
+
+#### What is a deterministic operation on multiple system?
+
+* Deterministic operation is an operation on multiple system for which the input and output corresponds to one of the classical state of the joint system. There won't be any uncertainty about the output. We alway get exactly one of the classical states as the output. 
+
+> We will look into a specific example of controlled NOT operation where if $X_1 = 1$ then flip the bit $X_2$, otherwise do nothing.
+
+* The following matrix represents this operation.
+
+$$
+\begin{equation}\tag{Ex-5}
+\begin{split}
+
+&\Rightarrow
+|00\rangle\langle00| + 
+|01\rangle\langle01| + 
+|10\rangle\langle11| + 
+|11\rangle\langle10| \\
+&= 
+\begin{pmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 
+\end{pmatrix}
+
+\end{split}
+\end{equation}
+$$
+
+* The above stochastic matrix represents the controlled NOT operation on the system $(X_1,X_2)$. Here $X_1$ is the controll bit which decides whether or not particular operation should be applied and $X_2$ is the target bit on which the actual operation is applied.
+
+* In the LHS you can see we have represented the stochastic matrix using the dirac notations. Each entry in the LHS correponds to output-input relationship. In each term the first vector(column vector) corresponds to a output and second vector(row vector) corresponds to a input. If you do the normal matrix multiplication, then you will get the matrix on the RHS.
+
+* Similar way we can define the case where $X_2$ is controll bit and $X_1$ is the target bit. The following matrix represents this operation.
+
+$$
+\begin{equation}\tag{Ex-6}
+\begin{split}
+
+&\Rightarrow
+|00\rangle\langle00| + 
+|11\rangle\langle01| + 
+|10\rangle\langle10| + 
+|01\rangle\langle11| \\
+&= 
+\begin{pmatrix}
+1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 0 
+\end{pmatrix}
+
+\end{split}
+\end{equation}
+$$
+
+* Here you can think about the deterministic operations more intutively also. First row of the matrix tells us that for what input we have to get the output $|00\rangle$? in our case that output corresponds to the input $\langle00|$, so we have set the first entry as 1. Similary the second row is for the output $|01\rangle$, We have to this output when input is $\langle11|$, that's the reason we set tht last entry to the 1.
+
+
+#### What is a probabilistic operation on multiple systems?
+
+* Probabilistic operation is a operation on multiple systems for which the input and output corresponds to one of the classical state of the joint system. But there will be some uncertainty about the output. We will get one or more of the classical states as the output. If multiple classical states are associated with same input, the each of classical state will have some probability associated with it. 
+
+> For example take an operation where when two bits $X_1$ and $X_2$ are not then same then half of the time set the value of $X_1$ to $X_2$ and another half of the time set the value of $X_2$ to $X_1$.
+
+* The following stochastic matrix represents this operation.
+$$
+\begin{equation}\tag{Ex-7}
+\begin{split}
+
+&\Rightarrow 
+|00\rangle\langle00| + 
+\frac{1}{2}|00\rangle\langle01| + 
+\frac{1}{2}|11\rangle\langle01| + 
+\frac{1}{2}|11\rangle\langle10| + 
+\frac{1}{2}|00\rangle\langle10| + 
+|11\rangle\langle11|
+ \\
+&= 
+\frac{1}{2}
+\begin{pmatrix}
+1 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 1
+\end{pmatrix} +
+\frac{1}{2}
+\begin{pmatrix}
+1 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 1 
+\end{pmatrix} \\
+&=
+\begin{pmatrix}
+1 & \frac{1}{2} & \frac{1}{2} & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & \frac{1}{2} & \frac{1}{2} & 1 
+\end{pmatrix}
+
+\end{split}
+\end{equation}
+$$
+
+* In the avove example you can see that we can think of this operation in two ways. One way is in terms of state vectors and dirac notation similar to the example `Ex-6`, another way is in terms of sum of two deterministic operation each associated with some probability.
+
+* Similar operations can be defined for any number of systems. We will use dirac notation to explain the following example.
+
+> Consider a octal(base-8) number system where numbers are only 0-7. The operation is whenever some input is given we have to add 1 to that number and give the result again in the octal number system. 
+
+* Remember that when we add 7+1=8 is not a valid octal number so we have to use modular arithmetic to find the valid octal nubmer for the result. In this case the result will be ((7+1) mod 8) = 0. 
+
+$$
+\begin{equation}\tag{Ex-7}
+\begin{split}
+
+&\Rightarrow 
+\sum_{k=0}^{7} |binary \; encoding\; of \;((k+1) \;mod \;8)\rangle
+\langle binary \; encoding\; of \; k| \\
+&= 
+|001\rangle\langle000| +
+|010\rangle\langle001| +
+|011\rangle\langle010| +
+|100\rangle\langle011| +
+|101\rangle\langle100| +
+|110\rangle\langle101| +
+|111\rangle\langle110| +
+|000\rangle\langle111| \\
+&= 
+\begin{pmatrix}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+\end{pmatrix} 
+\end{split}
+\end{equation}
+$$
+
+* Here also the dirac notation and the matrix representation works in the same way as we discussed previously.
+
+### Independent Operations
+
+* So when there are multiple systems, we have defined the independence of the individual systems that make the multiple systems using the tensor product. In a similar way we can define the independence of the operation on the multiple systems using tensor product. To understand this we have to first understand the tensor product of matrices.
+
+#### Tensor product of matrices 
+
+* Lets take an usual example of multiple systems with two bits $X_1$ and $X_2$ with classical state set $\Sigma_1$ and $\Sigma_2$ respectively. We know from previous sections that the operations on individual systems are represented by stochastic matrix. The following definitions of matrices $M_1$ and $M_2$ represent the operations on the individual systems $X_1$ and $X_2$ in a generic way. 
+
+
+$$
+\begin{equation}\tag{12}
+M_1 = \sum_{a,b \in \Sigma_1} \alpha_{ab}|a\rangle\langle b| \;\;\;
+M_2 = \sum_{c,d \in \Sigma_1} \beta_{cd}|c\rangle\langle d|
+\end{equation}
+$$
+
+* In the above definitions $\langle b|$ and $\langle d|$ are inputs and $|a\rangle$ and $|c\rangle$ are their corresponding outputs. We have defined the operation as sum of output-input vector multiplication for each possible input from the the classical state sets. 
+
+* The $\alpha_{ab}$(similar way we can explain the $\beta_{cd}$) is a real numbers that represent the probability of the input $\langle b|$ giving the output $|a\rangle$. For each such input the sum of probabilities should add upto 1. The good example for this is an `Ex-7` where half of the time we set the value $X_1$ to $X_2$ and another half of the time $X_2$ to $X_1$.
+
+* Now the operation on the joint system $(X_1,X_2)$ is represented by the following matrix.
+
+$$
+\begin{equation}\tag{13}
+\begin{split}
+M &= M_1 \otimes M_2 \\
+
+&= \sum_{a,b \in \Sigma_1} \sum_{c,d \in \Sigma_2} \alpha_{ab} \beta_{cd} 
+|ac\rangle\langle bd| \\
+
+&= \sum_{ac, bd \in \Sigma_1 \times \Sigma_2} \alpha_{ab} \beta_{cd} 
+|ac\rangle\langle bd| \\
+
+\end{split}
+\end{equation}
+$$
+
+* Here note that for the joint system $(X_1,X_2)$, the tensor product defines for each input $\langle bd|$ the corresponding output $|ac\rangle$ in a similar way as single system but for the classical states of the cartesian product set. We can think about this in a different way as following equation is defined.
+
+$$
+\begin{equation}\tag{14}
+\langle ac| M_1 \otimes M_2 |bd\rangle = 
+\langle a| M_1 |b\rangle 
+\langle c| M_2 |d\rangle
+\end{equation}
+$$
+for every choice of $a,b \in \Sigma_1$ and $c,d \in \Sigma_2$
+* Here note that $(M_1 \otimes M_2)|bd\rangle = |ac\rangle$. So in the LHS the value $\langle ac||ac\rangle $ is going to be some real number which will be equal to the real number that we will get when we evaluate the RHS.
+
+* Because of the way we defined the tensor product the following equation is true for any valid operations $M_1$ and $M_2$ on systems $X_1$ and $X_2$. Here $|\psi_1\rangle$ and $|\psi_2\rangle$ are probability vectors of the systems $X_1$ and $X_2$ respectively.
+
+$$
+\begin{equation}\tag{15}
+(M_1 \otimes M_2) (|\psi_1\rangle \otimes |\psi_2\rangle) = 
+(M_1 |\psi_1\rangle) \otimes 
+(M_2 |\psi_2\rangle)
+\end{equation}
+$$
+
+* The tensor product of two matrices are defined in the following way.
+
+
+$$
+\begin{equation}\tag{Ex-8}
+\begin{split}
+
+&\Rightarrow \begin{pmatrix}
+a_{11} & \cdots & a_{1m} \\
+\vdots & \ddots & \vdots \\
+a_{m1} & \cdots & a_{mm}
+\end{pmatrix}
+\otimes
+\begin{pmatrix}
+b_{11} & \cdots & b_{1k} \\
+\vdots & \ddots & \vdots \\
+b_{k1} & \cdots & b_{kk}
+\end{pmatrix} \\ \\
+
+&=
+\begin{pmatrix}
+a_{11}b_{11} & \cdots & a_{11}b_{1k} & & a_{1m}b_{11} & \cdots & a_{1m}b_{1k}\\
+
+\vdots & \ddots & \vdots & \cdots & \vdots & \ddots & \vdots\\
+
+a_{11}b_{k1} & \cdots & a_{11}b_{kk} & & a_{1m}b_{k1} & \cdots & a_{1m}b_{kk} \\
+
+& \vdots & & \ddots & & \vdots & \\
+
+ a_{m1}b_{11} & \cdots & a_{m1}b_{1k} & & a_{mm}b_{11} & \cdots & a_{mm}b_{1k}\\
+
+\vdots & \ddots & \vdots & \cdots & \vdots & \ddots & \vdots\\
+
+a_{m1}b_{k1} & \cdots & a_{m1}b_{kk} & & a_{mm}b_{k1} & \cdots & a_{mm}b_{kk} \\
+\end{pmatrix}
+
+\end{split}
+\end{equation}
+$$
+
+* In a similar way as above we can define the tensor product of three or more matrices. The equivalent equations for `equation-14` and `equation-15` for multiple systems are respectively `equation-16` and `equation-17`.
+
+$$
+\begin{equation}\tag{16}
+\langle a_1 a_2 \cdots a_n| M_1 \otimes M_2 \otimes \cdots \otimes M_n |b_1 b_2 \cdots b_n\rangle
+= \langle a_1| M_1 |b_1\rangle 
+  \langle a_2| M_2 |b_2\rangle \cdots 
+  \langle a_n| M_n |b_n\rangle
+\end{equation}
+$$
+
+Here the $|b_1 b_2 \cdots b_n\rangle$ and $\langle a_1 a_2 \cdots a_n|$ are input and output state of the joint system $(X_1,X_2,\cdots,X_n)$ respectively. The result value on both LHS and RHS going to be real number. 
+
+$$
+\begin{equation}\tag{17}
+(M_1 \otimes 
+M_2 \otimes 
+\cdots \otimes
+M_n)
+
+(|\psi_1\rangle \otimes 
+|\psi_2\rangle \otimes 
+\cdots \otimes
+|\psi_n\rangle) = 
+
+(M_1 |\psi_1\rangle) \otimes 
+(M_2 |\psi_2\rangle) \otimes
+\cdots \otimes
+(M_n |\psi_n\rangle)
+\end{equation}
+$$
+
+Here the state vectors $|\psi_1\rangle,|\psi_2\rangle, \cdots , |\psi_n\rangle$ and matrix operations $M_1,M_2, \cdots , M_n$ corresponds to the systems $X_1,X_2, \cdots X_n$ respectively.
+
+>note: the tensor product of matrices is said to be multiplicative because of the follwing equation. 
+> $$\begin{equation}\tag{18} (M_1 \otimes M_2 \otimes \cdots \otimes M_k)(N_1 \otimes N_2 \otimes \cdots \otimes N_k) = (M_1 N_1) \otimes (M_2 N_2) \otimes \cdots \otimes (M_k N_k) \end{equation}$$
+> Here $M_1,M_2,\cdots,M_k$ and $N_1,N_2,\cdots,N_k$ are any valid matrices as long as matrix multiplication $(M_i N_i)$ makes sense for $1 \leq i \leq k$.
+
+### Examples of Independent operations
+
+* Lets take an usual example of two bits $X_1$ and $X_2$ with calssical state sets $\Sigma_1$ and $\Sigma_2$ and state vectors $|\psi_1\rangle$ and $|\psi_2\rangle$. If we apply the operations $M_1$ and $M_2$ on states $|\psi_1\rangle$ and $|\psi_2\rangle$ independently then the joint operation on the joint system's state  $|\psi_1\rangle \otimes |\psi_2\rangle$ is represented by the tensor product $M_1 \otimes M_2$.
+
+> Consider a particualar operation, If $X_1=1$, then we flip the bit $X_1$ half of the times, otherwise do nothing. We call this operation as $M_1$
+>
+>Suppose if we apply the operation $M_1$ on $|\psi_1\rangle$ and operation NOT on the $|\psi_2\rangle$ independently, what is the joint operation that act on the state $|\psi_1\rangle \otimes |\psi_2\rangle$
+
+The joint operation is represented by the following matrix.
+$$
+\begin{equation}\tag{Ex-9}
+\begin{split}
+
+M_1 \otimes NOT &= 
+
+\begin{pmatrix}
+1 & \frac{1}{2} \\ 
+0 & \frac{1}{2} 
+\end{pmatrix}
+\otimes
+\begin{pmatrix}
+0 & 1 \\ 
+1 & 0 
+\end{pmatrix} \\\\
+
+&=
+\begin{pmatrix}
+0 &  1 & 0 &  \frac{1}{2}  \\ 
+1 &  0 & \frac{1}{2}  &  0 \\
+0 &  0 & 0 &  \frac{1}{2}  \\
+0 &  0 & \frac{1}{2}  &  0
+\end{pmatrix} 
+
+\end{split}
+\end{equation}
+$$
+
+> Apply NOT operation on $X_1$ and do nothing for $X_2$
+
+We commonly apply some operation M on one system(or proper subset of systems) and do nothing to the remaining systems. Doing nothing can be represented by the identity matrix. So the above operation can be represented by the following matrix.
+
+$$
+\begin{equation}\tag{Ex-10}
+\begin{split}
+
+M_1 \otimes NOT &= 
+
+\begin{pmatrix}
+0 & 1 \\ 
+1 & 0 
+\end{pmatrix} 
+\otimes
+\begin{pmatrix}
+1 & 0 \\ 
+0 & 1
+\end{pmatrix}\\ \\
+
+&=
+\begin{pmatrix}
+0 & 0 & 1 & 0 \\ 
+0 & 0 & 0 & 1 \\
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0
+\end{pmatrix} 
+
+\end{split}
+\end{equation}
+$$
+
+Note: 
+> It may be useful to think in a following way. If you consider a value 1 in the row 1 and column 3 in the above matrix, these indeces express a particular relationship between input and output states.
+> * Here column index 3 tells that the input state will be the state taht corresponds to the index 3 of the state vector. The row index 1 tells that output will be the state that correspons to the index 1 of the state vector.
+>
+> This way of thinking might not be always useful but sometime it will give some intution about the operation that the matrices represent.

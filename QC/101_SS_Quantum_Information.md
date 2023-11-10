@@ -143,11 +143,18 @@ $\sigma_z$ is called phase flip operation, because $\sigma_z|0\rangle = |0\rangl
 
 #### Hadamard Operation:
 
-$$ H = \begin{pmatrix} \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \end{pmatrix}$$
+$$ H = 
+\begin{pmatrix} 
+\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ 
+\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} 
+\end{pmatrix}
+$$
 
 #### Phase Operation:
 
-$$ P_\theta = \begin{pmatrix} 1 & 0 \\ 0 & e^{i\theta} \end{pmatrix}$$
+$$ P_\theta = 
+\begin{pmatrix} 1 & 0 \\ 0 & e^{i\theta} \end{pmatrix}
+$$
 
 $$ 
 S = P_\frac{\pi}{2} = \begin{pmatrix} 1 & 0 \\ 0 & i \end{pmatrix}, \;\;
