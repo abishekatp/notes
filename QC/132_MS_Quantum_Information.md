@@ -293,3 +293,7 @@ Generally a system with the classical state $\Sigma = \{0,1,2,...,d-1\}$ is call
 
 
 ## What is the measurement of quantum multiple systems?
+
+
+
+## What is unitary operations on quantum multiple systems?

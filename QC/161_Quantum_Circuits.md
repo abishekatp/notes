@@ -25,6 +25,10 @@ $$
 
 Similar to how we use boolean circuits to represent classical computation, We use quantum circuits to represent quantum computations. Similar to the classical gates, we use quantum gates to represent quantum operations on the quantum information.
 
+In previous blogs we have learnt about the operations on quantum information represented by a unitary matrices. In the quantum circuit we will represent those unitary operations using quantum gates. In the circuit diagram we represent the quantum gates by different shapes like square and circles with some labels. For example the Hadamard operation is represented by a square box with label H in the center of the box like given below. 
+
+
+# Inner products, Orthonormal sets and Projective measurements
 
 ## What is inner product?
 
@@ -48,5 +52,12 @@ $$
 
 
 ## What is othogonal and orthonormal sets?
+
+
+## What is Projections and Projective measurements?
+
+
+
+# Limitations on quantum information
 
 
