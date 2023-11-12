@@ -292,4 +292,4 @@ $$
 Generally a system with the classical state $\Sigma = \{0,1,2,...,d-1\}$ is called `qdits` for arbitrary value of d.
 
 
-## What is the measurement of multiple quantum systems?
+## What is the measurement of quantum multiple systems?
