@@ -367,7 +367,7 @@ Using the above definitions we can say that the new state of the joint system $(
 
 #### Reduced or Marginal state of X
 
-We have seen the reduced or marginal probability in the `equation-6`. How can we represent the reduced or marginal state of the system $X_1$. To understand this we can drop all the states associated to the $X_2$ in the $|\psi\rangle$(from `equation-1`) and simplify it. Now we will get the marginal state of $X_1$. This can be formally defined as follows,
+We have seen the reduced or marginal probability in the `equation-6`. How can we represent the reduced or marginal state just one(or proper subset) of the system. To understand this we can drop all the states associated to the $X_2$ in the $|\psi\rangle$(from `equation-1`) and simplify it. Now we will get the marginal state of $X_1$. This can be formally defined as follows,
 
 $$ 
 \begin{equation} \tag{11}
@@ -389,7 +389,7 @@ Now here just drop the states that corresponds to the system $X_2$ and sum only 
 
 $$
 \begin{equation} \tag{Ex-3}
-   marginal \; state of X_1 = \frac{6}{9}|0\rangle + \frac{3}{9}|1\rangle
+   marginal \; state \; of \; X_1 = \frac{6}{9}|0\rangle + \frac{3}{9}|1\rangle
 \end{equation}
 $$
 

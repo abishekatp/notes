@@ -294,6 +294,401 @@ Generally a system with the classical state $\Sigma = \{0,1,2,...,d-1\}$ is call
 
 ## What is the measurement of quantum multiple systems?
 
+Standard basis measurement of multiple systems is same as measuring a single system. Suppose if particular quantum system is represented by a quantum state vector $|\psi\rangle$ and classical state set $\Sigma$, then in the standard basis measurement for each classical state $a \in \Sigma$ is obtained with the probability $| \langle a|\psi\rangle |^2$.
+
+Suppose assume that the quantum systems $X_1,X_2,...,X_n$ is having the classical state set $\Sigma_1,\Sigma_2,...,\Sigma_n$. If the combined sysystem $(X_1,X_2,...,X_n)$ is represented by the quantum state vector $|\psi\rangle$ and classical state set $\Sigma = \Sigma_1 \times \Sigma_2 \times \cdots \times \Sigma_n$, then in standard basis measurement for each classical state $(a_1,a_2,\cdots,a_n) \in \Sigma$ will be obtained with the probability $|\langle a_1,a_2,\cdots,a_n|\psi\rangle|^2$
+
+For example, suppose systems $X_1$ and $X_2$ jointly in a state $|\psi\rangle$.
+
+$$|\psi\rangle = \frac{3}{5} |00\rangle - i\frac{4}{5} |11\rangle$$
+
+If we measure the quantum system in the above state, then the systems $(X_1,X_2)$ will be in the state $(0,0)$ with the probability $\frac{9}{25}$ and in the state $(1,1)$ with the probability $\frac{16}{25}$.
 
 
-## What is unitary operations on quantum multiple systems?
+### Partial measurement of multiple systems
+
+Similar to the partial measurement of multiple classical systems, we can define the partial measurement of multiple quantum systems. Lets take same example as two qbits $X_1$ and $X_2$ with the classical state set $\Sigma_1$ and $\Sigma_2$. The joint system $(X_1,X_2)$ is represented by the quantum state vector $|\psi\rangle$ in dirac notation.
+
+$$
+\begin{equation}\tag{4}
+|\psi\rangle = \sum_{a,b \in \Sigma_1 \times \Sigma_2} 
+\alpha_{ab} |ab\rangle
+\end{equation}
+$$
+
+where $\{\alpha_{ab}: (a,b) \in \Sigma_1 \times \Sigma_2 \}$ is collection of complex numbers satisfying the following condition that the summ of absolute value of those complex numbers should be equal to 1(Remember that this condition is equivalent to Euclidean norm being equal to 1).
+
+$$
+\begin{equation}\tag{5}
+\sum_{a,b \in \Sigma_1 \times \Sigma_2} |\alpha_{ab}|^2 = 1
+\end{equation}
+$$
+
+We already know that if both $X_1$ and $X_2$ is measured then the probability that we obtain the state (a,b) can be defined using the classical state(`bra` notation) $\langle ab|$ and state vector(`ket` notation) $|\psi\rangle$.
+
+$$
+\begin{equation}\tag{6}
+Pr((X_1,X_2)=(a,b))=|\langle ab|\psi\rangle|^2 = |\alpha_{ab}|^2
+\end{equation}
+$$
+
+Suppose we only measure the system $X_1$ then the probability that we obtain any classical state `a` is defined by the following sum. This is marginal(or reduced) probability of the joint system.
+
+$$
+\begin{equation}\tag{7}
+Pr(X_1=a) = \sum_{b \in \Sigma_2} |\alpha_{ab}|^2
+\end{equation}
+$$
+
+This is consistent with the fact that the probability associated with just one(or proper subset) of the systems doesn't depend on the other(remaining) systems. Because of the similar argument in the probabilistic settings which we have seen in the previous blog, As of now the faster than light communction is not possible based on our understanding of physics.
+
+After measuring the quantum system $X_1$, it will collapse into one of the classical states $|a\rangle$. If individual systems are not independent, then due to measuring one(or proper subset) of the systems our knowledge about the other(or remaining) systems will change. So the quantum state vector of the joint system should reflect this change. This idea can be represented by conditional probability similar to the probabilistic settings.
+
+Now we define the $|\psi\rangle$ in the `equation-4` in slightly different form, so that we can use this definition to define the conditional probability.
+
+
+$$
+\begin{equation}\tag{8}
+\begin{split}
+|\psi\rangle &= \sum_{a \in \Sigma_1} |a\rangle \otimes |\phi_a\rangle \\
+
+|\phi_a\rangle &=\sum_{b \in \Sigma_2} \alpha_{ab} |b\rangle
+\end{split}
+\end{equation}
+$$
+
+
+Then the probability that $X_1=a$ defined in the `equation-7` can be equivalently defined using Euclidean norm of the quantum state vector $|\alpha_{ab}\rangle$ for each $a \in \Sigma_1$.
+
+$$Pr(X_1=a) = || |\phi_a\rangle ||^2$$
+
+Now suppose if we measured the $X_1=a$, then the state of the system $X_2$ can be represented by the following vector.
+
+$$
+\begin{equation}\tag{8}
+|a\rangle \otimes 
+\frac{|\phi_a\rangle}{|| |\phi_a\rangle||}
+\end{equation}
+$$
+
+Here the resulting vector $|a\rangle \otimes |\phi_a\rangle$ will represent the quantum state of the system $X_2$ on measuring the state of the system $X_1 = a$ for each $a \in \Sigma_1$. The term $|| |\phi_a\rangle ||$ is to make the Euclidean norm of the resulting vector to be equal to 1(This process is called normalization). This will make the resulting vecor to be a valid quantum state vector. Remember tha in the probablistic setting we divided the vector by the sum of probabilities of that vector to do the normalization.
+
+### Examples of partial measurement
+
+Lets take an usual example as the joint system of two qbits $(X_1,X_2)$ is represented by the following quantum state vector $|\psi\rangle$.
+
+$$
+\begin{equation}\tag{Ex-8}
+\begin{split}
+|\psi\rangle \otimes &= 
+\frac{1}{\sqrt{2}}|00\rangle -
+i\frac{1}{\sqrt{6}}|01\rangle +
+\frac{1}{\sqrt{6}}|10\rangle +
+i\frac{1}{\sqrt{6}}|11\rangle \\
+
+&=|0\rangle \otimes \left(
+\frac{1}{\sqrt{2}}|0\rangle -
+i\frac{1}{\sqrt{6}}|1\rangle
+\right) +
+|1\rangle \left(
+\frac{1}{\sqrt{6}}|0\rangle +
+i\frac{1}{\sqrt{6}}|1\rangle
+\right) \\
+
+\end{split}
+\end{equation}
+$$
+
+The probability that we measure $X_1 = 0$ is,
+
+$$
+Pr(X_1=0) = 
+\left|\left| \frac{1}{\sqrt{2}}|0\rangle -
+i\frac{1}{\sqrt{6}}|1\rangle \right|\right|^2 
+= \frac{1}{2} + \frac{1}{6} 
+= \frac{2}{3}
+$$
+
+> **Note**: \
+>Here note that the Euclidean norm of the vector is the square root of the sum of square of the the absolute value of each entry of the vector. To cancel out this square root we have the power 2 in the above equation. Since each entry of the vector is the complex number the absolute value of the complex number calculated using the formula $|a+bi| = \sqrt{a^2 + b^2}$
+
+After measuring the $X_1=0$ the state of the whole system $|\psi\rangle$ collapses into a following vector.
+
+$$
+|0\rangle \otimes \left(
+\frac{
+\frac{1}{\sqrt{2}}|0\rangle -
+i\frac{1}{\sqrt{6}}|1\rangle}
+{\sqrt{\frac{2}{3}}}
+\right)
+
+=|0\rangle \otimes \left(
+\frac{\sqrt{3}}{2}|0\rangle -
+i\frac{1}{2}|1\rangle
+\right)
+$$
+
+If you check the Euclidean norm of the above vector it will be $\frac{3}{4} +\frac{1}{4} = 1$. This is a helpful check that our computation is going in the right way. The resulting vector is a valid quantum state vector.
+
+The probability of getting $X_1=1$ is,
+
+$$
+Pr(X_1 = 1) = 
+\left|\left| \frac{1}{\sqrt{6}}|0\rangle +
+i\frac{1}{\sqrt{6}}|1\rangle \right|\right|^2 
+= \frac{1}{6} + \frac{1}{6} 
+= \frac{1}{3}
+$$
+
+Here also note that the sum of $Pr(X_1=0) +Pr(X_1=1) = 1$ is again another useful check.
+As we have previously done as soon as we measured $X_1 = 1$, the state of the whole system collapses into the new state that reflects our measurement. When $X_1 = 1$, the state of the system $X_2$ is reflected by the following vector.
+
+$$
+|1\rangle \otimes \left(
+\frac{
+\frac{1}{\sqrt{6}}|0\rangle +
+i\frac{1}{\sqrt{6}}|1\rangle}
+{\sqrt{\frac{1}{3}}}
+\right)
+
+=|0\rangle \otimes \left(
+\frac{1}{\sqrt{2}}|0\rangle +
+i\frac{1}{\sqrt{2}}|1\rangle
+\right)
+$$
+
+In a similar and straighforward way we can define the case when only the system $X_2$ is measured and the $X_1$ is not measured.
+
+### What about reduced quantum state of any one system?
+
+This example shows the limitation of the simplified definition of the quantum information that we are learning so far. In probabilistic settings we defined the reduced(or marginal) state of the just one of the two systems(or a proper subset of the three or more systems). But the way we are defining the quantum information using quantum state vector doesn't give us a way to define the same for the quantum settings.
+
+Suppose the probabilistic state of the two systems $(X_1,X_2)$ is represented by the following probability vector.
+
+$$
+|\phi\rangle = \sum_{a,b \in \Sigma_1 \times \Sigma_2}
+r_{ab}|ab\rangle
+$$
+
+Then the reduced or marginal state of $X_1$ is
+
+$$
+\sum_{a,b \in \Sigma_1 \times \Sigma_2} 
+r_a|a\rangle
+$$
+
+But if we have a quantum state of the two systems $X_1,X_2$ is represented by the following quantum state vector.
+
+$$
+|\psi\rangle = \sum_{a,b \in \Sigma_1 \times \Sigma_2}
+\alpha_{ab}|ab\rangle
+$$
+
+Then the following equation won't make any sense
+
+$$
+\sum_{a,b \in \Sigma_1 \times \Sigma_2} 
+\alpha_a|a\rangle
+$$
+
+The above vector doesn't always make sense because the resulting vecot won't always be a valid quantum state vector. The problem with the above equation is that in the probabilistic settings we have defined the value of $r_{ab}$ for each classical state $a \in \Sigma_1$ using the following sum,
+
+$$
+r_a = \sum_{b \in \Sigma_2} r_{ab}
+$$
+
+If we try to construct a similar formula for in the quantum case, then we will get something like below.
+
+$$
+\alpha_a = \sum_{b \in \Sigma_2} \alpha_{ab}
+$$
+
+The above formula won't always be a valid quantum state vector due to two reasons, First one is the $\alpha_{ab}$ is a complex number and the second is we define the probability of quantum state vector using absolute values of those complex numbers. So directly adding up the complex numbers won't always give the correct probability for the state $X_1 = a$ for any $a \in \Sigma_1$. You can check this out with the `Ex-8`.
+
+The another way we may try is the following.
+
+$$
+\alpha_a = \sum_{b \in \Sigma_2} |\alpha_{ab}|^2
+$$
+
+We may try adding up absolute values of $\alpha_{ab}$. In fact this will give correct probability values for with each state $a \in \Sigma_1$. But when we calculate absolute values we may loose some information about the system that was represented by the complex numbers(due to the fact that we are calculating absolute values). Due to these reasons we will see more general description of quantum information which will solve these kind of problems.
+
+### Partial measurement of three or more systems
+
+Measuring the proper subset of three or more systems is very similar to measuring just one of the two systems. In this case will consider the subset of systems that is being measured as single combined system and all the reamaing systems as the second system.
+
+Assume that we have five systems $(X_1,X_2,X_3,X_4,X_5)$ together representing some information. The first two systems $X_1$ and $X_2$ are having a classical state set $\Sigma_1$ and all the remaining systems are having a classical state set $\Sigma_2$. The quantum state of the joint system is represented by the state vector $|\psi\rangle$.
+
+$$
+\begin{equation}\tag{Ex-9}
+\begin{split}
+& \Sigma_1 = \{0,1\} \\
+& \Sigma_2 = \{C, D, H, S\} \\
+& where \; C-Clubs \; D-Diamonds \; H-Hearts \; S-Spades \\\\
+
+&|\psi\rangle = 
+\frac{1}{\sqrt{5}}|0\rangle |1\rangle |H\rangle |D\rangle |S\rangle +
+\frac{1}{\sqrt{5}}|1\rangle  |1\rangle |C\rangle |D\rangle |C\rangle +
+\frac{1}{\sqrt{5}}|0\rangle |1\rangle |H\rangle |H\rangle |D\rangle +
+\frac{1}{\sqrt{5}}|1\rangle |0\rangle |D\rangle |D\rangle |S\rangle +
+\frac{1}{\sqrt{5}}|1\rangle |0\rangle |C\rangle |D\rangle |S\rangle
+\end{split}
+\end{equation}
+$$
+
+So now assume that we are going to measure the first and third system in the joint systems $(X_1,X_2,X_3,X_4,X_5)$. So we will consider the systems $X_1$ and $X_3$ as the first system and all the remaining systems as the second system. We are going to group the similar state of the first system as we have done in the classical systems case. But since the system $X_2$ which is part of the second system is in the middle of the $X_1$ and $X_3$ we need some way of keeping the order of these vector. For that we will label each vector with labels $1,2,3,4,5$ for the systems $(X_1,X_2,X_3,X_4,X_5)$ respectively. We will see soon why we are doing this. So the equivalent vector for $|\psi\rangle$ with labels is as follows.
+
+$$
+|\psi\rangle = 
+\frac{1}{\sqrt{5}}|0\rangle_1 |1\rangle_2 |H\rangle_3 |D\rangle_4 |S\rangle_5 +
+\frac{1}{\sqrt{5}}|1\rangle_1 |1\rangle_2 |C\rangle_3 |D\rangle_4 |C\rangle_5 +
+\frac{1}{\sqrt{5}}|0\rangle_1 |1\rangle_2 |H\rangle_3 |H\rangle_4 |D\rangle_5 +
+\frac{1}{\sqrt{5}}|1\rangle_1 |0\rangle_2 |D\rangle_3 |D\rangle_4 |S\rangle_5 +
+\frac{1}{\sqrt{5}}|1\rangle_1 |0\rangle_2 |C\rangle_3 |D\rangle_4 |S\rangle_5
+$$
+
+So now we will group them into two groups based on our measurement.
+
+$$
+\begin{split}
+
+|\psi\rangle &= 
+\frac{1}{\sqrt{5}}|0\rangle_1 |H\rangle_3 |1\rangle_2 |D\rangle_4 |S\rangle_5 +
+\frac{1}{\sqrt{5}}|0\rangle_1 |H\rangle_3 |1\rangle_2 |H\rangle_4 |D\rangle_5 +
+\frac{1}{\sqrt{5}}|1\rangle_1 |C\rangle_3 |1\rangle_2 |D\rangle_4 |C\rangle_5 +
+\frac{1}{\sqrt{5}}|1\rangle_1 |C\rangle_3 |0\rangle_2 |D\rangle_4 |S\rangle_5 +
+\frac{1}{\sqrt{5}}|1\rangle_1 |D\rangle_3 |0\rangle_2 |D\rangle_4 |S\rangle_5 \\
+
+&= |0\rangle_1 |H\rangle_3 
+
+\left(
+    \frac{1}{\sqrt{5}} |1\rangle_2 |D\rangle_4 |S\rangle_5 +
+    \frac{1}{\sqrt{5}}|1\rangle_2 |H\rangle_4 |D\rangle_5
+\right) + 
+
+|1\rangle_1 |C\rangle_3
+\left(
+\frac{1}{\sqrt{5}} |1\rangle_2 |D\rangle_4 |C\rangle_5 +
+\frac{1}{\sqrt{5}} |0\rangle_2 |D\rangle_4 |S\rangle_5 
+\right) +
+
+|1\rangle_1 |D\rangle_3 \left(
+\frac{1}{\sqrt{5}}|0\rangle_2 |D\rangle_4 |S\rangle_5
+\right)
+
+\end{split}
+$$
+
+Now we will just take one part of the system and explain about the probability of the measured systems($X_1$ and $X_3$) and state vector for $(X_1,X_2,X_3,X_4,X_5)$ after the measurement. Then you can easily do the similar computation for the other two parts of the above equation.
+
+The probability that we will obtain the result $X_1 = 0$ and $X_3 = H$ is as follows.
+
+$$
+\left|\left| 
+    \left(
+    \frac{1}{\sqrt{5}} |1\rangle_2 |D\rangle_4 |S\rangle_5 +
+    \frac{1}{\sqrt{5}}|1\rangle_2 |H\rangle_4 |D\rangle_5
+\right) \right|\right|^2 
+= \frac{1}{5} + \frac{1}{5} = \frac{2}{5}
+$$
+
+The state of the systems $(X_1,X_2,X_3,X_4,X_5)$ after the measurement that $(X_1,X_3) = (0,H)$ is as follows.
+
+$$
+\Rightarrow |0\rangle_1 |H\rangle_3 \otimes
+\frac{
+     \left(
+    \frac{1}{\sqrt{5}} |1\rangle_2 |D\rangle_4 |S\rangle_5 +
+    \frac{1}{\sqrt{5}}|1\rangle_2 |H\rangle_4 |D\rangle_5
+\right)}
+{\sqrt{\frac{2}{5}}} \\
+
+= \frac{1}{\sqrt{2}} |0\rangle_1 |1\rangle_2 |H\rangle_3 |D\rangle_4 |S\rangle_5 +
+\frac{1}{\sqrt{2}} |0\rangle_1 |1\rangle_2 |H\rangle_3 |H\rangle_4 |D\rangle_5
+$$
+
+Similary we can do for the other two parts.
+
+#### Why do we need to keep the order of the vectors?
+
+This is kind of important thing to note. If you have read previous blogs, then you might already know that the order of the cartesian product and tensor product doesn't matter as long as we keep the same order in all the places. Because of this reason we have used the subscript labels for the vectors in the dirac notation above.
+
+Initially we defined the order of the systems as $(X_1,X_2,X_3,X_4,X_5)$. So all the cartesian products and tensor products should follow the same ordering. When we group the terms of the vector that are being measured we change the order of the vectors for the sake of simplicity. This change in order doesn't mean we can change order of the tensor product there. The order of the tensor product should be same as the order of the systems in $(X_1,X_2,X_3,X_4,X_5)$. To keep track of this information we use the labels here. 
+
+These labels $1,2,3,4,5$(This can be any labels doesn't always need to be numbers) corresponds to the systems $(X_1,X_2,X_3,X_4,X_5)$ respectively. So even though we wrote down like this $|0\rangle_1 |H\rangle_3 |1\rangle_2 |D\rangle_4 |S\rangle_5$, Here the implicit order of the tensor product is as follows $|0\rangle_1 |1\rangle_2 |H\rangle_3 |D\rangle_4 |S\rangle_5$.
+
+
+## What is the unitary operation on quantum multiple systems?
+
+So the unitary operations on multiple quantum systems bring ideas from both unitary operation on the quantum single system and probabilistic operations on the classical single system. When we think about the multiple systems as a single combined system then the unitary operations are defined by the unitary matrices similar to the quantum single sytem. But here the row and column indeces of the unitary matrix will correspond to the cartesian product set of the classical state sets of the individual systems.
+
+Lets take an example of two qbits $(X_1,X_2)$ where $X_1$ and $X_2$ has the classical state set $\Sigma=\{0,1\}$. Then the following matrix applies Hadamard operation on the each individual bit of the two qbits system.
+
+$$ 
+\begin{equation}\tag{Ex-10}
+
+H = 
+\begin{pmatrix} 
+\frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} \\\\
+\frac{1}{2} & -\frac{1}{2} & \frac{1}{2} & -\frac{1}{2} \\\\
+\frac{1}{2} & \frac{1}{2} & -\frac{1}{2} & -\frac{1}{2} \\\\
+\frac{1}{2} & -\frac{1}{2} & -\frac{1}{2} & \frac{1}{2}
+\end{pmatrix}
+
+\end{equation}
+$$
+
+This can be obtained using the formula specified in `Ex-8` in the [131_MS_Classical_Information](./131_MS_Classical_Information.md) blog. You can check that for this matrix $H H^\dagger  = H^\dagger H = I$, where I is identity matrix.
+
+If you apply this operation on the state vector $|01\rangle$ you will get the following result. This is the usuall matrix multiplication.
+
+$$
+H|01\rangle 
+= H \begin{pmatrix}
+0 \\ 1 \\ 0 \\ 0
+\end{pmatrix}
+
+=\begin{pmatrix}
+\frac{1}{2} \\\\ -\frac{1}{2} \\\\ \frac{1}{2} \\\\ -\frac{1}{2}
+\end{pmatrix}
+
+= \frac{1}{2}|00\rangle -
+\frac{1}{2}|01\rangle +
+\frac{1}{2}|10\rangle -
+\frac{1}{2}|11\rangle
+= |+\rangle|-\rangle
+$$
+
+We have got the result as expected. Here note that we are representing the result in the vector form and also in dirac notation. Remember that specifying full matrices and vectors won't be always possible. So sometimes we use dirac notations to simplify things. But while using dirac notation we may loose some patterns of the operations, which we might have figured out if we have used the full matrix form. So both these approaches has its own pros and cons.
+
+#### What is reversible operations?
+If the unitary operations are also deterministic, then we call them reversible operations. When we apply deterministic operation on some classical state it will always give the result as one of the possible calssical states. We have seen one such example in `Ex-7` in the [131_MS_Classical_Information](./131_MS_Classical_Information.md) blog. The reverse operation of the particular unitary matrix is computed by the `conjugate transpose` of the unitary matrix that represents the operation.
+
+$$
+U = \sum_{k=0}^{7} |binary \; encoding\; of \;((k+1) \;mod \;8)\rangle
+\langle binary \; encoding\; of \; k| \\
+$$
+
+The above operation is deterministic. If you give the input number from 0 to 7 in the binary form, then this operation will add 1 to that number and find the (mod 8) of that new number. The conjugate transpose of the U is as follows.
+
+$$
+U^\dagger = \sum_{k=0}^{7}
+| binary \; encoding\; of \; k\rangle
+\langle binary \; encoding\; of \;((k+1) \;mod \;8)| \\
+
+= \sum_{k=0}^{7} |binary \; encoding\; of \;((k-1) \;mod \;8)\rangle
+\langle binary \; encoding\; of \; k|
+$$
+
+This opearation does the reverse or inverse of the operation done by the U.
+
+
+### How do we represent independent operations?
+If the unitary operations are applied individually on the individual systems, then the operation on the combined system will be represented by the tensor product of the matrices that represent the individual operation. This idea is similar to what we have done in the classical multiple systems and probabilistic operations.
+
+
+### Examples of the non independent operations
+
+#### The swap operation 
+
+#### The controlled unitary operations

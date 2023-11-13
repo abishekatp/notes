@@ -1,6 +1,6 @@
 # Quantum Computation
 
-This directory will contain my notes that are related to Quantum computation. My main reference has been this freely available textbook and video content in [IBM Qiskit](https://learning.quantum-computing.ibm.com/course/basics-of-quantum-information/single-systems) by Prof John Watrous, the Qiskit team and many other contributors. 
+This directory will contain my notes that are related to Quantum computation. My main reference has been this freely available textbook and video content in [IBM Qiskit](https://learning.quantum-computing.ibm.com/course/basics-of-quantum-information/single-systems) the Qiskit team and many other contributors. 
 
 > **Important:**\
 > So most of the content will be redundent from the Qiskit textbook. So you will be better off if you follow the qiskit textbook itself. I have tried explaining in some places in my own way, so if you don't understand some part in the qiskit textbook, then you can refer this notes to get different perspective on those topics.
