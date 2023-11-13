@@ -684,11 +684,86 @@ This opearation does the reverse or inverse of the operation done by the U.
 
 
 ### How do we represent independent operations?
-If the unitary operations are applied individually on the individual systems, then the operation on the combined system will be represented by the tensor product of the matrices that represent the individual operation. This idea is similar to what we have done in the classical multiple systems and probabilistic operations.
+If the unitary operations are applied individually on the individual systems of the collective systems, then the operation on the combined system will be described by the tensor product of the unitary matrices that represent the individual operation. If you can think about it this is analogous to what we have done for the classical multiple systems.
+
+Suppose If $U_1,U_2,\cdots,U_n$ are unitary matrices that represent the unitary operations on the individual systems $X_1,X_2,\cdots,X_n$, then the tensor product $U_1 \otimes U_2 \otimes \cdots \otimes U_n$ will define the combined operation on the joint system $(X_1,X_2,\cdots,X_n)$. The fact that the tensor product of unitary matrices is again a unitary matrix can be proved as follows,
+
+$$
+\begin{split}
+&\Rightarrow (U_1 \otimes U_2 \otimes \cdots \otimes U_n)(U_1 \otimes U_2 \otimes \cdots \otimes U_n)^\dagger \\
+
+&= (U_1 \otimes U_2 \otimes \cdots \otimes U_n)(U_1^\dagger \otimes U_2^\dagger \otimes \cdots \otimes U_n^\dagger) \\
+
+&= (U_1 U_1^\dagger) \otimes (U_2 U_2^\dagger) \otimes \cdots \otimes (U_n U_n^\dagger) \\
+
+&= I_1 \otimes I_2 \otimes \cdots \otimes I_n \\
+
+&= I
+
+\end{split} 
+$$
+
+In the second step we have used the fact that computing tensor product of matrices and then conjugate transposing it is equal to first conjugate transposing each of the matrices then finding the tensor product. In the third step we have used the fact that tensor product of matrices is multiplicative. Since all the $U_i$ for $1 \leq i \leq n$ are unitary matrices we got the Identity matrices as a result. Then the tensor product of these idenetity matrices is going to be a identity matrix that corresponds to the joint system $(X_1,X_2,\cdots,X_n)$.
+
+#### Doing nothing on one system
+
+One more thing we have to learn is that there might be cases when we want apply some operation on just one(or proper subset) of the systems and do nothing for other(or remaining) systems. We have already learnt about the similar case in the probabilistic operation. Here is also it is going to be the same idea. Doing nothin on the other(or remaining) systems is equivalent to applying the identity operation. We already know that the identity operation is represented by the idenetity matrix $I_X$ with row and column indeces corresponding to the classical state set of the system X.
+
+For example take an example of two qbits $(X_1,X_2)$ and we want to apply an Hadamard operation on $X_1$ and do nothing on $X_2$. This operation can be described by the following unitary matrix.
+
+$$
+\begin{split}
+H \otimes I_{X_2} &=
+\begin{pmatrix}
+\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}
+\end{pmatrix} \otimes
+\begin{pmatrix}
+1 & 0 \\ 0 & 1
+\end{pmatrix}\\
+
+&= \begin{pmatrix}
+\frac{1}{\sqrt{2}} & 0 & \frac{1}{\sqrt{2}} & 0 \\
+0 & \frac{1}{\sqrt{2}} & 0 & \frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} & 0 & -\frac{1}{\sqrt{2}} & 0 \\
+0 & \frac{1}{\sqrt{2}} & 0 & -\frac{1}{\sqrt{2}}
+\end{pmatrix}
+\end{split}
+$$
+
+Similarly we can define unitary matrix for the case where we apply hadamard operation on the system $X_2$ and do nothing on the $X_1$. This unitary operation can be described by the unitary matrix $I_{X_1} \otimes H$.
+
 
 
 ### Examples of the non independent operations
+In the previous section we have learnt about the independent operations. But not all the operations on the combined multiple systems can be represented as the tensor product of the unitary matrices, just like the fact that not all the quantum state vectors are product vectors. 
 
-#### The swap operation 
+For example consider a swap or controlled unitary operations. In thse cases the nature of the operation itself is not for the individual systems. Swap operation will always need two or more systems then one we can swap classical states of the two systems(or two subset of the systems). Similary in the case of controlled unitary operation we always need one(or subset of systems) as control systems and remaining systems as target systems. We see some of these examples below.
 
-#### The controlled unitary operations
+### The swap operation 
+
+Lets assume that two quantum systems $X_1$ and $X_2$ with the classical state set $\Sigma$. Note that having the same classical state set is necessary because we are doing the swap operation. Then the swap operation on the joint system $(X_1,X_2)$ will inter change the contents of the two systems. This operation we define as SWAP. Then the swap operation for any two calssical states $a,b \in \Sigma$ is defined as follows
+
+$$ SWAP \; |a\rangle|b\rangle  = |b\rangle|a\rangle$$
+
+We can compute the unitary matrix for the swap operation using the following equation.
+
+$$ SWAP = \sum_{c,d \in \Sigma}|c\rangle \langle d| \otimes |d\rangle \langle c|$$
+
+If you are confused about the above matrix, then don't worry its very simple. We are just computing the matrices for individual operations on the individaul systems $X_1$ and $X_2$ and then compute the tensor product of them. The term $|c\rangle \langle d|$ tells that on the first system when input is $\langle d|$ then the output is $|c\rangle$. 
+
+>**Important:** \
+> In the above definitions we are defining the input as row vector such as $\langle d$ and output as column vector such as $|c\rangle$. This is only for the purpose of computing the unitary matices. In normal cases of the unitary operations both the input and output is going to be column vector represented by the `ket` notation.
+
+The swap operation the joint system of two qbits $(X_1,X_2)$ is defined as follows.
+
+$$
+SWAP = \begin{pmatrix}
+1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1
+\end{pmatrix}
+$$
+
+### The controlled Unitary operation

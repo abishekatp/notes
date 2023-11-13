@@ -631,6 +631,11 @@ $$
 
 * In the above definitions $\langle b|$ and $\langle d|$ are inputs and $|a\rangle$ and $|c\rangle$ are their corresponding outputs. We have defined the operation as sum of output-input vector multiplication for each possible input from the the classical state sets. 
 
+
+>**Important:** \
+> In the above definitions we are defining the input as row vector such as $\langle b|$ and output as column vector such as $|a\rangle$. This is only for the purpose of computing the matices. In normal cases of the applying the operations both the input and output is going to be column vector represented by the `ket` notation.
+
+
 * The $\alpha_{ab}$(similar way we can explain the $\beta_{cd}$) is a real numbers that represent the probability of the input $\langle b|$ giving the output $|a\rangle$. For each such input the sum of probabilities should add upto 1. The good example for this is an `Ex-7` where half of the time we set the value $X_1$ to $X_2$ and another half of the time $X_2$ to $X_1$.
 
 Now the operation on the joint system $(X_1,X_2)$ is represented by the following matrix.
