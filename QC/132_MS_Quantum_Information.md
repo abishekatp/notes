@@ -662,6 +662,7 @@ $$
 We have got the result as expected. Here note that we are representing the result in the vector form and also in dirac notation. Remember that specifying full matrices and vectors won't be always possible. So sometimes we use dirac notations to simplify things. But while using dirac notation we may loose some patterns of the operations, which we might have figured out if we have used the full matrix form. So both these approaches has its own pros and cons.
 
 #### What is reversible operations?
+
 If the unitary operations are also deterministic, then we call them reversible operations. When we apply deterministic operation on some classical state it will always give the result as one of the possible calssical states. We have seen one such example in `Ex-7` in the [131_MS_Classical_Information](./131_MS_Classical_Information.md) blog. The reverse operation of the particular unitary matrix is computed by the `conjugate transpose` of the unitary matrix that represents the operation.
 
 $$
@@ -672,23 +673,31 @@ $$
 The above operation is deterministic. If you give the input number from 0 to 7 in the binary form, then this operation will add 1 to that number and find the (mod 8) of that new number. The conjugate transpose of the U is as follows.
 
 $$
+\begin{equation}\tag{Ex-11}
+\begin{split}
+
 U^\dagger = \sum_{k=0}^{7}
 | binary \; encoding\; of \; k\rangle
 \langle binary \; encoding\; of \;((k+1) \;mod \;8)| \\
 
 = \sum_{k=0}^{7} |binary \; encoding\; of \;((k-1) \;mod \;8)\rangle
 \langle binary \; encoding\; of \; k|
+
+\end{split}
+\end{equation}
 $$
 
 This opearation does the reverse or inverse of the operation done by the U.
 
 
 ### How do we represent independent operations?
+
 If the unitary operations are applied individually on the individual systems of the collective systems, then the operation on the combined system will be described by the tensor product of the unitary matrices that represent the individual operation. If you can think about it this is analogous to what we have done for the classical multiple systems.
 
 Suppose If $U_1,U_2,\cdots,U_n$ are unitary matrices that represent the unitary operations on the individual systems $X_1,X_2,\cdots,X_n$, then the tensor product $U_1 \otimes U_2 \otimes \cdots \otimes U_n$ will define the combined operation on the joint system $(X_1,X_2,\cdots,X_n)$. The fact that the tensor product of unitary matrices is again a unitary matrix can be proved as follows,
 
 $$
+\begin{equation}\tag{9}
 \begin{split}
 &\Rightarrow (U_1 \otimes U_2 \otimes \cdots \otimes U_n)(U_1 \otimes U_2 \otimes \cdots \otimes U_n)^\dagger \\
 
@@ -701,6 +710,7 @@ $$
 &= I
 
 \end{split} 
+\end{equation}
 $$
 
 In the second step we have used the fact that computing tensor product of matrices and then conjugate transposing it is equal to first conjugate transposing each of the matrices then finding the tensor product. In the third step we have used the fact that tensor product of matrices is multiplicative. Since all the $U_i$ for $1 \leq i \leq n$ are unitary matrices we got the Identity matrices as a result. Then the tensor product of these idenetity matrices is going to be a identity matrix that corresponds to the joint system $(X_1,X_2,\cdots,X_n)$.
@@ -712,7 +722,9 @@ One more thing we have to learn is that there might be cases when we want apply 
 For example take an example of two qbits $(X_1,X_2)$ and we want to apply an Hadamard operation on $X_1$ and do nothing on $X_2$. This operation can be described by the following unitary matrix.
 
 $$
+\begin{equation}\tag{Ex-12}
 \begin{split}
+
 H \otimes I_{X_2} &=
 \begin{pmatrix}
 \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
@@ -728,7 +740,9 @@ H \otimes I_{X_2} &=
 \frac{1}{\sqrt{2}} & 0 & -\frac{1}{\sqrt{2}} & 0 \\
 0 & \frac{1}{\sqrt{2}} & 0 & -\frac{1}{\sqrt{2}}
 \end{pmatrix}
+
 \end{split}
+\end{equation}
 $$
 
 Similarly we can define unitary matrix for the case where we apply hadamard operation on the system $X_2$ and do nothing on the $X_1$. This unitary operation can be described by the unitary matrix $I_{X_1} \otimes H$.
@@ -736,6 +750,7 @@ Similarly we can define unitary matrix for the case where we apply hadamard oper
 
 
 ### Examples of the non independent operations
+
 In the previous section we have learnt about the independent operations. But not all the operations on the combined multiple systems can be represented as the tensor product of the unitary matrices, just like the fact that not all the quantum state vectors are product vectors. 
 
 For example consider a swap or controlled unitary operations. In thse cases the nature of the operation itself is not for the individual systems. Swap operation will always need two or more systems then one we can swap classical states of the two systems(or two subset of the systems). Similary in the case of controlled unitary operation we always need one(or subset of systems) as control systems and remaining systems as target systems. We see some of these examples below.
@@ -758,12 +773,113 @@ If you are confused about the above matrix, then don't worry its very simple. We
 The swap operation the joint system of two qbits $(X_1,X_2)$ is defined as follows.
 
 $$
+\begin{equation}\tag{Ex-13}
 SWAP = \begin{pmatrix}
 1 & 0 & 0 & 0 \\
 0 & 0 & 1 & 0 \\
 0 & 1 & 0 & 0 \\
 0 & 0 & 0 & 1
 \end{pmatrix}
+\end{equation}
 $$
 
 ### The controlled Unitary operation
+
+Lets take an example that X is a qbit and Y is an arbitrary quantum system. We have some unitay operation that is described by the unitary matrix U. The controlled unitary operation is that when X=0 then do nothing to Y and whne X=1 then apply the unitary operation on Y. The unitary matrix for this can be computed as follows. Here $I_Y$ is the identity matrix that corresponds to the system Y.
+
+$$
+CU = |0\rangle \langle 0| \otimes I_Y + |1\rangle \langle 1| \otimes U
+$$
+
+Suppose we want to apply the controlled pauli X operation(It is the NOT operation or $\sigma_x$ operation). We have seen this pauli-X operation in `Ex-4` in the [101_SS_Quantum_Information](./101_SS_Quantum_Information.md).
+
+$$
+\begin{equation}\tag{Ex-14}
+\begin{split}
+
+CX &= |0\rangle \langle 0| \otimes I_Y + |1\rangle \langle 1| \otimes X \\
+&= 
+\begin{pmatrix} 1 \\ 0 \end{pmatrix} 
+\begin{pmatrix} 1 & 0 \end{pmatrix} \otimes 
+\begin{pmatrix} 1 & 0 \\ 0 & 1\end{pmatrix} + 
+\begin{pmatrix} 0 \\ 1 \end{pmatrix} 
+\begin{pmatrix} 0 & 1 \end{pmatrix} \otimes 
+\begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix} \\
+
+&=\begin{pmatrix} 
+1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0
+\end{pmatrix}
+
+\end{split}
+\end{equation}
+$$
+
+Another example is Contolled pauli-Z(It is phase flip or $\sigma_z$ operation) operation.
+
+$$
+\begin{equation}\tag{Ex-15}
+\begin{split}
+
+CZ &= |0\rangle \langle 0| \otimes I_Y + |1\rangle \langle 1| \otimes \begin{pmatrix}
+1 & 0 \\ 0 & -1
+\end{pmatrix} \\
+
+&=\begin{pmatrix} 
+1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\ 0 & 0 & 0 & -1
+\end{pmatrix}
+
+\end{split}
+\end{equation}
+$$
+
+
+#### Fredkin operation or Fredkin gate
+
+Now consider a three qbit systems $(X_1,X_2,X_3)$. The first system $X_1$ is a controll bit and we apply the swap operation on the remaining two systems $X_2$ and $X_3$. This operation is called Fredkin operation(or Fredkin gate) named for the Edward Fredkin. Here $I_{X_2}$ and $I_{X_3}$ are identity matrices that correspond to systems $X_2$ and $X_3$. Here the SWAP is a matrix from the example `Ex-13`.
+
+$$
+CSWAP |0cb\rangle = |0cb\rangle \\
+CSWAP |1cb\rangle = |1bc\rangle
+$$
+
+$$
+\begin{equation}\tag{Ex-16}
+\begin{split}
+
+CSWAP &= |0\rangle \langle 0|  \otimes (I_{X_2} \otimes I_{X_3}) + |1\rangle \langle 1| \otimes SWAP
+\\
+&= \begin{pmatrix}
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}
+
+\end{split}
+\end{equation}
+$$
+
+Here to understand this better try to visualize how this matrix operation may be applied on any particular quantum state vector.
+
+
+#### Toffoli operation or Toffoli gate
+
+Now we will see about the controlled-controlled NOT operation( or CCX operation). It is called Toffoli operation (or Toffoli gate) named for the Tommaso Toffoli. Suppose if we have same three qbit system $(X_1,X_2,X_3)$ as in the previous example, then first two bits $X_1$ and $X_2$ are controll bits and the controlled NOT operation is applied on the third bit $X_3$. 
+
+$$
+\begin{equation}\tag{Ex-17}
+\begin{split}
+
+CSWAP &= (|00\rangle \langle 00| + |01\rangle \langle 01| +  |10\rangle \langle 10|)  \otimes I_{X_3} + |11\rangle \langle 11| \otimes X \\
+&= \begin{pmatrix}
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0
+\end{pmatrix}
+
+\end{split}
+\end{equation}
+$$

@@ -185,7 +185,7 @@ i & 0
 $$
 
 Here `I` is a bit flip or NOT operation. becuse $I|0\rangle = |0\rangle$ and $I|1\rangle = |1\rangle$.
-$\sigma_z$ is called phase flip operation, because $\sigma_z|0\rangle = |0\rangle$ and $\sigma_z|1\rangle = -|1\rangle$.
+$\sigma_z$ is called phase flip operation, because $\sigma_z|0\rangle = |0\rangle$ and $\sigma_z|1\rangle = -|1\rangle$. Here the $\Sigma_x$, $\Sigma_y$ and $\Sigma_z$ operations are sometimes referred to as X, Y and Z.
 
 #### Hadamard Operation:
 
