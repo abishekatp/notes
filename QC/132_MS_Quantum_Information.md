@@ -491,13 +491,13 @@ $$
 \alpha_a|a\rangle
 $$
 
-The above vector doesn't always make sense because the resulting vecot won't always be a valid quantum state vector. The problem with the above equation is that in the probabilistic settings we have defined the value of $r_{ab}$ for each classical state $a \in \Sigma_1$ using the following sum,
+The above vector doesn't always make sense because the resulting vecot won't always be a valid quantum state vector. The problem with the above equation is that in the probabilistic settings we have defined the probability of $X_1$ as $r_{ab}$ for each classical state $a \in \Sigma_1$ using the following sum formula,
 
 $$
 r_a = \sum_{b \in \Sigma_2} r_{ab}
 $$
 
-If we try to construct a similar formula for in the quantum case, then we will get something like below.
+If we try to construct a similar formula for the quantum state, then we will get something like below.
 
 $$
 \alpha_a = \sum_{b \in \Sigma_2} \alpha_{ab}
@@ -511,7 +511,7 @@ $$
 \alpha_a = \sum_{b \in \Sigma_2} |\alpha_{ab}|^2
 $$
 
-We may try adding up absolute values of $\alpha_{ab}$. In fact this will give correct probability values for with each state $a \in \Sigma_1$. But when we calculate absolute values we may loose some information about the system that was represented by the complex numbers(due to the fact that we are calculating absolute values). Due to these reasons we will see more general description of quantum information which will solve these kind of problems.
+We may try adding up absolute values of $\alpha_{ab}$. In fact this will give correct probability values for each state $a \in \Sigma_1$. But when we calculate absolute values we may loose some information about the system that was represented by the complex numbers(due to the fact that we are calculating absolute values). We will see that the more general description of quantum information will solve these kind of problems.
 
 ### Partial measurement of three or more systems
 
