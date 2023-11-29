@@ -1,91 +1,116 @@
 # Classical Information(Single System)
- In this blog we are going to see about classical information about some classical system. Here by single system I mean single classical system as a separate entityt. We are not going to see about interaction betweeen multiple systems. But about the classical states of a single classical system. We will see a Bit as an individual classsical system in this blog.
 
-## What is Classical Information?
+## Classical information
 
-Before we start learning about Quantum information we have to first understand the concept of classical information. Why should we do that? We have lived in classical world for some time now. So First we will clearly define what we know about classical information. Then later we can easily take the analogies from the classical world to the quantum world.
+### What is the classical information?
 
-> Classical information is a knowledge about the state of the classical system. These states are called classical states. 
+Classical information is a knowledge about the state of the classical system. These states are called classical states. 
 
-## What is Classical Sytems and Clasical States?
+### What is the calssical system?
 
-Classical system is any system we see in our day to day life which can be in one of it's possible states. For example the fan is a classical system which is in one of the following states at any moment of time: $\Sigma$ = {HIGH, MEDIUM, LOW and OFF}. The torch light is a classical system which can be in one of the following states: $\Sigma$ = {OFF, ON}. Our digital systems(like computers, smart watches and many more) are very similar to this torch light analogy. In a digital computer the information is stored and processed in the form of Bits which can be either in a state 0 or a state 1. We use the symbol $\Sigma$ to represent the set of possible states.
+Any day to day objects you see or interact with can be considered as a classical systems for example Fan, Television, Car, etc. More complex things like Planes, Computers, Rockets can also be considered as classical system.
 
-The classical state set is the set of possible states of the classical system. The classical state can be represented by a non-empty finite set. Some systems can have infinitely many classical states but we will focus on system with finite number of classical states now. We will be mainly focussing on a Bits since we will use them represent the classical information in our digital systems.
+### What is the clasical states of the classical system?
 
-> Note that the term classical is used here to differentiate the information that can be represented by a quantum systems.
+-  Consideer a Fan as a classical system which is in one of the following states at any moment of time: $\Sigma$ = {HIGH, MEDIUM, LOW and OFF}. 
 
-## Why do we use Bits(Binary digits or {0, 1}) to represent information in computers?
+- The torch light is a classical system which can be in one of the following states: $\Sigma$ = {OFF, ON}. 
 
-When I say the word classical information the first thing that come to my mind is the name bit. The term bit is used to represent a fundamental way we define and process the classical information in computers and many other digital systems. All the numbers, charactors and everything you see or process in the computer is represented by a bit under the wood. 
+- Our digital systems(like computers, smart watches and many more) are very similar to this torch light analogy. In a digital computer the information is stored and processed in the form of Bits which can be either in a state 0 or a state 1. We use the symbol $\Sigma$ to represent the set of possible states.
 
-Why do we use binary system?\
-The digital world we see today is made up of transistors and logical gates. These components can efficiently store and process the electrical signals of HIGH and LOW voltages. So the best way we can represent them in the mathematical world is using binary numbers.
+### what is classical state set? 
 
-At any moment of time a bit can be in one of the two classical states. Either in a state 0(OFF) or in a state 1(ON).
+- The classical state set is the set of possible states of the classical system. The classical state can be represented by a non-empty finite set. Some systems can have infinitely many classical states but we will focus on system with finite number of classical states now.
 
-The good analogy for a bit is a torch light example which can be in either OFF or ON state. So the state of the torch light can be represented by a binary digit(or bit) with 0 as OFF and 1 as ON.
+> Note that the term classical is used here to specifically differentiate the information that can be represented by a quantum systems.
 
-## How can we represent state of a system mathematically?
+## Bit
+
+### What is a bit?
+
+The term bit is a short form of Binary Digit. A single bit can represent some information using two classical states $\Sigma = \{ 0 , 1 \}$.
+
+### Where we use bit?
+
+The term bit is used to represent a fundamental way we define and process the information in computers and many other digital systems. All the numbers, charactors and everything you see or process in the computer is represented by bits under the wood. 
+
+### Why do we use binary system(or bit)?
+
+All the digital devices we see today are mainly made up of transistors and logical gates. These components can efficiently store and process the electrical signals of HIGH(like 5 voltage) and LOW(like 0 voltage) voltages. So the intutive way of representing these information mathematically is using binary digits(or numbers).
+
+## State of the Classical System
+
+### How can we represent the state of the classical system mathematically?
 
 We can think of some different ways to represent classical states of a classical system. For example each state of a system can be represented by some characters like {a,b,c,...}. We may try to represent each character by numbers like {1,2,3,...}. But will these approaches be helpful for mathematically processing classical information. Not every way we think of can be a optimal or scalable answer to this problem.
 
-One good solution we have found for this problem is representing each state of the system by a vector. We can represent a vector by a single dimensional row or column matrix(which is specifically called a vector). This way of representing states seems intutive and scalable in terms of our mathematical thinking.
+One good solution we have found for this problem is representing each state of the system by a vector. A vector is a matrix with only one dimension.There are two kinds of vectors namely column vector(matrix with a single column) and row vector(matrix with a single row).
 
-First we are going see is how we can represent a classical state of a system using a column vector(another way to represent a state is a row vector). If particular system has n states then we will create a column vector of length n to represent that state. If the classical state of the system is s(i) where 1 <= i <= n, The position i of the column vector will be 1 and all the other position will contain 0. Remember that the notation s(i) means the i'th state in the classical state set.
+### What is a state vector?
 
-## What is a column vector and Dirac notation for it?
+When column or row vector is used to represent the classical state of the system then it is called state vector. More commonly we use column vector to represent the state. 
 
-We are going to introduce a notation called dirac notation to give some label to each state of the classical system for example If you take our torch light example it can be in one of two states OFF or ON. Then we will represent these to state as given below using column vector. These notations are specifically useful in clearly differentiating row and column vectors. 
+### How column vector represents the state?
+
+If particular system has n classical states then we will create a column vector of length n to represent the state of that system. The i'th state s(i) of the system will have 1 in the i'th index of the column vector and 0 in all the remaining indices where 1 <= i <= n.
+
+### Why do we need row vector then?
+
+One fundamental operation that we can apply on matrix is matrix transformation. When we discuss different properties of the classical system there will be a situation where we need to apply transformation to the column vector, during that time we will need row vector to do the computation. Also remember that the row vector is a equivalent way of representing a state of the system.
+
+### How do we differentiate row and column vector?
+
+When we label(giving some name) the row or column vector we use the dirac notation to differentiate them. 
+
+### What is a dirac notation of column vector?
+
+If you take a torch light example it can be in one of two states OFF or ON. The column vector of this system can be represented in a following way.
 
 $$ |OFF\rangle = \begin{pmatrix} 1 \\ 0\end{pmatrix} $$
 $$ |ON\rangle = \begin{pmatrix} 0 \\ 1\end{pmatrix} $$
 
+This particular notation is called `ket`. Here the **OFF** is represented by a first position of a column vector and the state **ON** is  by a second position of a vector.
 
-Here the weiredly looking label for **OFF or ON** is spelled like `ket OFF` or `ket ON` respectively. This is a part of Dirac notation. Here **OFF** is represented by a first position of a vector and ON is represented by a second position of a vector. This will give us direct analogy for representing binary system using similar notations.
-
-## What is a row vector and Dirac notation for it?
-
-Soon we will use the row vectors also to represent a state in some scenarios. We will use another part of Dirac notation for that. The given below another weiredly looking label for **OFF or ON** is spelled like `bra OFF` or `bra ON` respectively. 
+### What is a dirac notation of a row vector?
+ 
+The state of the same torch light example can be represented by a row vector in a following way. This notation is called `bra`.
 
 $$ \langle OFF| = \begin{pmatrix} 0 & 1\end{pmatrix} $$
 $$ \langle ON| = \begin{pmatrix} 1 & 0\end{pmatrix} $$
 
-Similary we define a state of binary sytem using simlar notations. Here state OFF of system corresponds to a binary state 0 and ON coresponds to a state 1. I am only giving examples of column vectors here. This way of representing a state is called deterministic state. Where there can only two possible state with definite answer for a binary system.
 
-The give below two vectors are called the standar basis vectors for the any system with two classical states. Using these two vectors we can represent any deterministic or probabilistic state of the such systems. We can write any other vector with the same dimension as linear combination of these two vectors. Similarly for the classical state set of n dimensions we can define the set of n vectors as the standard basis vectors.
+### How do we represent a bit using dirac notation?
+
+The following column vectors are used to represent a bit. the first index of the column vector corresponds to state 0 and secons corresponds to state 1.
 
 $$ |0\rangle = \begin{pmatrix} 1 \\ 0\end{pmatrix} $$
 $$ |1\rangle = \begin{pmatrix} 0 \\ 1\end{pmatrix} $$
 
-### what does the combination of the `bra` and `ket` dirac notations represent?
+These two states are called deterministic states of the binary system. These two state vectors are specifically called standard basis vectors of dimension 2. 
 
-Together when we join them together they will form a word `braket`. The following way of notation is called an inner product of states ON(represented as row vector) and OFF(represented as column vector). This operation will give you scalar value as a result(That's what you will expect when you are mulplying row vector with a column vector). 
+### What is a deterministic state?
 
-$$ \langle ON||OFF\rangle$$
+When a state vector has a value 1 in exactly one position of the vector and 0 in all the remaining positions then it is called a deterministic state. If a state vector of the system is deterministic, then it will define the classical state of the system either as 0 or 1(in case of binary system) without any ambiguity.
 
-or simply
+There is also a different kind of state vector called probabilistic state vector.
 
-$$ 
-\langle ON|OFF\rangle = 
-\begin{pmatrix} 0 & 1\end{pmatrix} \begin{pmatrix} 1 \\ 0\end{pmatrix} = 0 
-$$
+### What is a probabilistic state vector or probability vector?
 
-Another combination can be `ketbra` notation(This name may be made up by me). where we multiply a column vector by a row vector. This way when we multiply two states in the binary system we will get a two dimensional matrix representing some connection between these two states.
+In the probability vector, entries of the vector will be a real numbers with a constraint that the sum of the entries should add up to 1.
 
-$$ 
-|ON\rangle \langle OFF| = 
-\begin{pmatrix} 1 \\ 0\end{pmatrix} 
-\begin{pmatrix} 0 & 1\end{pmatrix} = 
-\begin{pmatrix} 0 & 1\\ 0 & 0\end{pmatrix}
-$$
+### Why the sum of the entries of the probability should be 1?
 
-If you notice here the resultant matrix has 1 at the `row= 1 and column = 2`. It represents that column vector contains 1 at the row 1 and row vector contains 1 at the column 2. We will explore this logic further in the matrix operations section of this blog. 
+In a probability vector each entry of the vector corresponds to a probability associated with the state that corresponds to that particular entry(or index) of the vector. So to satisfy the condition that the total probability of the system should be 1, the sum should be 1.
+
+### Why the vectors $|0\rangle$ and $|1\rangle$ are called standard basis vectors?
+
+Using these two vectors $|0\rangle$ and $|1\rangle$ we can represent any deterministic or probabilistic state of the classical systems. The above is true because we can write any other vector of dimension two as a linear combination of these two vectors. This idea can be generalized to any classical system with n classical states.
 
 
 
+## Probability vector
 
-## Where does the probabilty come into the picture of classical world?
+### Why do we need a probability vector?
 
 We don't always know the current state of the clssical system for sure. Sometime the state of the classical system can be unknown. If your friend is holding a torch light inside a room. You won't know the state of the torch light untill you go and see inside the room. Untill then the probabilty of torch being ON will be 1/2 and being OFF can be 1/2. Then you can represent the state of the torch light using following column vector. 
 
