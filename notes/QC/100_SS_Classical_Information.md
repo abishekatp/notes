@@ -1,6 +1,4 @@
-# Classical Information(Single System)
-
-## Classical information
+# Classical Information(Single system)
 
 ### What is the classical information?
 
@@ -8,31 +6,48 @@ Classical information is a knowledge about the state of the classical system. Th
 
 ### What is the calssical system?
 
-Any day to day objects you see or interact with can be considered as a classical systems for example Fan, Television, Car, etc. More complex things like Planes, Computers, Rockets can also be considered as classical system.
+Any day to day objects you see or interact with can be considered as a classical systems.
 
-### What is the clasical states of the classical system?
+- For example fans, torch lights, elevators and etc can be considered as classical systems. Usually these are all simple systems with small set of possible classical states. 
 
--  Consideer a Fan as a classical system which is in one of the following states at any moment of time: $\Sigma$ = {HIGH, MEDIUM, LOW and OFF}. 
+- The things like cars, planes, computers and rockets can also be considered as classical system. These are all complex systems with wide range of classical states. More complex systems like these can be easily represented using multiple systems. 
 
-- The torch light is a classical system which can be in one of the following states: $\Sigma$ = {OFF, ON}. 
+### What is the clasical state?
 
-- Our digital systems(like computers, smart watches and many more) are very similar to this torch light analogy. In a digital computer the information is stored and processed in the form of Bits which can be either in a state 0 or a state 1. We use the symbol $\Sigma$ to represent the set of possible states.
+Any classical system will be in one of the possible classicle states at any moment of time.
+
+-  Consideer a fan as a classical system which is in one of the following states at any moment of time: {HIGH, MEDIUM, LOW and OFF}. 
+
+- The torch light is a classical system which can be in one of the following states: {OFF, ON}. 
+
+- A bit is a classical system which can be eithe in state 0 or state 1. The complex modern digital systems like computers are made up of millions of these bits. We will see more about this later when we ask the question of how we can combine multiple simple systems together to form a complex system.
 
 ### what is classical state set? 
 
-- The classical state set is the set of possible states of the classical system. The classical state can be represented by a non-empty finite set. Some systems can have infinitely many classical states but we will focus on system with finite number of classical states now.
+- The set of all possible states of the classical system is called classical state set. This set should be a non-empty finite set. Some systems can have infinitely many classical states but we will focus on system with finite number of classical states now. We use the symbol $\Sigma$ to represent the set of possible states. The classical state set of torch light is as follows.
+
+$$\Sigma = \{OFF, ON \}$$
 
 > Note that the term classical is used here to specifically differentiate the information that can be represented by a quantum systems.
+
+### What is a single system?
+ In general there is no strict line between single system and multiple systems. We can consider a car as a single system which can be in one of the some possible states {ON, OFF, MOVING FRONT, MOVING BACK, etc...}. At the same time we can consider a car as a multiple systems that is combination of many small single systems such that breaking system, clutch system, accelerator system and etc...
+
+ - So the system is single or multiple can be defined as per our needs.
+
+ - Usually we consider a simple system like a Bit as a single systems and complex systems such as the complex information stored and processed in our computers as a combination of these single systems which is called multiple systems.
+
+ - Remember that at any moment of time we can think of some multiple systems as a single system and use the same ideas we discuss in a single system also in a multiple systems case. We will dicuss about this further in multiple systems case.
 
 ## Bit
 
 ### What is a bit?
 
-The term bit is a short form of Binary Digit. A single bit can represent some information using two classical states $\Sigma = \{ 0 , 1 \}$.
+The term bit is a short term for Binary Digit. A single bit can represent some information using two classical states $\Sigma = \{ 0 , 1 \}$.
 
 ### Where we use bit?
 
-The term bit is used to represent a fundamental way we define and process the information in computers and many other digital systems. All the numbers, charactors and everything you see or process in the computer is represented by bits under the wood. 
+The bit is used to represent and process the information in digital computers and many other digital systems. All the numbers, charactors that are stored and processed by computers are represented by bits under the wood. 
 
 ### Why do we use binary system(or bit)?
 
@@ -94,25 +109,34 @@ When a state vector has a value 1 in exactly one position of the vector and 0 in
 
 There is also a different kind of state vector called probabilistic state vector.
 
+### Why the vectors $|0\rangle$ and $|1\rangle$ are called standard basis vectors?
+
+Using these two vectors $|0\rangle$ and $|1\rangle$ we can represent any deterministic or probabilistic state of the classical systems. The above is true because we can write any other vector of dimension two as a linear combination of these two vectors. This idea can be generalized to any classical system with n classical states.
+
+> Note that the set of vectors that form a standard basis is called standard basis set.
+
+
+## Probability vector
+
 ### What is a probabilistic state vector or probability vector?
 
 In the probability vector, entries of the vector will be a real numbers with a constraint that the sum of the entries should add up to 1.
+
+> **Note:** \
+One important thing about representing a probabilistic state by a column vector is: 
+> * All the entries of the column vector should contain non-negative real numbers
+> * when the sum of entries in the column vector should be 1. This is because the total probability of a system can be at most one. 
+>
+>If the particular vector obeys the above rules then we call that as probability vector.
+
 
 ### Why the sum of the entries of the probability should be 1?
 
 In a probability vector each entry of the vector corresponds to a probability associated with the state that corresponds to that particular entry(or index) of the vector. So to satisfy the condition that the total probability of the system should be 1, the sum should be 1.
 
-### Why the vectors $|0\rangle$ and $|1\rangle$ are called standard basis vectors?
-
-Using these two vectors $|0\rangle$ and $|1\rangle$ we can represent any deterministic or probabilistic state of the classical systems. The above is true because we can write any other vector of dimension two as a linear combination of these two vectors. This idea can be generalized to any classical system with n classical states.
-
-
-
-## Probability vector
-
 ### Why do we need a probability vector?
 
-We don't always know the current state of the clssical system for sure. Sometime the state of the classical system can be unknown. If your friend is holding a torch light inside a room. You won't know the state of the torch light untill you go and see inside the room. Untill then the probabilty of torch being ON will be 1/2 and being OFF can be 1/2. Then you can represent the state of the torch light using following column vector. 
+We don't always know the current state of the clssical system for sure. There can be some uncertainty. Sometime the state of the classical system can be unknown. For example if your friend is holding a torch light inside a room, then You won't know the state of the torch light untill you go and see inside the room. Untill then we can assign some probability to each state of the claassical system.
 
 $$ 
 |state\rangle = 
@@ -121,43 +145,40 @@ $$
 \frac{1}{2} |ON\rangle
 $$
 
-This is because we don't always know the state of some classical system with confident. We can represent these uncertainty using a probabilistic vectors. Here we associate some probability for system being in each of the classical state. For example in the above state 
+Here we associated some probability for each possible state of the classical system.
 
 $$ 
 Pr(light=OFF)= \frac{1}{2} \;\; and \;\;  
 Pr(light=ON) = \frac{1}{2} 
 $$
 
-Here you can also see that some probabilistic state of the classical system is represented by a linear combination of column vectors from the standard basis set. This is what I was trying to explain about standard basis vectors previously.
+Here the probability vector $|state\rangle$ is written as linear combination of deterministic state vectors $|ON\rangle$ and $|OFF\rangle$ from standard basis set. 
 
 This way of thinking is very useful, because in real world there can be hardware or environmental condition which will change the state of the system with some probability. For example take a same example as your friend holding torch light inside room. But now you know some extra information that today there is power shortage in that area and it is dark outside. Now the probability of torch light being ON will be increased.
 
-The similar kind of thing can happen in our computers also. So when we represent a classical information using state $ |state\rangle $ it can have some higer probability of being 0 than 1 or vice versa. When we introduce probabilic state into our classical information we can easily handle these kind of situations.
+The similar kind of thing can happen in our computers also. So when we represent a classical information using state $ |state\rangle $ it can have some higer probability of being 0 than 1 or vice versa. When we introduce probabilistic state into our classical information we can easily handle these kind of situations.
 
-> **Note: Probability Vector** \
-One important thing about representing a probabilistic state by a column vector is: 
-> * All the entries of the column vector should contain non-negative real numbers
-> * when the sum of entries in the column vector should be 1. This is because the total probability of a system can be at most one. 
->
->If the particular vector obeys the above rules then we call that as probability vector.
-
-
-
-## What do we mean by measuring the state of a classical single system?
+### What do we mean by measuring the state of the classical single system?
 
 In previous section we have seen that we don't know the actual state of a torch light until we go inside room and see it's status. This action of checking the state of a system is called measuring the state of the system formally. Untill we mesure the state of the system, the state can be represented by some probabilistic vector based on our knowledge about the system.
 
-As soon as we go and measure the state of the system the state will go from a probabilistic state to one of the possible deterministic states. As soon as we go inside the room and check the torch light, it will be either **OFF or ON**.
+As soon as we go and measure the state of the system the state will go from a probabilistic state to one of the possible deterministic states. Similar to our analogy of as soon as we go inside the room and check the torch light, it will be either **OFF or ON**.
 
-## What is matrix operation on classical system and why do we use it?
+## Operations on single systems
+
+### what is an operation on a single system?
 
 So we have seen what is classical information and we can represent them either as deterministic vector or probabilistic vector. We also discussed that the state of the system might change over time. How can the state of the system will change. It might be because of the reason that someone interacted with the system.
 
 In our torch light example it might be you friend who is switching OFF or ON the torch light. This particular interaction with a system can be represented by a mathematical operations formally. There can be two kind of operations namely deterministic operation or probabilistic operation. We will see them one by one now.
 
-Before we get into that we have to understand that another way of representing operation mathematically is using funcions. Functions will take some input and apply some operations on the input and produce an output. Here we are going to represent these operations using two dimensional matrices. 
+### How can we represent this operation mathemtically?
 
-When we multiply some matrix with a particular state vector it is kind of applying some logic on each individual elements of a vector based on some mathematical function. So in a broad thinking these matrices are representing some operation of a particular function.
+Before we get into that we have to understand that another way of representing operation mathematically is using funcions. Functions will take some input and apply some operations on the input and produce an output. The operation that is computed by a function can be represented by a matrices. 
+
+- For example the operation on a system with two classical states can be represented by a two dimensional square matrix.
+
+When we multiply a matrix with a particular state vector it is kind of applying some logic on each individual elements of a vector based on some mathematical function.
 
 ### What is deterministic operation?
 
@@ -182,14 +203,13 @@ $$
 
 Here $ NOT|0\rangle $ is matrix multiplication NOT applied on a column vector for state 0 of a binary system.
 
-#### How can we compute some matrix M that is equivalent of applying function f?
+### How can we compute some matrix M that is equivalent of applying function f?
 
 We have seen that the matrices in the matrix operation represent some mathematical function applied on some classical state. How can we find this matrix when we know the kind of function we want to apply. $ |f(a)\rangle$ is a function applied to some vector a, where the fucntion is `f:Σ->Σ`.
 
-We have seen about `ketbra` operation in dirac notation section. When we know what is the output for each input, then we can apply the `ketbra` opertion for each of these output(as column vector) and input(as a row vector) vectors. After that if we sum all the resultant 2 dimensional matrices we will get a matrix M that represent the input output relationship that we need.
+When we know what is the output for each input, then we can do the matrix multiplication of each of the output(as column vector) and input(as a row vector) vectors. After that if we sum all the resulting n dimensional square matrices we will get a matrix M that represent the input output relationship, where n is the number of classical state of the system.
 
 $$ M = \sum_{a ∈ \Sigma} |f(a)\rangle \langle a|$$
-
 
 For example the following equations compute the matrix for NOT operation on the torch light that we have discussed previously. Here $\Sigma$ = {OFF, ON} or you can think of equivalent binary operation. Our function will be f(ON) = OFF and f(OFF) = ON.
 
@@ -211,7 +231,7 @@ So to make this idea simple we will say the torch light is represented by two cl
 $$ |LOW\rangle = \begin{pmatrix} 1 \\ 0\end{pmatrix} $$
 $$ |HIGH\rangle = \begin{pmatrix} 0 \\ 1\end{pmatrix} $$
 
-> Don't think about the relationships between $\Sigma$ and $\Sigma 1$. We will see about their relationship and how we can represent them together in a blog about multiple systems. As of now consider $\Sigma$ and $\Sigma 1$ are two separate individual classical systems.
+> Don't think about the relationships between $\Sigma$ and $\Sigma 1$. We will see about their relationship and how we can represent them together in a blog about multiple systems. As of now consider $\Sigma$ and $\Sigma 1$ are two individual classical single systems.
 
 When probability of darkness is larger, then the probability of state HIGH will be higher. For example $ Pr(HIGH) = \frac{3}{4} $ and $ Pr(LOW) = \frac{1}{4} $.
 
@@ -220,13 +240,15 @@ So now the current classical state is LOW means it is flipped to the state HIGH 
 $$ \begin{pmatrix} 3/4 & 1 \\ 1/4 & 0 \end{pmatrix} $$
 
 > **Note: Stochastic Matrix**\
-Similar rules as we discussed in the probabilistic vector applies to probabilistic operations also. 
+The similar rules that we discussed for the probabilistic vector will also apply for the probabilistic operationss. 
 > * The sum of values in each column of the matrix should add up to 1. 
 > * Each entry of the matrix should be non-negative real numbers.
 >
->`Stochastic matrix`: This probability matrix that obeys the above mentioned rules is called stochastic matrix. These matrices will always map the probability vector to another probability vector as an output.
+>`Stochastic matrix`: This probability matrix that obeys the above mentioned rules is called stochastic matrix. These matrices will always represent a operation that maps the input probability vector to another probability vector as an output.
 
-Another way of thinking about these probability matris is such that they are multiple determinist matrix operation each appliede with some probability. So we can always represent the probabilist operation as a linear combination of deterministic operation with some probability associated with each deterministic operation. For example the previous probabilistic operation can be written as linear combination of following deterministic operations.
+### is there some relationship between deterministic and probabilistic operations?
+
+Another way of thinking about these probability matris is such that they are multiple deterministic matrix operations each applied with some probability. So we can always represent the probabilist operation as a linear combination of deterministic operation with some probability associated with each deterministic operation. For example the previous probabilistic operation can be written as linear combination of following deterministic operations.
 
 $$ 
 \begin{pmatrix} 3/4 & 1 \\ 1/4 & 0 \end{pmatrix} =  
@@ -237,28 +259,33 @@ $$
 
 ### composition of matrix operations(Matrix Associative property)
 
-All the properties of matrix multiplication is valid here. Assume that $M_1$ and $M_2$ are the matrix operations applied on some state vector. The fact that matrix multiplication is associative and but not cummutative results in following equivalities and inequivalities.
+All the properties of matrix multiplication is valid for the stochastic matrices also. Assume that $M_1$ and $M_2$ are the matrix operations applied on some state vector. The fact that matrix multiplication is associative and but not cummutative results in following equivalities and inequivalities.
 
 $$ (M_1 M_2)a = M_1 (M_2a)$$
 
-because matrix multiplication is associative. So first applying $M_2$ opeation then applying $M_1$ operation is same as applying the result matrix matrix multiplication $M_1 M_2$ to the state a.
+The above is because matrix multiplication is associative. So first applying $M_2$ opeation then applying $M_1$ operation is same as applying the result of the matrix matrix multiplication $M_1 M_2$ to the state a.
+
+since the matrix multiplication is not cummutative the following equation is true.
 
 $$ (M_1 M_2)a \neq (M_2 M_1)a$$
-
-because matrix multiplication is not cummutative.
 
 
 ## Notes
 
 ### What is Orthonormal Basis & Standard Basis?
 
-A subset {v1, v2,...,v(k)} of the Vector Space V with a inner product <,> is callled orthonormal if < v(i), v(j) > = 0 for any i!=j and 1<= i,j <= k. This means the vectors in the subset are mutually perpendicular to each other and each vector has length 1 ( means < v(i), v(i) > = 1).
+A subset {v1, v2,...,v(k)} of the vector space V is callled orthonormal if $\langle v(i), v(j) \rangle = 0$ for any i!=j and $1 \leq i, j \leq k$. This means the vectors in the subset are mutually perpendicular to each other and each vector has length 1 ( means $\langle v(i), v(i) \rangle = 1$).
 
-An onthonormal set should contain only linearly independent vectors so that it can be a vector basis for a vector space it spans. Such a basis is called orthonormal basis. 
+An onthonormal set should contain only linearly independent vectors so that it can be a basis for a vector space it spans. Such a basis is called orthonormal basis. 
 
-Here linearly independent means no linear combination of vectors v(j)'s in the basis should form another vector v(i) in the same basis set where i!=j. The vector basis spans a vector space means we can represent any vector in the vector space as a linear combination of vectors in the basis set.
+### What does linearly independent means?
 
-Common example of a orthonormal basis is for standard basis e(i) for the Eucliden Vector Space(**R**^n) where e(i) is the vector with 1 at the i'th position and 0 in the all other positions. Here n is the dimension of the vector space and i = 1,2,...,n. Here the notation **R** tries to explain that each vector in this vector space is a n-tuple of real numbers.
+Here linearly independent means no linear combination of vectors v(j) in the basis should form another vector v(i) in the same basis set, where $i \neq j$. The vector basis spans a vector space means we can represent any other vector in the vector space as a linear combination of vectors in the basis set.
 
-**Standard Basis**: Standard basis is a special case of Orthonormal basis where each vector in the basis has 1 in exactly one position and 0 in all other positions.
+Common example of a orthonormal basis is for standard basis e(i) for the Eucliden Vector Space(**$R^n$**) where e(i) is the vector with 1 at the i'th position and 0 in the all other positions. Here n is the dimension of the vector space and i = 1, 2,...,n. Here the notation **$R^n$** tries to explain that each vector in this vector space is a n-tuple of real numbers. We will learn more about this topic in future blogs.
+
+**Standard Basis**: Standard basis is a special case of Orthonormal basis where each vector in the basis has 1 in exactly one position and 0 in all other positions. The example of a standard basis of two dimension vector space is given below.
+
+$$ |0\rangle = \begin{pmatrix} 1 \\ 0\end{pmatrix} $$
+$$ |1\rangle = \begin{pmatrix} 0 \\ 1\end{pmatrix} $$
 
