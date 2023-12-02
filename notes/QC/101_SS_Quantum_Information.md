@@ -1,20 +1,39 @@
 # Quantum Information(Single System)
-In this blog we are going to explore about the Quantum Information. This is about how can we mathematically define and compute the quantum states of the single quantum system. Similary to Clssical Information which we have seen in the previous blog we are going to focus on a single quantum system in isolation. We will see how the quantum states can be represented by qbit and How can we apply some operations on that qbit. Similar to as we have seen the Bit as an individual classical system, we will see a Qbit as an individual quantum system.
+In this blog we are going to explore about the Quantum Information.
 
-> **Important: Here after in most of the places wherever it is possible, We will directly use Dirac notations for all the mathematical operations instead of explicitly doing things with the matrices.**
+### What is Quantom Information and Quantum System?
+
+So If we use the rules of classical physics to describe and process the information, then that is classical information. If we use the rules of quantum physics to describe and process the information, then we call that quantum information. If some system can be in some quantum state, then we need quantum information to represent that system mathematically and then that system is called quantum system(e.g electrons, photons, atoms etc.).
+
+### What is a quantum state?
+
+So when we analyse the quantum system we will see that, Not only the quantum systems can be in one of the possible classical states but also in quantum state. Quantum mechanics allows quantum system to be in multiple states at the same time. This property of the quantum system is called qunatum superposition. This particular property of the quantum system is one of the reasons why quantum computer are expected to be more efficient than classical computers(There are some other properties like entanglement and interference). So this means we can't use just use ideas from classical systems to represent this quantum state. Since quantum systems can be in multiple states at the same time, there is some probability value associated with each state of the quantum system.
+
+### We might think can't we use probabilistics computation model to represent these quantum systems?
+
+Though the quantum mechanics indirectly associates the probability to each state of the quantum system, We can't use the probabilistic computation model for quantum systems. Remember that probabilistic systems associates some probability(possitive real number between 0 and 1) with each classical state of the system. Since the probability associated with each state of the system can be only a possitive real number, they should add upto 1 to be a valid probabilistic system. But properties of quantum system allows us to associate some complex number amplitude with each state of the quantum system. That's why we can use the probabilistic computation model.
+
+### Why does the quantum system allow complex number amplitude?
+
+The quantum systems can be in multiple states at the same time does not means that it directly associates probability with each state of the quantum system. Rather it associates some complex number amplitude with each state of the system. Upon measuring the quantum systems these amplitude values represent the probability associated with each state of the system. We will soon see that we can use the absolute values of these complex number to find the probability associated with each state of the system. 
+
+The physical properties of quantum system such as interference allows these multiple possible quantum states to interfere with each other to add-up or cancel-out each other. If amplitudes corresponds to particular state adds-up, then the probability associated with that state will increase and conversly if amplitudes cancel-out each other then the probability value reduces. Because of this reason we can't directly use the possitive real number but complex numbers to represent these amplitude values. 
+
+> Side Note:\
+> If you are someone who remember about the double slit experiement from high school, then you can understand this interference better. In double slit experiement we send light(photons) through two very closly seperated slits. in the other side of the slits we have some screen kind of setting which can measure the photons. We will see dark and bright patterns of light due to interference of photons. The dark spots corresponds to negative interference and bright spots correspond to possitive interference. This double slit experiement will also show the superposition property of the photons. Even if you sent one photon at a time, this interference pattern will show up. This means each photon interfere with itself due to the superposition property. When only single slit is open this pattern emerge beacause there is only single path for photon to follow, but when two slits are open, that allows photon to travel in both path simultaneously and create interference with itself.(These interference properties are due to the wave nature of these photons. Quantum systems like photonos, electors sometimes act like wave and sometimes act like particles. This is called dual-nature of the system).
 
 
-## What is Quantom Information?
+### What is a qbit?
 
-In a Similar way as how we represent the classical information of digital systems using a Bit, The quantum information is represented by using a qbit in the quantum systems(such as quantum computers). The quantum information means the state of a quantum system(for e.g Qbit) at any moment of time.
+We know that a bit is a most common way of describing and processing the information about the classical system state mathematically. Similarly qbit is a common way of describing and processing the information about some quantum system(such as quantum computers). Here the quantum information means the state of a quantum system at any moment of time.
 
-**Qbit**: Similar to the bit the qbit is also having finite and non-emtpy set of classical states {0, 1}. Apart from this qbit can also be in one of the many quantum states. In the next section we will see some of the possible states that qbit can be.
+Similar to the bit the qbit is also having finite and non-emtpy set of classical states {0, 1}. Apart from this qbit can also be in one of the many quantum states.
 
-## How do we represent a qbit?
+### How do we represent a qbit mathematically?
 
-Similar to the classical bit we will represent a qbit also using a column vector. But unlike deterministic or probabilistic states, the qunatum state vector can have a complex number entries also. (Note that since we allow complex numbers in the quantum state vector, it can also have negative real number in the entries. This won't be problem because of the way we compute the probability associated with the quantum state vector using absolute values).
+Similar to the classical bit we will represent a qbit also using a column vector. But unlike deterministic or probabilistic states, the qunatum state vector can have a complex number entries. (Note that since we allow complex numbers in the quantum state vector, it can also have negative real number in the entries. This won't be problem because of the way we compute the probability associated with the quantum state vector using absolute values).
 
-* Just making this small change in the state vector is enough to bring us from a classical world to a quantum world. In the following way we can reresent a state of the any quantum system in general.
+* Just making this small change in the state vector is enough to bring us from a classical world to a quantum world. In general the following way can be used reresent a state of any quantum system.
 
 $$ 
 \begin{equation}\tag{Ex-1}
@@ -24,7 +43,7 @@ v = \begin{pmatrix}
 \end{equation}
 $$
 
-The quantun system will have n possible classical states. Other than that it can be in any one of the many possible quantum states. But there are some condition which should be satified by a column vector to be a valid quantum state vector.
+* Still the quantun system will have n possible classical states. Other than that it can be in any one of the many possible quantum states. Keep in mind that there are some condition which should be satified by a column vector to be a valid quantum state vector.
 
 
 $$ 
@@ -36,16 +55,12 @@ $$
 > **Rules: quantum state vector** \
 >Two important rules about quantum states vector is that 
 > * The entries should be a complex number. 
-> * Euclidean norm of the quantum state vector should be 1(Or we can say the sum of absolute values squared of each entry of quantum state vector should be equal to 1. Remember that the Euclidean norm just applies square root operation on top of it). We use the notation `||a||` to represent Euclidean norm of the vector $|a\rangle$.
+> * Euclidean norm of the quantum state vector should be 1(Or we can say the sum of absolute values squared of each entry of quantum state vector should be equal to 1. Remember that the Euclidean norm just applies square root operation on top of it). We use the notation `||a||` to represent Euclidean norm of the vector $|a\rangle$. To learn about Euclidean norm see the notes section.
 >
 > This vector with the above mentioned properties is called the Unit vector.
 
 
-
-In the given below examples `Ex-2`, we have quantum state vectors with n=2(which means there are two possible classical states for that quantum system). The first two listed are the two possible classical states which we can also consider a quantum state(This due to the fact that their entries imaginary parts are just happened to be 0). 
-
-> **Note: superposition or linear combination**\
->Remember that still these two vectors are the standard basis for quantum state vectors also. So this means any quantum state can be written as linear combination of the two standard basis vectors. This linear combination is called 'superposition' in quantum world. That means any quantum state can be written as the superposition of vectors from the standard basis(which usually is the standard basis)
+In the given below `Ex-2`, we have quantum state vectors with n=2(which means there are two possible classical states for that quantum system). The first two listed are the two possible classical states which we can also consider a quantum state(This is simply because their entries happen to have complex numbers with imaginary part 0). 
 
 The two vectors $|+\rangle$ and $|-\rangle$ are some of the commonly used quantum states. The vector $|\psi\rangle$ is just a random quantum state which doesn't have any special meaning. We will use the symbol $\psi$ for representing any arbitrary quantum state.
 
@@ -67,7 +82,9 @@ $$
 |\psi\rangle = \begin{pmatrix} \frac{1+2i}{3} \\ \frac{2}{3} \end{pmatrix}
 $$
 
-The $|+\rangle$ and $|-\rangle$ are special in the way that when we find the absolute value of each entry of the these vector both will give equal probabilities for classical states $|0\rangle$ and $|1\rangle$. The following eqution reprsents this equal probability of classical states in a more systematic way using a dirac notation to represent a $|+\rangle$ state.
+
+### What is special about $|+\rangle$ and $|-\rangle$?
+The $|+\rangle$ and $|-\rangle$ are special in the way that If we find the absolute value of each entry of the these vector, then both will give equal probabilities for being a classical state $|0\rangle$ and $|1\rangle$. The following eqution reprsents the measurement of classical states with equal probability in a more formal way using a dirac notation to represent a $|+\rangle$ state.
 
 $$
 |+\rangle = 
@@ -79,11 +96,13 @@ $$
 \frac{1}{\sqrt{2}}|1\rangle
 $$
 
+### How can we describe the superposition using quantum state vector?
 
-In the above equations we are writing a quantum state as a linear combination of basis vectors. (note: As we discussed in quantum systems linear combination and superpositon are synonymous to each other). Also if you notice both these states only differ by a sign of a imaginary part. We will use some kind of operations to differentiate these two vectors. We will see more about operation on quantum system in upcoming sections.
+Remember that still the two vectors $|0\rangle$ and $|1\rangle$ are the standard basis for quantum state vectors also. So this means any quantum state can be written as a linear combination of the two standard basis vectors. This linear combination is called 'superposition' in quantum world. That means any quantum state can be written as the superposition(or linear combination) of vectors from the basis set(which usually is the standard basis).
 
+In the above equations we are writing a quantum states $|+\rangle$ and $|-\rangle$ as a linear combination of basis vectors. Also if you notice that both these states only differ by a sign of a imaginary part(or can say that only differ by phase not by the amplitude). There is a way to differentiate these two quantum states using some operations. We will see more about operation on quantum system in upcoming sections.
 
-> Notice that for all the five of these quantum states have a Eucliean norm of 1(then only we can say that it is a valid quantum state).
+> Notice that all the five of these quantum states have a Euclidean norm of 1(then only we can say that it is a valid quantum state).
 > $$|| |0\rangle || = || |1\rangle || = || |+\rangle || = || |-\rangle || = || |\psi\rangle || = 1$$
 >I will just show for one quantum state how we can compute the Euclidean norm.
 >$$ || |\psi\rangle || = 
@@ -92,19 +111,30 @@ In the above equations we are writing a quantum state as a linear combination of
     \left| \frac{2}{3} \right|^2
 } = 1 $$
 
-### What is the difference between Quantum State and Probabilistic State?
+### How can we get the probability associated with each classical state of the system?
 
-Remember that the absolute value of particular entry of a quantum state vector is a probability of getting the classical state which corresponds to the position of that particular entry. For example in a $|+\rangle $ state we can define the probability for each standard basis vectos: $Pr(result = |1\rangle) = \frac{1}{2}$ and $Pr(result = |0\rangle) = \frac{1}{2}$. 
+We already know that the absolute value of particular entry of a quantum state vector is a probability of getting the classical state which corresponds to the position of that particular entry. For example lets take the $|+\rangle$ or $|-\rangle$ state, we can calculate the probability associated with each of the classical states for both of these states as follows.
 
-If each entry of the quantum state associates some probability value to some classical state, then why do we need a quantum state vector? we can just use the probabilistic state vector to represent a quantum state right? We will soon see that the operations that we can apply on quantum states is not same as that we can apply on probabilistic states.
+$$
+Probability\ of\ being\ |1\rangle 
+= \left| \frac{1}{\sqrt{2}} \right|^2 
+= \left| -\frac{1}{\sqrt{2}} \right|^2
+= \frac{1}{2} \\
 
-You might have already noticed that quantum state vector can also have negative real number as a entry. This is because negative real number is also a valid complex number with imaginary part set to 0. These differences will create new possibilities of the operations that we can apply on the quantum systems(both theoretically and practically).(note: by practically I mean using qunatum physics as the base we can develop circuits which can physically represent these quantum operations similart to AND, OR, and NOT gates in classical world)
+Probability\ of\ being\ |0\rangle 
+= \left| \frac{1}{\sqrt{2}} \right|^2
+= \frac{1}{2}
+$$ 
 
-### Can we represent quantum state vector for system with more than two states
+As we have previously explained both these states has same probability associated with classical states. When we measure these states we get the results $|0\rangle$
 
-In the classical information blog we have seen that we can represent not only a binary system but any classical system can be modeled as a state vector. Similar idealogy works for quantum system. We can represent any system by a quantum state vector. 
+>where the absolute value of complex number is $|a+bi| = \sqrt{a^2 + b^2} $
 
-But we can't say all of these representation will make some practical sense. For example the fan is having a classical states set:  Σ = {HIGH, MEDIUM, LOW, OFF}. The quantum state of the fan can be represented as follow(even though quantum state is not used for this):
+### How can we represent quantum state vector for system with more than two states
+
+In the classical information blog we have seen that we can represent not only a binary system but also any classical system can be represented by a state vector. Similar idea works for quantum system. We can represent a system with any number of classical states using a quantum state vector. 
+
+But we can't say all of these representation will make some practical sense. Just for an example, assume that the fan is having a classical states set:  Σ = {HIGH, MEDIUM, LOW, OFF}. The quantum state of the fan can be represented as follow(even though associating quantum state with fan doesn't make any sense):
 
 $$ 
 \begin{equation}\tag{Ex-3}
@@ -116,20 +146,20 @@ $$
 \end{equation}
 $$
 
-Here we have represented system with four classical states. We do this to make a point that we can represent a system with any number of classical states as a quantum state vector(in fact we can do that in classical state vector also).
+Here we have represented system with four classical states. We do this to make a point that we can represent a system with any number of classical states as a quantum state vector(in fact we can do that for classical state vector also).
 
 One more thing that we can notice here is when we reprsent a system with more classical states the vector representation becomes clumsy. That's the reason we have to appriciate the Dirac notation. Dirac notation allows us to represent a state of a system with any number of classical states in neat and readable way without any ambigous. 
 
-We can do that by writing a quantum state vector as a linear combination of diracc notation of the standard basis vectors(for exmaple here $|HIGH\rangle$). 
+We can do that by writing a quantum state vector as a linear combination of dirac notation of the standard basis vectors. 
+Remember that once we specify the order of the classical states then the dirac notation implicitly follows that.
 
-> That is the reason here after we will try to use the dirac notations to represent a quantum state vectors wherever it is possible. One more advantage is each time we don't have to explicitly mention the order of entries in state vector for each classical state.
+## Measurement of quantum system
 
+### What do we mean by measuring a quantum state of a qbit?
 
-## What do we mean by measuring a quantum state of a qbit?
+Before measuring a quantum system we don't know the state of the quantum system with certainty. The action of measuring will reveal the state of the quantum system. Before measuring the quantum system there is some probability associated with each classical state of the system(This idea can be generalized to more than just classical states. We will learn more about that when we learn about projective measurements in future blogs). As soon as we measure the system it will collapse into one of the possible classical states. But the measured result state that we get will depend on the probability associated with that result.
 
-Similar to measuring the classical system, before measuring a quantum system we don't know the state of the quantum system with certainty. The action of measuring will reveal the classical state of the quantum system. So when we measure a quantum system we won't get some quantum state vector as a result. But rather we will get one of the possible classical states as the result.
-
-The simple way of measurement is called the standard basis measurement. Later we will see more general notion of the measurement. The action of measurement itself is a kind of operation which changes system from a particular quantum state to classical state(We will see about more kind of operation in next and future topics).
+The simple way of measurement is called the standard basis measurement where results can be one of the possible classical states. Later we will see more general notion of the measurement. The action of measurement itself is a kind of operation which changes system from a particular quantum state to classical state(We will see about more kind of operation in next and future topics).
 
 Before the action of measuring we don't know for sure the state of a quantum system. But as soon as we measure it, it will collapse to some classical state with some probabilty. After measuring the system can't be in some quantum state. 
 
