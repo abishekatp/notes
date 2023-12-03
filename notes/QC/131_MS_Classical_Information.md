@@ -1,60 +1,67 @@
 
 # Classical Information(Multiple systems)
 
-As in a classical single system, In the multiple systems case also we will first see about the classical information and then go onto the quantum information in the next blog.
+As in a classical single system(also we can think of them as a simple systems), In the multiple systems(Also we can think of this as complex systems) case also we will first see about the classical information and then go onto the quantum information in the next blog.
+
+### What does the multiple systems mean?
+
+As we have discussed in the classical systems the concept of single or multiple systems can be defined as per our needs. Commonly we consider a simple systems like a bit or a qbit as a single system and use the combination them to create more complex systems. We will use ideas from this blog to combine multiple simple systems together to describe more complex systems.
+
+### Why do we need multiple systems?
+
+Our world is made up of complex systems. If we create a single classical system with so many classical states, then we might be able represent these complex systems mathematically. But this idea of just increasing the number of classical states to represent a more complex systems is not a scallable idea. So if we first define a simple classical systems with small number of classical states such as bit, then we can use the ideas from this blog to represent more complex systems.
+
+Intutively the complex systems are the combination of many same or different kind of simple system. How can we mathematically reprsent these multiple systems so that we can process those information mathematically?
+
+> **Note:** \
+> * Important: Remember that any particular multiple system can be considered as a single system itself. After that we can use that as a part of more complex systems. \
+> * So at the end the terms Single or Mulitple is differtiated by only how we think about a particular system. For example think of this torch light attached to more complex system like motor bike(like an head light). In that case we will think of the torch light as a single system that is part of the more complex system like a motor bike.
+> * This is going to be key idea behind how we are going to measure or apply some operations on the multiple systems. We consider multiple systems together as single big system and use the same ideas which we have used in the single systems
 
 
-## What does the multiple systems mean?
-
-We have seen previously that the single system can represent some information using its classical states. For example we have seen torch light example with the classical states $\Sigma$ = {OFF, ON} and more formal single system was a Bit with classical states $\Sigma$ = {0, 1}.
-
-Remember that the single system have a finite non empty set of classical states. So this means any particular classical system of this kind can only represent finite amount information. If you think about our world, it is made up of many complex systems(in our case it is called multiple systems). Intutively the complex systems are the combination of many same or different kind of single system. How can we mathematically reprsent these multiple systems? so that we can process those information mathematically.
-
-For example, in the blog about single system and specifically in the torch light example, Individually we have used classical systems of torch light with the following classical state sets:
- $$\Sigma_1 = \{ OFF, ON \}$$  
- $$\Sigma_2 = \{ LOW, HIGH \}$$ 
 
 In this blog we will see how we can represent the torch light as the combination these two individual systems. Here $\Sigma_1$ represents the on-off state of the torch light and $\Sigma_2$ represents the brightness of the torch light. So we need way of mathematically representing these single systems together.
 
 Practically these individual systems together form a multiple system. In the above case this multiple system is formed by two individual systems $\Sigma_1$ and $\Sigma_2$ of the torch light. But in general the multiple systems can be formed by any number individual systems.
 
-So the multiple system is a combination of single systems together representing the complex system. Here two or more single systems comes together to represent the complex information about the complex multiple systems.
-
-> Important: Remember that any particular multiple system can be considered as a single system itself. After that we can use that as a part of more complex systems.
-> 
->So at the end the terms Single or Mulitple is differtiated by only how we think about a particular system. For example think of this torch light attached to more complex system like motor bike(like an head light). In that case we will think of the torch light as a single system that is part of the more complex system like motor bike.
->
-> This is going to be key idea behind how we are going to handle multiple systems. We consider multiple systems together as single big system and use the same ideas which we have used in the single systems
 
 
-## How do we find classical state set multiple systems?
+### How do we find classical state set multiple systems?
 
-So we have said that multiple systems is formed by two or more single system. If each of the single system has its own associated classical states set, then the multiple systems are represented by the cartesian product of classical state set of each of the single systems.
+If there are two are more single systems, then we can find the classical state set of the joint multiple systems by finding the cartesian product of the classical state sets of the single systems.
 
-For example In our torch light example we had two single systems with classical state sets $\Sigma_1$ and $\Sigma_2$. We can represent a classical states of a torch light using the cartesian product of these single systems as follows. 
+For example, lets take an torch light example from our previous blogs, Individually we have used two classical systems one for ON/OFF infor and another is battery brightness:
+ $$\Sigma_1 = \{ OFF, ON \}$$  
+ $$\Sigma_2 = \{ LOW, HIGH \}$$ 
+
+If each of the single system has its own associated classical states set as defined above, then the multiple systems are represented by the cartesian product of classical state set of each of the single systems. We can represent a classical states of a torch light using the cartesian product of these single systems as follows. 
 
 $$\Sigma = \Sigma_1 \times \Sigma_2 = \{ (OFF, LOW), (OFF, HIGH), (ON, LOW), (ON, HIGH)\}$$
 
 If you think that torch ligh has two switches one switch to make the torch light and ON or OFF and another one to change brightness HIGH or LOW, then here (ON, LOW) is one of the possible classical state of the torch light, where torch light is ON and its brightness is set to LOW. 
 
-#### Cartesian Product to find the joined state set
+### What is cartesian product?
 
 If you think more formally the cartesian product takes each element `a` of any set $\Sigma_1$ and pair it with each element `b` of another set $\Sigma_2$ to create single combined set $\Sigma$. We can formally define this as follows,
 
 $$\Sigma_1 \times \Sigma_2 = \{ (a,b) : a \in \Sigma_1 \; and \; b \in \Sigma_2 \}$$
 
-We can generalize this idea to n number of classical systems each associated with finite non empty classical state sets.
+We can generalize this idea to n number of classical systems each associated with finite and non empty classical state sets.
 
 $$\Sigma_1 \times \Sigma_2 \times ... \times \Sigma_n = 
 \{ (a_1, a_2,...,a_n) :  a_1 \in \Sigma_1 ,\; a_2  \in \Sigma_2 ...a_n \in \Sigma_n \}$$
 
-> **Important: The Order of elements of the cartesian product set** 
-> * Here we assume that the elements of classical state sets($\Sigma_1$,$\Sigma_2$...$\Sigma _n$) are arranges in particular order(For example alphabetical order). Then when we find a cartesian product of these sets arrange them using the same ordering logic. The order in which we create a cartesian product doesn't matter as long as we keep the same ordering in all the places we use the cartesian product set. For example the same order must be used when representing a calssical state of a multiple system as a row or column vector.
-> * We follow the notion of taking first element of first set and pair with each element of second set, then take the second element of the first set and pair with all the elements of the second set and so on. this idea can be generalized for any number of sets. For example we can do that by first combining first two sets as a single set and then combine thise new combined set with third set and so on(This can be recursively defined).
+### What about the Order of elements of the cartesian product set?
 
-## How can we represent the state of the multiple systems mathematically?
+When we describe the state of the system as column or row vector the order of the states plays crucial role. If we use different order in different part of our calculation, then we won't get a correct answer. So the order in which the cartesian product set is defined is also an important thing to consider.
 
-Now we know that we can use the cardesian product to get classical state set of the multiple systems. Then how can we represent the state of the joined system mathematically? Its simple, we are going to use same idea as a single system, We are going to use a column vector to represent a classical state of the multiple sytems. But here the column vector entries will correspond to the classical state set(which we got using the cartesian product) of the multiple systems.
+* Here we assume that the elements of classical state sets($\Sigma_1$,$\Sigma_2$...$\Sigma _n$) are arranged in particular order(For example alphabetical order). Then when we find a cartesian product of these sets and arrange them using the same ordering logic. The order in which we create a cartesian product doesn't matter as long as we keep the same ordering in all the places wherever we use the cartesian product set. For example the same order must be used when representing a calssical state of a multiple system as a row or column vector.
+
+* We follow the notion of taking first element of first set and pair with each element of second set, then take the second element of the first set and pair with all the elements of the second set and so on. This idea can be generalized for any number of sets by recursively combining always the first two sets. For example we can do that by first combining first two sets as a single set and then combine this new cartesian product set with third set and so on.
+
+### Can we still use vector notation to represent the state of the multiple systems?
+
+We know that we can use the cardesian product to get classical state set of the multiple systems. Then we can use a column vector to represent a classical state of the multiple sytems in a same way as single systems. But here the column vector entries will correspond to the cartesian product set(which we got using the cartesian product of classical state sets of single systems) of the multiple systems.
 
 For example the classical state of the torch light that is ON and with LOW brightness can be represented by the following column vector(we have added labels for each entry of the column vector. These labels corresponds to a classical state of the torch light).
 

@@ -31,7 +31,8 @@ $$\Sigma = \{OFF, ON \}$$
 > Note that the term classical is used here to specifically differentiate the information that can be represented by a quantum systems.
 
 ### What is a single system?
- In general there is no strict line between single system and multiple systems. We can consider a car as a single system which can be in one of the some possible states {ON, OFF, MOVING FRONT, MOVING BACK, etc...}. At the same time we can consider a car as a multiple systems that is combination of many small single systems such that breaking system, clutch system, accelerator system and etc...
+
+ In general there is no strict line between single system and multiple systems. We can consider a car as a single system which can be in one of the some possible states {ON, OFF, MOVING FRONT, MOVING BACK, etc...}. At the same time we can consider a car as a multiple systems that is combination of many small single systems such as breaking system, clutch system, accelerator system and etc...
 
  - So the system is single or multiple can be defined as per our needs.
 
