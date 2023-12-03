@@ -116,13 +116,13 @@ In the above equations we are writing a quantum states $|+\rangle$ and $|-\rangl
 We already know that the absolute value of particular entry of a quantum state vector is a probability of getting the classical state which corresponds to the position of that particular entry. For example lets take the $|+\rangle$ or $|-\rangle$ state, we can calculate the probability associated with each of the classical states for both of these states as follows.
 
 $$
+Probability\ of\ being\ |0\rangle 
+= \left| \frac{1}{\sqrt{2}} \right|^2
+= \frac{1}{2} \\
+
 Probability\ of\ being\ |1\rangle 
 = \left| \frac{1}{\sqrt{2}} \right|^2 
 = \left| -\frac{1}{\sqrt{2}} \right|^2
-= \frac{1}{2} \\
-
-Probability\ of\ being\ |0\rangle 
-= \left| \frac{1}{\sqrt{2}} \right|^2
 = \frac{1}{2}
 $$ 
 
@@ -159,28 +159,49 @@ Remember that once we specify the order of the classical states then the dirac n
 
 Before measuring a quantum system we don't know the state of the quantum system with certainty. The action of measuring will reveal the state of the quantum system. Before measuring the quantum system there is some probability associated with each classical state of the system(This idea can be generalized to more than just classical states. We will learn more about that when we learn about projective measurements in future blogs). As soon as we measure the system it will collapse into one of the possible classical states. But the measured result state that we get will depend on the probability associated with that result.
 
-The simple way of measurement is called the standard basis measurement where results can be one of the possible classical states. Later we will see more general notion of the measurement. The action of measurement itself is a kind of operation which changes system from a particular quantum state to classical state(We will see about more kind of operation in next and future topics).
+The simple way of measurement is called the standard basis measurement where results can be one of the possible classical states. Later we will see more general notion of the measurement. The action of measurement itself is a kind of operation which changes our knowledge about the system from a particular quantum state to some classical state(We will see about more general notion of operation in the next section).  
 
-Before the action of measuring we don't know for sure the state of a quantum system. But as soon as we measure it, it will collapse to some classical state with some probabilty. After measuring the system can't be in some quantum state. 
+### What is a standard basis measurement?
 
-#### Standard basis measurement
+The standard basis measurement links the absolute value squared of each entry of a quantum state vector to the probability that we will get specific calssical state as a result. We can get the probability associated with specific classical state by calculating the absolute value of the entry of the quantum state vector that corresponds to it. This is called Born rule of quantum mechanics. Take the following arbitrary example of qbit,
 
-The standard basis measurement links the absolute value squared of each entry of a quantum state vector to the probability that we will get specific calssical state as a result. The probability for specific classical state will be get from the entry of the quantum state vector that corresponds to it. This is called Born rule of quantum mechanics.
+$$ 
+|\psi\rangle = \sqrt{\frac{3}{4}}|0\rangle + i\sqrt{\frac{1}{4}}|1\rangle
+= \begin{pmatrix} \sqrt{\frac{3}{4}} \\ i\sqrt{\frac{1}{4}} \end{pmatrix}
+$$
 
-#### What does the classical state with associated probability mean?
+Here the probability associated with classical states $|0\rangle$ and $|1\rangle$ are.
+$$
+Probability\ of\ getting\ |0\rangle 
+= \left| \sqrt{\frac{3}{4}} \right|^2 
+= \frac{3}{4} \\
 
-* So when we measure the quantum system we won't always get a same result. But rather we may get different answers for different measurements. But these answers will be based on the probability associated classical states that is represented by the quantum state. 
+Probability\ of\ being\ |1\rangle 
+= \left| i\sqrt{\frac{1}{4}} \right|^2
+= \frac{1}{4}
+$$ 
 
-* $|+\rangle$ or $|-\rangle$ then both of these quantum states has the $Pr(result = |0\rangle) =  \frac{1}{2}$ and $Pr(result = |1\rangle) =  \frac{1}{2}$. So when you try to measure these quantum states you will get a classical state $|0\rangle$ for half of the times and $|1\rangle$ for other time.(for exmaple if you measure the qbit for 100 times, then 50 times you will get classical state 0 (represented by $|0\rangle$) anf 50 times you will get 1. but it will be in some random order.)
 
-* because of this we can't differentiate the $|+\rangle$ and $|-\rangle$ state using standard basis measurement. We will see in future there are some operations on these quantum states that will differentiate them.
+#### What does the probability associated with classical state mean?
+
+If we measure the quantum system, then we won't always get a same result on each measurement. But rather we may get different classical states as a result for different measurements. These results will be based on the probability associated with each classical state of the quantum state vector. 
+
+* We have seen previously that both $|+\rangle$ or $|-\rangle$ quantum states has the $Pr(result = |0\rangle) =  \frac{1}{2}$ and $Pr(result = |1\rangle) =  \frac{1}{2}$. So when you try to measure these quantum states you will get a classical state $|0\rangle$ for half of the times and $|1\rangle$ for other time.(for exmaple if you measure the qbit for 100 times, then 50 times you will get classical state 0 (represented by $|0\rangle$) and 50 times you will get 1. but it will be in some random order.)
+
+>Note: do you remember about the double slit experiement? then the notion of the measurement is similar to how we recorded the dark and light spots on the other side of the double slit. Thought it will be done in a more systematic way to make it less error prone and more efficient.
 
 
-## What is a Operation and Unitary operation?
+## Operation and Unitary operation?
 
-Simialer to the deterministic and probabilistic operations on the classical system. We can apply some operations on the quantum system. These operations will change the state of system from one quantum state to another quantum state.(Sometimes the operation on a quantum system may change the system to a classical state with some probability. The action of measuring itself is a one of that kind).
+### How does the operation on the quantum system differs from classical system?
 
-Unitary operations are carried out by a unitary matrices. You can see the notes section of this blog to know more about the unitary matrix. These matrices has some particular behaviour that is: After applying these operations the Euclidean norm of the quantum staes doesn't changes. So when we apply some unitary operation to some quantum state you will get another quntum state as a result. For example the $\psi$ is some quantum state then we can multiply this state by some unitary matrix M to get another quantum state. formally said $|| M|\psi\rangle || = || |\psi\rangle ||$.
+Simialer to the deterministic and probabilistic operations on the classical system. We can apply some operations on the quantum system. These operations will change the state of system from one quantum state to another quantum state.(Sometimes the operation on a quantum system may change the system to a classical state with some probability. The action of measuring itself is a one of that kind which is called standard basis measurement).
+
+The notion of operation is very important because what kind of operation we can implement using practical hardwares will determine the applications of the quantum systems. Also since quantum systems behaves differently than the classical systems based on quantum physics, this allows us to apply different operations on quantum systems then classical system. If we can use some of these operations for our advantage we can make the computation more efficient than our classical system. The operations that we can apply on quantum systems are called unitary operations.
+
+### What exactly is an unitary operation ?
+
+Similar to classical information we can represent the operations on quantum systems using matrices. More specifically the operations on quantum systems are described by an unitary matrices. That's why we call these operations unitary operations. You can see the notes section of this blog to know more about the unitary matrix. These matrices has some particular behaviour that is: After applying these operations the Euclidean norm of the quantum staes doesn't changes. So when we apply some unitary operation to some quantum state you will get another quntum state as a result. For example lets take an arbitrary quantum state vector $\psi$, We can multiply this state by some unitary matrix M to get another quantum state. formally said $|| M|\psi\rangle || = || |\psi\rangle ||$.
 
 ### Examples of unitray operation.
 The following are the some of the commonly used unitary opeartions.
@@ -214,7 +235,7 @@ i & 0
 \end{equation}
 $$
 
-Here `I` is a bit flip or NOT operation. becuse $I|0\rangle = |0\rangle$ and $I|1\rangle = |1\rangle$.
+Here `I` is an identity matrix, becuse $I|0\rangle = |0\rangle$ and $I|1\rangle = |1\rangle$. $\sigma_x$ is a bit flip or NOT operation
 $\sigma_z$ is called phase flip operation, because $\sigma_z|0\rangle = |0\rangle$ and $\sigma_z|1\rangle = -|1\rangle$. Here the $\Sigma_x$, $\Sigma_y$ and $\Sigma_z$ operations are sometimes referred to as X, Y and Z.
 
 #### Hadamard Operation:
@@ -230,6 +251,8 @@ H =
 
 \end{equation}
 $$
+
+The matrix H is called self inverse operation because of the fact that $H^2 = I$.
 
 #### Phase Operation:
 
@@ -256,25 +279,30 @@ T = P_\frac{\pi}{4} =
 \end{pmatrix}
 $$
 
-Here $\theta$ can be any real number and $e^{i\theta} = cos(\theta) + i sin(\theta)$. Because of this we can show the equivalities $P_0 = I$ and $P_\pi = \sigma_z $
+Here $\theta$ can be any real number and $e^{i\theta} = cos(\theta) + i sin(\theta)$. Because of this we can show the equivalities $P_0 = I$ and $P_\pi = \sigma_z $. Here notes that $S^2 = \sigma_z$.
 
 
-All these operations are unitary operations. I think its best to discuss the detailed behaviour of these operation wherever we use them. As an example we will see the Hadamard operation now. You can just do the normal matrix multiplications to get these results.
+All these operations are unitary operations. I think its best to discuss the detailed behaviour of these operations wherever we use them. As an example we will see the Hadamard operation now. You can just do the normal matrix multiplications to get these results.
+
+### How can we differentiate $|+\rangle$ and $|-\rangle$ states?
 
 $$ 
-H|0\rangle = |+\rangle, \;
-H|1\rangle = |-\rangle, \;
-H|+\rangle = |0\rangle, \;
+H|+\rangle = |0\rangle, \ \ 
 H|-\rangle = |1\rangle
 $$
 
-Here note that previously we discussed that we can't differentiate the $|+\rangle$ and $|-\rangle$ using the standard basis measurement. But when we apply Hadamard operation to those quantum state we will get differnt outputs as a result. So Hadamard operation differentiates the states $|+\rangle$ and $|-\rangle$.
+Here note that previously we discussed that we can't differentiate the $|+\rangle$ and $|-\rangle$ using the standard basis measurement. But when we apply Hadamard operation to those quantum state we will get differnt outputs as a result. So Hadamard operation can differentiate the states $|+\rangle$ and $|-\rangle$. Note the following operations also.
+
+$$
+H|0\rangle = |+\rangle, \ \ 
+H|1\rangle = |-\rangle
+$$
 
 * All these operations are simple matrix multiplications. So try to visualize them as matrix multiplications. For example H is two dimensional matrix and $|0\rangle$ is a column vector. When you multiply them together you will get another column vector as a result which $|+\rangle$.
 
-### Composition of unitary operations(Matrix Associative property)
+### Can we represent multiple unitary operation together?
 
-Like we did in the classical operations, the composition of unitary operations can be applied to the quantum states. For exmaple If you apply H operation then S operation, then again H operation, it can be represented by a matrix `R = HSH`.
+When we multiply multiple stochastic matrices we got combined stochastic operation, similarly the composition of unitary operations can be applied to the quantum states. For exmaple If you apply H operation then S operation, then again H operation, it can be represented by a matrix `R = HSH`.
 
 $$ 
 \begin{equation}\tag{Ex-7}
@@ -286,22 +314,28 @@ R = HSH =
 \end{equation}
 $$
 
-The square of the operation R is kind of suprising one. $R^2 = I$. Becuse $R^2|0\rangle = |1\rangle$ and $R^2|1\rangle = |0\rangle$. So this implies that $R = \sqrt{I}$.
+If we compute the square of R, then we will get $R^2 = I$. Becuse $R^2|0\rangle = |0\rangle$ and $R^2|1\rangle = |1\rangle$. So this implies that $R = \sqrt{I}$.
 
-### Can we apply this unitary operation on larger systems?
+### Can we apply this unitary operation on a larger systems?
 
-These unitary operations are not restricted to use only with qbit. The qbit is a simple form of quantum system with just two possible quantum states. We can apply unitary operations for systems with more classical states also. For example the follwing the matrix is called permutation unitary matrix. This permuation operation will just rearrange the entries of the state vector.
+These unitary operations are not restricted to use only with a qbit. The qbit is a simple form of quantum system with just two possible quantum states. We can apply unitary operations for systems with more classical states also. For example the follwing the matrix is called permutation unitary matrix. This permuation operation will just rearrange the entries of the state vector.
 
-$$ A = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0\end{pmatrix}$$
+$$ A = 
+\begin{pmatrix} 
+0 & 1 & 0 \\ 
+0 & 0 & 1 \\ 
+1 & 0 & 0
+\end{pmatrix}
+$$
 
 $$ A|0\rangle = |2\rangle, \; A|1\rangle = |0\rangle, \; A|2\rangle = |1\rangle$$
- You can think of `NOT` operation as simple permuation operation for a qbit.
+ You can think of $\sigma_x$ operation as simple permuation operation for a qbit.
 
-*The following is the unitary operation for quantum fourier transform for system with n=4 classical states. We can define quantum fourier transform matrix for any possitive integer n. We will use this operation in future sections.
+The following is the unitary operation for quantum fourier transform for system with n=4 classical states. We can define quantum fourier transform matrix for any possitive integer n. We will use this operation in future sections.
 
 $$ U = \frac{1}{2} \begin{pmatrix} 1 & 1 & 1 & 1 \\ 1 & i & -1 & -i \\ 1 & -1 & 1 & -1 \\ 1 & -i & -1 & i \end{pmatrix}$$
 
-**Why?**: The way we are going to represent multiple systems will require us to have a state vector which represents more than two classical states for the combined system(combination of single systems which we have studied in this lesson). That why I have shown here the way we can represent an operation on a quantum state vector with three or more classical states. 
+**Why?**: The way we are going to represent multiple systems will require us to have a state vector which represents more than two classical states for the combined system(combination of simple systems which we have studied in this lesson). Thats why I have shown here the way we can represent an operation on a quantum state vector with three or more classical states. 
 
 
 ## Notes
