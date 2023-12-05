@@ -409,7 +409,7 @@ $$
 
 ### Example of partial measurement
 
-Assume that the probabilistic state of the joint system $(X_1,X_2)$ is represented by the following probability vector. $X_1$ is the bit with the classical state set $\Sigma_1$ and $X_2$ is the system that represent four suits of cards in the deck of cards with calssical state set $\Sigma_2$. (Here $X_1,X_2$ are not independent systems).
+Assume that the probabilistic state of the joint system $(X_1,X_2)$ is represented by the following probability vector. $X_1$ is the bit with the classical state set $\Sigma_1$ and $X_2$ is the system that represent four suits of cards in the deck of cards with calssical state set $\Sigma_2$. (Here $X_1$ and $X_2$ are not independent systems).
 
 $$\Sigma_1=\{0,1\} \;\; \Sigma_2=\{C,D,H,S\}$$
 
@@ -463,31 +463,32 @@ $$
 $$
 
 **Note: In the above equations I am not simplyfying any of the fraction values**(e.g $
-\frac{3}{15} = \frac{1}{5}$), **This is because we can easily check the probability sum equals to 1 wherever it is applicable.**
+\frac{3}{15} = \frac{1}{5}$), **This is to make it easy for verifying the probability sum.**
 
 
-#### What about partial measurement of independent multiple systems?
+### What about partial measurement of independent multiple systems?
 
-If you take an example `Ex-4` the two systems we discussed there are not independent systems. So when we measured the system $X_1$ it gave us some information about the state of the system $X_2$ before actually measuring the system $X_2$. 
+In an example `Ex-4` the two systems we discussed are not independent. So when we measured the system $X_1$ it gave us some information about the state of the system $X_2$ before actually measuring the system $X_2$. 
 
-When two systems are independent then measuring one of systems doen't provide any information about the second system before the measurement of the second system.
+When two systems are independent then measuring one of systems doesn't provide any information about the second system before the actual measurement of the second system.
 
-Lets take an example given in `Ex-1`. For that joint system $(X_1,X_2)$ before and after measuring the system $X_1$ the probability associated with each state of the $X_2$ remains the same. That's the reason we call them independent systems.
-
+Lets take a joint system $(X_1,X_2)$ in `Ex-1`. In that example you can see that the probability associated with the system $X_2$ doesn't change after measuring the system $X_1$ and vice versa is also true. This is exactly why we call them independent systems.
 
 ## Operations on multiple systems
 
-When we think multiple systems as a combined single system then the operations on multiple systems can be defined using stochastic matrix similar to the single system. Here the rows and columns of the stochastic matrix corresponds to the entries of the classical state set of the joint system. Remember that we can get the calssical state set of the joint system using the cartesian product of the classical state sets of the individual systems.
+### Can we still use stochastic matrix?
+
+If we think about the multiple systems combined together as a single system, then the operations on multiple systems can also be defined using stochastic matrix. Here the rows and columns of the stochastic matrix corresponds to the entries of the classical state set of the joint system. Remember that we can get the calssical state set of the joint system using the cartesian product of the classical state sets of the individual systems.
 
 Lets take usual example of two bits joint system $(X_1, X_2)$. The rows and columns of the stochastic matrix for this joint system will corresponds to a cartesian product set $\Sigma_1 \times \Sigma_2$.
 
-#### What is a deterministic operation on multiple system?
+### What about the deterministic operation on multiple systems?
 
-Deterministic operation is an operation on multiple system for which the input and output corresponds to one of the classical state of the joint system. There won't be any uncertainty about the output. We alway get exactly one of the classical states as the output. 
+Deterministic operation is an operation on multiple system for which the input and output corresponds to one of the classical state of the joint system. There won't be any uncertainty about the output. We will alway get exactly one of the classical states as the output. 
 
-> We will look into a specific example of controlled NOT operation where if $X_1 = 1$ then flip the bit $X_2$, otherwise do nothing.
+> First We will look into a specific example of controlled NOT operation where if $X_1 = 1$ then flip the bit $X_2$, otherwise do nothing.
 
-The following stochastic matrix represents this operation. We have seen about the stochastic matrix in the blog about the single system classical information.
+The controlled-NOT means, there will be one control bit and if the control bit is 1, then we will apply NOT operation on the other bit. The following stochastic matrix represents this operation. We have seen about the stochastic matrix in the blog about the single system classical information.(Even though the given below matrix represents deterministic operation, we can call it stochastic because it satisfies the conditions for being a stochastic matrix)
 
 $$
 \begin{equation}\tag{Ex-5}
@@ -510,9 +511,9 @@ $$
 \end{equation}
 $$
 
-The above stochastic matrix represents the controlled NOT operation on the system $(X_1,X_2)$. Here $X_1$ is the controll bit which decides whether or not particular operation should be applied and $X_2$ is the target bit on which the actual operation is applied.
+The above stochastic matrix represents the controlled NOT operation on the system $(X_1,X_2)$. Here $X_1$ is the control bit. The control bit decides whether or not particular operation should be applied on the target bit and $X_2$ is the target bit on which the actual operation is applied.
 
-In the LHS you can see we have represented the stochastic matrix using the dirac notations. Each entry in the LHS correponds to output-input relationship. In each term the first vector(column vector) corresponds to a output and second vector(row vector) corresponds to a input. If you do the normal matrix multiplication, then you will get the matrix on the RHS.
+In the LHS you can see that we have represented the stochastic matrix using the dirac notations. Each entry in the LHS corresponds to output-input relationship. In each term the first vector(column vector) corresponds to a output and second vector(row vector) corresponds to a input. If you do the normal matrix multiplication, then you will get the matrix on the RHS.
 
 Similar way we can define the case where $X_2$ is controll bit and $X_1$ is the target bit. The following matrix represents this operation.
 
@@ -537,26 +538,30 @@ $$
 \end{equation}
 $$
 
-Here you can think about the deterministic operations more intutively also. First row of the matrix tells us that for what input we have to get the output $|00\rangle$? in our case that output corresponds to the input $\langle00|$, so we have set the first entry as 1. Similary the second row is for the output $|01\rangle$, We have to this output when input is $\langle11|$, that's the reason we set tht last entry to the 1.
+Another way to think about deterministic operation is by thinking about what each row does to the input vector. If input column vector is $|00\rangle$, then the output should be the same vector. This means if first entry of the input is 1, then first entry of the output also should be 1. The first row of the matrix does exactly the same. Similarly the second row represents the fact that if the input is $|01\rangle$, then the output should be $|11\rangle$. 
 
+### What is a probabilistic operation on multiple systems?
 
-#### What is a probabilistic operation on multiple systems?
+The probabilistic operation is applied on the probability vector and gives another probability vector as an ouput. There will be some uncertainty about the output. To describe this uncertainty about the output, we will associate some probability to each possible output state. Note that the stochastic matrices are mathematical representation of probabilistic operation and deterministic operations can be thought of as special case of probabilistic operation, where we know the output with cetainty. 
 
-Probabilistic operation is a operation on multiple systems for which the input and output corresponds to one of the classical state of the joint system. But there will be some uncertainty about the output. We will get one or more of the classical states as the output. If multiple classical states are associated with same input, the each of classical state will have some probability associated with it. 
-
-> For example take an operation where when two bits $X_1$ and $X_2$ are not then same then half of the time set the value of $X_1$ to $X_2$ and another half of the time set the value of $X_2$ to $X_1$.
+> For example if two bits $X_1$ and $X_2$ are not same, then half of the time set the value of $X_1$ to $X_2$ and another half of the time set the value of $X_2$ to $X_1$.
 
 The following stochastic matrix represents this operation.
+
 $$
 \begin{equation}\tag{Ex-7}
 \begin{split}
 
 &\Rightarrow 
 |00\rangle\langle00| + 
+\left( 
 \frac{1}{2}|00\rangle\langle01| + 
+\frac{1}{2}|11\rangle\langle10| 
+\right) + 
+\left( 
 \frac{1}{2}|11\rangle\langle01| + 
-\frac{1}{2}|11\rangle\langle10| + 
-\frac{1}{2}|00\rangle\langle10| + 
+\frac{1}{2}|00\rangle\langle10| 
+\right) + 
 |11\rangle\langle11|
  \\
 &= 
@@ -585,6 +590,7 @@ $$
 \end{split}
 \end{equation}
 $$
+(remember that in the first equation the row vector corresponds to input and the column vector corresponds to output)
 
 In the avove example you can see that we can think of this operation in two ways. One way is in terms of state vectors and dirac notation similar to the example `Ex-6`, another way is in terms of sum of two deterministic operation each associated with some probability.
 
@@ -592,7 +598,7 @@ Similar operations can be defined for any number of systems. We will use dirac n
 
 > Consider a octal(base-8) number system where numbers are only 0-7. The operation is whenever some input is given we have to add 1 to that number and give the result again in the octal number system. 
 
-Remember that when we add 7+1=8 is not a valid octal number so we have to use modular arithmetic to find the valid octal nubmer for the result. In this case the result will be ((7+1) mod 8) = 0. 
+Remember that when we add 7+1=8 will exceed our limit. So we have to use modular arithmetic to find a octal nubmer that is within our limit. In this case the result will be ((7+1) mod 8) = 0. 
 
 $$
 \begin{equation}\tag{Ex-7}
@@ -627,13 +633,15 @@ $$
 
 Here also the dirac notation and the matrix representation works in the same way as we discussed previously.
 
-### Independent Operations
+## Independent Operations
+
+### What if we want to apply operation only on single or proper subset of the multiple systems?
 
 So when there are multiple systems, we have defined the independence of the individual systems that make the multiple systems using the tensor product. In a similar way we can define the independence of the operation on the multiple systems using tensor product. To understand this we have to first understand the tensor product of matrices.
 
-#### Tensor product of matrices 
+### How can find the tensor product of matrices? 
 
-* Lets take an usual example of multiple systems with two bits $X_1$ and $X_2$ with classical state set $\Sigma_1$ and $\Sigma_2$ respectively. We know from previous sections that the operations on individual systems are represented by stochastic matrix. The following definitions of matrices $M_1$ and $M_2$ represent the operations on the individual systems $X_1$ and $X_2$ in a generic way. 
+Lets take an usual example of multiple systems with two bits $X_1$ and $X_2$ with classical state set $\Sigma_1$ and $\Sigma_2$ respectively. We know from previous sections that the operations on individual systems are represented by stochastic matrix. The following definitions of matrices $M_1$ and $M_2$ represent the operations on the individual systems $X_1$ and $X_2$ in a generic way. 
 
 
 $$
@@ -643,14 +651,15 @@ M_2 = \sum_{c,d \in \Sigma_1} \beta_{cd}|c\rangle\langle d|
 \end{equation}
 $$
 
-* In the above definitions $\langle b|$ and $\langle d|$ are inputs and $|a\rangle$ and $|c\rangle$ are their corresponding outputs. We have defined the operation as sum of output-input vector multiplication for each possible input from the the classical state sets. 
+In the above definitions $\langle b|$ and $\langle d|$ are input vectors and $|a\rangle$ and $|c\rangle$ are their corresponding output vectors. We have defined the operation as sum of output-input vector multiplication for each possible input from the the classical state set. 
 
 
 >**Important:** \
-> In the above definitions we are defining the input as row vector such as $\langle b|$ and output as column vector such as $|a\rangle$. This is only for the purpose of computing the matices. In normal cases of the applying the operations both the input and output is going to be column vector represented by the `ket` notation.
+> In the above definitions we are defining the input as row vector such as $\langle b|$ and output as column vector such as $|a\rangle$. This is only for the purpose of computing the matices. In the normal case while applying the operations on the probability vectors, both the input and output are going to be column vector represented by the `ket` notation.
 
+### Why do we need $\alpha_{ab}$ and $\beta_{cd}$?
 
-* The $\alpha_{ab}$(similar way we can explain the $\beta_{cd}$) is a real numbers that represent the probability of the input $\langle b|$ giving the output $|a\rangle$. For each such input the sum of probabilities should add upto 1. The good example for this is an `Ex-7` where half of the time we set the value $X_1$ to $X_2$ and another half of the time $X_2$ to $X_1$.
+The $\alpha_{ab}$(similar way we can explain the $\beta_{cd}$) is a real numbers that represent the probability of the input $\langle b|$ giving a particular output $|a\rangle$. For each such input the sum of probabilities should add upto 1. The good example is `Ex-7` where half of the time we set the value $X_1$ to $X_2$ and another half of the time $X_2$ to $X_1$.
 
 Now the operation on the joint system $(X_1,X_2)$ is represented by the following matrix.
 
@@ -669,7 +678,7 @@ M &= M_1 \otimes M_2 \\
 \end{equation}
 $$
 
-Here note that for the joint system $(X_1,X_2)$, the tensor product defines for each input $\langle bd|$ the corresponding output $|ac\rangle$ in a similar way as single system but for the classical states of the cartesian product set. We can think about this in a different way as following equation is defined.
+Let assume that $M_1$ and $M_2$ are operation applied on the individual systems. The tensor product of these matrices represents the combined operation on the joint system. In the last step of the above derivation we can see that the tensor product describes the output-input relationship for each input $\langle bd|$ of the joint system. We can think about this in a different way as the follows.
 
 $$
 \begin{equation}\tag{14}
@@ -683,7 +692,7 @@ for every choice of $a,b \in \Sigma_1$ and $c,d \in \Sigma_2$
 
 Here note that $(M_1 \otimes M_2)|bd\rangle = |ac\rangle$. So in the LHS the value $\langle ac||ac\rangle $ is going to be some real number which will be equal to the real number that we will get when we evaluate the RHS.
 
-* Because of the way we defined the tensor product the following equation is true for any valid operations $M_1$ and $M_2$ on systems $X_1$ and $X_2$. Here $|\psi_1\rangle$ and $|\psi_2\rangle$ are probability vectors of the systems $X_1$ and $X_2$ respectively.
+Because of the way we defined the tensor product the following equation is true for any valid operations $M_1$ and $M_2$ on individual systems $X_1$ and $X_2$. Here $|\psi_1\rangle$ and $|\psi_2\rangle$ are probability vectors that corresponds to systems $X_1$ and $X_2$ respectively.
 
 $$
 \begin{equation}\tag{15}
@@ -693,7 +702,7 @@ $$
 \end{equation}
 $$
 
-* The tensor product of two matrices are defined in the following way.
+The tensor product of two matrices are defined in the following way.
 
 
 $$
@@ -733,7 +742,7 @@ a_{m1}b_{k1} & \cdots & a_{m1}b_{kk} & & a_{mm}b_{k1} & \cdots & a_{mm}b_{kk} \\
 \end{equation}
 $$
 
-In a similar way as above we can define the tensor product of three or more matrices. The equivalent equations for `equation-14` and `equation-15` for multiple systems are respectively `equation-16` and `equation-17`.
+In a similar way as above we can define the tensor product of three or more matrices. For three or more systems, the equations `equation-16` and `equation-17` are equivalent to the equations in the `equation-14` and `equation-15`.
 
 $$
 \begin{equation}\tag{16}
@@ -744,7 +753,7 @@ $$
 \end{equation}
 $$
 
-Here the $|b_1 b_2 \cdots b_n\rangle$ and $\langle a_1 a_2 \cdots a_n|$ are input and output state of the joint system $(X_1,X_2,\cdots,X_n)$ respectively. The result value on both LHS and RHS going to be real number. 
+Suppose there is a joint system $(X_1,X_2,\cdots,X_n)$. the vector $|b_1 b_2 \cdots b_n\rangle$ is a input vector and $\langle a_1 a_2 \cdots a_n|$ is an output vector. In this case the LHS and RHS is going to evaluate to the same real number.
 
 $$
 \begin{equation}\tag{17}
@@ -774,18 +783,18 @@ Here the state vectors $|\psi_1\rangle,|\psi_2\rangle, \cdots , |\psi_n\rangle$ 
 
 ### Examples of Independent operations
 
-Lets take an usual example of two bits $X_1$ and $X_2$ with calssical state sets $\Sigma_1$ and $\Sigma_2$ and state vectors $|\psi_1\rangle$ and $|\psi_2\rangle$. If we apply the operations $M_1$ and $M_2$ on states $|\psi_1\rangle$ and $|\psi_2\rangle$ independently then the joint operation on the joint system's state  $|\psi_1\rangle \otimes |\psi_2\rangle$ is represented by the tensor product $M_1 \otimes M_2$.
+Lets take an usual example of two bits $X_1$ and $X_2$ with calssical state sets $\Sigma_1$ and $\Sigma_2$ and state vectors $|\psi_1\rangle$ and $|\psi_2\rangle$. If we apply the operations $M_1$ and $M_2$ on state vectors $|\psi_1\rangle$ and $|\psi_2\rangle$ independently then the joint operation on the joint system's state  $|\psi_1\rangle \otimes |\psi_2\rangle$ is represented by the tensor product $M_1 \otimes M_2$.
 
-> Consider a particualar operation, If $X_1=1$, then we flip the bit $X_1$ half of the times, otherwise do nothing. We call this operation as $M_1$
+> Consider a particualar operation where, If $X_1=1$, then we flip the bit $X_1$ half of the times, otherwise do nothing. We call this operation as $M_1$
 >
->Suppose if we apply the operation $M_1$ on $|\psi_1\rangle$ and operation NOT on the $|\psi_2\rangle$ independently, what is the joint operation that act on the state $|\psi_1\rangle \otimes |\psi_2\rangle$
+>Suppose if we apply the operation $M_1$ on $|\psi_1\rangle$ and operation X(or NOT operation) on the $|\psi_2\rangle$ independently, How can we represent the joint operation on the joint system?
 
 The joint operation is represented by the following matrix.
 $$
 \begin{equation}\tag{Ex-9}
 \begin{split}
 
-M_1 \otimes NOT &= 
+M_1 \otimes X &= 
 
 \begin{pmatrix}
 1 & \frac{1}{2} \\ 
@@ -809,7 +818,9 @@ M_1 \otimes NOT &=
 \end{equation}
 $$
 
-> Apply NOT operation on $X_1$ and do nothing for $X_2$
+### How can apply some operation only on proper subset of the systems and do nothing on remaining systems?
+
+> Apply X (or NOT) operation on $X_1$ and do nothing for $X_2$
 
 We commonly apply some operation M on one system(or proper subset of systems) and do nothing to the remaining systems. Doing nothing can be represented by the identity matrix. So the above operation can be represented by the following matrix.
 
@@ -817,7 +828,7 @@ $$
 \begin{equation}\tag{Ex-10}
 \begin{split}
 
-M_1 \otimes NOT &= 
+X \otimes I &= 
 
 \begin{pmatrix}
 0 & 1 \\ 
@@ -841,8 +852,10 @@ M_1 \otimes NOT &=
 \end{equation}
 $$
 
-Note: 
-> It may be useful to think in a following way. If you consider a value 1 in the row 1 and column 3 in the above matrix, these indeces express a particular relationship between input and output states.
-> * Here column index 3 tells that the input state will be the state taht corresponds to the index 3 of the state vector. The row index 1 tells that output will be the state that correspons to the index 1 of the state vector.
+### Thinking in terms of matrix row and column indeces
+
+> Sometime thinking about operation in terms of pattern in the matrix is useful. Here first row of the matrix tell us that for what input vector we will get an output vector that corresponds to the first entry of the state vector. So the row index corresponds to the index of the output state in the state vector and column index corresponds to the index of the input state of the state vector.
+>
+> If you consider the first row of the above matrix, the column index 3 tells that the input state will be the state that corresponds to the index 3 of the state vector. The row index 1 tells that output will be the state that correspons to the index 1 of the state vector.
 >
 > This way of thinking might not be always useful but sometime it will give some intution about the operation that the matrices represent.
