@@ -1,6 +1,5 @@
 # Quantum Circuits
 
-
 ### What is Circuit model?
 
 - In the classical world one of the fundamental ways of representing classical computation is using boolean circuits model. There are some other theoretical models for classical computation such as Turing machine model. 
@@ -29,7 +28,7 @@ Quantum circuits can be implemented using quantum gates(Similar to boolean gates
 
 # Inner products, Orthonormal sets and Projective measurements
 
-## What is inner product?
+### What is inner product?
 
 If we multiply a row vector with a column vector using the same rules as matrix multiplication, then it is called inner product. This is important because the inner product of a vector with itself will give us a square of Euclidean norm of that vector.
 
@@ -38,24 +37,40 @@ $$
 \begin{split}
 |\psi\rangle &= 
 \begin{pmatrix}
+\alpha_1 \\ \alpha_2 \\ \vdots \\ \alpha_n
 \end{pmatrix} \\
 
-\langle \psi| &= (|\psi\rangle)^{\dagger}
+\langle \psi| &= (|\psi\rangle)^{\dagger}= 
+\begin{pmatrix}
+\overline{\alpha_1} & \overline{\alpha_2} & \cdots & \overline{\alpha_n}
+\end{pmatrix} \\
+
+Inner\ product &= \langle \psi||\psi\rangle
+= \overline{\alpha_1}\alpha_1 + 
+\overline{\alpha_2}\alpha_2 + 
+\cdots + 
+\overline{\alpha_n}\alpha_n
+
 \end{split}
 \end{equation}
 $$
 
 
-## What is othogonal set?
+### What is othogonal set?
+
+We say that two vectors are orthogonal when they are right angle to each other or equivalently perpendicular to each other. Suppos the vectors $|\psi_1\rangle$ and $|\psi_2\rangle$ are orthogonal then their inner product will be 0. That means $\langle \psi_1||\psi_2\rangle = 0$.
+
+We say that the set of vectors are orthogonal set when all the vector are mutually orthogonal to each other. In other word for any two vectors $|\psi_i\rangle$ and $|\psi_j\rangle$ where $i \neq j$, the inner product $\langle \psi_i||\psi_j\rangle = 0$.
 
 
-## What is orthonormal sets?
+### What is orthonormal sets?
+
+The set of vectors is called orthonormal set, when the set is orthogonal and each vector in the set is unit vector. In other word for any two vectors $|\psi_i\rangle$ and $|\psi_j\rangle$ where $i \neq j$, the inner product $\langle \psi_i||\psi_j\rangle = 0$. If $i=j$, then $\langle \psi_i||\psi_i\rangle = 1$.
+
+### How do we compute projection matrix?
 
 
-## How do we compute projection matrix?
-
-
-## How can we do the projective measurement?
+### How can we do the projective measurement?
 
 
 
