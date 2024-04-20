@@ -65,9 +65,24 @@ We say that the set of vectors are orthogonal set when all the vector are mutual
 
 ### What is orthonormal sets?
 
-The set of vectors is called orthonormal set, when the set is orthogonal and each vector in the set is unit vector. In other word for any two vectors $|\psi_i\rangle$ and $|\psi_j\rangle$ where $i \neq j$, the inner product $\langle \psi_i||\psi_j\rangle = 0$. If $i=j$, then $\langle \psi_i||\psi_i\rangle = 1$.
+The set of vectors is called orthonormal set, when the set is orthogonal and each vector in the set is a unit vector. In other word for any two vectors $|\psi_i\rangle$ and $|\psi_j\rangle$,if $i \neq j$, then the inner product $\langle \psi_i||\psi_j\rangle = 0$. If $i=j$, then $\langle \psi_i||\psi_i\rangle = 1$.
 
-### How do we compute projection matrix?
+
+### What is orthonormal basis?
+
+Suppose we have a orthonormal set of vectors S and vectors in the set S has been drawn from the vector space V of dimension n. if vectors in the set S spans the vector space V, then the set S is called orthonormal basis. The given below sets $S_1$ and $S_2$ are orthonormal basis of dimension 2 and 4 respectively.
+
+$$
+S_1 = \{ |+\rangle, |-\rangle \} \\
+S_2 = \{ |\phi^+\rangle, |\phi^-\rangle, |\psi^+\rangle, |\psi^-\rangle \}
+$$
+
+Remember that the standard basis set of any dimension n is also a orthonormal basis of the vector space of dimension n.
+
+
+### What is projection?
+
+
 
 
 ### How can we do the projective measurement?
