@@ -505,6 +505,8 @@ $$
 
 The above formula won't always be a valid quantum state vector due to two reasons, First one is the $\alpha_{ab}$ is a complex number and the second is we define the probability of quantum state vector using absolute values of those complex numbers. So directly adding up the complex numbers won't always give the correct probability for the state $X_1 = a$ for any $a \in \Sigma_1$. You can check this out with the `Ex-8`.
 
+> **Note**: sum of absolute values squared of complex numbers is not equal to the absolute values square of the sum of complex numbers. For example suppose if $c_1$ and $c_2$ are two complex numbers, then $|c_1|^2 + |c_2|^2 \neq |c_1 + c_2|^2$. So we can't directly add the terms that contains $|a\rangle$ to get the complex number that corresponds to the state $|a\rangle$ of the system $X_1$.
+
 The another way we may try is the following.
 
 $$
@@ -713,6 +715,9 @@ $$
 \end{equation}
 $$
 
+
+> **The mixed-product property**: the property of the tensor product that is used here is: $(A \otimes B) (C \otimes D) = AC \otimes BD$.
+
 In the second step we have used the fact that computing tensor product of matrices and then conjugate transposing it is equal to first conjugate transposing each of the matrices then finding the tensor product. In the third step we have used the fact that tensor product of matrices is multiplicative. Since all the $U_i$ for $1 \leq i \leq n$ are unitary matrices we got the Identity matrices as a result. Then the tensor product of these idenetity matrices is going to be a identity matrix that corresponds to the joint system $(X_1,X_2,\cdots,X_n)$.
 
 #### Doing nothing on one system
@@ -765,10 +770,23 @@ We can compute the unitary matrix for the swap operation using the following equ
 
 $$ SWAP = \sum_{c,d \in \Sigma}|c\rangle \langle d| \otimes |d\rangle \langle c|$$
 
-If you are confused about the above matrix, then don't worry its very simple. We are just computing the matrices for individual operations on the individaul systems $X_1$ and $X_2$ and then compute the tensor product of them. The term $|c\rangle \langle d|$ tells that on the first system when input is $\langle d|$ then the output is $|c\rangle$. 
+We can derive this using the mixed-product property of the tensor product. Suppose for the input $\langle d|  \otimes \langle c|$ the output is $\langle c| \otimes \langle d|$, then based on the properties of the tensor product we can derive the following equation.
+
+$$
+\begin{split}
+
+&=\sum_{c,d \in \Sigma} (|c\rangle \otimes |d\rangle ) (\langle d| \otimes \langle c|) \\
+
+&= \sum_{c,d \in \Sigma} |c\rangle \langle d| \otimes |d\rangle \langle c| \\
+
+\end{split}
+$$
+
+or we can think of the above equation as we are defining the input vs ouput combination for each of the individual systems separately and then after that we are finding tensor product of those two matrices. For each pair $c,d \in \Sigma$, for the first system if $\langle d|$ is the input, then the $|c\rangle$ will be the output. But at the same time for the second system $\langle c|$ should be the input and the $|d\rangle$ should be the output.
+
 
 >**Important:** \
-> In the above definitions we are defining the input as row vector such as $\langle d$ and output as column vector such as $|c\rangle$. This is only for the purpose of computing the unitary matices. In normal cases of the unitary operations both the input and output is going to be column vector represented by the `ket` notation.
+> In the above definitions we are defining the input as row vector such as $\langle d$ and output as column vector such as $|c\rangle$. This is only for the purpose of computing the unitary matices. But usually when we apply unitary operation to a column vector it gives another column vector as an output.
 
 The swap operation the joint system of two qbits $(X_1,X_2)$ is defined as follows.
 
