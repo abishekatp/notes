@@ -1,46 +1,46 @@
 
 # Classical Information(Multiple systems)
 
-As in a classical single system(also we can think of them as a simple systems), In the multiple systems(Also we can think of this as complex systems) case also we will first see about the classical information and then go onto the quantum information in the next blog.
+As in a classical single system(also we can think of them as a simple system), In the multiple systems(Also we can think of this as a complex system) case also we will first see about the classical information and then go onto discussing about the quantum information in the next blog.
 
 ### What does the multiple systems mean?
 
-As we have discussed in the classical systems the concept of single or multiple systems can be defined as per our needs. Commonly we consider a simple systems like a bit or a qbit as a single system and use the combination them to create more complex systems. We will use ideas from this blog to combine multiple simple systems together to describe more complex systems.
+As we have discussed in the classical system blog the concept of a single or multiple systems can be defined as per our needs. Commonly we consider a simple system like a bit or a qbit as a single system and use the combination these to create a more complex system. We will use the ideas from this blog to combine multiple single systems together to create more a complex system(or equivalently called multiple systems).
 
-### Why do we need multiple systems?
+### Why do we need a multiple systems?
 
-Our world is made up of complex systems. If we create a single classical system with so many classical states, then we might be able represent these complex systems mathematically. But this idea of just increasing the number of classical states to represent a more complex systems is not a scallable idea. So if we first define a simple classical systems with small number of classical states such as bit, then we can use the ideas from this blog to represent more complex systems.
+Our world is made up of complex systems. If we create a single classical system with so many classical states, then we might be able describe these complex systems mathematically. But the idea of just increasing the number of classical states to describe a more complex system is not a scallable idea. So if we first define a simple classical system with small number of classical states such as bit, then we can use the ideas from this blog to a represent more complex systems using these simple systems.
 
-Intutively the complex systems are the combination of many same or different kind of simple system. How can we mathematically reprsent these multiple systems so that we can process those information mathematically?
+Intutively a complex system is a combination of many same or different kind of simple systems. How can we mathematically describe these multiple systems so that we can process those information mathematically?
 
 > **Note:** \
-> * Important: Remember that any particular multiple system can be considered as a single system itself. After that we can use that as a part of more complex systems. \
-> * So at the end the terms Single or Mulitple is differtiated by only how we think about a particular system. For example think of this torch light attached to more complex system like motor bike(like an head light). In that case we will think of the torch light as a single system that is part of the more complex system like a motor bike.
-> * This is going to be key idea behind how we are going to measure or apply some operations on the multiple systems. We consider multiple systems together as single big system and use the same ideas which we have used in the single systems
+> * Important: Remember that any of the multiple systems could be considered as a single system. In that case that system can be again included in a more complex system. \
+> * So at the end, the term single or mulitple differs only by how we think about a particular system. For example think of this torch light attached to a more complex system like motor bike(like an head light). In that case we can think of a torch light as a single system and that is part of a more complex system like a motor bike.
+> * This is going to be a key idea behind how we are going to measure or apply some operation on multiple systems. We could consider any multiple systems as single system and use the same ideas that we discussed in the single system blog.
 
 
 
-In this blog we will see how we can represent the torch light as the combination these two individual systems. Here $\Sigma_1$ represents the on-off state of the torch light and $\Sigma_2$ represents the brightness of the torch light. So we need way of mathematically representing these single systems together.
+In this blog we will see how we can represent the torch light as the combination these two individual systems. Here $\Sigma_1$ represents the on-off state of the torch light and $\Sigma_2$ represents the brightness of the torch light. So we need a way of mathematically combining these two single systems together.
 
 Practically these individual systems together form a multiple system. In the above case this multiple system is formed by two individual systems $\Sigma_1$ and $\Sigma_2$ of the torch light. But in general the multiple systems can be formed by any number individual systems.
 
-### How do we find classical state set multiple systems?
+### How do we find a classical state set of multiple systems?
 
-If there are two are more single systems, then we can find the classical state set of the joint multiple systems by finding the cartesian product of the classical state sets of the single systems.
+If there are two are more single systems and we combine them to form a multiple systems, then we can find a classical state set of a joint system by finding the cartesian product of classical state sets of each of the single system that is used to form multiple systems.
 
-For example, lets take an torch light example from our previous blogs, Individually we have used two classical systems one for ON/OFF infor and another is battery brightness:
+For example, lets take a torch light example from our previous blogs, Individually we have used two classical systems one to retain ON/OFF state and another is to represent the brightness of the torchlight:
  $$\Sigma_1 = \{ OFF, ON \}$$  
  $$\Sigma_2 = \{ LOW, HIGH \}$$ 
 
-If each of the single system has its own associated classical states set as defined above, then the multiple systems are represented by the cartesian product of classical state set of each of the single systems. We can represent a classical states of a torch light using the cartesian product of these single systems as follows. 
+If each of the single system has its own associated classical states set as defined above, then the joint system is represented by the cartesian product of classical state set of each of the single systems. We can find the classical states set of a torch light using the cartesian product of classical state sets of single systems as follows. 
 
 $$\Sigma = \Sigma_1 \times \Sigma_2 = \{ (OFF, LOW), (OFF, HIGH), (ON, LOW), (ON, HIGH)\}$$
 
-If you think that torch ligh has two switches one switch to make the torch light and ON or OFF and another one to change brightness HIGH or LOW, then here (ON, LOW) is one of the possible classical state of the torch light, where torch light is ON and its brightness is set to LOW. 
+If you think of a torch light having two switches one to make the torch light ON or OFF and other one to change brightness between HIGH or LOW, then here (ON, LOW) is one of the possible classical state of the torch light, where torch light is ON and its brightness is set to LOW. 
 
 ### What is cartesian product?
 
-If you think more formally the cartesian product takes each element `a` of any set $\Sigma_1$ and pair it with each element `b` of another set $\Sigma_2$ to create single combined set $\Sigma$. We can formally define this as follows,
+More formally the cartesian product takes each element `a` of any set $\Sigma_1$ and pair it with each element `b` of another set $\Sigma_2$ to create single combined set $\Sigma$. We can formally define this as follows,
 
 $$\Sigma_1 \times \Sigma_2 = \{ (a,b) : a \in \Sigma_1 \; and \; b \in \Sigma_2 \}$$
 
@@ -51,15 +51,15 @@ $$\Sigma_1 \times \Sigma_2 \times ... \times \Sigma_n =
 
 ### What about the order of elements in the cartesian product set?
 
-When we describe the state of the system as column or row vector the order of the states plays crucial role. If we use different order in different part of our calculation, then we won't get a correct answer. So the order in which the cartesian product set is defined is also an important thing to consider.
+When we describe a state of a system as a column or row vector the order of the states plays crucial role. If we use different order in different part of our calculation, then we won't get a correct answer. So the order in which the cartesian product set is defined is also an important thing to consider.
 
-* Here we assume that the elements of classical state sets($\Sigma_1$,$\Sigma_2$...$\Sigma _n$) are arranged in particular order(For example alphabetical order). Then when we find a cartesian product of these sets and arrange them using the same ordering logic. The order in which we create a cartesian product doesn't matter as long as we keep the same ordering in all the places wherever we use the cartesian product set. For example the same order must be used when representing a calssical state of a multiple system as a row or column vector.
+* Here we assume that the elements of classical state sets($\Sigma_1$,$\Sigma_2$...$\Sigma _n$) are arranged in a particular order(For example alphabetical order). Then when we find a cartesian product of these sets and arrange them using the same ordering logic. The order in which we create a cartesian product doesn't matter as long as we keep the same ordering logic in all places wherever we use the cartesian product set. For example the order must be retained when representing a calssical state of a joint system as a row or a column vector.
 
-* We follow the notion of taking first element of first set and pair with each element of second set, then take the second element of the first set and pair with all the elements of the second set and so on. This idea can be generalized for any number of sets by recursively combining always the first two sets. For example we can do that by first combining first two sets as a single set and then combine this new cartesian product set with third set and so on.
+* We follow the notion of taking a first element of the first set and pair with each element of the second set, then take the second element of the first set and pair it with all elements of the second set and so on. This idea can be generalized for any number of sets by recursively combining always the first two sets. For example we can do that by first combining first two sets as a single set and then combine this new cartesian product set with third set and so on.
 
-### Can we still use vector notation to represent the state of the multiple systems?
+### Can we still use the vector notation to represent a state of a joint systems?
 
-We know that we can use the cardesian product to get classical state set of the multiple systems. Then we can use a column vector to represent a classical state of the multiple sytems in a same way as single systems. But here the column vector entries will correspond to the cartesian product set(which we got using the cartesian product of classical state sets of single systems) of the multiple systems.
+We know that we can use the cardesian product to get a classical state set of a joint system. Then we can use a column vector to represent a classical state of that system in the same way as we have done for a single system. But here the column vector entries will correspond to the cartesian product set(which we got using the cartesian product of classical state sets of single systems) of the joint system.
 
 For example the classical state of the torch light that is ON and with LOW brightness can be represented by the following column vector(we have added labels for each entry of the column vector. These labels corresponds to a classical state of the torch light).
 
@@ -68,11 +68,11 @@ $$ |light\rangle =
 \begin{matrix} \rightarrow (OFF, LOW) 
 \\  \rightarrow (OFF, HIGH) \\ \rightarrow(ON, LOW) \\ \rightarrow(ON, HIGH)\end{matrix}$$
 
-Here the order of entries doesn't matter as long as we use the same order in all the places.
+Here the order of entries doesn't matter as long as we use the same order in all places.
 
-### Representing multiple bits using column vector
+### Representing multiple bits using a column vector
 
-More formal example will be Bit. Remember that it has two classical states 0 or 1. Consider two such bits $X_1$ and $X_2$ together represents some information. Here the classical state set $\Sigma_1$ and $\Sigma_2$ corresponds to the bits $X_1$ and $X_2$. 
+More formal example of multiple systems can be the combination of multiple bits. Remember that it has two classical states 0 or 1. Consider two such bits $X_1$ and $X_2$ together representing some information. Here classical state sets $\Sigma_1$ and $\Sigma_2$ correspond to bits $X_1$ and $X_2$ respectively. 
 $$
 \Sigma_1 = \{ 0,1 \} \ and \  
 \Sigma_2 = \{ 0,1 \}
@@ -82,13 +82,13 @@ Then we can get the classical state set of the joint system $(X_1,X_2)$ using th
 
 $$ \Sigma_1 \times \Sigma_2 = \{(0,0), (0,1), (1,0), (1,1)\} = \{00,01,10,11\}$$
 
-`String:` Here you can notice that instead of using brackets and commas we are just representing each state of the joined system just as a string. This is very common and valid way of defining the classical state of the multiple system. In this case removing brackets and commas doesn't add any ambiguity or confusion. One useful thing to remember is that the formal definition of the string is also defined by the cartesian product of sets with symbols called alphabets(where alphabets is more formal way of saying a set of symbols).
+`String:` Here you notice that instead of using brackets and commas we are just representing each state of the joint system just as a string. This is a very common and valid way of defining the classical state of joint system. In this case removing brackets and commas doesn't add any ambiguity or confusion. One useful thing to remember is that the formal definition of the string is also defined by the cartesian product of sets with symbols called alphabets(where alphabets is more formal way of saying a set of symbols).
 
-We can generalize this idea for n number of bits. For exmaple classical system $X$ with 10 bits $(X_1,X_2,...,X_{10})$ each with classical state set $\Sigma_1,\Sigma_2,...,\Sigma _{10}$ can be represented by the following cartesian product. Here we directly use the `string` format instead of using `tuple` format to represent each state.(There are total of $2^{10} = 1024$ such possible states of X)
+We can generalize this idea for n number of bits. For exmaple classical system $X$ with 10 bits $(X_1,X_2,...,X_{10})$ each with classical state set $\Sigma_1,\Sigma_2,...,\Sigma _{10}$ respectively can be represented by the following cartesian product. Here we directly use the `string` format instead of using the `tuple` format to represent each state.(There are total of $2^{10} = 1024$ such possible states of X)
 
 $$\Sigma_1 \times \Sigma_2 \times ... \times \Sigma_{10} = \{0000000000, 0000000001, 0000000010, ..., 1111111111\}$$
 
-Similar to the single systems, we can use the Column vector we can represent the classical state of the two bits in a following way(we have added labels for each entry of the column vector that corresponding classical state of two bit system). Similary we can define the calsssical state vector for any n number of bits also.
+Similar to the single system, we can use a column vector to represent a classical state of two bits in the following way(we have added labels for each entry of the column vector that corresponding classical state of two bit system). Similary we can define the calsssical state vector for any joint system with n number of single systems.
 
 $$ |b\rangle = 
 \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0\end{pmatrix} 
@@ -96,11 +96,11 @@ $$ |b\rangle =
 \\  \rightarrow 01 \\ \rightarrow 10 \\ \rightarrow 11\end{matrix}$$
 
 
-### How can we define the probabilistic state of the multiple systems?
+### How can we define the probabilistic state of multiple systems?
 
-We can define the probabilistic state of multiple systems in a same way as the probabilistic state of the single system. Here we will associate some probability value with each classical state of the cartesian product set of the joint system.
+We can define the probabilistic state of multiple systems in the same way as the probabilistic state of a single system. Here we will associate some probability value with each classical state of the cartesian product set of the joint system.
 
-As we have seen in previous section, Let $X_1$ and $X_2$ represent two Bits with classical state sets $\Sigma_1$ and $\Sigma_2$. Then the following vector represents a probabilistic state of joint system $(X_1,X_2)$ where the state `00 or (0,0)` has probability 1/2 and the state `11 or (1,1)` has the probabilty 1/2. The states `01` or `10` has the probability 0. (we have added classical state labels for each entry of the probability vector. Each entry corresponds to a probability associated with the labeled classical state).
+As we have seen in the previous section, Let $X_1$ and $X_2$ represent two Bits with classical state sets $\Sigma_1$ and $\Sigma_2$. Then the following vector represents a probabilistic state of joint system $(X_1,X_2)$ where the state `00 or (0,0)` has probability 1/2 and the state `11 or (1,1)` has the probabilty 1/2. The states `01` or `10` has the probability outcome of 0. (we have added classical state labels for each entry of the probability vector. Each entry corresponds to a probability associated with the labeled classical state).
 
 $$ |p\rangle = 
 \begin{pmatrix} \frac{1}{2} \\ 0 \\ 0 \\ \frac{1}{2}\end{pmatrix}
@@ -108,17 +108,19 @@ $$ |p\rangle =
 \\  \rightarrow 01 \\ \rightarrow 10 \\ \rightarrow 11\end{matrix}
 $$
 
-Similar to the single system, The sum of entries of the column vector that corresponds probabilistic state of the multiple system should also be equal to 1 and each entry of the vector should be a possitive real number. Then only we can say that this vector is a probability vector.
+Similar to a single system, The sum of entries of a column vector that corresponds probabilistic state of a multiple system should also be equal to 1 and each entry of the vector should be a possitive real number. Then only we can say that the vector is a probability vector.
 
-In the above example single systems that combined together to form a joint system have specific behaviour. If you see the single systems(bits) individually, then you can see that both the single systems are in same state always. This is an example of correlation between individual systems. This will not be always the case some times the systems will be independent of each other.
+In the above example single systems that are combined together to form a joint system have specific behaviour. If you look into each of the single systems(bits) individually, then you will see that the both single systems are in the same state always. This is an example of correlation between individual systems. This will not be the case always, some times each of the systems will be independent of each other.
 
 ## Independence and Correlation
 
-### What do we mean by the independence of single systems?
+### What do we mean by the independence among multiple systems?
 
-We have seen that the multiple system is just a combination of single systems. Two systems are said to be independent if learning the classical state of the each of the system doesn't depend on the other one. In other words learning the classical state of the any one of the systems doesn't give any information about the other system.
+We have seen that multiple systems are just a combination of single systems. Two systems are said to be independent if measuring the classical state of each of the system doesn't depend on the other one. In other words learning the classical state of the any one of the systems shouldn't give any information about the other system.
 
-To understand this first we will the independence between two systems then we can easily generalise that idea for the systems with three or more single systems. Lets assume that the two joint systems $(X_1, X_2)$ are represented by a probabilistic column vector $|\psi\rangle$. Here both $X_1$ and $X_2$ are classical bit with classical state set $\Sigma_1 = \{0,1\}$ and $\Sigma_2 = \{0,1\}$.
+> note: Suppose there are two systems. The correlation doesn't mean that the probability outcome of the second system depends on whether or not we are measure the first system. Regardless of the measurement of the first system, the second system will have same probability outcome. The correlation just means that measuring the first system will give us some information about the probability outcome of the second system. The measurement of the first system doesn't change the probability of the second system. If we directly measure the second system without measuring the first system, then also we will get the same probabilty outcome as before. We will further discuss about this in the upcoming sections.
+
+To understand this first we will define the independence between two systems. Remember that we can easily generalise this idea for the systems with three or more single systems. Lets assume that the joint system $(X_1, X_2)$ is represented by a probabilistic column vector $|\psi\rangle$. Here both $X_1$ and $X_2$ are classical bits with classical state set $\Sigma_1 = \{0,1\}$ and $\Sigma_2 = \{0,1\}$ respectively.
 
 Here the current probabilistic state of bits $X_1$ and $X_2$ are represented by the column vectors $|\psi_1\rangle$ and $|\psi_2\rangle$ respectively. We can define these vectors mathematically as follows.
 
@@ -134,17 +136,17 @@ $$
 \end{equation}
 $$
 
-Here $p_a$ and $q_b$ are probability value associated with each classicate state of the bits $X_1$ and $X_2$. The value $r_{ab}$ is the probability associated with each classical state of the joint system $(X_1,X_2)$. 
+Here $p_a$ and $q_b$ are probability value associated with each classicate state of bits $X_1$ and $X_2$. The value $r_{ab}$ is the probability associated with each classical state of the joint system $(X_1,X_2)$. 
 
->Even though already we know this I want to remaind that $|a\rangle$ and $|b\rangle$ are column vectors that represents the classical states of the systems $X_1$ and $X_2$. The column vector $|ab\rangle$ corresponds to the classicate states of the joint system $(X_1, X_2)$.
+>Even though already we know this I want to remind you that $|a\rangle$ and $|b\rangle$ are column vectors that represent the classical states of systems $X_1$ and $X_2$. The column vector $|ab\rangle$ corresponds to the classicate states of the joint system $(X_1, X_2)$.
 
-We say that these two systems $X_1$ and $X_2$ are independent when they are probabilistically independent from each other. Then Correlation between two systems is defined as lack of independence. If two systems are not independent, then they are correlated.
+We say that these two systems $X_1$ and $X_2$ are independent when they are probabilistically independent from each other. Then Correlation between two systems are defined as the lack of independence. If two systems are not independent, then they are correlated.
 
-#### What is the probabilistic independence?
+#### What is probabilistic independence?
 
-Two events are said to be independent if probability outcome of an one event doesn't affect the probability outcome of the other event. 
+Two events are said to be independent from each other if the probability outcome of an event doesn't affect the probability outcome of the other event. 
 
-Suppose $X_1$ and $X_2 are two individual systems. We say that these systems $X_1$ and $X_2$ are probabilistically independent when the probability associated with the system doesn't depend on each other. We can define this formally as follows,
+Suppose $X_1$ and $X_2$ are two individual systems. We say that these systems $X_1$ and $X_2$ are probabilistically independent when the probability associated with these systems doesn't depend on each other. We can define this formally as follows,
 
 $$ 
 \begin{equation} \tag{2}
@@ -152,29 +154,29 @@ P((X_1,X_2) = (a, b)) = P(X_1=a)P(X_2=b)
 \end{equation}
 $$
 
-This equation tells that the probability that the joint system $(X_1,X_2)$ is in a state $(a,b)$ is the multiplication of the probabilities that states of $X_1 = a$ and $X_2 = b$. We can define this for the probability $r_{ab}$ as follows.
+This equation tells us that the probability of the joint system $(X_1,X_2)$ to be in a state $(a,b)$ is the multiplication of probability values of states to be $X_1 = a$ and $X_2 = b$. The probability $r_{ab}$ can be defined as follows.
 
 $$ r_{ab} = p_a q_b$$
 
-This will be true for each classical state $a \in \Sigma_1$ and $ b \in \Sigma_2$. That means regardless of whatever state the individual systems $X_1$ and $X_2$ are in, The probability associated with the joint systems $(X_1,X_2)$ is always the multiplication of the probability associated with each of the single system. We can define this idea more formally using the tensor product.
+This will be true for each classical state $a \in \Sigma_1$ and $ b \in \Sigma_2$. That means regardless of whatever state individual systems $X_1$ and $X_2$ are in, The probability associated with the joint systems $(X_1,X_2)$ is always the multiplication of the probability associated with each of the single systems. We can define this idea more formally using the tensor product.
 
-### How does the tensor product represents independence?
+### How does the tensor product represent independence?
 
-So to define the independece of the individual systems that make up the multiple systems, we can use the tensor product. If we can write down the classical state of the multiple systems as a tensor product of classical state of the individual systems, then we can say that individual system are independent of each other.
+The tensor product is used to describe the combined state of multiple individual systems in such a way that it captures the independence of the individual systems. If we are able write down the classical state of multiple systems as a tensor product of classical state of the individual systems, then those individual system will be independent of each other.
 
-We can take the same definition of probability vectors $|\psi_1\rangle$ and $|\psi_2\rangle$ that corresponds to a individual systems $X_1$ and $X_2$ respectively. The probability vector $|\psi\rangle$ that corresponds to a joint systems $(X_1, X_2)$. Then we can say that $|\psi_1\rangle$ and $|\psi_2\rangle$ independent if and only if the following equation is true.
+Lets take the same definition of probability vectors $|\psi_1\rangle$ and $|\psi_2\rangle$ that correspond to individual systems $X_1$ and $X_2$ respectively. The probability vector $|\psi\rangle$ corresponds to a joint systems $(X_1, X_2)$. The vectors $|\psi_1\rangle$ and $|\psi_2\rangle$ will be independent of each other if and only if the following equation is true.
 
 $$ |\psi\rangle = |\psi_1\rangle \otimes |\psi_2\rangle$$
 
-Here the $|\psi\rangle$ is called the product vector(because it is the product of state vectors of the individual systems). The tensor product is more of a natural way of multiplying a column vector( or row vector) with another column vector(or row vector).(Here remember that the dirac notation `ket` represents the column vector)
+Since $|\psi\rangle$ is a product of state vectors of individual systems, it is called a product vector. The tensor product is a more natural way of multiplying a column vector with another column vector or a row vector with another row vector. Keep in mind that the Dirac notation `ket` represents a column vector.
 
 
-> **Notations for tensor product**: The following are the equivalent notation for representing tensor product of two vectors $|a\rangle$ and $|b\rangle$.
+> **Notations for tensor product**: The following are the equivalent notation for representing a tensor product of two vectors $|a\rangle$ and $|b\rangle$.
 > $$|a\rangle \otimes |b\rangle \equiv |a\rangle|b\rangle \equiv |ab\rangle \equiv |a \otimes b\rangle
 \equiv |(a,b)\rangle \equiv |a,b\rangle$$
 >  Here the most common notations are $|a\rangle \otimes |b\rangle$, $|a\rangle|b\rangle$ and $|ab\rangle$.
 
-The tensor product of two vecotors $|\psi_1\rangle$ and $|\psi_2\rangle$ can be done in a following way. Take each element of first vector and multiply with each element of the second vector.
+The tensor product of two vecotors $|\psi_1\rangle$ and $|\psi_2\rangle$ can be computed in the following way. Take each element of the first vector and multiply with each element of the second vector.
 
 $$
 |\psi\rangle = |\psi_1\rangle \otimes |\psi_2\rangle = 
@@ -192,17 +194,17 @@ $$
 >$$|a\rangle \otimes (k|b\rangle) = k(|a\rangle \otimes |b\rangle)$$
 
 
-Another way to describe the independence is if we can write down the complex number associated with each classical state $|ab\rangle$ of the joint system as the multiplication complex number associated with 
+We can explain the independence of two systems in some other ways also. Suppose if we can write down the complex number associated with each classical state $|ab\rangle$ of the joint system as the multiplication complex number associated with states $|a\rangle$ and $|b\rangle$ of individual systems, then we can call those systems as independent.
 
 $$ \langle ab|\psi\rangle = \langle a|\psi_1\rangle \langle b|\psi_2\rangle$$
 
-Here note that in the LHS we are multiplying two row vectors(classical state vector) $\langle a|$ and $\langle b|$ using the rules of the tensor product to get a classical state vector of the joint system $(X_1,X_2)$. Then we are multiplying resulting vector $\langle ab|$ with a current state(in `ket` notation) $|\psi\rangle$ of the joint system to get a complex number associated with that state.
+Note that in the LHS we are multiplying two row vectors(classical state vector) $\langle a|$ and $\langle b|$ using the rules of the tensor product to get a classical state vector of the joint system $(X_1,X_2)$. Then we are multiplying resulting vector $\langle ab|$ with a current state(in `ket` notation) $|\psi\rangle$ of the joint system to get a complex number associated with that state.
 
 Similarly in the RHS also we are multiplying classical state vectors $\langle a|$ and $\langle b|$ with the state vectors $|\psi_1\rangle$ or $|\psi_2\rangle$ respectively to get a complex number associated with respective states.
 
 ### Example of Independence using tensor product
 
-Lets take the same example of bits $X_1$ and $X_2$ here also. Suppose we have the probability vector $|\psi\rangle$ that represent the joint system $(X_1,X_2)$. Then in the following derivation we are trying to derive that $|\psi\rangle = |\psi_1\rangle |\psi_2\rangle$
+Lets take the same example of bits $X_1$ and $X_2$ here also. Assume that we have the probability vector $|\psi\rangle$ that represent the joint system $(X_1,X_2)$. In the following derivation we are trying to derive that $|\psi\rangle = |\psi_1\rangle |\psi_2\rangle$
 
 
 $$
@@ -226,17 +228,17 @@ $$
 >* Regardless of whatever the classical state the bit $X_1$, the probability associated with the bit $X_2$ is same. The probabilistic state of the $X_2$ is always $\left(\frac{2}{3} |0\rangle + \frac{1}{3} |1\rangle \right)$.
 
 
-In the above derivation you can see how we can find the probabilities associated with individual systems $X_1$ and $X_2$ in a formal way. we could have factored the term $\frac{4}{9} =\frac{2}{3} \times \frac{2}{3} = \frac{2}{9} \times 2$. But we have done in a specific way to make sure that the sum of probabilities of single system would add upto 1. Note that $\frac{2}{3} +\frac{1}{3} = 1$. (**Note**: Remember that the probability should add upto 1 in any probability vector.)
+The above derivation show us a way to compute a probability associated with individual systems. Notice that we could have done the factoring like $\frac{4}{9} =\frac{2}{3} \times \frac{2}{3} = \frac{2}{9} \times 2$. But we haven't done that to make sure the sum of probabilities of single system add upto 1. Such that $\frac{2}{3} +\frac{1}{3} = 1$. (**Note**: Remember that the probability associated with each of the states should add upto 1 for any probability vector.)
 
-Also If you multiply the probabilities associated with the classical states $|0\rangle$ of $|\psi_1\rangle$ and $|0\rangle$ of $|\psi_2\rangle$, then you will get the probability associated with the joint classical state $|00\rangle$ as $\frac{2}{3} \times \frac{2}{3} = \frac{4}{9}$. Like this you can cross check each valid combination of individual systems.
+Also If you multiply the probabilities associated with the classical states $|0\rangle$ of $|\psi_1\rangle$ and $|0\rangle$ of $|\psi_2\rangle$, then you will get the probability associated with the joint classical state $|00\rangle$ as $\frac{2}{3} \times \frac{2}{3} = \frac{4}{9}$. Like this we could check for other states of the joint system.
 
-If we can write down the probability vector of the joint system as the tensor product of probability vectors associated with each individual systems, then we can find the probability associated with each classical state of the individual system without depending on the other systems.
+If we can write down the probability vector of a joint system as the tensor product of probability vectors of individual systems, then we could say that the probability associated with each state of the individual systems are independent of other systems.
 
 ### Then what does the correlation mean?
 
-We can define the correlation(or dependence) as the lack of independence. If two systems are dependent to each other, then measuring one system will give you some information about the other system.
+The correlation(or dependence) is the lack of independence. If two systems are correlated, then measuring one system will give you some information about the other system.
 
-Lets suppose we have the following probability vector $|\psi\rangle$ that represents some probabilistic state of the joint system $(X_1,X_2)$. We will try to write it as the tensor product of two probability vectors.
+Lets take the following probability vector $|\psi\rangle$ that represents some probabilistic state of some joint system $(X_1,X_2)$. We will try to write it as the tensor product of two probability vectors.
 
 $$
 \begin{equation} \tag{Ex-2}
@@ -248,11 +250,11 @@ $$
 \end{equation}
 $$
 
-In the above derivation we can't go any further, that means we can't wirte this probability vector as a tensor product of two individual probability vectors. That means these two bits are correlated.
+In the above derivation we won't be able to do anythign further, that means we can't write down the above probability vector as a tensor product of two individual probability vectors. That means these two bits are correlated.
 
->If you think about it, then you can see that here learning the calssical state of $X_1$ does give us some information about the classical state of $X_2$. the probability vecotor for $X_2$ is different for two cases where $X_1$ is in the state $|0\rangle$ and in the state $|1\rangle$
+>Here note that learning the calssical state of $X_1$ give us some information about the classical state of $X_2$. the probability vecotor associated $X_2$ differs for two possible outcomes of $X_1$.
 
-Another good example of correlation is the following vector. Here the $|X_1\rangle$ and $|X_2\rangle$ can always be in the same state either $|0\rangle$ or $|1\rangle$.
+Given below is the good example for the correlation. The system $|X_1\rangle$ and $|X_2\rangle$ will always be in the same state either $|0\rangle$ or $|1\rangle$.
 
 $$ |\psi\rangle = \frac{1}{2}|00\rangle + \frac{1}{2}|11\rangle$$
 
@@ -260,7 +262,7 @@ Here the probability value $\frac{1}{2}$ has no special importance. It can be an
 
 ### What about the independence of three or more systems?
 
-The idea we have used for two systems can be generalised for three or more systems. Lets assume that we have joint multiple systems $(X_1,X_2,...,X_n)$ with probability vectors $|\psi\rangle$ and individual systems $X_1,X_2,...,X_n$ with probability vectors $|\psi_1\rangle, |\psi_2\rangle, ..., |\psi_n\rangle$. If we can write the probability vector $|\psi\rangle$ as the product of the probability vectors $|\psi_1\rangle, |\psi_2\rangle, ..., |\psi_n\rangle$, then we can say that individual systems are independent. It can be formally defined as follows,
+The idea that we discussed for two systems can be easily generalised for three or more systems. Lets assume that we have a joint system $(X_1,X_2,...,X_n)$ with the probability vectors $|\psi\rangle$ and individual systems $X_1,X_2,...,X_n$ with probability vectors $|\psi_1\rangle, |\psi_2\rangle, ..., |\psi_n\rangle$ respectively. If we can write down the probability vector $|\psi\rangle$ as the product of the probability vectors $|\psi_1\rangle, |\psi_2\rangle, ..., |\psi_n\rangle$, then we could say that individual systems are independent of each other(more specifically mutually independent of each other). It can be formally defined as follows,
 
 $$
 \begin{equation} \tag{3}
@@ -268,9 +270,9 @@ $$
 \end{equation}
 $$
 
-Similar to the two systems case, We can also define a linearity with respect each argument of the three or more systems when all the other arguments are fixed. This is called multilinearity.
+We could define a linearity with respect each argument of the three or more systems when all the other arguments are fixed like we did for two systems case. This is called multilinearity.
 
-If individual systems are indipendent, then we can describe the probability associated with each classical state of joint system in a following way.
+If individual systems are indipendent, then we will be able describe the probability associated with each classical state of joint system as follows.
 
 $$
 \begin{equation} \tag{4}
@@ -278,9 +280,11 @@ $$
  \end{equation}
  $$
 
+ This equation tells us that the probability associated with the joint system can be described as the multiplication of the probability associated with each of the individual systems.
+
  ### How can we calculate the tensor product of three or more vectors?
 
-One way to do this is, we can recursively define the tensor product of n vector. The logic goes like this, to compute the tensor product n vectors, first get the tesnor product of n-1 vectors and multiply it with n'th vector. To compute the tendor product of n-1 vector first get the tesnor product of n-2 vectors and then multiply it with the (n-1)'th vector. This will go on like this until there are just two vectors to multiply. The give below equation is how the first step of this recursive procedure will look like.
+One way to do this is, we can recursively define the tensor product of n vector as a tensor product of just two vectors. The logic goes like this, to compute the tensor product n vectors, first get the tesnor product of n-1 vectors and multiply it with n'th vector. To compute the tensor product of n-1 vector first get the tesnor product of n-2 vectors and then multiply it with the (n-1)'th vector. This will go on like this until there are just two vectors to multiply. The given below equation is how the first step of this recursive procedure will look like.
 
 $$
 \begin{equation} \tag{5}
@@ -289,39 +293,39 @@ $$
 $$
 
 
-## Measurement of multiple systems
+## Measuring the state of multiple systems
 
 ### How can we define the measurement on multiple systems?
 
-If we consider multiple systems together as a single system, then the measurement of multiple systems is similar to the measurement of a single system, the difference is that here we are measuring the classical state of the joint system. The classical states set of the joint system will be represented by cartesian product set. Before measuring the joint systems it will be in some probabilitic state. As soon as we measure it, the system will collapse into some classical state.(we know that the action of measurement itself is an operation applied on the probability vector. We will see more about operations in next section).
+If we consider multiple systems together as a single system, then the measurement of multiple systems is similar to the measurement of a single system, the difference is that here we are measuring the classical state of a joint system. The classical states set of the joint system will be a cartesian product set. Before the action of measurement the joint system will be in some probabilitic state. As soon as we measure it, the system will collapse into some classical state.(we know that the action of measurement itself is an operation applied on a probability vector. We will learn more about the operations in the next section).
 
 $$ |\psi\rangle = \frac{1}{2}|00\rangle + \frac{1}{2}|11\rangle$$
 
 For example if we measure the above vector we will get the result $|00\rangle$ with probability $\frac{1}{2}$ and the result $|11\rangle$ with probability $\frac{1}{2}$. So as soon as we measure it, the state of the system will collapse into one of these possible classical states.
 
-### What if we want to measure just one or subset of the systems(partial measurement)? 
+### What if we want to measure just one or subset of multiple systems(partial measurement)? 
 
-First we will take a two systems as an example, after that we can easily generalise this idea to the case where we measure the subset of the three or more systems. This is because measuring the subset of the multiple systems is similar to measuring just one of the two systems. We can think of subset of systems that we measure as one individual system and all the remaining systems as a second individual system.
+First lets just take two systems as an example, later we can easily generalize this idea to the joint system with three or more individual systems. Because measuring the subset of three or more systems is similar to measuring just one of the two systems. We can think of subset of systems that we measure as the first single system and all the remaining systems as a second single system.
 
-Let's take the same example as joint system  $(X_1,X_2)$ that represent two bits. If we only measure the system $X_1$, then the following equation should be true about the probability of $X_1 = a$. Where $X_1$ and $X_2$ are individual systems with classical state sets $\Sigma_1$ and $\Sigma_2$.
+Let's take the same example as the joint system $(X_1,X_2)$ that represents two bits. If we only measure the system $X_1$, then we can define the probability of $X_1 = a$ as given below. Where $X_1$ and $X_2$ are individual systems with classical state sets $\Sigma_1$ and $\Sigma_2$.
 
 $$ \begin{equation}\tag{6}
 Pr(X_1=a) = \sum_{b \in \Sigma_2} Pr((X_1,X_2) = (a,b))
 \end{equation}
 $$
 
-This equation tells that the probablity that the state of the $X_1 = a $ should be equal to the sum of probabilities of the joint system $(X_1,X_2)=(a,b)$ for each $b \in \Sigma_2$. This intutively means the probability of $X_1 = a$ will be true regardless of whatever the classical state the system $X_2$ is in. This particular formula is called the `reduced(or marginal)` probability. In a similar way we can define the case where we just measure the system $X_2$.
+This equation tells us that the probablity of having $X_1 = a $ will be equal to the sum of probabilities of having $(X_1,X_2)=(a,b)$ for each $b \in \Sigma_2$. If for each $b \in \Sigma_2$ the probability of $X_1 = a$ is the same, then the probability of $X_1 = a$ will be independent $X_2$. This particular formula is called the `reduced(or marginal)` probability. The case of just measuring the system $X_2$ will be similar. Keep in mind that this equation will be same for both independent and correlated systems.
 
-### Why does the above equation is true?
+### Why do we say that the measurement of one system doesn't affect the outcome of the another system?
 
-The above equation must be true, because if the state of the $X_1$ changes based on whether or not we measure the $X_2$, then it will allow us faster than light communication. For example lets assume that we are measuring the $X_1$ in the Earth and some other person is measuring the $X_2$ from the planet which is 100 light years away from earth which is called E_100.
+Because if the state of the $X_1$ changes based on whether or not we measure the $X_2$, then it will allow us faster than light communication. For example lets assume that we are measuring the $X_1$ in the Earth and some other person is measuring the $X_2$ from the planet which is 100 light years away from earth which is called E_100.
 
-If someone from planet E_100 want to send information to Earth it will take at least 100 light years in the normal settings. But if the state of the $X_1$ depends on the measurement of the state of the $X_2$, then some one from the Earth can continuously measure the $X_1$. If the person from the Planet E_100 measures the $X_2$, then at that moment the person in the earth will measure different value for $X_1$. This will allow us to send a signal to the earth faster than light. As of now it is not possible based on our understanding about the physics. So the above equation must be true.
+If someone from planet E_100 want to send information to Earth it will take at least 100 light years in the normal settings. But if the state of the $X_1$ depends on the measurement of the state of the $X_2$, then some one from the Earth can continuously measure the $X_1$. If the person from the Planet E_100 measures the $X_2$, then at that moment the person in the earth will measure different value for $X_1$. This will allow us to send a signal to the earth faster than light. As of now it is not possible based on our understanding about the physics. In this case the above equation describes the probability outcome of the first system by distributing that value to all the possible outcomes of the second system. 
 
 
 ### If two systems are correlated, does that mean measurement of one system depends on the other system?
 
-The answer is no. If we just measure $X_1$, then it will give us some information about the state of the $X_2$ when $X_1$ and $X_2$ are correlated and will give no information about the state of $X_2$ when two systems are independent. This has nothing to do with the measurement of the two systems depending on each other. Regardless of whether or not we measure the $X_2$ the measurement of $X_1$ will always give same result and vice versa is also true.
+The answer is no. But rather it means that if the systems $X_1$ and $X_2$ are correlated and we measure the system $X_1$, then it will give us some information about the state of the system $X_2$. If they are independent, then it will give no information about the state of the $X_2$. This has nothing to do with the measurement of the two systems depending on each other. Regardless of whether or not we measure the $X_2$ the measurement of $X_1$ will always give same result and vice versa is also true.
 
 Let assume that two joint systems $(X_1,X_2)$ is in a particular probabilistic state $\phi_1$. The correlation between these two systems just tells us that, if you keep the joint systems in the current state and measure the state of the $X_1$, then we will know some information about the system $X_2$. 
 
@@ -330,28 +334,30 @@ But if you apply some operation on the system $X_1$ individually(In next section
 
 ### After measuring the system $X_1$, we might know some information about the $X_2$. How to represent it mathematically?
 
-We said that if we measure the $X_1$ system, then sometimes it will give us some information about the state of the $X_2$. To represent this specific relation between $X_1$ and $X_2$ we will use the following conditional probabiltiy formula.
+We said that if we measure the system $X_1$ and $X_1$ and $X_2$ are correlated, then it will give us some information about the state of the $X_2$. To represent this specific relation between $X_1$ and $X_2$ we will use the following conditional probabiltiy formula.
 
 $$\begin{equation}\tag{7}
 Pr(X_2=b | X_1=a) = \frac{Pr((X_1,X_2)=(a,b))}{Pr(X_1=a)}
 \end{equation}
 $$
 
-The probabilty that $X_2=b$ based on the condition that the measurement that $X_1=a$ is defined by the above conditional probability formula. In the numerator we have the probabilty for the specific case where $(X_1,X_2)=(a,b)$. In the denominator we have the probability of $X_1=a$ and $X_2=c$ for each $c \in \Sigma_2$. When we see the example we will understand that the denominator is for the normalization. Here normalization means, If you sum the above computed probability for each classical state $b \in \Sigma_2$, then we will get the sum 1.
+The probabilty that $X_2=b$ based on the condition that the measurement of $X_1=a$ is defined by the above conditional probability formula. In the numerator we have the probabilty for the specific case where $(X_1,X_2)=(a,b)$. In the denominator we have to sum the probability of $X_1=a$ and $X_2=c$ for each $c \in \Sigma_2$. 
+
+When we see the example we will understand that the denominator is for the normalization. Here normalization means, If you sum the above computed probability for each classical state $b \in \Sigma_2$, then we will get the sum 1.
 
 > What if denominator is 0?
 
-The case where $Pr(X_1=a) = 0$ won't be a problem, because in that case we won't check for the probability vector of $X_2$ based on the condition that $X_1=a$. This is due to the reason that the event $X_1=a$ is never going to happen when the probability of that event is 0. 
+The case where $Pr(X_1=a) = 0$ won't be a problem, because in that case we won't check for the probability vector of $X_2$ based on the condition that $X_1=a$. Because the event $X_1=a$ is never going to happen when the probability of that event is 0. 
 
 ###  How do we find the updated state vector of the system after the measurement of one or subset of the multiple systems?
 
-In this section we will explore the idea of partial measurement using state vectors and dirac notations. Lets first consider the following probability vector that represents that state of two bits which we have already seen in the `equation-1`.
+In this section we will explore the idea of partial measurement using state vectors and dirac notations. Lets first take an example of the probability vector that represents the state of two bits which we have already seen in the `equation-1`.
 
 $$ |\psi\rangle = \sum_{(a,b) \in \Sigma_1 \times \Sigma_2} r_{ab}|ab\rangle$$
 
-If we have measured that the $X_1=a$, then how can we represent the updated probability vector of the system? When two systems are independent then we won't have any information about $X_2$ until we measure it, but when two systems are correlated we will get some information about the system $X_2$ before actually measuring it. To formally represent the change of our knowledge about $X_2$ we need to find two values that correspond to the numerator and denominator of the `equation-7`.
+How could we represent the updated probability vector of the system on condition that we have measured the system $X_1=a$? We know that if these two systems are independent, then we won't have any information about $X_2$ until we measure it. But if these two systems are correlated, then we would get some information about the probability outcome of the system $X_2$ before actually measuring it. To formally represent this knowledge about $X_2$ we need to find two values that correspond to the numerator and denominator of the `equation-7`.
 
-First the numerator corresponds to the probability associated with each state $b \in \Sigma_2$ where we already measured that $X_1=a$. Since we don't know the state of the $X_2$, it will have some probability associated with each classical state $b \in \Sigma_2$. This can be described using the following vector.
+First the numerator corresponds to the probability associated with each state $b \in \Sigma_2$ on condition that we have already measured the system $X_1=a$. Since we don't know the exact state of the system $X_2$, it will have some probability associated with each classical state $b \in \Sigma_2$. This can be described using the following vector.
 
 $$
 \begin{equation} \tag{8}
@@ -359,7 +365,7 @@ $$
 \end{equation}
 $$
 
-The entries of the valid probability vector should add upto 1. To make the $|\phi_a\rangle$ probability vector we need to normalise it. To do that we sum over all the probability values of the each entry of the vector $|\phi_a\rangle$ and divide the vector by that sum. the follwoing equation computes that sum.
+The entries of the valid probability vector should add upto 1. To make the $|\phi_a\rangle$ a valid probability vector we need to normalise it. To do that we sum over all the probability values of the each entry of the vector $|\phi_a\rangle$ and divide the vector by that sum. the follwoing equation computes that sum.
 
 $$
 \begin{equation} \tag{9}
@@ -478,7 +484,7 @@ Lets take a joint system $(X_1,X_2)$ in `Ex-1`. In that example you can see that
 
 ### Can we still use stochastic matrix?
 
-If we think about the multiple systems combined together as a single system, then the operations on multiple systems can also be defined using stochastic matrix. Here the rows and columns of the stochastic matrix corresponds to the entries of the classical state set of the joint system. Remember that we can get the calssical state set of the joint system using the cartesian product of the classical state sets of the individual systems.
+If we think about multiple systems together as a single system, then the operations on multiple systems can also be defined using stochastic matrix. Here the rows and columns of the stochastic matrix corresponds to the entries of the classical state set of the joint system. Remember that we can get the calssical state set of the joint system using the cartesian product of the classical state sets of the individual systems.
 
 Lets take usual example of two bits joint system $(X_1, X_2)$. The rows and columns of the stochastic matrix for this joint system will corresponds to a cartesian product set $\Sigma_1 \times \Sigma_2$.
 
@@ -678,7 +684,7 @@ M &= M_1 \otimes M_2 \\
 \end{equation}
 $$
 
-Let assume that $M_1$ and $M_2$ are operation applied on the individual systems. The tensor product of these matrices represents the combined operation on the joint system. In the last step of the above derivation we can see that the tensor product describes the output-input relationship for each input $\langle bd|$ of the joint system. We can think about this in a different way as the follows.
+Let assume that $M_1$ and $M_2$ are operation applied on the individual systems. The tensor product of these matrices represents the joint operation on multiple systems. In the last step of the above derivation we can see that the tensor product describes the output-input relationship for each input $\langle bd|$ of the joint system. We can think about this in a different way as the follows.
 
 $$
 \begin{equation}\tag{14}
