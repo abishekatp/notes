@@ -1,10 +1,10 @@
 # Quantum Information(Multiple Systems)
 
-In the previous blog we have seen about the classical information of the multiple systems. In this blog we will see about the quantum information of the multiple systems. The ideas are going to be very similar to the probabilistic part of the classical information of the multiple systems. When you think of multiple quantum systems as a single system similar to how we thought about multiple calssical systems, then the quantum state of multiple quantum systems can be represented by a unit vector. This unit vector is same as the one which we have used to represent the single quantum system but larger. Remember that unit vector is a vector with Euclidean norm equal to 1.
+In the previous blog we have learnt about the classical information of multiple systems. In this blog we will learn about the quantum information of multiple systems. The ideas are going to be the same as we discussed in the probabilistic part of the classical multiple systems. When you think of multiple quantum systems as a single system similar to how we thought about multiple calssical systems, then the quantum state of joint quantum system can be represented by a unit vector. This unit vector is same as the one which we have used to represent a single quantum system but larger. Remember that a unit vector is a vector with Euclidean norm equal to 1.
 
 ## How to represent quantum state of multiple systems?
 
-So when we think about the multiple systems together as a single system then quantum state is represented by a unit vector similar to single systems. But now the entries of the unit vector correspond to the `cartesian product` of the classical state sets of individual systems. For example consider two qbits $X_1$ and $X_2$ with the classical state sets $\Sigma_1$ and $\Sigma_2$. Then the classical state set of the joint system $(X_1, X_2)$ will be $\Sigma_1 \times \Sigma_2$.
+So If we think about multiple systems together as a single system, then the quantum state will be represented by a unit vector that is very similar to the quantum single system. But now the entries of the unit vector correspond to the `cartesian product` of the classical state sets of individual systems. For example consider two qbits $X_1$ and $X_2$ with the classical state sets $\Sigma_1$ and $\Sigma_2$. Then the classical state set of the joint system $(X_1, X_2)$ will be $\Sigma_1 \times \Sigma_2$.
 
 $$
 \begin{equation}\tag{1}
@@ -15,7 +15,7 @@ $$
 \end{equation}
 $$
 
-The following are the examples of quantum state vectors represented using the dirac notation.
+The given below examples are quantum state vectors represented using the dirac notation.
 
 $$
 \begin{equation}\tag{Ex-1}
@@ -40,7 +40,7 @@ $$
 \end{equation}
 $$
 
-All the above vectors are valid quantum state vectors with Euclidean norm equal to 1. Note that we use square root($\sqrt{}$) notation repeatedly to just make examples simpler to verify the Euclidean norm. There are multiple ways we can reprsent the same qunautm state vector using dirac notation. All the given below notation are valid and equivalent. We will use one of them based on the situation.
+All of the above vectors are valid quantum state vectors with Euclidean norm equal to 1. Note that we use the square root($\sqrt{}$) notation explicitly to make the process of verifying the Euclidean norm simpler. There are multiple ways that we could use to reprsent the same qunautm state vector using dirac notation. All the given below notation are valid and equivalent. We will use one of these notations based on our need.
 
 $$
 \begin{equation}\tag{Ex-2}
@@ -77,11 +77,11 @@ $$
 \end{equation}
 $$
 
-## How do we represent the independence of of the multiple systems?
+## How do we represent the independence of the quantum multiple systems or joint sytem?
 
-Independence of the multiple quantum systems is same as independence of the multiple classical systems. If we can write the quantum state vector of the multiple system as a tensor product of quantum state vectors of the individual systems, then we can say that the individual systems are independent. We call this a product state, so when we can write a quantum state vector in a product state then we can say that each individual systems of the multiple systems are independent.
+Independence of the joint quantum system is same as the independence of the joint classical system. If we can write the quantum state vector of the joint system as a tensor product of quantum state vectors of the individual systems, then we will say that those individual systems are independent of each other. This is called a product state.
 
-For example if $|\psi_1\rangle$ is a quantum state vector of the $X_1$ and $|\psi_2\rangle$ is a quantum state vector of the $X_2$, then the tensor product $|\psi_1\rangle \otimes |\psi_2\rangle$ will be the quantum state vector of the joint system $(X_1,X_2)$. Here $|\psi_1\rangle \otimes |\psi_2\rangle$,  $|\psi_1\rangle |\psi_2\rangle$ and $|\psi_1 \otimes \psi_2\rangle$ are the equivalent notations. This idea is same as how we represented classical state of the multiple classical systems. The only difference is here we are using quantum state vectors instead of classical state vectors.
+For example if $|\psi_1\rangle$ is a quantum state vector of the $X_1$ and $|\psi_2\rangle$ is a quantum state vector of the $X_2$, then the tensor product $|\psi_1\rangle \otimes |\psi_2\rangle$ will be the quantum state vector of the joint system $(X_1,X_2)$. Here $|\psi_1\rangle \otimes |\psi_2\rangle$,  $|\psi_1\rangle |\psi_2\rangle$ and $|\psi_1 \otimes \psi_2\rangle$ are equivalent notations. The idea is same as the classical state of the joint classical system. The only difference here is that we are using a quantum state vector instead of a classical state vector.
 
 The result we get from the tensor product is still a valid quantum state vector because the result will also have a Euclidean norm equal to 1.
 
@@ -106,9 +106,9 @@ $$
 \end{equation}
 $$
 
-So here if $|| |\psi_1\rangle || = 1$ and $|| |\psi_2\rangle || = 1$ then the $|| |\psi_1\rangle \otimes |\psi_2\rangle || = 1$. So if the vectors that represent individual systems are valid then tensor product of vectors is also a valid quantum state. Here note that when we sum over all possible $a,b \in \Sigma_1 \times \Sigma_2$ then for each such pair of a,b this $| \langle ab|\psi_1 \otimes \psi_2 \rangle |$ will give the absolute value of the complex number that is associated with the classical state $|ab\rangle$.
+So here if $|| |\psi_1\rangle || = 1$ and $|| |\psi_2\rangle || = 1$ then the $|| |\psi_1\rangle \otimes |\psi_2\rangle || = 1$. So if vectors that represent individual systems are valid qauntum state vectors then tensor product of vectors is also going to be a valid quantum state vector. Here we are summing over the probability value for each possible $a,b \in \Sigma_1 \times \Sigma_2$. Remembering that for each such pair of a,b this $| \langle ab|\psi_1 \otimes \psi_2 \rangle |$ will give the absolute value of the complex number that is associated with the classical state $|ab\rangle$.
 
-We can generalize this idea easily for three or more systems. Suppose the quantum state vectors $|\psi_1\rangle, |\psi_2\rangle, \cdots ,|\psi_n\rangle$ correspond to the quantum systems $X_1,X_2, \cdots ,X_n$ then the quantum state vector $|\psi\rangle$ represents the quantum state of the joint system $(X_1,X_2,\cdots,X_n)$.
+We could generalize this idea easily for three or more systems. Suppose quantum state vectors $|\psi_1\rangle, |\psi_2\rangle, \cdots ,|\psi_n\rangle$ correspond to quantum systems $X_1,X_2, \cdots ,X_n$ respectively, then the quantum state vector $|\psi\rangle$ will represent the quantum state of the joint system $(X_1,X_2,\cdots,X_n)$.
 
 $$ 
 \begin{equation}\tag{3}
@@ -123,11 +123,11 @@ $$
 || |\psi_1\rangle || \;\; || |\psi_2\rangle || \cdots || |\psi_n\rangle || = 1^n = 1
 $$
 
-### What is an entanglement of multiple quantum systems?
+### What is an entanglement of the join quantum system?
 
-We can't always write a quantum state vector of a multiple systems as a product of quantum state vectors of the individual system(as a product state). When such a scenario happens we say that quantum systems are entangled or correlated. Entanglement is important feature of the quantum systems. We will see that It is more complicated concept, when we learn about the more general description of the quantum information using the density matrix formulation. But in the quantum state vector description of the quantum information the entanglement is equivalent to the correlation.
+We can't always write a quantum state vector of multiple systems as a product of quantum state vectors of the individual systems(as a product state). When such a scenario happens we would say that quantum systems are entangled or correlated. Entanglement is important feature of quantum systems. We will see that it is a more complicated concept, when we learn about the more general description of the quantum information using the density matrix formulation. But in the quantum state vector description of the quantum information, the entanglement is equivalent to the correlation.
 
-For example if we want to show that the quantum state vectors $|\psi_1\rangle$ and $|psi_2\rangle$ that corresponds to systems $X_1$ and $X_2$ in the example `Ex-2` are independent, then you have to show that $|\psi\rangle$ as a tensor product of two quantum state vectors $|\psi_1\rangle$ and $|\psi_2\rangle$. The following equation formulizes this condition.
+For example if we want to show that the quantum state vectors $|\psi_1\rangle$ and $|psi_2\rangle$ that corresponds to systems $X_1$ and $X_2$ in the example `Ex-2` are independent, then you have to show that $|\psi\rangle$ as a tensor product of two quantum state vectors $|\psi_1\rangle$ and $|\psi_2\rangle$. The following equation formalizes this condition.
 
 $$
 \begin{equation}\tag{Ex-3}
@@ -137,7 +137,7 @@ $$
 \end{equation}
 $$
 
-Since the term $|01\rangle$ is 0 in this equation this means the following equation must be true.
+The term $|01\rangle$ is 0 in this equation. That means the following equation must be true.
 
 $$
 \langle 01|\psi\rangle =
@@ -150,14 +150,14 @@ This means that either $\langle 0|\psi_1\rangle = 0$ or $\langle 1|\psi_2\rangle
 $$
 \langle 00|\psi\rangle =
 \langle 00|\psi_1 \otimes \psi_2\rangle =
-\langle 0|\psi_1\rangle \langle 0|\psi_2\rangle = 0 \\
+\langle 0|\psi_1\rangle \langle 0|\psi_2\rangle = \frac{1}{2} \\
 and \\
 \langle 11|\psi\rangle =
 \langle 11|\psi_1 \otimes \psi_2\rangle =
-\langle 1|\psi_1\rangle \langle 1|\psi_2\rangle = 0 
+\langle 1|\psi_1\rangle \langle 1|\psi_2\rangle = \frac{1}{2}
 $$
 
-So this means that the above vector in `Ex-3` can't be written as product state. So they are entangled or correlated.
+If $\langle 0|\psi_1\rangle = 0$, then it will contradict the first equation. If $\langle 1|\psi_2\rangle = 0$, then it will contradict the second equation. So this means that the above vector in `Ex-3` can't be written as product state. So they are entangled or correlated.
 
 #### Example of independent quantum state vector.
 
