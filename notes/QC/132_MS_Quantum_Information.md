@@ -125,7 +125,9 @@ $$
 
 ### What is an entanglement of the join quantum system?
 
-We can't always write a quantum state vector of multiple systems as a product of quantum state vectors of the individual systems(as a product state). When such a scenario happens we would say that quantum systems are entangled or correlated. Entanglement is important feature of quantum systems. We will see that it is a more complicated concept, when we learn about the more general description of the quantum information using the density matrix formulation. But in the quantum state vector description of the quantum information, the entanglement is equivalent to the correlation.
+We can't always write a quantum state vector of multiple systems as a product of quantum state vectors of the individual systems(as a product state). When such a scenario happens we would say that quantum systems are entangled or correlated. Entanglement is important feature of quantum systems. We will see that it is a more complicated concept when we learn about the more general description of the quantum information using the density matrix formulation. But in the quantum state vector description of the quantum information, the entanglement is equivalent to the correlation.
+
+> Note: Alternatively quantum entanglement can be defined as the non-classical correlation. So the classical correlation and quantum correlation are not the same. The quantum entanglement has its own properties which we couldn't find in the classical probabilistic systems. The quantum system differs in a way that if you apply some operation to one of the entangled systems, then the probability outcome of the other system(that is in entanglement) will also change as long as the operation doesn't destroy the entanglement itself. We will discuss about this further in the end of this blog and in future blogs. 
 
 For example if we want to show that the quantum state vectors $|\psi_1\rangle$ and $|psi_2\rangle$ that corresponds to systems $X_1$ and $X_2$ in the example `Ex-2` are independent, then you have to show that $|\psi\rangle$ as a tensor product of two quantum state vectors $|\psi_1\rangle$ and $|\psi_2\rangle$. The following equation formalizes this condition.
 
@@ -159,7 +161,7 @@ $$
 
 If $\langle 0|\psi_1\rangle = 0$, then it will contradict the first equation. If $\langle 1|\psi_2\rangle = 0$, then it will contradict the second equation. So this means that the above vector in `Ex-3` can't be written as product state. So they are entangled or correlated.
 
-#### Example of independent quantum state vector.
+#### Examples of independent quantum state vectors.
 
 Suppose consider the following quantum state vector.
 
@@ -201,13 +203,13 @@ $$
 
 Here $|\psi_1\rangle$ and $|\psi_2\rangle$ are independent quantum state vectors.
 
-### Some more commonly used quantum state vectors that are not independent.
+### Some more commonly used quantum state vectors that are correlated or entangled.
 
 The given below are some of the commonly used quantum state vectors that are in the entangled state.
 
 #### Bell States
 
-These are some important two qbit quantum state vectors that are in entangeled states called Bell states named after the physicist Jhon Stewart Bell. For the same reason as example `Ex-3`, Bell states are entangled states.
+Bell states are two qbit quantum state vectors that are in the entangeled states named after the physicist Jhon Stewart Bell. For the same reason as the example `Ex-3`, Bell states are entangled states.
 
 $$
 \begin{equation}\tag{Ex-5}
@@ -232,7 +234,7 @@ $$
 \end{equation}
 $$
 
-Together these four vectors are called `Bell basis`. Similar to the `standard basis vectors` we can represent any vector of dimension 2 as a linear combination of Bell basis vectors. For example see the given below equation.
+These four vectors are called `Bell basis vectors`. Similar to the `standard basis vectors` we could represent any vector of dimension 2 as a linear combination of these vectors. For example see the given below equation.
 
 $$|11\rangle = 
 \frac{1}{\sqrt{2}}|\phi^+\rangle -
@@ -264,11 +266,11 @@ $$
 
 Both these states are entangled state which we will further explore on the partial measurement section.
 
-#### Addition examples of multiple quantum systems
+#### Additional examples of quantum multiple systems
 
-So far we have seen quantum multiple systems that is made up of same kind of individual systems. It is possible to have different kind of individual systems in the multiple systems. 
+So far we have seen quantum multiple systems that are made up of same kind of individual systems. It is possible to have different kind of individual systems in the joint system. 
 
-Suppose consider a system $X_1$ which is qbit and systems $X_2$ and $X_3$ which represents the four suits of the standard deck of the cards. Here classical state set of the qbit is $\Sigma_1$ and the classical state set of $X_2$ and $X_3$ is $\Sigma_2$.
+Suppose consider the system $X_1$ which is a qbit and systems $X_2$ and $X_3$ which will represent the four suits of the standard deck of the cards. Here classical state set of the qbit is $\Sigma_1$ and the classical state set of $X_2$ and $X_3$ is $\Sigma_2$.
 
 $$\Sigma_2 = {C, D, H, S}$$
 where C - Clubs, D- Diamonds, H-Hearts, S-Spades.
@@ -280,7 +282,7 @@ $$
 \frac{1}{\sqrt{2}}|1\rangle |C\rangle |H\rangle
 $$
 
-Consider a multiple systems $(X_1,X_2,X_3)$, where systems $X_1$, $X_2$ and $X_3$ have classical state set $\Sigma = \{0,1,2\}$. We call this system with three classical states as `trits` just like `bits`. In quantum world it is `qtrits`.
+Next consider the joint system $(X_1,X_2,X_3)$, where systems $X_1$, $X_2$ and $X_3$ are having the classical state set $\Sigma = \{0,1,2\}$. We call this system with three classical states as `trits` just like `bits`. In quantum world it is `qtrits`.
 
 $$
 |\psi\rangle = 
@@ -292,22 +294,22 @@ $$
 Generally a system with the classical state $\Sigma = \{0,1,2,...,d-1\}$ is called `qdits` for arbitrary value of d.
 
 
-## What is the measurement of quantum multiple systems?
+## What is the measurement of quantum multiple systems or the joint quantum system?
 
-Standard basis measurement of multiple systems is same as measuring a single system. Suppose if particular quantum system is represented by a quantum state vector $|\psi\rangle$ and classical state set $\Sigma$, then in the standard basis measurement for each classical state $a \in \Sigma$ is obtained with the probability $| \langle a|\psi\rangle |^2$.
+Standard basis measurement of quantum multiple systems is same as measuring a single quantum system. Suppose if particular quantum system is represented by a quantum state vector $|\psi\rangle$ and classical state set $\Sigma$, then the standard basis measurement for each classical state $a \in \Sigma$ is obtained with the probability equal to $| \langle a|\psi\rangle |^2$.
 
-Suppose assume that the quantum systems $X_1,X_2,...,X_n$ is having the classical state set $\Sigma_1,\Sigma_2,...,\Sigma_n$. If the combined sysystem $(X_1,X_2,...,X_n)$ is represented by the quantum state vector $|\psi\rangle$ and classical state set $\Sigma = \Sigma_1 \times \Sigma_2 \times \cdots \times \Sigma_n$, then in standard basis measurement for each classical state $(a_1,a_2,\cdots,a_n) \in \Sigma$ will be obtained with the probability $|\langle a_1,a_2,\cdots,a_n|\psi\rangle|^2$
+Suppose assume that the quantum systems $X_1,X_2,...,X_n$ are having the classical state set $\Sigma_1,\Sigma_2,...,\Sigma_n$ respectively. If the joint system $(X_1,X_2,...,X_n)$ is represented by a quantum state vector $|\psi\rangle$ and classical state set $\Sigma = \Sigma_1 \times \Sigma_2 \times \cdots \times \Sigma_n$, then the standard basis measurement for each classical state $(a_1,a_2,\cdots,a_n) \in \Sigma$ will be obtained with the probability equal to $|\langle a_1,a_2,\cdots,a_n|\psi\rangle|^2$
 
-For example, suppose systems $X_1$ and $X_2$ jointly in a state $|\psi\rangle$.
+For example, suppose systems $X_1$ and $X_2$ are jointly in the state $|\psi\rangle$.
 
 $$|\psi\rangle = \frac{3}{5} |00\rangle - i\frac{4}{5} |11\rangle$$
 
-If we measure the quantum system in the above state, then the systems $(X_1,X_2)$ will be in the state $(0,0)$ with the probability $\frac{9}{25}$ and in the state $(1,1)$ with the probability $\frac{16}{25}$.
+If we measure the quantum system that is in the above state, then the systems $(X_1,X_2)$ will be in the state $(0,0)$ with the probability $\frac{9}{25}$ and in the state $(1,1)$ with the probability $\frac{16}{25}$.
 
 
-### Partial measurement of multiple systems
+### How do we express the partial measurement of quantum multiple systems?
 
-Similar to the partial measurement of multiple classical systems, we can define the partial measurement of multiple quantum systems. Lets take same example as two qbits $X_1$ and $X_2$ with the classical state set $\Sigma_1$ and $\Sigma_2$. The joint system $(X_1,X_2)$ is represented by the quantum state vector $|\psi\rangle$ in dirac notation.
+We could define the partial measurement of multiple quantum systems similar to classical multiple systems. Lets take an example of two qbits $X_1$ and $X_2$ with the classical state set $\Sigma_1$ and $\Sigma_2$ respectively. The joint system $(X_1,X_2)$ will be represented by a quantum state vector $|\psi\rangle$ using the Dirac notation.
 
 $$
 \begin{equation}\tag{4}
@@ -316,7 +318,7 @@ $$
 \end{equation}
 $$
 
-where $\{\alpha_{ab}: (a,b) \in \Sigma_1 \times \Sigma_2 \}$ is collection of complex numbers satisfying the following condition that the summ of absolute value of those complex numbers should be equal to 1(Remember that this condition is equivalent to Euclidean norm being equal to 1).
+where $\{\alpha_{ab}: (a,b) \in \Sigma_1 \times \Sigma_2 \}$ is collection of complex numbers satisfying the condition that the sum of absolute value of those complex numbers should be equal to 1(Remember that this condition is equivalent to saying that the Euclidean norm is 1).
 
 $$
 \begin{equation}\tag{5}
@@ -324,7 +326,7 @@ $$
 \end{equation}
 $$
 
-We already know that if both $X_1$ and $X_2$ is measured then the probability that we obtain the state (a,b) can be defined using the classical state(`bra` notation) $\langle ab|$ and state vector(`ket` notation) $|\psi\rangle$.
+As we already know that if both $X_1$ and $X_2$ are measured, then the probability that we will get the state (a,b) as outcome could be calculated by multiplying the classical state(`bra` notation) $\langle ab|$ and state vector(`ket` notation) $|\psi\rangle$.
 
 $$
 \begin{equation}\tag{6}
@@ -332,7 +334,7 @@ Pr((X_1,X_2)=(a,b))=|\langle ab|\psi\rangle|^2 = |\alpha_{ab}|^2
 \end{equation}
 $$
 
-Suppose we only measure the system $X_1$ then the probability that we obtain any classical state `a` is defined by the following sum. This is marginal(or reduced) probability of the joint system.
+Suppose if we are only measuring the system $X_1$, then the probability outcome of `a` is computed by the following summation. This is the marginal(or reduced) probability of a joint system.
 
 $$
 \begin{equation}\tag{7}
@@ -340,11 +342,9 @@ Pr(X_1=a) = \sum_{b \in \Sigma_2} |\alpha_{ab}|^2
 \end{equation}
 $$
 
-This is consistent with the fact that the probability associated with just one(or proper subset) of the systems doesn't depend on the other(remaining) systems. Because of the similar argument in the probabilistic settings which we have seen in the previous blog, As of now the faster than light communction is not possible based on our understanding of physics.
+After measuring the quantum system $X_1$, it will collapse into one of the possible classical states $|a\rangle \in \Sigma_1$. If individual systems are not independent, then we know that the measurement of one(or proper subset) of the systems will change our knowledge about the other(or remaining) systems. So the quantum state vector of a joint system should reflect this change. This idea can be represented by conditional probability similar to the probabilistic settings.
 
-After measuring the quantum system $X_1$, it will collapse into one of the classical states $|a\rangle$. If individual systems are not independent, then due to measuring one(or proper subset) of the systems our knowledge about the other(or remaining) systems will change. So the quantum state vector of the joint system should reflect this change. This idea can be represented by conditional probability similar to the probabilistic settings.
-
-Now we define the $|\psi\rangle$ in the `equation-4` in slightly different form, so that we can use this definition to define the conditional probability.
+Now we define the $|\psi\rangle$ in the `equation-4` in a slightly different format, so that we could use that definition to understand the conditional probability.
 
 
 $$
@@ -358,11 +358,11 @@ $$
 $$
 
 
-Then the probability that $X_1=a$ defined in the `equation-7` can be equivalently defined using Euclidean norm of the quantum state vector $|\alpha_{ab}\rangle$ for each $a \in \Sigma_1$.
+Then the probability that $X_1=a$ that is defined in the `equation-7` can be equivalently defined using the Euclidean norm of the quantum state vector $|\phi_{ab}\rangle$ for any $a \in \Sigma_1$.
 
 $$Pr(X_1=a) = || |\phi_a\rangle ||^2$$
 
-Now suppose if we measured the $X_1=a$, then the state of the system $X_2$ can be represented by the following vector.
+Now suppose that we have measured $X_1=a$, then the state of the system $X_2$ will be represented by the following vector.
 
 $$
 \begin{equation}\tag{8}
@@ -371,16 +371,16 @@ $$
 \end{equation}
 $$
 
-Here the resulting vector $|a\rangle \otimes |\phi_a\rangle$ will represent the quantum state of the system $X_2$ on measuring the state of the system $X_1 = a$ for each $a \in \Sigma_1$. The term $|| |\phi_a\rangle ||$ is to make the Euclidean norm of the resulting vector to be equal to 1(This process is called normalization). This will make the resulting vecor to be a valid quantum state vector. Remember tha in the probablistic setting we divided the vector by the sum of probabilities of that vector to do the normalization.
+Here the resulting vector $|a\rangle \otimes |\phi_a\rangle$ will represent the quantum state of the system $X_2$ on condition that we have measured the state of the system $X_1 = a$ for any $a \in \Sigma_1$. The denominator term $|| |\phi_a\rangle ||$ is to make the Euclidean norm of the resulting vector to be equal to 1(This process is called normalization). This will make the resulting vecor a valid quantum state vector. Remember that in the probablistic setting we divided the vector by the sum of probabilities of that vector to do the normalization.
 
 ### Examples of partial measurement
 
-Lets take an usual example as the joint system of two qbits $(X_1,X_2)$ is represented by the following quantum state vector $|\psi\rangle$.
+Lets take an usual example of a joint system with two qbits $(X_1,X_2)$ which is represented by the following quantum state vector $|\psi\rangle$.
 
 $$
 \begin{equation}\tag{Ex-8}
 \begin{split}
-|\psi\rangle \otimes &= 
+|\psi\rangle &= 
 \frac{1}{\sqrt{2}}|00\rangle -
 i\frac{1}{\sqrt{6}}|01\rangle +
 \frac{1}{\sqrt{6}}|10\rangle +
@@ -399,7 +399,7 @@ i\frac{1}{\sqrt{6}}|1\rangle
 \end{equation}
 $$
 
-The probability that we measure $X_1 = 0$ is,
+The probability of an outcome $X_1 = 0$ can defined by the following Euclidean norm,
 
 $$
 Pr(X_1=0) = 
@@ -410,9 +410,9 @@ i\frac{1}{\sqrt{6}}|1\rangle \right|\right|^2
 $$
 
 > **Note**: \
->Here note that the Euclidean norm of the vector is the square root of the sum of square of the the absolute value of each entry of the vector. To cancel out this square root we have the power 2 in the above equation. Since each entry of the vector is the complex number the absolute value of the complex number calculated using the formula $|a+bi| = \sqrt{a^2 + b^2}$
+>Here note that the Euclidean norm of the vector is the square root of the sum of square of the the absolute value of each entry of the vector. To cancel out this square root we have to raise to the power 2 in the above equation. Here each entry of the vector is the complex number. Remember that the absolute value of the complex number is calculated using the formula $|a+bi| = \sqrt{a^2 + b^2}$
 
-After measuring the $X_1=0$ the state of the whole system $|\psi\rangle$ collapses into a following vector.
+After measuring the $X_1=0$, the state of the whole system $|\psi\rangle$ collapses into a following vector.
 
 $$
 |0\rangle \otimes \left(
@@ -428,9 +428,9 @@ i\frac{1}{2}|1\rangle
 \right)
 $$
 
-If you check the Euclidean norm of the above vector it will be $\frac{3}{4} +\frac{1}{4} = 1$. This is a helpful check that our computation is going in the right way. The resulting vector is a valid quantum state vector.
+If you try to verify the Euclidean norm of the above vector, then you will get the value $\frac{3}{4} +\frac{1}{4} = 1$. This is a useful check for the correctness of our calculation. This ensures that the resulting vector is a valid quantum state vector.
 
-The probability of getting $X_1=1$ is,
+The probability of an outcome $X_1=1$ will be as follows,
 
 $$
 Pr(X_1 = 1) = 
@@ -440,8 +440,8 @@ i\frac{1}{\sqrt{6}}|1\rangle \right|\right|^2
 = \frac{1}{3}
 $$
 
-Here also note that the sum of $Pr(X_1=0) +Pr(X_1=1) = 1$ is again another useful check.
-As we have previously done as soon as we measured $X_1 = 1$, the state of the whole system collapses into the new state that reflects our measurement. When $X_1 = 1$, the state of the system $X_2$ is reflected by the following vector.
+Here also the sum of $Pr(X_1=0) +Pr(X_1=1) = 1$ is again a useful check.
+As we have done previously, as soon as we get the measurement outcome $X_1 = 1$, the state of the whole system will collapse into the measured outcome. When $X_1 = 1$, the state of the system $X_2$ will be defined as follows.
 
 $$
 |1\rangle \otimes \left(
@@ -457,11 +457,11 @@ i\frac{1}{\sqrt{2}}|1\rangle
 \right)
 $$
 
-In a similar and straighforward way we can define the case when only the system $X_2$ is measured and the $X_1$ is not measured.
+In a similar way we could define the case where only the system $X_2$ is measured and the $X_1$ is not measured.
 
 ### What about reduced quantum state of any one system?
 
-This example shows the limitation of the simplified definition of the quantum information that we are learning so far. In probabilistic settings we defined the reduced(or marginal) state of the just one of the two systems(or a proper subset of the three or more systems). But the way we are defining the quantum information using quantum state vector doesn't give us a way to define the same for the quantum settings.
+This example shows the limitation of the simplified definition of the quantum information that we have been learning so far. In the probabilistic settings we have defined the reduced(or marginal) state of just one of the two systems(or the proper subset of the three or more systems). But the simplified definition of the quantum information using quantum state vectors doesn't give us a way to define the same for the quantum settings.
 
 Suppose the probabilistic state of the two systems $(X_1,X_2)$ is represented by the following probability vector.
 
@@ -474,7 +474,7 @@ Then the reduced or marginal state of $X_1$ is
 
 $$
 \sum_{a,b \in \Sigma_1 \times \Sigma_2} 
-r_a|a\rangle
+r_{ab}|a\rangle
 $$
 
 But if we have a quantum state of the two systems $X_1,X_2$ is represented by the following quantum state vector.
@@ -488,7 +488,7 @@ Then the following equation won't make any sense
 
 $$
 \sum_{a,b \in \Sigma_1 \times \Sigma_2} 
-\alpha_a|a\rangle
+\alpha_{ab}|a\rangle
 $$
 
 The above vector doesn't always make sense because the resulting vecot won't always be a valid quantum state vector. The problem with the above equation is that in the probabilistic settings we have defined the probability of $X_1$ as $r_{ab}$ for each classical state $a \in \Sigma_1$ using the following sum formula,
@@ -503,9 +503,9 @@ $$
 \alpha_a = \sum_{b \in \Sigma_2} \alpha_{ab}
 $$
 
-The above formula won't always be a valid quantum state vector due to two reasons, First one is the $\alpha_{ab}$ is a complex number and the second is we define the probability of quantum state vector using absolute values of those complex numbers. So directly adding up the complex numbers won't always give the correct probability for the state $X_1 = a$ for any $a \in \Sigma_1$. You can check this out with the `Ex-8`.
+The above formula won't always give us a valid quantum state vector due to two reasons, First one is that $\alpha_{ab}$ is a complex number and the second is that we have defined the probability outcome of a quantum state vector using absolute values of those complex numbers. So directly adding up the complex numbers won't always give the correct probability for the state $X_1 = a$ for any $a \in \Sigma_1$. You can check this out with the `Ex-8`.
 
-> **Note**: sum of absolute values squared of complex numbers is not equal to the absolute values square of the sum of complex numbers. For example suppose if $c_1$ and $c_2$ are two complex numbers, then $|c_1|^2 + |c_2|^2 \neq |c_1 + c_2|^2$. So we can't directly add the terms that contains $|a\rangle$ to get the complex number that corresponds to the state $|a\rangle$ of the system $X_1$.
+> **Note**: sum of absolute values squared of complex numbers is not equal to the absolute values square of the sum of complex numbers. For example suppose if $c_1$ and $c_2$ are two complex numbers, then $|c_1|^2 + |c_2|^2 \neq |c_1 + c_2|^2$. So we can't simply add the terms that contains $|a\rangle$ to get the complex number that corresponds to the state $|a\rangle$ of the system $X_1$, that will give us a wrong result.
 
 The another way we may try is the following.
 
@@ -513,11 +513,11 @@ $$
 \alpha_a = \sum_{b \in \Sigma_2} |\alpha_{ab}|^2
 $$
 
-We may try adding up absolute values of $\alpha_{ab}$. In fact this will give correct probability values for each state $a \in \Sigma_1$. But when we calculate absolute values we may loose some information about the system that was represented by the complex numbers(due to the fact that we are calculating absolute values). We will see that the more general description of quantum information will solve these kind of problems.
+We may try adding up absolute values of $\alpha_{ab}$. In fact this will give correct probability values for each state $a \in \Sigma_1$. But when we calculate absolute values we may loose some information about the system that was represented by the complex numbers(because of calculating absolute values). We will see that the more general description of quantum information will solve these kind of problems.
 
 ### Partial measurement of three or more systems
 
-Measuring the proper subset of three or more systems is very similar to measuring just one of the two systems. In this case will consider the subset of systems that is being measured as single combined system and all the reamaing systems as the second system.
+Measuring the proper subset of three or more systems is very similar to measuring just one of the two systems. In this case we will consider the subset of systems that are being measured as a single combined system and all the reamaing systems as the second system.
 
 Assume that we have five systems $(X_1,X_2,X_3,X_4,X_5)$ together representing some information. The first two systems $X_1$ and $X_2$ are having a classical state set $\Sigma_1$ and all the remaining systems are having a classical state set $\Sigma_2$. The quantum state of the joint system is represented by the state vector $|\psi\rangle$.
 
@@ -538,7 +538,7 @@ $$
 \end{equation}
 $$
 
-So now assume that we are going to measure the first and third system in the joint systems $(X_1,X_2,X_3,X_4,X_5)$. So we will consider the systems $X_1$ and $X_3$ as the first system and all the remaining systems as the second system. We are going to group the similar state of the first system as we have done in the classical systems case. But since the system $X_2$ which is part of the second system is in the middle of the $X_1$ and $X_3$ we need some way of keeping the order of these vector. For that we will label each vector with labels $1,2,3,4,5$ for the systems $(X_1,X_2,X_3,X_4,X_5)$ respectively. We will see soon why we are doing this. So the equivalent vector for $|\psi\rangle$ with labels is as follows.
+So now assume that we are going to measure the first and third system in the joint systems $(X_1,X_2,X_3,X_4,X_5)$. So we will consider systems $X_1$ and $X_3$ together as the first system and all the remaining systems as the second system. We are going to group the similar states of the first system as we have done in the classical systems case. But since the system $X_2$ which is part of the second system but it is in the middle of $X_1$ and $X_3$. So we need a way of reordering these systems but still keep track of the initial order of them. For that purpose only we have labeled each vector with labels $1,2,3,4,5$ for the systems $(X_1,X_2,X_3,X_4,X_5)$ respectively. We will see soon that why we are doing this. So the equivalent vector for $|\psi\rangle$ with labels is as follows.
 
 $$
 |\psi\rangle = 
@@ -581,7 +581,7 @@ $$
 \end{split}
 $$
 
-Now we will just take one part of the system and explain about the probability of the measured systems($X_1$ and $X_3$) and state vector for $(X_1,X_2,X_3,X_4,X_5)$ after the measurement. Then you can easily do the similar computation for the other two parts of the above equation.
+Now we will just take one part of the system and compute the probability outcome of the systems($X_1$ and $X_3$) and state vector for $(X_1,X_2,X_3,X_4,X_5)$ after the measurement. Then you can easily do the similar computation for the other two parts of the above equation.
 
 The probability that we will obtain the result $X_1 = 0$ and $X_3 = H$ is as follows.
 
@@ -594,7 +594,7 @@ $$
 = \frac{1}{5} + \frac{1}{5} = \frac{2}{5}
 $$
 
-The state of the systems $(X_1,X_2,X_3,X_4,X_5)$ after the measurement that $(X_1,X_3) = (0,H)$ is as follows.
+The state of the systems $(X_1,X_2,X_3,X_4,X_5)$ after the measurement that $(X_1,X_3) = (0,H)$ is as follows. Remember that denominator will be the Euclidean norm not the square of Euclidean norm.
 
 $$
 \Rightarrow |0\rangle_1 |H\rangle_3 \otimes
@@ -620,7 +620,7 @@ Initially we defined the order of the systems as $(X_1,X_2,X_3,X_4,X_5)$. So all
 These labels $1,2,3,4,5$(This can be any labels doesn't always need to be numbers) corresponds to the systems $(X_1,X_2,X_3,X_4,X_5)$ respectively. So even though we wrote down like this $|0\rangle_1 |H\rangle_3 |1\rangle_2 |D\rangle_4 |S\rangle_5$, Here the implicit order of the tensor product is as follows $|0\rangle_1 |1\rangle_2 |H\rangle_3 |D\rangle_4 |S\rangle_5$.
 
 
-## What is the unitary operation on quantum multiple systems?
+## What is unitary operation on quantum multiple systems?
 
 So the unitary operations on multiple quantum systems bring ideas from both unitary operation on the quantum single system and probabilistic operations on the classical single system. When we think about the multiple systems as a single combined system then the unitary operations are defined by the unitary matrices similar to the quantum single sytem. But here the row and column indeces of the unitary matrix will correspond to the cartesian product set of the classical state sets of the individual systems.
 
@@ -901,3 +901,63 @@ CSWAP &= (|00\rangle \langle 00| + |01\rangle \langle 01| +  |10\rangle \langle 
 \end{split}
 \end{equation}
 $$
+
+
+## How does the partial operations and measurements affects the entangled systems?
+
+> Note that Measurement is a kind of operation. So as soon as we measure one of the entangled systems the whole system will collapse into that outcome. We will see in the future that just by measuring the entangled system we won't be able control the outcome of the measurement. The measurement outcome is kind of random(that only depends on the quantum state). So we can't use this particular property for faster than light communication. Applying some operation to one of the entangled pair might alter the probability outcome of the the whole entangled system, but that will not give the gurenteed outcome without destroying the entanglement itself. We will see one example for each of these cases below.  
+
+
+
+If we apply some operation to just one(or subset) of the entangled systems and do nothing to the remaing system, then what will happen? We will discuss about it clearly here.
+
+> Assume that there are two qbits that are in an entangled state like $|\phi_+ \rangle$ state. Alice has one qbit and Bob has another qbit in far away location. If Alice applies the NOT operation on her qbit. will it affect the state of the Bob's qbit?
+
+
+Remember that in classical settings we have discussed that measurement or applying some operation on one system doesn't affect the probability outcome of the other system. It will not always be true for the quantum system. If two quantum systems are entangled, then applying some operation to the first system will try to preserve the overall system in an entangled state(even though it will not physically change the state of the second system).
+
+
+When two qubits are entangled in a state such as $|\phi^+\rangle$, the entanglement implies a strong correlation between their states. The $|\phi^+\rangle$ Bell state is given by:
+
+\[ |\phi^+\rangle = \frac{1}{\sqrt{2}} (|00\rangle + |11\rangle) \]
+
+In this state, if Alice and Bob each have one qubit, and they are far apart, their joint state is described as being either both in $|0\rangle$ or both in $|1\rangle$, with equal probability.
+
+Now, let's consider what happens when Alice applies a NOT operation (Pauli-X gate) to her qubit. The NOT operation flips the state of a qubit, changing $|0\rangle$ to $|1\rangle$ and $|1\rangle$ to $|0\rangle$. 
+
+Applying the NOT operation on Alice's qubit would transform the joint state as follows:
+
+1. The original state is $|\phi^+\rangle = \frac{1}{\sqrt{2}} (|00\rangle + |11\rangle)$.
+
+2. Alice applies the NOT operation to her qubit:
+   - $|0\rangle \rightarrow |1\rangle$
+   - $|1\rangle \rightarrow |0\rangle$
+
+3. Applying the NOT operation on Alice's qubit modifies the joint state:
+   \[
+   (X \otimes I) |\phi^+\rangle = (X \otimes I) \left( \frac{1}{\sqrt{2}} (|00\rangle + |11\rangle) \right)
+   \]
+   - $X|0\rangle = |1\rangle$
+   - $X|1\rangle = |0\rangle$
+
+   Therefore, applying the NOT operation on Alice's qubit changes the state to:
+   \[
+   \frac{1}{\sqrt{2}} (|10\rangle + |01\rangle)
+   \]
+
+This new state, $\frac{1}{\sqrt{2}} (|10\rangle + |01\rangle)$, is known as the $|\psi^+\rangle$ Bell state.
+
+#### Effect on Bob's Qubit
+
+Bob's qubit is now part of a new entangled state $|\psi^+\rangle$. If Bob measures his qubit, he will still find it to be perfectly correlated with Alice's qubit, but now in the opposite way compared to the original state:
+
+- If Alice's qubit is measured and found to be $|1\rangle$, Bob's qubit will be $|0\rangle$.
+- If Alice's qubit is measured and found to be $|0\rangle$, Bob's qubit will be $|1\rangle$.
+
+#### Summary
+
+When Alice applies the NOT operation on her qubit, the overall entangled state of the system changes from $|\phi^+\rangle$ to $|\psi^+\rangle$. This means that the correlation between Alice's and Bob's qubits changes, but no instantaneous information is transferred between Alice and Bob. Bob's qubit state is affected in the sense that the joint entangled state is different, but Alice's local operation does not send any information to Bob faster than the speed of light. The entangled nature of their qubits ensures that any measurement they perform will still show correlated results appropriate to the new entangled state.
+
+
+
+>***Note*** The property of changing probabilities in one part of an entangled(or correlated) system affecting another part due to quantum entanglement is unique to quantum mechanics and does not have a direct analog in classical, non-quantum correlated systems. So if there are two classical bits that are correlated and we apply some operation on the first classical bit, then that doesn't change the probability outcome of the other classical bit. But in case of quantum bit(qbit) applying some operation on the first qbit will change the probability outcome of the second qbit.
