@@ -4,7 +4,7 @@ In the previous blog we have learnt about the classical information of multiple 
 
 ## How to represent quantum state of multiple systems?
 
-So If we think about multiple systems together as a single system, then the quantum state will be represented by a unit vector that is very similar to the quantum single system. But now the entries of the unit vector correspond to the `cartesian product` of the classical state sets of individual systems. For example consider two qbits $X_1$ and $X_2$ with the classical state sets $\Sigma_1$ and $\Sigma_2$. Then the classical state set of the joint system $(X_1, X_2)$ will be $\Sigma_1 \times \Sigma_2$.
+So If we think about multiple systems together as a single system, then the quantum state will be represented by a unit vector that is very similar to the quantum single system. But now the entries of the unit vector correspond to the `cartesian product` of the classical state sets of individual systems. For example consider two qubits $X_1$ and $X_2$ with the classical state sets $\Sigma_1$ and $\Sigma_2$. Then the classical state set of the joint system $(X_1, X_2)$ will be $\Sigma_1 \times \Sigma_2$.
 
 $$
 \begin{equation}\tag{1}
@@ -209,7 +209,7 @@ The given below are some of the commonly used quantum state vectors that are in 
 
 #### Bell States
 
-Bell states are two qbit quantum state vectors that are in the entangeled states named after the physicist Jhon Stewart Bell. For the same reason as the example `Ex-3`, Bell states are entangled states.
+Bell states are two qubit quantum state vectors that are in the entangeled states named after the physicist Jhon Stewart Bell. For the same reason as the example `Ex-3`, Bell states are entangled states.
 
 $$
 \begin{equation}\tag{Ex-5}
@@ -243,7 +243,7 @@ $$
 
 #### GHZ and W states
 
-The GHZ state is a vector that represents a three qbit state $(X_1,X_2,X_3)$. It is named in honor of Daniel Greenberger, Michael Horne, and Anton Zeilinger, who first studied some of its properties.
+The GHZ state is a vector that represents a three qubit state $(X_1,X_2,X_3)$. It is named in honor of Daniel Greenberger, Michael Horne, and Anton Zeilinger, who first studied some of its properties.
 
 $$
 \begin{equation}\tag{Ex-6}
@@ -270,7 +270,7 @@ Both these states are entangled state which we will further explore on the parti
 
 So far we have seen quantum multiple systems that are made up of same kind of individual systems. It is possible to have different kind of individual systems in the joint system. 
 
-Suppose consider the system $X_1$ which is a qbit and systems $X_2$ and $X_3$ which will represent the four suits of the standard deck of the cards. Here classical state set of the qbit is $\Sigma_1$ and the classical state set of $X_2$ and $X_3$ is $\Sigma_2$.
+Suppose consider the system $X_1$ which is a qubit and systems $X_2$ and $X_3$ which will represent the four suits of the standard deck of the cards. Here classical state set of the qubit is $\Sigma_1$ and the classical state set of $X_2$ and $X_3$ is $\Sigma_2$.
 
 $$\Sigma_2 = {C, D, H, S}$$
 where C - Clubs, D- Diamonds, H-Hearts, S-Spades.
@@ -309,7 +309,7 @@ If we measure the quantum system that is in the above state, then the systems $(
 
 ### How do we express the partial measurement of quantum multiple systems?
 
-We could define the partial measurement of multiple quantum systems similar to classical multiple systems. Lets take an example of two qbits $X_1$ and $X_2$ with the classical state set $\Sigma_1$ and $\Sigma_2$ respectively. The joint system $(X_1,X_2)$ will be represented by a quantum state vector $|\psi\rangle$ using the Dirac notation.
+We could define the partial measurement of multiple quantum systems similar to classical multiple systems. Lets take an example of two qubits $X_1$ and $X_2$ with the classical state set $\Sigma_1$ and $\Sigma_2$ respectively. The joint system $(X_1,X_2)$ will be represented by a quantum state vector $|\psi\rangle$ using the Dirac notation.
 
 $$
 \begin{equation}\tag{4}
@@ -375,7 +375,7 @@ Here the resulting vector $|a\rangle \otimes |\phi_a\rangle$ will represent the 
 
 ### Examples of partial measurement
 
-Lets take an usual example of a joint system with two qbits $(X_1,X_2)$ which is represented by the following quantum state vector $|\psi\rangle$.
+Lets take an usual example of a joint system with two qubits $(X_1,X_2)$ which is represented by the following quantum state vector $|\psi\rangle$.
 
 $$
 \begin{equation}\tag{Ex-8}
@@ -622,9 +622,9 @@ These labels $1,2,3,4,5$(This can be any labels doesn't always need to be number
 
 ## What is unitary operation on quantum multiple systems?
 
-So the unitary operations on multiple quantum systems bring ideas from both unitary operation on the quantum single system and probabilistic operations on the classical single system. When we think about the multiple systems as a single combined system then the unitary operations are defined by the unitary matrices similar to the quantum single sytem. But here the row and column indeces of the unitary matrix will correspond to the cartesian product set of the classical state sets of the individual systems.
+The unitary operations on quantum multiple systems bring the ideas from both unitary operation on the quantum single system and probabilistic operations on the classical single system. When we think about the multiple systems as a single combined system then the unitary operations are defined by unitary matrices similar to the quantum single sytem. But here the row and column indeces of the unitary matrix will correspond to the cartesian product set of the classical state sets of the individual systems.
 
-Lets take an example of two qbits $(X_1,X_2)$ where $X_1$ and $X_2$ has the classical state set $\Sigma=\{0,1\}$. Then the following matrix applies Hadamard operation on the each individual bit of the two qbits system.
+Lets take an example of two qubits $(X_1,X_2)$ where $X_1$ and $X_2$ each has the classical state set $\Sigma=\{0,1\}$. Then the following matrix applies Hadamard operation on the each individual bit of the two qubits system.
 
 $$ 
 \begin{equation}\tag{Ex-10}
@@ -640,9 +640,9 @@ H =
 \end{equation}
 $$
 
-This can be obtained using the formula specified in `Ex-8` in the [131_MS_Classical_Information](./131_MS_Classical_Information.md) blog. You can check that for this matrix $H H^\dagger  = H^\dagger H = I$, where I is identity matrix.
+This can be obtained using the formula for tensor product of two matrices specified in `Ex-8` in the [131_MS_Classical_Information](./131_MS_Classical_Information.md) blog. You can check that for this matrix $H H^\dagger  = H^\dagger H = I$, where I is identity matrix.
 
-If you apply this operation on the state vector $|01\rangle$ you will get the following result. This is the usuall matrix multiplication.
+If you apply this operation on the state vector $|01\rangle$ you will get the following result. This is a usuall matrix multiplication operation.
 
 $$
 H|01\rangle 
@@ -661,11 +661,11 @@ H|01\rangle
 = |+\rangle|-\rangle
 $$
 
-We have got the result as expected. Here note that we are representing the result in the vector form and also in dirac notation. Remember that specifying full matrices and vectors won't be always possible. So sometimes we use dirac notations to simplify things. But while using dirac notation we may loose some patterns of the operations, which we might have figured out if we have used the full matrix form. So both these approaches has its own pros and cons.
+We have got the result as expected. Here note that we are representing the result in the vector form and also in dirac notation. Remember that specifying full matrices and vectors won't always be possible. So sometimes we use dirac notations to simplify things. But while using dirac notation we may loose some patterns of the operations, which we might have figured out if we have used the full matrix format. So both these approaches has its own pros and cons.
 
-#### What is reversible operations?
+#### Another example of unitary operation(This is specifically called reversible operation)?
 
-If the unitary operations are also deterministic, then we call them reversible operations. When we apply deterministic operation on some classical state it will always give the result as one of the possible calssical states. We have seen one such example in `Ex-7` in the [131_MS_Classical_Information](./131_MS_Classical_Information.md) blog. The reverse operation of the particular unitary matrix is computed by the `conjugate transpose` of the unitary matrix that represents the operation.
+If an operation is both deterministic and unitary then it is called reversible operations. When we apply deterministic operation to some classical state it will always give the result as another calssical state. We have seen one such example in `Ex-7` in the [131_MS_Classical_Information](./131_MS_Classical_Information.md) blog. The reversed operation of the particular unitary matrix is computed by the `conjugate transpose` of the unitary matrix that represents the original operation.
 
 $$
 U = \sum_{k=0}^{7} |binary \; encoding\; of \;((k+1) \;mod \;8)\rangle
@@ -689,14 +689,14 @@ U^\dagger = \sum_{k=0}^{7}
 \end{equation}
 $$
 
-This opearation does the reverse or inverse of the operation done by the U.
+This opearation does the reverse or inverse of the operation done by the U. Note that conjugate transpose of $(|k+1\rangle \langle k|)^{\dagger} = |k\rangle \langle k+1|$.
 
 
 ### How do we represent independent operations?
 
-If the unitary operations are applied individually on the individual systems of the collective systems, then the operation on the combined system will be described by the tensor product of the unitary matrices that represent the individual operation. If you can think about it this is analogous to what we have done for the classical multiple systems.
+If unitary operations are applied individually on each one of the multiple systems, then the operation on the joint system will be described by the tensor product of the unitary matrices that represent the individual operation. If you can think about it this is analogous to what we have done for the classical multiple systems.
 
-Suppose If $U_1,U_2,\cdots,U_n$ are unitary matrices that represent the unitary operations on the individual systems $X_1,X_2,\cdots,X_n$, then the tensor product $U_1 \otimes U_2 \otimes \cdots \otimes U_n$ will define the combined operation on the joint system $(X_1,X_2,\cdots,X_n)$. The fact that the tensor product of unitary matrices is again a unitary matrix can be proved as follows,
+Suppose If $U_1,U_2,\cdots,U_n$ are unitary matrices that describe unitary operations on the individual systems $X_1,X_2,\cdots,X_n$ respectively, then the tensor product $U_1 \otimes U_2 \otimes \cdots \otimes U_n$ will describe the joint operation on the joint system $(X_1,X_2,\cdots,X_n)$. The fact that the tensor product of unitary matrices is again a unitary matrix can be proved as follows,
 
 $$
 \begin{equation}\tag{9}
@@ -718,13 +718,13 @@ $$
 
 > **The mixed-product property**: the property of the tensor product that is used here is: $(A \otimes B) (C \otimes D) = AC \otimes BD$.
 
-In the second step we have used the fact that computing tensor product of matrices and then conjugate transposing it is equal to first conjugate transposing each of the matrices then finding the tensor product. In the third step we have used the fact that tensor product of matrices is multiplicative. Since all the $U_i$ for $1 \leq i \leq n$ are unitary matrices we got the Identity matrices as a result. Then the tensor product of these idenetity matrices is going to be a identity matrix that corresponds to the joint system $(X_1,X_2,\cdots,X_n)$.
+In the second step we have used the fact that computing tensor product of matrices and then conjugate transposing it is equal to first conjugate transposing each of the matrices then finding the tensor product. In the third step we have used the fact that tensor product of matrices is multiplicative(The mixed-product property). Since all the $U_i$ for $1 \leq i \leq n$ are unitary matrices we got the Identity matrices as a result. Then the tensor product of these idenetity matrices is going to be a identity matrix that corresponds to the joint system $(X_1,X_2,\cdots,X_n)$.
 
 #### Doing nothing on one system
 
-One more thing we have to learn is that there might be cases when we want apply some operation on just one(or proper subset) of the systems and do nothing for other(or remaining) systems. We have already learnt about the similar case in the probabilistic operation. Here is also it is going to be the same idea. Doing nothin on the other(or remaining) systems is equivalent to applying the identity operation. We already know that the identity operation is represented by the idenetity matrix $I_X$ with row and column indeces corresponding to the classical state set of the system X.
+There might be situations where we want apply some operation on just one(or proper subset) of the systems and do nothing for other(or remaining) systems. We have already learnt about this concepte in the probabilistic operation. Here also it is going to be the same idea. Doing nothin on the other(or remaining) systems is equivalent to applying the identity operation. We already know that the identity operation is represented by the idenetity matrix $I_X$ with row and column indeces corresponding to the classical state set of the system X.
 
-For example take an example of two qbits $(X_1,X_2)$ and we want to apply an Hadamard operation on $X_1$ and do nothing on $X_2$. This operation can be described by the following unitary matrix.
+For example take an example of two qubits $(X_1,X_2)$ and we want to apply an Hadamard operation to the $X_1$ and do nothing to the $X_2$. This operation will be described by the following unitary matrix.
 
 $$
 \begin{equation}\tag{Ex-12}
@@ -750,27 +750,27 @@ H \otimes I_{X_2} &=
 \end{equation}
 $$
 
-Similarly we can define unitary matrix for the case where we apply hadamard operation on the system $X_2$ and do nothing on the $X_1$. This unitary operation can be described by the unitary matrix $I_{X_1} \otimes H$.
+Similarly we could find a unitary matrix for the case where we apply hadamard operation to the system $X_2$ and do nothing to the $X_1$. This unitary operation could be described by the unitary matrix $I_{X_1} \otimes H$.
 
 
 
 ### Examples of the non independent operations
 
-In the previous section we have learnt about the independent operations. But not all the operations on the combined multiple systems can be represented as the tensor product of the unitary matrices, just like the fact that not all the quantum state vectors are product vectors. 
+In the previous section we have learnt the concept of independent operations. But not all the operations on the joint system could be represented by the tensor product of the unitary matrices, just like the fact that not all the quantum state vectors are product vectors. 
 
-For example consider a swap or controlled unitary operations. In thse cases the nature of the operation itself is not for the individual systems. Swap operation will always need two or more systems then one we can swap classical states of the two systems(or two subset of the systems). Similary in the case of controlled unitary operation we always need one(or subset of systems) as control systems and remaining systems as target systems. We see some of these examples below.
+For example consider a swap or controlled unitary operations. In thse situations the nature of the operation itself is not for individual systems. Swap operation will always need two or more systems then only we can swap classical states of two systems(or two subset of the systems). Similary in the case of controlled unitary operation we always need one(or subset of systems) as control system and remaining systems as target system. We will see some of these examples below.
 
 ### The swap operation 
 
-Lets assume that two quantum systems $X_1$ and $X_2$ with the classical state set $\Sigma$. Note that having the same classical state set is necessary because we are doing the swap operation. Then the swap operation on the joint system $(X_1,X_2)$ will inter change the contents of the two systems. This operation we define as SWAP. Then the swap operation for any two calssical states $a,b \in \Sigma$ is defined as follows
+Lets take two quantum systems $X_1$ and $X_2$ with the classical state set $\Sigma$. Note that having the same classical state set is necessary because we are doing the swap operation. Then the swap operation on the joint system $(X_1,X_2)$ will inter change the contents of the two systems. We call this operation as SWAP. Then the swap operation for any two calssical states $a,b \in \Sigma$ will be defined as follows
 
 $$ SWAP \; |a\rangle|b\rangle  = |b\rangle|a\rangle$$
 
-We can compute the unitary matrix for the swap operation using the following equation.
+We could compute the unitary matrix for the swap operation using the following equation.
 
 $$ SWAP = \sum_{c,d \in \Sigma}|c\rangle \langle d| \otimes |d\rangle \langle c|$$
 
-We can derive this using the mixed-product property of the tensor product. Suppose for the input $\langle d|  \otimes \langle c|$ the output is $\langle c| \otimes \langle d|$, then based on the properties of the tensor product we can derive the following equation.
+We are going to derive this using the mixed-product property of the tensor product. Suppose for the input $\langle d|  \otimes \langle c|$ the output is $\langle c| \otimes \langle d|$, then based on the properties of the tensor product we can derive the following equation.
 
 $$
 \begin{split}
@@ -786,9 +786,9 @@ or we can think of the above equation as we are defining the input vs ouput comb
 
 
 >**Important:** \
-> In the above definitions we are defining the input as row vector such as $\langle d$ and output as column vector such as $|c\rangle$. This is only for the purpose of computing the unitary matices. But usually when we apply unitary operation to a column vector it gives another column vector as an output.
+> In the above definitions we are defining an input as row vector such as $\langle d|$ and output as a column vector such as $|c\rangle$. This is only for the purpose of computing the unitary matices. But usually when we apply unitary operation to a column vector it gives another column vector as an output.
 
-The swap operation the joint system of two qbits $(X_1,X_2)$ is defined as follows.
+The swap operation the joint system of two qubits $(X_1,X_2)$ will be defined as follows.
 
 $$
 \begin{equation}\tag{Ex-13}
@@ -803,13 +803,13 @@ $$
 
 ### The controlled Unitary operation
 
-Lets take an example that X is a qbit and Y is an arbitrary quantum system. We have some unitay operation that is described by the unitary matrix U. The controlled unitary operation is that when X=0 then do nothing to Y and whne X=1 then apply the unitary operation on Y. The unitary matrix for this can be computed as follows. Here $I_Y$ is the identity matrix that corresponds to the system Y.
+Lets take an example that X is a qubit and Y is an arbitrary quantum system. We have some unitary operation that is described by the unitary matrix U. What we call a controlled unitary operation is that if X=0 then do nothing to Y and if X=1 then apply the unitary operation U to Y. The unitary matrix for this can be computed as follows. Here $I_Y$ is the identity matrix that corresponds to the system Y.
 
 $$
 CU = |0\rangle \langle 0| \otimes I_Y + |1\rangle \langle 1| \otimes U
 $$
 
-Suppose we want to apply the controlled pauli X operation(It is the NOT operation or $\sigma_x$ operation). We have seen this pauli-X operation in `Ex-4` in the [101_SS_Quantum_Information](./101_SS_Quantum_Information.md).
+Suppose we want to apply the controlled pauli X operation(It is also known as NOT operation or $\sigma_x$ operation). We have seen this pauli-X operation in `Ex-4` in the [101_SS_Quantum_Information](./101_SS_Quantum_Information.md).
 
 $$
 \begin{equation}\tag{Ex-14}
@@ -833,7 +833,7 @@ CX &= |0\rangle \langle 0| \otimes I_Y + |1\rangle \langle 1| \otimes X \\
 \end{equation}
 $$
 
-Another example is Contolled pauli-Z(It is phase flip or $\sigma_z$ operation) operation.
+Another example is a contolled pauli-Z(It is also known as phase flip or $\sigma_z$ operation) operation.
 
 $$
 \begin{equation}\tag{Ex-15}
@@ -855,7 +855,7 @@ $$
 
 #### Fredkin operation or Fredkin gate
 
-Now consider a three qbit systems $(X_1,X_2,X_3)$. The first system $X_1$ is a controll bit and we apply the swap operation on the remaining two systems $X_2$ and $X_3$. This operation is called Fredkin operation(or Fredkin gate) named for the Edward Fredkin. Here $I_{X_2}$ and $I_{X_3}$ are identity matrices that correspond to systems $X_2$ and $X_3$. Here the SWAP is a matrix from the example `Ex-13`.
+Now consider a three qubit system $(X_1,X_2,X_3)$. The first system $X_1$ is a controll bit and it controls the swap operation on the remaining two systems $X_2$ and $X_3$. This operation is called Fredkin operation(or Fredkin gate) named after the Edward Fredkin. Here $I_{X_2}$ and $I_{X_3}$ are identity matrices that correspond to systems $X_2$ and $X_3$. Here the SWAP is a matrix from the example `Ex-13`.
 
 $$
 CSWAP |0cb\rangle = |0cb\rangle \\
@@ -879,12 +879,12 @@ CSWAP &= |0\rangle \langle 0|  \otimes (I_{X_2} \otimes I_{X_3}) + |1\rangle \la
 \end{equation}
 $$
 
-Here to understand this better try to visualize how this matrix operation may be applied on any particular quantum state vector.
+Here try to visualize how this matrix operation will act on a particular quantum state vector to to get a better understanding.
 
 
 #### Toffoli operation or Toffoli gate
 
-Now we will see about the controlled-controlled NOT operation( or CCX operation). It is called Toffoli operation (or Toffoli gate) named for the Tommaso Toffoli. Suppose if we have same three qbit system $(X_1,X_2,X_3)$ as in the previous example, then first two bits $X_1$ and $X_2$ are controll bits and the controlled NOT operation is applied on the third bit $X_3$. 
+Now we will see about the controlled-controlled NOT operation( or CCX operation). It is called Toffoli operation (or Toffoli gate) named after Tommaso Toffoli. Suppose if we have same three qubit system $(X_1,X_2,X_3)$ as in the previous example, then first two qubits $X_1$ and $X_2$ are controll bits and the controlled NOT operation will be applied on the third qubit $X_3$. 
 
 $$
 \begin{equation}\tag{Ex-17}
@@ -911,7 +911,7 @@ $$
 
 If we apply some operation to just one(or subset) of the entangled systems and do nothing to the remaing system, then what will happen? We will discuss about it clearly here.
 
-> Assume that there are two qbits that are in an entangled state like $|\phi_+ \rangle$ state. Alice has one qbit and Bob has another qbit in far away location. If Alice applies the NOT operation on her qbit. will it affect the state of the Bob's qbit?
+> Assume that there are two qubits that are in an entangled state like $|\phi_+ \rangle$ state. Alice has one qubit and Bob has another qubit in far away location. If Alice applies the NOT operation on her qubit. will it affect the state of the Bob's qubit?
 
 
 Remember that in classical settings we have discussed that measurement or applying some operation on one system doesn't affect the probability outcome of the other system. It will not always be true for the quantum system. If two quantum systems are entangled, then applying some operation to the first system will try to preserve the overall system in an entangled state(even though it will not physically change the state of the second system).
@@ -960,4 +960,4 @@ When Alice applies the NOT operation on her qubit, the overall entangled state o
 
 
 
->***Note*** The property of changing probabilities in one part of an entangled(or correlated) system affecting another part due to quantum entanglement is unique to quantum mechanics and does not have a direct analog in classical, non-quantum correlated systems. So if there are two classical bits that are correlated and we apply some operation on the first classical bit, then that doesn't change the probability outcome of the other classical bit. But in case of quantum bit(qbit) applying some operation on the first qbit will change the probability outcome of the second qbit.
+>***Note*** The property of changing probabilities in one part of an entangled(or correlated) system affecting another part due to quantum entanglement is unique to quantum mechanics and does not have a direct analog in classical, non-quantum correlated systems. So if there are two classical bits that are correlated and we apply some operation on the first classical bit, then that doesn't change the probability outcome of the other classical bit. But in case of quantum bit(qubit) applying some operation on the first qubit will change the probability outcome of the second qubit.

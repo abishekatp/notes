@@ -27,17 +27,17 @@ The physical properties of quantum system such as interference allow these multi
 > If you are someone who remember about the double slit experiement from high school, then you can understand this interference better. In double slit experiement we send light(photons) through two very closly seperated slits. in the other side of the slits we have some screen kind of setting which can measure the photons. We will see dark and bright patterns of light due to interference of photons. The dark spots corresponds to negative interference and bright spots correspond to possitive interference. This double slit experiement will also show the superposition property of the photons. Even if you send a single photon at a time, this interference pattern will show up. This means each photon interfere with itself due to the superposition property of a the quantum system. When only single slit is open this pattern emerges beacause there is only single path for photon to follow, but when two slits are open, that allows photon to travel in both path simultaneously and create interference with itself.(These interference properties are due to the wave nature of these photons. Quantum systems like photonos, electors sometimes act like wave and sometimes act like particles. This is called the famous dual-nature of a quantum system).
 
 
-- One common example of quantum system is a qbit. This is analogous term to the bit in the classical computers for quantum computers. 
+- One common example of quantum system is a qubit. This is analogous term to the bit in the classical computers for quantum computers. 
 
-### What is a qbit?
+### What is a qubit?
 
-We know that a bit is a most common way of describing and processing the information about the classical system state mathematically in digital computers. Similarly qbit is a common way of describing and processing the information about some quantum system(such as quantum computers) in a quantum computer. Here the quantum information describes the state of a quantum system at any moment of time.
+We know that a bit is a most common way of describing and processing the information about the classical system state mathematically in digital computers. Similarly qubit is a common way of describing and processing the information about some quantum system(such as quantum computers) in a quantum computer. Here the quantum information describes the state of a quantum system at any moment of time.
 
-Similar to the bit the qbit is also having finite and non-emtpy set of classical states {0, 1}. Apart from this qbit can also be in any one of the possible quantum states.
+Similar to the bit the qubit is also having finite and non-emtpy set of classical states {0, 1}. Apart from this qubit can also be in any one of the possible quantum states.
 
-### How do we represent a qbit mathematically?
+### How do we represent a qubit mathematically?
 
-Similar to a classical bit we will represent a qbit using a column vector. But unlike deterministic or probabilistic states, the qunatum state vector can have a complex number entries. (Note that since we allow complex numbers in the quantum state vector, it can also have negative real number in any entry. This won't be a problem because of the way we compute the probability associated with each quantum state of the system from the quantum state vector).
+Similar to a classical bit we will represent a qubit using a column vector. But unlike deterministic or probabilistic states, the qunatum state vector can have a complex number entries. (Note that since we allow complex numbers in the quantum state vector, it can also have negative real number in any entry. This won't be a problem because of the way we compute the probability associated with each quantum state of the system from the quantum state vector).
 
 * Just making this small change in the state vector is enough to bring us from the classical world to the quantum world. In general the following way can be used reresent a state of any quantum system.
 
@@ -163,7 +163,7 @@ Remember that once we specify the order of the classical states then the dirac n
 
 ## Measurement of quantum system
 
-### What do we mean by measuring a quantum state of a qbit?
+### What do we mean by measuring a quantum state of a qubit?
 
 Without the action of measuring a quantum system we couldn't know the state of the quantum system with certainty. The action of measuring will reveal the state of the quantum system. Without measurement there is some probability associated with each classical state of the system(This idea can be generalized to more than just a classical states set. We will learn more about that when we learn about projective measurements in future blogs). As soon as we measure the system it will collapse into one of the possible classical states. But the measured result state that we get will depend on the probability associated with that outcome.
 
@@ -171,7 +171,7 @@ The simple way of measurement is called the standard basis measurement where res
 
 ### What is a standard basis measurement?
 
-The standard basis measurement links the absolute value squared of each entry of a quantum state vector to the probability that we will get specific calssical state as an outcome. We can get the probability associated with specific classical state by calculating the absolute value of the entry of the quantum state vector that corresponds to it. This is called Born rule of quantum mechanics. Take the following arbitrary example of qbit,
+The standard basis measurement links the absolute value squared of each entry of a quantum state vector to the probability that we will get specific calssical state as an outcome. We can get the probability associated with specific classical state by calculating the absolute value of the entry of the quantum state vector that corresponds to it. This is called Born rule of quantum mechanics. Take the following arbitrary example of qubit,
 
 $$ 
 |\psi\rangle = \sqrt{\frac{3}{4}}|0\rangle + i\sqrt{\frac{1}{4}}|1\rangle
@@ -194,7 +194,7 @@ $$
 
 If we measure the quantum system, then we won't always get a same result on each measurement. But rather we may get different classical states as an outcome for different measurements. These results will be based on the probability associated with each classical state of the quantum state vector. 
 
-* We have seen previously that both $|+\rangle$ or $|-\rangle$ quantum states have the $Pr(outcome = |0\rangle) =  \frac{1}{2}$ and $Pr(outcome = |1\rangle) =  \frac{1}{2}$. So when you try to measure these quantum states you will get a classical state $|0\rangle$ as an outcome for half of the times and $|1\rangle$ for other half.(for exmaple if you measure the qbit for 100 times, then 50 times you will get classical state 0 (represented by $|0\rangle$) and 50 times you will get 1. but it could be in some random order.)
+* We have seen previously that both $|+\rangle$ or $|-\rangle$ quantum states have the $Pr(outcome = |0\rangle) =  \frac{1}{2}$ and $Pr(outcome = |1\rangle) =  \frac{1}{2}$. So when you try to measure these quantum states you will get a classical state $|0\rangle$ as an outcome for half of the times and $|1\rangle$ for other half.(for exmaple if you measure the qubit for 100 times, then 50 times you will get classical state 0 (represented by $|0\rangle$) and 50 times you will get 1. but it could be in some random order.)
 
 >Note: do you remember about the double slit experiement? then the notion of the measurement is similar to how we recorded the dark and light spots on the other side of the double slit. Thought it will be done in a more systematic way to make it less error prone and more efficient.
 
@@ -330,7 +330,7 @@ If we compute the square of R, then we will get $R^2 = I$. Becuse $R^2|0\rangle 
 
 ### Can we apply a unitary operation on a quantum system with more than two classical states?
 
-The unitary operations is not restricted to use only with a qbit. The qbit is a simple form of quantum system with just two possible classical states. We can apply unitary operations for a system with more than just two classical states. For example the follwing the matrix is called permutation matrix. This is called a permuation operationb because it will just rearrange the entries of the state vector.
+The unitary operations is not restricted to use only with a qubit. The qubit is a simple form of quantum system with just two possible classical states. We can apply unitary operations for a system with more than just two classical states. For example the follwing the matrix is called permutation matrix. This is called a permuation operationb because it will just rearrange the entries of the state vector.
 
 $$ A = 
 \begin{pmatrix} 
@@ -341,7 +341,7 @@ $$ A =
 $$
 
 $$ A|0\rangle = |2\rangle, \; A|1\rangle = |0\rangle, \; A|2\rangle = |1\rangle$$
- You can think of $\sigma_x$ operation as a simple permuation operation for a qbit.
+ You can think of $\sigma_x$ operation as a simple permuation operation for a qubit.
 
 The following is the unitary operation for the quantum fourier transform for system with n=4 classical states. We can define quantum fourier transform matrix for any possitive integer n. We will use this operation in future sections.
 
