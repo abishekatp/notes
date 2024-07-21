@@ -205,7 +205,7 @@ $$
 
 Here $ NOT|0\rangle $ is a matrix multiplication. The NOT operation is applied on a column vector for state 0 of a binary system.
 
-### How can we compute a matrix M that is equivalent of applying a function f(a particular operation)?
+### How could we construct a matrix M that is equivalent of applying a function f(or equaivalently particular particular operation)?
 
 We have already seen that matrices in the matrix operation represent some mathematical function applied on a classical state. How can we find this matrix when we know the kind of function we want to apply. $ |f(a)\rangle$ is a function applied to some vector $a$, where the fucntion is $f:\Sigma \rightarrow \Sigma$. This means both input and output of the function is bounded by the classical state set $\Sigma$
 
@@ -258,6 +258,8 @@ $$
 \frac{1}{4}\begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} +
 \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}
 $$
+
+> ***Important*** For classical systems we can write the probabilistic operation matrix as a linear combination of deterministic operations as long as the resulting matrix is a valid stochastic matrix.
 
 ### composition of matrix operations(Matrix Associative property)
 

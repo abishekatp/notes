@@ -125,9 +125,9 @@ $$
 
 ### What is an entanglement of the join quantum system?
 
-We can't always write a quantum state vector of multiple systems as a product of quantum state vectors of the individual systems(as a product state). When such a scenario happens we would say that quantum systems are entangled or correlated. Entanglement is important feature of quantum systems. We will see that it is a more complicated concept when we learn about the more general description of the quantum information using the density matrix formulation. But in the quantum state vector description of the quantum information, the entanglement is equivalent to the correlation.
+We can't always write a quantum state vector of multiple systems as a product of quantum state vectors of the individual systems(as a product state). When such a scenario happens we would say that quantum systems are entangled or correlated. Entanglement is important feature of quantum systems. We will see that it is a more complicated concept when we learn about the more general description of the quantum information using the density matrix formulation. But in the quantum state vector description of the quantum information, the entanglement is equivalent to the correlation(specifically non classical correlation).
 
-> Note: Alternatively quantum entanglement can be defined as the non-classical correlation. So the classical correlation and quantum correlation are not the same. The quantum entanglement has its own properties which we couldn't find in the classical probabilistic systems. The quantum system differs in a way that if you apply some operation to one of the entangled systems, then the probability outcome of the other system(that is in entanglement) will also change as long as the operation doesn't destroy the entanglement itself. We will discuss about this further in the end of this blog and in future blogs. 
+> ***Note:*** Alternatively quantum entanglement can be defined as the non-classical correlation. So the classical correlation and quantum correlation are not the same. The quantum entanglement has its own properties which we couldn't find in the classical probabilistic systems. The quantum system differs in a way that if you apply some operation to one of the entangled systems, then the probability outcome of the other system(that is in entanglement) will also change as long as the operation doesn't destroy the entanglement itself. We will discuss about this further in the end of this blog and in future blogs. 
 
 For example if we want to show that the quantum state vectors $|\psi_1\rangle$ and $|psi_2\rangle$ that corresponds to systems $X_1$ and $X_2$ in the example `Ex-2` are independent, then you have to show that $|\psi\rangle$ as a tensor product of two quantum state vectors $|\psi_1\rangle$ and $|\psi_2\rangle$. The following equation formalizes this condition.
 
@@ -620,6 +620,30 @@ Initially we defined the order of the systems as $(X_1,X_2,X_3,X_4,X_5)$. So all
 These labels $1,2,3,4,5$(This can be any labels doesn't always need to be numbers) corresponds to the systems $(X_1,X_2,X_3,X_4,X_5)$ respectively. So even though we wrote down like this $|0\rangle_1 |H\rangle_3 |1\rangle_2 |D\rangle_4 |S\rangle_5$, Here the implicit order of the tensor product is as follows $|0\rangle_1 |1\rangle_2 |H\rangle_3 |D\rangle_4 |S\rangle_5$.
 
 
+### How does the measurement of entangled quantum systems work?
+
+The entanglement property tells us that when we measure just one part of the entangled systems the whole system collapse into that particular measurement outcome. This is because of the correlation between two entangled systems. Two entangled system will always tend to be in the same state as long as the entanglement is not destroyed.
+
+It seems like that the measurement outcome of one of the entangled systems is depending on the measurement of the other system. So we may think that this property could be used for faster than light communication. But that is not fully correct understanding. 
+
+The measurement outcome of both entangled systems will always depend on the intrinsic quantum state of the entangled system. When we measure one of the entangled systems it will just change our knowledge about the system. After measurement the whole system collapses into the measured outcome(that is not because of the measurement but rather due to the probabilities associated with the entangled quantum state).
+
+For example think about the $|\phi_+\rangle = \frac{1}{\sqrt{2}} (|00\rangle + |11\rangle)$ Bell state. In this entangled state both qubits will be in the $|00\rangle$ state with probability $\frac{1}{2}$ and in the state $|11\rangle$ with the probability $\frac{1}{2}$. If you take one hundred $|\phi_+\rangle$ states and measure each one of them, then you will get an outcome $|00\rangle$ for half of the times and $|11\rangle$ for other half of the times in a random order. 
+
+Again take one hundred $|phi_+\rangle$ states and only measure the first(or second) qubit of the $|\phi_+\rangle$ state for one hundred times, then also you will get similar outcome in a different random order. So the outcome only depends on the probability values associated with the actual quantum state rather than the action of measurement.
+
+The above experiment will give us same outcomes regardless of the distance between two qubits. By only measuring the one qubit we will know the state of the other qubit regardless of the measurement of the other qubit. This only changes our knowledger about the other system. The action of measurement of one qubit does not have any control over the actual measurement outcome.
+
+> ***Important***: Currently there are no known unitary operation U which can applied on just one of the two entangled qubits to give the guaranteed outcome(either give the output 0 or 1 with one hundred percent outcome probability) without destroying the entanglement itself(if entanglement is destroyed then the operation will only affect one of the entangled system). If we can find such a unitary operation U(that can do the above mentioned action without destroying the entanglement), then we could use that unitary operation U to send some message to a user in a far away location with speed faster than light can travel. This phenomenon I have explainded at the end of this blog.
+> Even if we could find a unitary operation U that maximises the probability outcome to more than ninety-nine percent, then we can send message faster than light with high probability of correctness of the message.
+
+> ***Two way communication:*** Even with a unitary operation U that we discussed above sending a message(one way non-acknowledged communication) seems easier than the real time two way communications because of the following property of the quantum systems.
+> As soon as we measure the quantum system, the whole system will collapse into the measured outcome. After that any number of measurements will result in the same outcome. So if the receiver measured the entangled state before applying the unitary operation U, then the whole entangled system will collapse into the measured outcome.
+
+> ***Because of these reasons currently there are no fater than light communication possible using the quantum entanglement property.***
+
+
+
 ## What is unitary operation on quantum multiple systems?
 
 The unitary operations on quantum multiple systems bring the ideas from both unitary operation on the quantum single system and probabilistic operations on the classical single system. When we think about the multiple systems as a single combined system then the unitary operations are defined by unitary matrices similar to the quantum single sytem. But here the row and column indeces of the unitary matrix will correspond to the cartesian product set of the classical state sets of the individual systems.
@@ -903,61 +927,30 @@ CSWAP &= (|00\rangle \langle 00| + |01\rangle \langle 01| +  |10\rangle \langle 
 $$
 
 
-## How does the partial operations and measurements affects the entangled systems?
-
-> Note that Measurement is a kind of operation. So as soon as we measure one of the entangled systems the whole system will collapse into that outcome. We will see in the future that just by measuring the entangled system we won't be able control the outcome of the measurement. The measurement outcome is kind of random(that only depends on the quantum state). So we can't use this particular property for faster than light communication. Applying some operation to one of the entangled pair might alter the probability outcome of the the whole entangled system, but that will not give the gurenteed outcome without destroying the entanglement itself. We will see one example for each of these cases below.  
 
 
+## Thought process with Entanglement
+This is only a thought experiement. The below mentioned idea won't work untill we find a unitary operation U such that if we apply the unitary operation U on just one part of the entangled systems, then that will affect the probability outcome of the whole entangled system without destroying the entanglement.
 
-If we apply some operation to just one(or subset) of the entangled systems and do nothing to the remaing system, then what will happen? We will discuss about it clearly here.
+### Presumption:
 
-> Assume that there are two qubits that are in an entangled state like $|\phi_+ \rangle$ state. Alice has one qubit and Bob has another qubit in far away location. If Alice applies the NOT operation on her qubit. will it affect the state of the Bob's qubit?
+- Alice and Bob each have one hundred qubits that are entangled together. These entangled qubits are of the same kind which we take as $\phi_+ \rangle$. 
 
+- Bob is going to travel to Planet X which is one hundred light years away from the Earth. Bob will travel at the speed of light so it will take hundred light years for him to reach that Planet X. As soon as Bob reaches Planet X he would like to know the status of the wellness of the Earth at the time of ninety-nine light years.
 
-Remember that in classical settings we have discussed that measurement or applying some operation on one system doesn't affect the probability outcome of the other system. It will not always be true for the quantum system. If two quantum systems are entangled, then applying some operation to the first system will try to preserve the overall system in an entangled state(even though it will not physically change the state of the second system).
+- If Alice sends the status of the Earth at the 99th light year to Bob using the classical communication, then it will take another 100 light years to reach Bob.
 
+- But we know that Bob and Alice each share 100 entangled qubits of type $\phi_+ \rangle$. Can we use these entangled qubits to send a message to Bob with high certainty? We will explore this idea further.
 
-When two qubits are entangled in a state such as $|\phi^+\rangle$, the entanglement implies a strong correlation between their states. The $|\phi^+\rangle$ Bell state is given by:
-
-\[ |\phi^+\rangle = \frac{1}{\sqrt{2}} (|00\rangle + |11\rangle) \]
-
-In this state, if Alice and Bob each have one qubit, and they are far apart, their joint state is described as being either both in $|0\rangle$ or both in $|1\rangle$, with equal probability.
-
-Now, let's consider what happens when Alice applies a NOT operation (Pauli-X gate) to her qubit. The NOT operation flips the state of a qubit, changing $|0\rangle$ to $|1\rangle$ and $|1\rangle$ to $|0\rangle$. 
-
-Applying the NOT operation on Alice's qubit would transform the joint state as follows:
-
-1. The original state is $|\phi^+\rangle = \frac{1}{\sqrt{2}} (|00\rangle + |11\rangle)$.
-
-2. Alice applies the NOT operation to her qubit:
-   - $|0\rangle \rightarrow |1\rangle$
-   - $|1\rangle \rightarrow |0\rangle$
-
-3. Applying the NOT operation on Alice's qubit modifies the joint state:
-   \[
-   (X \otimes I) |\phi^+\rangle = (X \otimes I) \left( \frac{1}{\sqrt{2}} (|00\rangle + |11\rangle) \right)
-   \]
-   - $X|0\rangle = |1\rangle$
-   - $X|1\rangle = |0\rangle$
-
-   Therefore, applying the NOT operation on Alice's qubit changes the state to:
-   \[
-   \frac{1}{\sqrt{2}} (|10\rangle + |01\rangle)
-   \]
-
-This new state, $\frac{1}{\sqrt{2}} (|10\rangle + |01\rangle)$, is known as the $|\psi^+\rangle$ Bell state.
-
-#### Effect on Bob's Qubit
-
-Bob's qubit is now part of a new entangled state $|\psi^+\rangle$. If Bob measures his qubit, he will still find it to be perfectly correlated with Alice's qubit, but now in the opposite way compared to the original state:
-
-- If Alice's qubit is measured and found to be $|1\rangle$, Bob's qubit will be $|0\rangle$.
-- If Alice's qubit is measured and found to be $|0\rangle$, Bob's qubit will be $|1\rangle$.
-
-#### Summary
-
-When Alice applies the NOT operation on her qubit, the overall entangled state of the system changes from $|\phi^+\rangle$ to $|\psi^+\rangle$. This means that the correlation between Alice's and Bob's qubits changes, but no instantaneous information is transferred between Alice and Bob. Bob's qubit state is affected in the sense that the joint entangled state is different, but Alice's local operation does not send any information to Bob faster than the speed of light. The entangled nature of their qubits ensures that any measurement they perform will still show correlated results appropriate to the new entangled state.
+- Just for the sake of this experiement assume that there exists a unitary operation U such that if we apply the unitary operation U on just one part of the entangled systems, then that will change the probability outcome of the whole entangled system without destroying the entanglement.
 
 
+### if such unitary operation U exists, then the possible solution to send a message with high probability:
 
->***Note*** The property of changing probabilities in one part of an entangled(or correlated) system affecting another part due to quantum entanglement is unique to quantum mechanics and does not have a direct analog in classical, non-quantum correlated systems. So if there are two classical bits that are correlated and we apply some operation on the first classical bit, then that doesn't change the probability outcome of the other classical bit. But in case of quantum bit(qubit) applying some operation on the first qubit will change the probability outcome of the second qubit.
+- Be noted that communication between Bob and Alice is going to be neither two way nor real time communication. Alice is just going to send a message to Bob about the status of the Earth.
+
+- Before Bob starts his journey Alice and Bob agrees that if the Earth is good on the ninety-ninth light year, then Alice will apply a unitary operation U on her one hundred qubits such that this operation will maximize the probability of getting an outcome $|1\rangle$ to 99.99 percent. Bob will measure these qubits anytime after the 99th light year to know the status of the Earth.
+
+- If Bob measures and gets an outcome $|1\rangle$ for 99 percent of his measurements, then he can decide with high probability that the Earth is good on the 99th light year.
+
+- Even If Bob measures his qubits one year after(the time interval would have been pre agreed before the journey) Alice’s operation, we can say that it only took one year to send this message. But in classical communication it would have taken minimum of 100 light years to send this message.

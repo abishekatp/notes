@@ -349,6 +349,14 @@ $$ U = \frac{1}{2} \begin{pmatrix} 1 & 1 & 1 & 1 \\ 1 & i & -1 & -i \\ 1 & -1 & 
 
 **Why?**: The way we are going to define multiple systems will require us to have a state vector with more than just two classical states. We will see about these combined systems(combination of simple systems which we have studied in this lesson) in the next blog. Thats why I have shown here the way we can represent an operation on a quantum state vector with three or more classical states. 
 
+### Can we construct unitary operation matrices similar to how we constructed stochastic matrices for probabilistic systems?
+
+For classical systems we have written the probabilistic operation matrix as a linear combination of deterministic operations as long as the resulting matrix is a valid stochastic matrix. Can we do a similar kind of logic for constructing unitary operation matrices from deterministic operations for quatum systems?
+
+In quantum system simple unitary matrices can't be written as linear combination of other unitary matrices(we know that all deterministic operations are unitary) like we did for probabilistic operations. 
+
+However, certain quantum operations (called Kraus operators) allow expressing mixed-state evolutions (quantum channels) as sums of operations applied to density matrices. But don't worry about any of this now, we will explore this when we learn about the density matrix formulation of the quantum systems.
+
 
 ## Notes
 
