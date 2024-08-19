@@ -70,10 +70,12 @@ Sometimes the last equation you see above is used to declar the order of the ten
 
 ```math
 \begin{equation}\tag{Ex-2}
+\begin{split}
 |\psi\rangle =
 \begin{pmatrix}
 \frac{1}{\sqrt{2}} \\ 0 \\ 0 \\ \frac{1}{\sqrt{2}}
 \end{pmatrix}
+\end{split}
 \end{equation}
 ```
 
@@ -112,7 +114,9 @@ We could generalize this idea easily for three or more systems. Suppose quantum 
 
 ```math
 \begin{equation}\tag{3}
+\begin{split}
 |\psi\rangle =|\psi_1\rangle \otimes |\psi_2\rangle \otimes \cdots \otimes |\psi_n\rangle
+\end{split}
 \end{equation}
 ```
 
@@ -133,9 +137,11 @@ For example if we want to show that the quantum state vectors $|\psi_1\rangle$ a
 
 ```math
 \begin{equation}\tag{Ex-3}
+\begin{split}
 |\psi_1\rangle \otimes |\psi_2\rangle = 
 \frac{1}{\sqrt{2}}|00\rangle +
 \frac{1}{\sqrt{2}}|11\rangle \\
+\end{split}
 \end{equation}
 ```
 
@@ -248,9 +254,11 @@ The GHZ state is a vector that represents a three qubit state $(X_1,X_2,X_3)$. I
 
 ```math
 \begin{equation}\tag{Ex-6}
+\begin{split}
 |GHZ\rangle = 
 \frac{1}{\sqrt{2}}|000\rangle +
 \frac{1}{\sqrt{2}}|111\rangle 
+\end{split}
 \end{equation}
 ```
 
@@ -258,10 +266,12 @@ The following is the so called W state:
 
 ```math
 \begin{equation}\tag{Ex-7}
+\begin{split}
 |GHZ\rangle = 
 \frac{1}{\sqrt{3}}|001\rangle +
 \frac{1}{\sqrt{3}}|010\rangle +
 \frac{1}{\sqrt{3}}|100\rangle 
+\end{split}
 \end{equation}
 ```
 
@@ -318,8 +328,10 @@ We could define the partial measurement of multiple quantum systems similar to c
 
 ```math
 \begin{equation}\tag{4}
+\begin{split}
 |\psi\rangle = \sum_{a,b \in \Sigma_1 \times \Sigma_2} 
 \alpha_{ab} |ab\rangle
+\end{split}
 \end{equation}
 ```
 
@@ -327,7 +339,9 @@ where $\{\alpha_{ab}: (a,b) \in \Sigma_1 \times \Sigma_2 \}$ is collection of co
 
 ```math
 \begin{equation}\tag{5}
+\begin{split}
 \sum_{a,b \in \Sigma_1 \times \Sigma_2} |\alpha_{ab}|^2 = 1
+\end{split}
 \end{equation}
 ```
 
@@ -335,7 +349,9 @@ As we already know that if both $X_1$ and $X_2$ are measured, then the probabili
 
 ```math
 \begin{equation}\tag{6}
+\begin{split}
 Pr((X_1,X_2)=(a,b))=|\langle ab|\psi\rangle|^2 = |\alpha_{ab}|^2
+\end{split}
 \end{equation}
 ```
 
@@ -343,7 +359,9 @@ Suppose if we are only measuring the system $X_1$, then the probability outcome 
 
 ```math
 \begin{equation}\tag{7}
+\begin{split}
 Pr(X_1=a) = \sum_{b \in \Sigma_2} |\alpha_{ab}|^2
+\end{split}
 \end{equation}
 ```
 
@@ -373,8 +391,10 @@ Now suppose that we have measured $X_1=a$, then the state of the system $X_2$ wi
 
 ```math
 \begin{equation}\tag{8}
+\begin{split}
 |a\rangle \otimes 
 \frac{|\phi_a\rangle}{|| |\phi_a\rangle||}
+\end{split}
 \end{equation}
 ```
 
@@ -659,6 +679,7 @@ Lets take an example of two qubits $(X_1,X_2)$ where $X_1$ and $X_2$ each has th
 
 ```math
 \begin{equation}\tag{Ex-10}
+\begin{split}
 
 H = 
 \begin{pmatrix} 
@@ -668,6 +689,7 @@ H =
 \frac{1}{2} & -\frac{1}{2} & -\frac{1}{2} & \frac{1}{2}
 \end{pmatrix}
 
+\end{split}
 \end{equation}
 ```
 
@@ -827,12 +849,14 @@ The swap operation the joint system of two qubits $(X_1,X_2)$ will be defined as
 
 ```math
 \begin{equation}\tag{Ex-13}
+\begin{split}
 SWAP = \begin{pmatrix}
 1 & 0 & 0 & 0 \\
 0 & 0 & 1 & 0 \\
 0 & 1 & 0 & 0 \\
 0 & 0 & 0 & 1
 \end{pmatrix}
+\end{split}
 \end{equation}
 ```
 

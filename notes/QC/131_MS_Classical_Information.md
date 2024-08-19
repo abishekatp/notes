@@ -170,7 +170,11 @@ Suppose $X_1$ and $X_2$ are two individual systems. We say that these systems $X
 
 ```math
 \begin{equation} \tag{2}
+\begin{split}
+
 P((X_1,X_2) = (a, b)) = P(X_1=a)P(X_2=b)
+
+\end{split}
 \end{equation}
 ```
 
@@ -304,7 +308,11 @@ The idea that we discussed for two systems can be easily generalised for three o
 
 ```math
 \begin{equation} \tag{3}
+\begin{split}
+
 |\psi\rangle = |\psi_1\rangle \otimes |\psi_2\rangle \otimes ... \otimes |\psi_n\rangle
+
+\end{split}
 \end{equation}
 ```
 
@@ -314,7 +322,11 @@ If individual systems are indipendent, then we will be able describe the probabi
 
 ```math
 \begin{equation} \tag{4}
+\begin{split}
+
  \langle a_1 a_2 ... a_n|\psi\rangle = \langle a_1|\psi_1\rangle \langle a_2|\psi_2\rangle...\langle a_n|\psi_n\rangle
+
+ \end{split}
  \end{equation}
 ```
 
@@ -326,7 +338,11 @@ One way to do this is, we can recursively define the tensor product of n vector 
 
 ```math
 \begin{equation} \tag{5}
+\begin{split}
+
 |\psi\rangle = (|\psi_1\rangle \otimes |\psi_2\rangle \otimes ... \otimes |\psi_{n-1}) \otimes |\psi_n\rangle
+
+\end{split}
 \end{equation}
 ```
 
@@ -351,7 +367,11 @@ Let's take the same example as the joint system $(X_1,X_2)$ that represents two 
 
 ```math
 \begin{equation}\tag{6}
+\begin{split}
+
 Pr(X_1=a) = \sum_{b \in \Sigma_2} Pr((X_1,X_2) = (a,b))
+
+\end{split}
 \end{equation}
 ```
 
@@ -382,7 +402,11 @@ We said that if we measure the system $X_1$ and the $X_1$ and $X_2$ are correlat
 
 ```math
 \begin{equation}\tag{7}
+\begin{split}
+
 Pr(X_2=b | X_1=a) = \frac{Pr((X_1,X_2)=(a,b))}{Pr(X_1=a)}
+
+\end{split}
 \end{equation}
 ```
 
@@ -408,7 +432,9 @@ First the numerator corresponds to the probability associated with each state $b
 
 ```math
 \begin{equation} \tag{8}
+\begin{split}
 \phi_a = \sum_{b \in \Sigma_2} r_{ab}|b\rangle
+\end{split}
 \end{equation}
 ```
 
@@ -416,7 +442,9 @@ The entries of the valid probability vector should add upto 1. To make the $|\ph
 
 ```math
 \begin{equation} \tag{9}
+\begin{split}
 k = \sum_{c \in \Sigma_2}r_{ac}
+\end{split}
 \end{equation}
 ```
 
@@ -424,9 +452,11 @@ Here the notation `c` is used for the sake of using differnet notation. Otherwis
 
 ```math
 \begin{equation} \tag{10}
+\begin{split}
 |\pi_a\rangle = \frac{|\phi\rangle}{k} = 
 \frac{\sum_{b \in \Sigma_2} r_{ab}|b\rangle}
 {\sum_{c \in \Sigma_2}r_{ac}}
+\end{split}
 \end{equation}
 ```
 
@@ -438,7 +468,9 @@ We have seen that the reduced or marginal probability in the `equation-6`. How c
 
 ```math
 \begin{equation} \tag{11}
+\begin{split}
 \sum_{a \in \Sigma_1} \left(\sum_{b \in \Sigma_2} r_{ab} \right) |a\rangle
+\end{split}
 \end{equation}
 ```
 
@@ -456,7 +488,9 @@ Now here just drop the states that corresponds to the system $X_2$ and sum only 
 
 ```math
 \begin{equation} \tag{Ex-3}
+\begin{split}
    marginal \; state \; of \; X_1 = \frac{6}{9}|0\rangle + \frac{3}{9}|1\rangle
+\end{split}
 \end{equation}
 ```
 
@@ -497,11 +531,13 @@ Lets assume that we measured the state of $X_1$ as $|0\rangle$. Then the probabi
 
 ```math
 \begin{equation} \tag{Ex-4}
+\begin{split}
 |\pi_0| = \frac{
     \left( \frac{3}{15} |C\rangle + \frac{4}{15}|D\rangle  + \frac{2}{15}|H\rangle \right)
 }{\frac{9}{15}}
 =
 \left( \frac{3}{9} |C\rangle + \frac{4}{9}|D\rangle  + \frac{2}{9}|H\rangle \right)
+\end{split}
 \end{equation}
 ```
 
@@ -513,11 +549,13 @@ Pr(X_1 = 1)  = \frac{5}{15} + \frac{1}{15} = \frac{6}{15}
 
 ```math
 \begin{equation} \tag{Ex-4}
+\begin{split}
 |\pi_0| = \frac{
     \left( \frac{5}{15} |C\rangle +  \frac{1}{15} |S\rangle \right)
 }{\frac{3}{7}}
 =
 \left( \frac{5}{6} |C\rangle +  \frac{1}{6} |S\rangle \right)
+\end{split}
 \end{equation}
 ```
 
@@ -706,8 +744,10 @@ Lets take a usual example of multiple systems with two bits $X_1$ and $X_2$ with
 
 ```math
 \begin{equation}\tag{12}
+\begin{split}
 M_1 = \sum_{a,b \in \Sigma_1} \alpha_{ab}|a\rangle\langle b| \;\;\;
 M_2 = \sum_{c,d \in \Sigma_1} \beta_{cd}|c\rangle\langle d|
+\end{split}
 \end{equation}
 ```
 
@@ -742,9 +782,11 @@ Lets assume that $M_1$ and $M_2$ are operation applied on the individual systems
 
 ```math
 \begin{equation}\tag{14}
+\begin{split}
 \langle ac| M_1 \otimes M_2 |bd\rangle = 
 \langle a| M_1 |b\rangle 
 \langle c| M_2 |d\rangle
+\end{split}
 \end{equation}
 ```
 
@@ -756,9 +798,11 @@ Because of the way we defined the tensor product the following equation will be 
 
 ```math
 \begin{equation}\tag{15}
+\begin{split}
 (M_1 \otimes M_2) (|\psi_1\rangle \otimes |\psi_2\rangle) = 
 (M_1 |\psi_1\rangle) \otimes 
 (M_2 |\psi_2\rangle)
+\end{split}
 \end{equation}
 ```
 
@@ -806,10 +850,12 @@ We can define the tensor product of three or more matrices similarly. For three 
 
 ```math
 \begin{equation}\tag{16}
+\begin{split}
 \langle a_1 a_2 \cdots a_n| M_1 \otimes M_2 \otimes \cdots \otimes M_n |b_1 b_2 \cdots b_n\rangle
 = \langle a_1| M_1 |b_1\rangle 
   \langle a_2| M_2 |b_2\rangle \cdots 
   \langle a_n| M_n |b_n\rangle
+\end{split}
 \end{equation}
 ```
 
@@ -817,6 +863,7 @@ Suppose there is a joint system $(X_1,X_2,\cdots,X_n)$. the vector $|b_1 b_2 \cd
 
 ```math
 \begin{equation}\tag{17}
+\begin{split}
 (M_1 \otimes 
 M_2 \otimes 
 \cdots \otimes
@@ -831,6 +878,7 @@ M_n)
 (M_2 |\psi_2\rangle) \otimes
 \cdots \otimes
 (M_n |\psi_n\rangle)
+\end{split}
 \end{equation}
 ```
 
@@ -839,7 +887,9 @@ Here the state vectors $|\psi_1\rangle,|\psi_2\rangle, \cdots , |\psi_n\rangle$ 
 >Note: \
 >The tensor product of matrices is said to be multiplicative because of the follwing property. 
 ```math
-\begin{equation}\tag{18} (M_1 \otimes M_2 \otimes \cdots \otimes M_k)(N_1 \otimes N_2 \otimes \cdots \otimes N_k) = (M_1 N_1) \otimes (M_2 N_2) \otimes \cdots \otimes (M_k N_k) \end{equation}
+\begin{equation}\tag{18} \begin{split} 
+(M_1 \otimes M_2 \otimes \cdots \otimes M_k)(N_1 \otimes N_2 \otimes \cdots \otimes N_k) = (M_1 N_1) \otimes (M_2 N_2) \otimes \cdots \otimes (M_k N_k) 
+\end{split}\end{equation}
 ```
 > Here $M_1,M_2,\cdots,M_k$ and $N_1,N_2,\cdots,N_k$ are any valid matrices as long as matrix multiplication $(M_i N_i)$ makes sense for $1 \leq i \leq k$.
 

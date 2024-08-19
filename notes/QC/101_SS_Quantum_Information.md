@@ -43,9 +43,13 @@ Similar to a classical bit we will represent a qubit using a column vector. But 
 
 ```math
 \begin{equation}\tag{Ex-1}
-v = \begin{pmatrix}
+\begin{split}
+
+v &= \begin{pmatrix}
 \alpha _1 \\ . \\ . \\ . \\ \alpha _n 
 \end{pmatrix} 
+
+\end{split}
 \end{equation}
 ```
 
@@ -54,7 +58,11 @@ v = \begin{pmatrix}
 
 ```math
 \begin{equation}\tag{1}
-Euclidean \; norm \; ||v|| = \sqrt{\sum_{k=1}^n (\alpha _k)^2} 
+\begin{split}
+
+Euclidean \; norm \; ||v|| &= \sqrt{\sum_{k=1}^n (\alpha _k)^2} 
+
+\end{split}
 \end{equation}
 ```
 
@@ -72,6 +80,7 @@ The two vectors $|+\rangle$ and $|-\rangle$ are some of the commonly used quantu
 
 ```math
 \begin{equation}\tag{Ex-2}
+\begin{split}
 
 |0\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix} 
 \;\;\;
@@ -81,6 +90,7 @@ The two vectors $|+\rangle$ and $|-\rangle$ are some of the commonly used quantu
 \;\;\;
 |-\rangle = \begin{pmatrix} \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} \end{pmatrix}
 
+\end{split}
 \end{equation}
 ```
 
@@ -150,11 +160,13 @@ But we can't say all of these representation will make some practical sense. Jus
 
 ```math
 \begin{equation}\tag{Ex-3}
+\begin{split}
 
 |\psi\rangle 
 =  \begin{pmatrix}  \frac{1}{2} \\  0  \\  -\frac{i}{2}  \\  \frac{1}{\sqrt{2}}  \end{pmatrix} 
 =  \frac{1}{2} |HIGH\rangle - \frac{i}{2} |LOW\rangle +  \frac{1}{\sqrt{2}} |OFF\rangle 
 
+\end{split}
 \end{equation}
 ```
 
@@ -224,6 +236,7 @@ The following are the some of the commonly used unitary opeartions.
 
 ```math
 \begin{equation}\tag{Ex-4}
+\begin{split}
 
 I =
 \begin{pmatrix} 
@@ -246,6 +259,7 @@ i & 0
 0 & -1 
 \end{pmatrix} \;\;
 
+\end{split}
 \end{equation}
 ```
 
@@ -256,6 +270,7 @@ $\sigma_z$ is called phase flip operation, because $\sigma_z|0\rangle = |0\rangl
 
 ```math
 \begin{equation}\tag{Ex-5}
+\begin{split}
 
 H = 
 \begin{pmatrix} 
@@ -263,6 +278,7 @@ H =
 \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} 
 \end{pmatrix}
 
+\end{split}
 \end{equation}
 ```
 
@@ -272,10 +288,14 @@ The matrix H is called self inverse operation because of the fact that $H^2 = I$
 
 ```math
 \begin{equation}\tag{Ex-6}
+\begin{split}
+
 P_\theta = 
 \begin{pmatrix} 
 1 & 0 \\ 0 & e^{i\theta} 
 \end{pmatrix}
+
+\end{split}
 \end{equation}
 ```
 
@@ -322,11 +342,15 @@ When we multiply multiple stochastic matrices we got combined stochastic operati
 
 ```math
 \begin{equation}\tag{Ex-7}
+\begin{split}
+
 R = HSH = 
 \begin{pmatrix} 
 \frac{1+i}{2} & \frac{1-i}{2} \\ 
 \frac{1-i}{2} & \frac{1+i}{2}
 \end{pmatrix}
+
+\end{split}
 \end{equation}
 ```
 
