@@ -11,11 +11,11 @@ The boolean circuits are made up of boolean gates and wires. The commonly used b
 ### Can circuit model have non boolean inputs?
 
 In general ciruit model can also operate on non boolean inputs(though not used in practical sense). One example is arithematical circuit which uses arithematic operations instead of boolean operations. The given below is arithmetical equivalent of XOR gate.
-$$
+```math
 a \lor b = 1 - (1-a)(1-b) \\
 a \land b = a \times b  \\
 \lnot a = 1-a
-$$
+```
 
 ### What is a Quantum circuit?
 
@@ -58,13 +58,13 @@ The density matrix formulation in quantum computing is more general than the qua
 On the other hand, the quantum circuit model deals primarily with pure states and describes quantum computation as a sequence of unitary operations on these states. While the quantum circuit model is extremely useful for understanding and designing quantum algorithms, the density matrix formulation provides a more general and flexible framework for describing quantum states and operations, especially in the presence of noise and decoherence.
 
 
-# Inner products, Orthonormal sets and Projective measurements
+## Inner products, Orthonormal sets
 
 ### What is inner product?
 
 If we multiply a row vector with a column vector using the same rules as matrix multiplication, then it is called inner product. This is important because the inner product of a vector with itself will give us a square of Euclidean norm of that vector.
 
-$$
+```math
 \begin{equation}\tag{1}
 \begin{split}
 |\psi\rangle &= 
@@ -85,7 +85,19 @@ Inner\ product &= \langle \psi||\psi\rangle
 
 \end{split}
 \end{equation}
-$$
+```
+
+
+### Properties of inner product
+
+- The Euclidean norm relationship: The Euclidean norm of a vector is the square root of the inner product of the vector with itself. This value will always be a non negative real number.
+
+- Conjugate symmetry: Inner product of two vectors is equal to the complex conjugate of the inner product of the same two vectors in the reverse order.
+
+- Inner product has the property of linearity in the first argument and conjugate linearity in the second argument.
+
+- The Cauchy Schwarz inequality: the absolute value of the inner product of two vectors is always less than or equal to the product of the Euclidean norm of the individual vectors.
+
 
 
 ### What is othogonal set?
@@ -100,14 +112,23 @@ An orthogonal set is a set of vectors where all the vectors are mutually orthogo
 The set of vectors is called an orthonormal set, if the set is orthogonal and each vector in the set is a unit vector. In other words for any two vectors $|\psi_i\rangle$ and $|\psi_j\rangle$ from the set, if $i \neq j$, then the inner product $\langle \psi_i||\psi_j\rangle = 0$. If $i=j$, then $\langle \psi_i||\psi_i\rangle = 1$.
 
 
+### Properties of orthonormal sets 
+
+- Suppose we have a set of m vectors that are pulled from the n dimensional vector space. If these vectors span the subspace of dimension m, then we can always add remaining n-m vectors to this set and compute the set of orthonormal vectors that span the n dimensional vector space. To do this we can use the Gram Schmitt orthogonalization process.
+
+- Unitary matrices and orthonormal sets are strongly linked to each other. If you form the set of vectors using the columns of the unitary matrix, then that set will be an orthonormal set. Similarly if you form a set of vectors using the rows of the unitary matrix, then that also will be an orthonormal set. 
+
+- We can prove both of the above mentioned properties mathematically. We are stating these properties because this will be helpful in defining projection matrices and projections using orthonormal sets and unitary matrices.
+
+
 ### What is orthonormal basis?
 
 Suppose we have an orthonormal set S and vectors in the set S have been drawn from the vector space V of dimension n. if vectors in the set S spans the vector space V, then the set S is called orthonormal basis. For example the given below sets $S_1$ and $S_2$ are orthonormal basis of dimension 2 and 4 respectively.
 
-$$
+```math
 S_1 = \{ |+\rangle, |-\rangle \} \\
 S_2 = \{ |\phi^+\rangle, |\phi^-\rangle, |\psi^+\rangle, |\psi^-\rangle \}
-$$
+```
 
 Remember that the standard basis set of any dimension n is also a orthonormal basis of the vector space of dimension n.
 
@@ -124,13 +145,42 @@ Remember that the standard basis set of any dimension n is also a orthonormal ba
 - The output of the Grahm-Schmidt orthogonalization process is the set of orthogonal vector. To get the orthonormal basis we have convert all the vectors in the set to the unit vectors. This can be easily done by dividing each vector in the set by it's Euclidean norm value.
 
 
-### What is projection?
+## Projective measurements
+
+#### Projection matrices
+
+In our definition the projection matrix is the square matrix with the following two properties.
+
+> - Complex conjugate of the square matrix should result in the same matrix. $\Pi^{\dagger} = \Pi$
+> - The square matrix raised to the power 2 should result in the same matrix. $\Pi^{2} = \Pi$
+
+Note that if you multiply a unit vector with itself($|\psi\rangle \langle\psi|$), then you will get a projection matrix. This can be easily proved just using the Diarac notation. lets take an example of $|\pi\rangle = |\psi\rangle \langle\psi|$.
+
+```math
+\Pi^{\dagger} = (|\psi\rangle \langle\psi|)^{\dagger} = (\langle\psi|)^{\dagger} (|\psi\rangle)^{\dagger} =  |\psi\rangle \langle\psi| = \Pi \\
+
+\Pi^2 = (|\psi\rangle \langle\psi|)^2 = |\psi\rangle \langle\psi| |\psi\rangle \langle\psi| =  |\psi\rangle \langle\psi| = \Pi
+```
+
+In the first equation we use the property of transpose of the matrix $(AB)^{\dagger} = B^{\dagger} A^{\dagger}$. 
+In the second equation we use the property of unit vector that $\langle \psi||\psi \rangle = 1$
+
+This idea can be used for any set of unit vecotr $\{ \psi_1 , \psi_2 \dots \psi_k \}$.
+
+```math
+\Pi^{\dagger} = \left( \right) = \Pi \\
+
+\Pi^2 = (|\psi\rangle \langle\psi|)^2 = |\psi\rangle \langle\psi| |\psi\rangle \langle\psi| =  |\psi\rangle \langle\psi| = \Pi
+```
 
 
 
 
 ### How can we do the projective measurement?
 
+Projective measurement is a more general way of defining the measurement of a quantum system than the standard basis measurement. We will see that standard basis measurement is a special case of projective measurement.
+
+Projective measurement is described by a collection of projection matrices, where the sum of these projection matrices result in an identity matrix. This directly corresponds to the fact that probability associated with the different outcome of the measurement should sum upto 1.
 
 
 
