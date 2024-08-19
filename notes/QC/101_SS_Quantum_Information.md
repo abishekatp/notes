@@ -41,22 +41,22 @@ Similar to a classical bit we will represent a qubit using a column vector. But 
 
 * Just making this small change in the state vector is enough to bring us from the classical world to the quantum world. In general the following way can be used reresent a state of any quantum system.
 
-$$ 
+```math
 \begin{equation}\tag{Ex-1}
 v = \begin{pmatrix}
 \alpha _1 \\ . \\ . \\ . \\ \alpha _n 
 \end{pmatrix} 
 \end{equation}
-$$
+```
 
 * Still the quantun system will have n possible classical states. Other than that it can be in any one of the possible quantum states. Keep in mind that there are some conditions that should be satified by a column vector to be a valid quantum state vector.
 
 
-$$ 
+```math
 \begin{equation}\tag{1}
 Euclidean \; norm \; ||v|| = \sqrt{\sum_{k=1}^n (\alpha _k)^2} 
 \end{equation}
-$$
+```
 
 > **Rules: quantum state vector** \
 >Two important rules about quantum states vector is that 
@@ -70,7 +70,7 @@ In the given below `Ex-2`, we have quantum state vectors with n=2(which means th
 
 The two vectors $|+\rangle$ and $|-\rangle$ are some of the commonly used quantum states. The vector $|\psi\rangle$ is just a random quantum state which doesn't have any special meaning. We will use the symbol $\psi$ for representing an arbitrary quantum state.
 
-$$ 
+```math
 \begin{equation}\tag{Ex-2}
 
 |0\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix} 
@@ -82,17 +82,17 @@ $$
 |-\rangle = \begin{pmatrix} \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} \end{pmatrix}
 
 \end{equation}
-$$
+```
 
-$$
+```math
 |\psi\rangle = \begin{pmatrix} \frac{1+2i}{3} \\ \frac{2}{3} \end{pmatrix}
-$$
+```
 
 
 ### What is special about $|+\rangle$ and $|-\rangle$?
 The $|+\rangle$ and $|-\rangle$ are special in the way that If we find the absolute value of each entry of the these vector, then both will give equal probabilities for being a classical state $|0\rangle$ and $|1\rangle$. The following eqution reprsents this concept of equal probability in a more formal way using a dirac notation to represent a $|+\rangle$ and $|-\rangle$ states.
 
-$$
+```math
 |+\rangle = 
 \frac{1}{\sqrt{2}}|0\rangle +  
 \frac{1}{\sqrt{2}}|1\rangle
@@ -100,7 +100,7 @@ $$
 |-\rangle = 
 \frac{1}{\sqrt{2}}|0\rangle -  
 \frac{1}{\sqrt{2}}|1\rangle
-$$
+```
 
 ### How can we describe the superposition using quantum state vector?
 
@@ -111,19 +111,23 @@ Remember that still the two vectors $|0\rangle$ and $|1\rangle$ are the standard
 In the above equations we are writing a quantum states $|+\rangle$ and $|-\rangle$ as a linear combination of basis vectors. Also if you notice that both these states only differ by a sign of a imaginary part(or can say that only differ by phase not by the amplitude). There is a way to differentiate these two quantum states by applying some operations on them. We will see more about these operations on a quantum system in upcoming sections.
 
 > Notice that all the five of these quantum states have a Euclidean norm of 1(then only we can say that it is a valid quantum state).
-> $$|| |0\rangle || = || |1\rangle || = || |+\rangle || = || |-\rangle || = || |\psi\rangle || = 1$$
+```math
+|| |0\rangle || = || |1\rangle || = || |+\rangle || = || |-\rangle || = || |\psi\rangle || = 1
+```
 >I will just show for one quantum state how we can compute the Euclidean norm.
->$$ || |\psi\rangle || = 
+```math
+|| |\psi\rangle || = 
 \sqrt{
     \left|\frac{1+2i}{3} \right|^2 + 
     \left| \frac{2}{3} \right|^2
-} = 1 $$
+} = 1
+```
 
 ### How can we get the probability associated with each classical state of a quantum system?
 
 We already know that the absolute value of particular entry of a quantum state vector is a probability of outcome of the classical state which corresponds to the position of that particular entry. For example lets take the $|+\rangle$ or $|-\rangle$ state, we can calculate the probability associated with each of the classical states for both of these states as follows.
 
-$$
+```math
 Probability\ of\ being\ |0\rangle 
 = \left| \frac{1}{\sqrt{2}} \right|^2
 = \frac{1}{2} \\
@@ -132,7 +136,7 @@ Probability\ of\ being\ |1\rangle
 = \left| \frac{1}{\sqrt{2}} \right|^2 
 = \left| -\frac{1}{\sqrt{2}} \right|^2
 = \frac{1}{2}
-$$ 
+```
 
 As we have previously explained both these states have the same probability associated with both of it's classical states. When we measure these states we get the results $|0\rangle$ and $|1\rangle$ with the equal probability of $\frac{1}{2}$
 
@@ -144,7 +148,7 @@ In the classical information blog we have seen that we can represent not only a 
 
 But we can't say all of these representation will make some practical sense. Just for an example, assume that the fan is having a classical states set:  Σ = {HIGH, MEDIUM, LOW, OFF}. The quantum state of the fan can be represented as follow(even though associating quantum state with fan doesn't make any sense):
 
-$$ 
+```math
 \begin{equation}\tag{Ex-3}
 
 |\psi\rangle 
@@ -152,7 +156,7 @@ $$
 =  \frac{1}{2} |HIGH\rangle - \frac{i}{2} |LOW\rangle +  \frac{1}{\sqrt{2}} |OFF\rangle 
 
 \end{equation}
-$$
+```
 
 Here we have represented system with four classical states. We do this to make a point that we can represent a system with any number of classical states as a quantum state vector(in fact we can do that for classical state vector also).
 
@@ -173,13 +177,13 @@ The simple way of measurement is called the standard basis measurement where res
 
 The standard basis measurement links the absolute value squared of each entry of a quantum state vector to the probability that we will get specific calssical state as an outcome. We can get the probability associated with specific classical state by calculating the absolute value of the entry of the quantum state vector that corresponds to it. This is called Born rule of quantum mechanics. Take the following arbitrary example of qubit,
 
-$$ 
+```math
 |\psi\rangle = \sqrt{\frac{3}{4}}|0\rangle + i\sqrt{\frac{1}{4}}|1\rangle
 = \begin{pmatrix} \sqrt{\frac{3}{4}} \\ i\sqrt{\frac{1}{4}} \end{pmatrix}
-$$
+```
 
 Here the probability associated with classical states $|0\rangle$ and $|1\rangle$ are.
-$$
+```math
 Probability\ of\ getting\ |0\rangle 
 = \left| \sqrt{\frac{3}{4}} \right|^2 
 = \frac{3}{4} \\
@@ -187,7 +191,7 @@ Probability\ of\ getting\ |0\rangle
 Probability\ of\ being\ |1\rangle 
 = \left| i\sqrt{\frac{1}{4}} \right|^2
 = \frac{1}{4}
-$$ 
+```
 
 
 #### What does the probability associated with classical state mean?
@@ -218,7 +222,7 @@ The following are the some of the commonly used unitary opeartions.
 
 #### Pauli Operations:
 
-$$  
+```math
 \begin{equation}\tag{Ex-4}
 
 I =
@@ -243,14 +247,14 @@ i & 0
 \end{pmatrix} \;\;
 
 \end{equation}
-$$
+```
 
 Here `I` is an identity matrix, becuse $I|0\rangle = |0\rangle$ and $I|1\rangle = |1\rangle$. $\sigma_x$ is a bit flip or NOT operation
 $\sigma_z$ is called phase flip operation, because $\sigma_z|0\rangle = |0\rangle$ and $\sigma_z|1\rangle = -|1\rangle$. Here the $\Sigma_x$, $\Sigma_y$ and $\Sigma_z$ operations are sometimes referred to as X, Y and Z.
 
 #### Hadamard Operation:
 
-$$ 
+```math
 \begin{equation}\tag{Ex-5}
 
 H = 
@@ -260,22 +264,22 @@ H =
 \end{pmatrix}
 
 \end{equation}
-$$
+```
 
 The matrix H is called self inverse operation because of the fact that $H^2 = I$.
 
 #### Phase Operation:
 
-$$ 
+```math
 \begin{equation}\tag{Ex-6}
 P_\theta = 
 \begin{pmatrix} 
 1 & 0 \\ 0 & e^{i\theta} 
 \end{pmatrix}
 \end{equation}
-$$
+```
 
-$$ 
+```math
 S = P_\frac{\pi}{2} = 
 \begin{pmatrix} 
 1 & 0 \\ 
@@ -287,7 +291,7 @@ T = P_\frac{\pi}{4} =
 1 & 0 \\ 
 0 & \frac{1+i}{\sqrt{2}} 
 \end{pmatrix}
-$$
+```
 
 Here $\theta$ can be any real number and $e^{i\theta} = cos(\theta) + i sin(\theta)$. Because of this we can show the equivalities $P_0 = I$ and $P_\pi = \sigma_z $. Here note that $S^2 = \sigma_z$.
 
@@ -296,17 +300,17 @@ All these operations are unitary operations. I think its best to discuss the det
 
 ### How can we differentiate $|+\rangle$ and $|-\rangle$ states?
 
-$$ 
+```math
 H|+\rangle = |0\rangle, \ \ 
 H|-\rangle = |1\rangle
-$$
+```
 
 We know that we can't differentiate the $|+\rangle$ and $|-\rangle$ using the standard basis measurement. But when we apply Hadamard operation to these quantum states we will get differnt outputs as an outcome. So Hadamard operation can differentiate the states $|+\rangle$ and $|-\rangle$. Note the following operations also.
 
-$$
+```math
 H|0\rangle = |+\rangle, \ \ 
 H|1\rangle = |-\rangle
-$$
+```
 
 * All these operations are simple matrix multiplications. So try to visualize them as matrix multiplications. For example H is two dimensional matrix and $|0\rangle$ is a column vector. When you multiply them together you will get another column vector as a result which is $|+\rangle$.
 
@@ -316,7 +320,7 @@ $$
 
 When we multiply multiple stochastic matrices we got combined stochastic operation, similarly the composition of unitary operations can be applied to a quantum state. For exmaple If you apply H operation then S operation, then again H operation, it can be represented by a matrix `R = HSH`.
 
-$$ 
+```math
 \begin{equation}\tag{Ex-7}
 R = HSH = 
 \begin{pmatrix} 
@@ -324,7 +328,7 @@ R = HSH =
 \frac{1-i}{2} & \frac{1+i}{2}
 \end{pmatrix}
 \end{equation}
-$$
+```
 
 If we compute the square of R, then we will get $R^2 = I$. Becuse $R^2|0\rangle = |0\rangle$ and $R^2|1\rangle = |1\rangle$. So this implies that $R = \sqrt{I}$.
 
@@ -332,20 +336,25 @@ If we compute the square of R, then we will get $R^2 = I$. Becuse $R^2|0\rangle 
 
 The unitary operations is not restricted to use only with a qubit. The qubit is a simple form of quantum system with just two possible classical states. We can apply unitary operations for a system with more than just two classical states. For example the follwing the matrix is called permutation matrix. This is called a permuation operationb because it will just rearrange the entries of the state vector.
 
-$$ A = 
+```math
+A = 
 \begin{pmatrix} 
 0 & 1 & 0 \\ 
 0 & 0 & 1 \\ 
 1 & 0 & 0
 \end{pmatrix}
-$$
+```
 
-$$ A|0\rangle = |2\rangle, \; A|1\rangle = |0\rangle, \; A|2\rangle = |1\rangle$$
+```math
+A|0\rangle = |2\rangle, \; A|1\rangle = |0\rangle, \; A|2\rangle = |1\rangle
+```
  You can think of $\sigma_x$ operation as a simple permuation operation for a qubit.
 
 The following is the unitary operation for the quantum fourier transform for system with n=4 classical states. We can define quantum fourier transform matrix for any possitive integer n. We will use this operation in future sections.
 
-$$ U = \frac{1}{2} \begin{pmatrix} 1 & 1 & 1 & 1 \\ 1 & i & -1 & -i \\ 1 & -1 & 1 & -1 \\ 1 & -i & -1 & i \end{pmatrix}$$
+```math
+U = \frac{1}{2} \begin{pmatrix} 1 & 1 & 1 & 1 \\ 1 & i & -1 & -i \\ 1 & -1 & 1 & -1 \\ 1 & -i & -1 & i \end{pmatrix}
+```
 
 **Why?**: The way we are going to define multiple systems will require us to have a state vector with more than just two classical states. We will see about these combined systems(combination of simple systems which we have studied in this lesson) in the next blog. Thats why I have shown here the way we can represent an operation on a quantum state vector with three or more classical states. 
 
@@ -369,16 +378,22 @@ Complex numbers are the number which contains real and imaginary part. For examp
 
 The absolute value of a complex number is a square root of the sum of the square of the real and imaginary part of the complex number. Suppose c = a + bi is a complex number, then the following is th absolute value of the complex number.
 
-$$ |c| = \sqrt{a^2 + b^2} $$
+```math
+|c| = \sqrt{a^2 + b^2}
+```
 
 ### What is 1-norm or L-1 norm?
 It is the sum of absolute values of the elements of the column vector.
 
-$$ v = \begin{pmatrix} v_1 & v_2 & . & . & . & v_n\end{pmatrix} $$
+```math
+v = \begin{pmatrix} v_1 & v_2 & . & . & . & v_n\end{pmatrix}
+```
 
 Then the 1-norm is 
 
-$$ |v| = |v_1| + |v_2| + ... + |v_n|$$
+```math
+|v| = |v_1| + |v_2| + ... + |v_n|
+```
  
 
 ### What is Euclidean norm or 2-norm or L-2 norm? 
@@ -386,20 +401,27 @@ It is the square root of the sum of the absolute value squared of the elements o
 
 Then the 2-norm is 
 
-$$ ||v|| = \sqrt{|v_1|^2 + |v_2|^2 + ... + |v_n|^2}$$
+```math
+||v|| = \sqrt{|v_1|^2 + |v_2|^2 + ... + |v_n|^2}
+```
  
 
 ### What is a Unit vector?
 Unit vectors will have exact distance of 1 from the origin. This means they will have Euclidean norm 1. These unit vectors represent the direction of a vector. For any vector v we can compute the unit vector by using the following formula. The unit vector is represented by a notation $\hat{v}$. Remember that we have to divide a vector by a Euclidean norm.
   
-$$ \hat{v} = \frac{v}{||v||}$$
+```math
+\hat{v} = \frac{v}{||v||}
+```
 
 ### what is Unitary Matrix?
 * Unitary matrix is a square matrix with complex numbers as its entries, where the inverse of the unitary matrix is equal to the complex conjugate transpose of a matrix. When you multiply a unitary matix with its conjugate transpose matrix you will get a identity matrix as a result(what you would have expected when multiplying a matrix with its inverse).
 
 * The matrix A with complex number entries is said to be unitary matrix if the complex conjugate transpose of a matrix A is same as inverse of a matrix A. This can be formulated as given below.
 
- $$ AA^† = A^† A = I $$
+```math
+AA^† = A^† A = I
+```
+
  Here $ A^† $ is spelled as `A dagger` and is the notation for complex conjugate transpose of a matrix. The I is the notation for an identity matrix.
 
  ### What is Conjugate Transpose? 
