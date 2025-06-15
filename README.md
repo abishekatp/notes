@@ -7,16 +7,12 @@ This repository contains my notes or blogs on each topic I am learning. I hope t
 
 ## Index
 
-### AI
-- [Micrograd from Andrej Karpathy in Rust](/notes/AI/015_neuron_back_propagation.md)
-
-
-
 ### Leetcode problems
-As of now I have only added few of them here. These are from the top_interview_150 section in the leetcode.
+- [LeetCode Problems](/2025/leetcode_problems/)
 
-- [Array String](/2025/leetcode_problems/001_LC150_Array_String.md)
-- [Two Pointers](/2025/leetcode_problems/002_LC150_Two_Pointers.md)
+
+### Deep Neural Networks and Artificial Intelligence
+- [Micrograd from Andrej Karpathy in Rust](/notes/AI/015_neuron_back_propagation.md)
 
 
 

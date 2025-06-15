@@ -53,9 +53,7 @@ nums is sorted in non-decreasing order.
 
 ## Pseudocode
 
-```
-
-```
+- 
 
 
 ## Solution

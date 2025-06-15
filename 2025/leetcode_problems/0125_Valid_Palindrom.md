@@ -38,9 +38,7 @@ s consists only of printable ASCII characters.
 
 ## Pseudocode
 
-```
-
-```
+- 
 
 
 

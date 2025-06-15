@@ -55,10 +55,7 @@ Constraints:
 
 ## Pseudocode
 
-```
-
-```
-
+- 
 
 ## Solution
 ```go
