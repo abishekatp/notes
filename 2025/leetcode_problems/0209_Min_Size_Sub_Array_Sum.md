@@ -52,6 +52,7 @@ Follow up: If you have figured out the O(n) solution, try coding another solutio
 - else return finalMinLen
 
 
+`Solution: If you want it in one line then here it is: Add at the tail and discard at the front`
 
 
 ## Solution
@@ -87,4 +88,21 @@ func minSubArrayLen(target int, nums []int) int {
 	}
 	return finalMinLen
 }
+```
+
+***Time Complexity:***
+- Even though we have two nested for loops. Inner for loop will only run when sum is greater than or equal to target. If you think about it at most it will iterate the whole array of nums one time. Only in the worst case when last element is equal to the target value, the inner for loop will iterate the whole nums array, otherwise it won't ever iterate the whole array just once.
+
+``` 
+time complexity(~): O(n)
+where n = len(nums)
+```
+
+***Space Complexity:***
+
+- We are only using constant number varialble year. So the space complexity is constant.
+
+
+``` 
+space complexity(~): O(1)
 ```
