@@ -34,7 +34,6 @@ Follow-up: Could you solve the problem in linear time and in O(1) space?
         - if max count is 0 then set this element as max count element.
 - return the max count element.
 
-
 ## Solution-1(Linear time & space)
 ```golang
 func majorityElement(nums []int) int {
@@ -100,3 +99,12 @@ func majorityElement(nums []int) int {
 	return majorityElement
 }
 ```
+
+## Intution for Solution-2
+- Suppose consider there is war between zombies and humans. The zombies are of same kind and humans are of different kind.
+- Assume that the humans has more number than all the zombies in the world.
+- At any point of time any number zombies can fight with any number humans in a fight.
+- Assume there will be n number of such fights.
+- In a fight equal number of zombies and humans will die at the end.
+- So if more number of humans are there, then humans will dominate in that fight. Vice versa also true. Remaining people can go back to their respective team and come back for the next fight.
+- Since in each fight equal number of humans and zombies are dying. And remaining zombies/humans are going back to their respective team, at end there will always be some humans remaining. This is because total number of humans > zombies. So humans will dominate at the end.
