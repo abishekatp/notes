@@ -16,6 +16,11 @@ Source - [LeetCode](https://leetcode.com/problems/)
 - element's index < k are valid elements. increment k only when next valid element is moved to position i
 - [link](./0027_Remove_Element.md)
 
-### 
+### 121. Best Time to Buy and Sell Stock
+- Here we can buy and sell at most one stock. As index progresses update the current min. find the profit using current value and current min. if the profit is greater than maxProfit then update this value to the maxProfit
+- [link](./0121_Best_Time_To_Buy_Sell_Stock.md)
 
+### 122. Best Time to Buy and Sell Stock II
+- Here we can buy and sell multiple stocks but hold at most one at a time. For each index find the profit from previous index. if the values is greater than 0 then add it to the maxProfit.
+- [link](./0122_Best_Time_To_Buy_Sell_Stock2.md)
 
