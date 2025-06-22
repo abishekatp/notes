@@ -43,8 +43,8 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 ### Constraints:
 ```shell
-1 <= nums.length <= 3 * 104
--104 <= nums[i] <= 104
+1 <= nums.length <= 3 * 10^4
+-10^4 <= nums[i] <= 10^4
 nums is sorted in non-decreasing order.
 ```
 
