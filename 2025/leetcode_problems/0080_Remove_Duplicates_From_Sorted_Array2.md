@@ -25,8 +25,7 @@ If all assertions pass, then your solution will be accepted.
 ```
  
 
-Example 1:
-
+### Example 1:
 ```shell
 Input: nums = [1,1,1,2,2,3]
 Output: 5, nums = [1,1,2,2,3,_]
@@ -34,8 +33,7 @@ Explanation: Your function should return k = 5, with the first five elements of 
 It does not matter what you leave beyond the returned k (hence they are underscores).
 ```
 
-Example 2:
-
+### Example 2:
 ```shell
 Input: nums = [0,0,1,1,1,1,2,3,3]
 Output: 7, nums = [0,0,1,1,2,3,3,_,_]
@@ -43,20 +41,20 @@ Explanation: Your function should return k = 7, with the first seven elements of
 It does not matter what you leave beyond the returned k (hence they are underscores).
 ```
 
-Constraints:
-
+### Constraints:
 ```shell
 1 <= nums.length <= 3 * 104
 -104 <= nums[i] <= 104
 nums is sorted in non-decreasing order.
 ```
 
-## Pseudocode
+## Solution
 
+### Pseudocode
 - 
 
 
-## Solution
+
 ```go
 func removeDuplicates(nums []int) int {
     // elements before the index k are the valid elements
@@ -80,8 +78,6 @@ func removeDuplicates(nums []int) int {
     return k
 }
 ```
-
-## Bonus Section
 
 ### Explanation
 - This one is straightforward. We will copy the elment that is not equal to the `val` at the beginning of the array. If the current element is equal to `val`, then we will just increment `i` and does not increment `k`(since we haven't copied any new valid element to the current position of the `k`). This process continues untill `i = len(nums) -1` which is last index of the array `nums`.

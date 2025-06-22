@@ -35,14 +35,12 @@ Constraints:
 s consists only of printable ASCII characters.
 ```
 
+## Solution
 
-## Pseudocode
-
+### Pseudocode
 - 
 
 
-
-## Solution
 
 ```go
 import "unicode"

@@ -1,5 +1,4 @@
-# $7. Remove Element
-
+# 27. Remove Element
 Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
 
 Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:
@@ -27,8 +26,7 @@ If all assertions pass, then your solution will be accepted.
 ```
  
 
-Example 1:
-
+### Example 1:
 ```shell
 Input: nums = [3,2,2,3], val = 3
 Output: 2, nums = [2,2,_,_]
@@ -36,8 +34,7 @@ Explanation: Your function should return k = 2, with the first two elements of n
 It does not matter what you leave beyond the returned k (hence they are underscores).
 ```
 
-Example 2:
-
+### Example 2:
 ```shell
 Input: nums = [0,1,2,2,3,0,4,2], val = 2
 Output: 5, nums = [0,1,4,0,3,_,_,_]
@@ -46,18 +43,27 @@ Note that the five elements can be returned in any order.
 It does not matter what you leave beyond the returned k (hence they are underscores).
 ```
 
-Constraints:
+### Constraints:
 ```shell
 0 <= nums.length <= 100
 0 <= nums[i] <= 50
 0 <= val <= 100
 ```
 
-## Pseudocode
-
-- 
 
 ## Solution
+
+### Pseudocode
+- k:=0
+- for i from 0 to n:
+    - if num[i]= val:
+        - i++
+    - else:
+        - nums[k] = nums[i]
+        - k++ and i++
+
+
+
 ```go
 func removeElement(nums []int, val int) int {
     // all the elements at or before k are already validated to be not to be val.
@@ -79,3 +85,7 @@ func removeElement(nums []int, val int) int {
 }
 ```
 
+```
+Time complexity: O(n)
+Space complexity: O(1)
+```

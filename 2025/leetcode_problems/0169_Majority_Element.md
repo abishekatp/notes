@@ -3,19 +3,19 @@ Given an array nums of size n, return the majority element.
 
 The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
 
-Example 1:
+### Example 1:
 ```shell
 Input: nums = [3,2,3]
 Output: 3
 ```
 
-Example 2:
+### Example 2:
 ```shell
 Input: nums = [2,2,1,1,1,2,2]
 Output: 2
 ```
 
-Constraints:
+### Constraints:
 ```shell
 n == nums.length
 1 <= n <= 5 * 104
@@ -24,7 +24,9 @@ n == nums.length
 
 Follow-up: Could you solve the problem in linear time and in O(1) space?
 
-## Pseudocode-1(Linear time & space)
+## Solution 1(Linear time & space)
+
+### Pseudocode
 - for each element in nums:
     - if element already in the map:
         - increment the corresponding count.
@@ -34,7 +36,7 @@ Follow-up: Could you solve the problem in linear time and in O(1) space?
         - if max count is 0 then set this element as max count element.
 - return the max count element.
 
-## Solution-1(Linear time & space)
+
 ```golang
 func majorityElement(nums []int) int {
 	valMap := make(map[int]int)
@@ -64,8 +66,9 @@ func majorityElement(nums []int) int {
 }
 ```
 
+## Solution 2(Linear time & constant space)
 
-## Pseudocode-2(Linear time & constant space)
+### Pseudocode
 Moore's Voting Algorithm or  Boyer-Moore Majority Vote Algorithm
 - majorityElement = random value
 - majorityCount = 0
@@ -76,9 +79,6 @@ Moore's Voting Algorithm or  Boyer-Moore Majority Vote Algorithm
         - else decrement majorityCount
 - return majorityElement
 
-
-
-## Solution-2(Linear time & constant space)
 ```golang
 func majorityElement(nums []int) int {
 	majorityElement := -1
@@ -100,7 +100,7 @@ func majorityElement(nums []int) int {
 }
 ```
 
-## Intution for Solution-2
+### Intution
 - Suppose consider there is war between zombies and humans. The zombies are of same kind and humans are of different kind.
 - Assume that the humans has more number than all the zombies in the world.
 - At any point of time any number zombies can fight with any number humans in a fight.
