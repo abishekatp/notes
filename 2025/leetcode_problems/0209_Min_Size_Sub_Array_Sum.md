@@ -51,7 +51,7 @@ space complexity(~): O(1)
 ```
 
 ### Pseudocode
-
+```go
 - sum := 0
 - finalMinLen := len(nums) + 1
 - i := 0
@@ -66,11 +66,11 @@ space complexity(~): O(1)
 - if finalMinLen > len(nums): only when target is never achieved
     - return 0
 - else return finalMinLen
-
+```
 
 `Solution: If you want it in one line then here it is: Add at the tail and discard at the front`
 
-
+### Golang
 ```go
 func minSubArrayLen(target int, nums []int) int {
 	sum := 0 // current sub array sum

@@ -24,3 +24,7 @@ Source - [LeetCode](https://leetcode.com/problems/)
 - Here we can buy and sell multiple stocks but hold at most one at a time. For each index find the profit from previous index. if the values is greater than 0 then add it to the maxProfit.
 - [link](./0122_Best_Time_To_Buy_Sell_Stock2.md)
 
+### 55. Jump Game
+- This solution is simple and straightforward using greedy approach. Choosing the best available option at the point.
+- [link](./0055_Jump_Game.md)
+

@@ -49,6 +49,7 @@ nums is sorted in non-decreasing order.
 ## Solution
 
 ### Pseudocode
+```go
 - visitedMap := map()
 - k:=0
 - for i from 0 to len(nums):
@@ -58,8 +59,9 @@ nums is sorted in non-decreasing order.
 		- set visitedMap
 		- nums[k] = nums[i]
 		- k++ and i++
+```
 
-
+### Golang
 ```go
 func removeDuplicates(nums []int) int {
 	uniqueMap := make(map[int]bool)

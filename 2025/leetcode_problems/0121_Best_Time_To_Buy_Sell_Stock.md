@@ -36,6 +36,7 @@ Space complexity: O(1)
 ```
 
 ### Pseudocode
+```go
 - curMin := -1
 - maxProfit := 0
 - for i from 0 to len(prices):
@@ -44,7 +45,10 @@ Space complexity: O(1)
     - prices[i] = prices[i] - curMin
     - if prices[i] > maxProfit:
         - maxProfit = prices[i]
+- return maxProfit
+```
 
+### Golang
 ```golang
 func maxProfit(prices []int) int {
     curMin := prices[0]

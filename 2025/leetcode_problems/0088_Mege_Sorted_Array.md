@@ -44,9 +44,11 @@ Follow up: Can you come up with an algorithm that runs in O(m + n) time?
 ## Solution
 
 ### Pseudocode
+```go
 - 
+```
 
-
+### Golang
 ```go
 func merge(nums1 []int, m int, nums2 []int, n int)  {
     i := 0

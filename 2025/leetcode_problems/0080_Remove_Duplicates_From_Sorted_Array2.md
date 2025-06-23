@@ -51,10 +51,11 @@ nums is sorted in non-decreasing order.
 ## Solution
 
 ### Pseudocode
+```go
 - 
+```
 
-
-
+### Golang
 ```go
 func removeDuplicates(nums []int) int {
     // elements before the index k are the valid elements

@@ -44,6 +44,7 @@ Space complexity: O(n)
 ```
 
 ###  Pseudocode
+```go
 - moduloK := k % len(nums)
 - visitedMap := new map()
 - for each element in the first moduloK positions:
@@ -53,9 +54,9 @@ Space complexity: O(n)
 		    - j = (j + moduloK) % len(nums)
 			- shift(rotate) element at i'th postion to moduloK positions. 
 			- then shift(rotate) the element at i+modulK for moduloK psitions.
+```
 
-
-
+### Golang
 ```golang
 func rotate(nums []int, k int) {
 	length := len(nums)
@@ -92,14 +93,15 @@ Space complexity: O(n)
 
 ### Pseudocode
 This should have been my obvious solution. Anyway we are going to use `O(n)` space and time. We could create another temp array to store all the roated elements.
-
+```go
 - temp := [] 
 - for i from 0 to n-1:
 	- temp[(i + moduloK) % len(nums)] = temp[i]
 - for i from 0 to n-1:
 	- nums[i] = temp[i]
+```
 
-
+### Golang
 ```golang
 func rotate(nums []int, k int) {
 	length := len(nums)
@@ -123,6 +125,7 @@ Space complexity: O(1)
 ```
 
 ### Pseudocode
+```go
 - moduloK := k % len(nums)
 - center := floor(len(nums) / 2)
 - for i from 0 to center-1: reverse logic
@@ -131,8 +134,9 @@ Space complexity: O(1)
 	- nums[i] = nums[end]
 	- nums[end] = temp
 - apply the same reverse logic for first k elements and next len(nums) - k elements individually
+```
 
-
+### Golang
 ```golang
 func rotate(nums []int, k int) {
 	length := len(nums)

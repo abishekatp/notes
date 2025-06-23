@@ -50,6 +50,7 @@ lastMaxProfitJ = 0, 0, 0, 0, 0
 ```
 
 ### Pseudocode
+```go
 - profits := []
 - maxProfit := 0
 - lastMaxProfitJ := 0
@@ -64,9 +65,10 @@ lastMaxProfitJ = 0, 0, 0, 0, 0
         - if profits[i] > maxProfit:
             - maxProfit = profits[i]
             - lastMaxProfitJ = j
-
-
-```golang
+- return maxProfit
+```
+### Golang
+```go
 func maxProfit(prices []int) int {
     /* 
     profit at index i will contain the maximum of profit you can get at index either through 
@@ -147,12 +149,16 @@ i   profit  maxProfit
 ```
 
 ### Pseudocode
+```go
 - maxProfit := 0
 - for i from 0 to len(pricess):
     - profit := profit[i] = profit[i-1]
     - if profit > 0
         - maxProfit = maxProfit + profit
+- return maxProfit
+```
 
+### Golang
 ```golang
 func maxProfit(prices []int) int {
     maxProfit := 0

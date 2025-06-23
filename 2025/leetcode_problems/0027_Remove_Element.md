@@ -54,6 +54,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 ## Solution
 
 ### Pseudocode
+```go
 - k:=0
 - for i from 0 to n:
     - if num[i]= val:
@@ -61,9 +62,10 @@ It does not matter what you leave beyond the returned k (hence they are undersco
     - else:
         - nums[k] = nums[i]
         - k++ and i++
+- return k
+```
 
-
-
+### Golang
 ```go
 func removeElement(nums []int, val int) int {
     // all the elements at or before k are already validated to be not to be val.

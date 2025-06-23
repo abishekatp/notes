@@ -38,10 +38,12 @@ s consists only of printable ASCII characters.
 ## Solution
 
 ### Pseudocode
+```go
 - 
 
+```
 
-
+### Golang
 ```go
 import "unicode"
 func isPalindrome(s string) bool {

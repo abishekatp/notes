@@ -27,6 +27,7 @@ Follow-up: Could you solve the problem in linear time and in O(1) space?
 ## Solution 1(Linear time & space)
 
 ### Pseudocode
+```go
 - for each element in nums:
     - if element already in the map:
         - increment the corresponding count.
@@ -35,9 +36,10 @@ Follow-up: Could you solve the problem in linear time and in O(1) space?
         - set the count as 1 for that element.
         - if max count is 0 then set this element as max count element.
 - return the max count element.
+```
 
-
-```golang
+### Golang
+```go
 func majorityElement(nums []int) int {
 	valMap := make(map[int]int)
     maxC := 0
@@ -70,6 +72,7 @@ func majorityElement(nums []int) int {
 
 ### Pseudocode
 Moore's Voting Algorithm or  Boyer-Moore Majority Vote Algorithm
+```go
 - majorityElement = random value
 - majorityCount = 0
 - for each element in the list:
@@ -78,7 +81,9 @@ Moore's Voting Algorithm or  Boyer-Moore Majority Vote Algorithm
         - if current element == majority element then increment majorityCount
         - else decrement majorityCount
 - return majorityElement
+```
 
+### Golang
 ```golang
 func majorityElement(nums []int) int {
 	majorityElement := -1

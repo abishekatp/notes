@@ -42,11 +42,13 @@ The tests are generated such that there is exactly one solution.
 ## solution
 
 ### Pseudocode
-
+```go
 - 
 
+```
 
 
+### Golang
 ```go
 func twoSum(numbers []int, target int) []int {
     for i:=0; i< len(numbers); i++{
