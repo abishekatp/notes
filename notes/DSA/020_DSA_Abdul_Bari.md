@@ -997,4 +997,18 @@ To solve this problem assume that n is in powers of two that is $n = 2^m$ then $
 
 
 ## Binary Search
+- The prerequest for binary search is that the input array should be in sorted order. This would take O(n log(n)) time.
+- Then we can follow the following algorithm to find an element from the array in O(log(n)) time.
 
+### Pseudocode: Iterative logic
+```go
+- binarySearch(input:[], key):
+    - start := 0
+    - end := len(input)
+```
+
+### Pseudocode: Recursive logic
+```go
+- binarySearch(input:[], key, start):
+    - 
+```

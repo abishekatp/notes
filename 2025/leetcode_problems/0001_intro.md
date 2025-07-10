@@ -1,9 +1,14 @@
 # LeetCode
-This section contains my solution for Leetcode problems using the programming langual `Golang`. `All these questions are created and provided by Leetcode and I have no rights to those problems`. I am just sharing these solutions so that it might be helpful to someone.
+
+## Language Choice(Rust)
+
+- Initially I started solvig these problems using Golang because it is simple and yet powerful. But later switched to Rust language because it is more `secure`, `not garbage collected`(using `ownerships` and `lifetimes`), has compile time advantages(`macros`, `error handling`) and mainly it is `fully community backed`(like PostgreSQL).
+
+
+
+This section contains my solution for Leetcode problems. `All these questions are created and provided by Leetcode and I have no rights to those problems`. I am just sharing these solutions so that it might be helpful to someone.
 
 Source - [LeetCode](https://leetcode.com/problems/)
-
-
 
 # Overview of problems
 
