@@ -100,3 +100,55 @@ impl Solution {
 - Time complexity: $O(n^2)$. 
     - But I think this should take time around $O(n)$ or $O(n log(n))$ something like that. Because the inner loop will jump to the next best position by skipping in between indeces.
 - Space complexity: $O(1)$
+
+
+
+## Solution 2
+
+### Pseudocode
+```rs
+- jump(nums):
+    - declare farhest, jumps, cur_index
+    - for each index i in nums till len-2:
+        - if i + nums[i] is greater than the current farthest point:
+            - farthest = i + nums[i]
+        - if we reached the cur_index which means i == cur_index:
+            - jump to the next index which can lead to the next farthest point by doing jump += 1 and cur_index = farthest
+    - return the jumps 
+```
+
+### Rust
+```rs
+impl Solution {
+    pub fn jump(nums: Vec<i32>) -> i32 {
+        let mut jumps = 0;
+        let mut farthest = 0;
+        let mut cur_index = 0;
+        let len = nums.len() as i32;
+        for i in (0..len-1){
+            let ju = *nums.get(i as usize).unwrap();
+            /* 
+            - Until you reach the cur_index compute the next farthest point you can reach.
+            - So that you can use this next farthest point to update the cur_index at the next jump.
+            */
+            if i + ju > farthest {
+                farthest = i + ju;
+            }
+
+            /*
+                - When i reaches the cur_index that means we exhausted all the available steps
+                from the previously updated farthest step count.
+                - This means either we have to use the curren index step count or 
+                we can use the step count using which we can reach next farthest index.
+                - That particular maximum step count we have stored in the farthest variable.
+                - So update the cur_index based on the next farthest reachable index and increase the jumps variable. Because we jumped from one index to another index to update the next farthest step count.
+            */
+            if cur_index == i {
+                jumps += 1;
+                cur_index = farthest;
+            }
+        }
+        return jumps;
+    }
+}
+```
