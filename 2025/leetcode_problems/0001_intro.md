@@ -4,6 +4,8 @@
 
 - Initially I started solvig these problems using Golang because it is simple and yet powerful. But later switched to Rust language because it is more `secure`, `not garbage collected`(using `ownerships` and `lifetimes`), has compile time advantages(`macros`, `error handling`) and mainly it is `fully community backed`(like PostgreSQL).
 
+- Initially writing Rust code might seem like a unnecessary overhead and it will seem like Golang is more simple and readable. But If you think from a programmer perspective Rust programs are more readable and easily debuggable. This is because they explicitly tell us which variables are mutable and which are not. It tells us which data is owned/referenced by which variable. Also it tells us that function/method takes ownership or mutable or immutable reference of a variable. These factors will be more and more useful for debugging as you start using the Rust more frequently.
+
 
 
 This section contains my solution for Leetcode problems. `All these questions are created and provided by Leetcode and I have no rights to those problems`. I am just sharing these solutions so that it might be helpful to someone.
