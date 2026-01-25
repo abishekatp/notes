@@ -1,0 +1,52 @@
+# Part 1 \- The Philosophical View on the Sapiens
+
+## A Brief History of Humankind by Yuval Noah Harari
+
+Recently I have read this book called Sapiens by Yuval Noah Harari. This is one of the most informative books that I have read about human history. We have been learning history through our school education from our childhood. But this is totally different. This book gives a different perspective on human history. While I was reading each chapter, it changed how I think about the world and its problems. Everyone should read this book when they get a chance. But for those of you who want to get the glimpse of this book, here I am trying to explain each chapter of this book with my philosophical point of view. Let’s begin this journey from here.
+
+# An Animal of No Significance \- Scavenger animal that lived on this planet for millions of years
+
+## Scavangers
+
+Indeed it was true, we were an animal of no significance. Here one tricky point is the term we may include other kinds of human species which we had lost either intentionally or unintentionally in the course of history. 2.5 million years ago we were just animals scavenging the forest for food. We were hunting small games and mostly preferred easy food that we got without any fighting. So we can say that we were just an animal living in the middle of the food chain. But suddenly everything changed. We moved from the middle to the top of the food chain very quickly. It was so quick that nature and other animals didn’t get enough time to adapt to these drastic changes. This has created so much misery for the other animals and also for the other kinds of human species. We all know that humans, when they get a tremendous power, suddenly tend to use it to their advantage without considering the consequences. Even if it’s not intentional we have been hurting most of the animals that live with us in this plant for millions of years. 
+
+## The Human Brain
+
+At the time 2.5 millions years ago we started walking up straight, created mostly wooden or stone tools and started growing our brains. Walking up straight enabled us to see the large land area with clear visibility for our advantage and tools might have helped us with small day to day jobs. But we don’t know clearly why we started growing our brains. Today scientists tell us that our brain only weighs 2-3 percent of our body weight, but it accounts for more than 20 percent of our daily total energy. This is the real growth that we had over the past 2.5 million years. This clearly puts us in advantage over other animal species, but similar growth started happening for other human species also. How come they didn’t survive? That’s a really big question which we don’t have a clear answer but some speculations.
+
+About 300 thousand years ago humans (In this blog I will use the term humans to specify all kinds of human species following the author's terminology) we started using the fire on a daily basis. There are some speculations that eating the cooked food made us spend less energy on digesting and more energy on thinking and socialising. The same idea is linked to our small intestines. This could be the reason for our brain development. But we can’t define anything clearly without any concrete proof.
+
+## Where did they go?
+
+At the course of history there lived more than one kind of human species on this planet at the same time. To name a few of them: Neanderthals, Homo Erectus, Homo Habilis, Homo Rudolfensis, Homo Floresiensis and a few others. But where did they go? How did we lose all of them? The author puts it nicely **“They were too familiar to ignore, yet too different to tolerate”.** This line explains a lot of present day problems as well like racism, casteism and many more. There are two theories behind this. One set of scholars say that we have done mass genocide of them. Second set of scholars say that some of them might have merged with human species through reproduction and we lost few of them without any significant human intervention. Both of these theories might be partially true, but we don’t have any clear answer to these questions.
+
+So some advantages that we had put us at a different level than other species, then what differentiated us from the other human species. The important thing is that at that time Neanderthals had a very similar kind of brain and social development like us. They were even stronger than us physically. How did we manage to outlive these brainy social giants? The upcoming chapters will try to explore this question. The author says that Homo Sapiens conquered the world thanks above all to its unique language.
+
+# The Tree of Knowledge \- Cognitive Revolution that made us who we are today
+
+## Cognitive Revolution
+
+This is the most interesting chapter for me. This introduces one bizarre yet most common feature of our species as the key reason for our success. Until 150 thousand years ago there was no significant difference between us and other human and animal species. But from 150 thousand to 70 thousand years ago some unique change in our species that made us more powerful than all other humans and animal species. In these 60 thousand years we have developed some new ways of thinking and communication. The author calls it **“Cognitive Revolution”.** The idea of linking this cognitive revolution to the success of Homo Sapiens totally blew my mind. In this time period there was a random genetic mutation in Homo Sapiens that caused us to think and communicate differently. Why only Homo Sapiens but not other human species? We don’t have any clear answer to this question. After all, it could have been some lottery for us in the evolutionary process. This caused us several changes in our behaviours.
+
+## Language
+
+First we started using a more complex set of sounds to communicate complex information between us. This enabled us to coordinate and live as a group of at most 100 to 150 people. But this can be done by many other humans and animal species. A monkey can communicate about a lion coming on their way and tell their gang about where the food is located. Even in our close relatives chimpanzees they have a hierarchical society with alpha male and their followers. So this is not the only reason we outlived all of them.
+
+## Gossip
+
+The second point is our ability to gossip about the people in our gang. Yes indeed, today we are saying that gossiping is bad and avoid that at any cost. But it is believed by some scholars to be one of the reasons for homo sapien’s success. This effectively allowed us to gossip about who can be trusted and who cannot be in each gang and allowed us to choose who can lead the gang. This allowed us to coordinate at the level of 100 to 150 people for survival. Humans needed this so much because for reproduction and raising a human baby is a sophisticated process which would be very tough to do individually. But even chimpanzees can do this. Scholars say that chimpanzees have a complex social structure where they gossip about their gang members to stay as a gang. So this is not the only reason for our success.
+
+## Imagined Reality
+
+The third and focal point of the story is our ability to imagine unrealistic things. Yes you heard me correct, what we call madness is the same thing that differentiate us from other human and animal species. The only difference between madness and imagined reality is how many people believe in them. When only a few of the people believe in something unrealistic we call them mad, but when the majority believe in some unrealistic thing we call those who don’t believe in it as mad. 
+
+Things like gods, myths, legends, religions, caste, countries, companies, capitalism, money, communism and many more things only live in our imagined world. These imagined things enabled us to cooperate in large numbers. How does this give us any advantage? When you ask thousands of people to fight the neighbouring country for no reason no one will do it. But when you introduce them to the concept of god and tell them that the neighboring country is disrespecting that god or even just the concept of country and tell them that neighbours are invading its border. Then a huge number of people will come together for this common cause. This is the exact turning point, once we started believing these imagined realities, we were able to come together in large numbers for them. As another example you can take any famous brand like BMW, Google, Apple, Louis Vuitton. These are all not natural phenomena, these just exist in our imaginary world. If everyone who believes in these things does not exist, then these brands also won’t exist. 
+
+Because of this we were able to overcome the usual constraints of the genetic evaluation process. If we were to genetically advance to believe in the idea of capitalism, socialism, communism, human rights and other similar ideologies, then how many millions of years would it take or is it even possible? But don’t become overconfident, we are still constrained by our genetic capabilities. Still we are not very much different from our close relatives which are chimpanzees. The advantage is that we could go from capitalist to communist, slaves to free people and religious to atheist overnight. Because all these things only live in the imagined world. But don’t underestimate the power of this capability either.
+
+# My View
+
+If one random mutation is all it takes to go from an animal of no significance to an animal of most significance, then what’s stopping us or any other animal to have another random mutation like that? In the course of history we have put a lot of other animals, other humans and the whole ecology itself in great misery. If we are accepting this, then what can we do to avoid any future miseries like this from happening? If this single planet contains these many dramas, then why are we still not considering the other forms of life in the universe? We are both the subjects and being subjected to this story. Does it really make things more complicated? Who are we exactly?
+
+This is just an overview of how we went from an animal of no significance to the most significant animal on the planet. When you go in depth on these topics there are a lot of details in each and every aspect of this blog. In the upcoming blogs we will see how we lived and changed the course of life on this planet. I know this will be a roller coaster ride through the history of humankind. 
+
