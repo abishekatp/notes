@@ -1,5 +1,5 @@
 # notes
-This repository contains my notes or blogs on each topic I am learning. I hope this might be helpful for someone.
+This repository contains my notes on each topic I am learning. I hope this might be helpful for someone.
 
 * Why am I doing this? Because I think one of the best ways to learn anything is to write or doing something practical with what you are trying to learn. At the same time It will be useful for someone who is trying to learn this subject. 
 
@@ -8,33 +8,33 @@ This repository contains my notes or blogs on each topic I am learning. I hope t
 ## Index
 
 ### Leetcode problems
-- [LeetCode Problems](/2025/leetcode_problems/)
+- [LeetCode Problems](/LeetCodeProblems/)
 
 
 ### Deep Neural Networks and Artificial Intelligence
-- [Micrograd from Andrej Karpathy in Rust](/notes/AI/015_neuron_back_propagation.md)
+- [Micrograd from Andrej Karpathy in Rust](/AI/015_neuron_back_propagation.md)
 
 
 
 ### Theory of Computation(Personal notes)
-* [Index](/notes/TOC/010_Index.md)
-* [DFA, NFA, Regular Lnaguages](/notes/TOC/101_DFA_NFA_RL.md)
-* [PDA CFG, Context Free Lnaguages](/notes/TOC/120_PDA_CFG_CFL.md)
-* [Turing Machine](/notes/TOC/301_TuringMachine.md)
-* [Decidability](/notes/TOC/320_Decidability.md)
-* [Reducibility](/notes/TOC/330_Reducibility.md)
-* [Time Complexity](/notes/TOC/601_TimeComplexity.md)
-* [Space Complexity](/notes/TOC/630_SpaceComplexity.md)
-* [Intractability](/notes/TOC/660_Intractability.md)
-* [Advanced Topics](/notes/TOC/670_AdvancedComplexity.md)
+* [Index](/TOC/010_Index.md)
+* [DFA, NFA, Regular Lnaguages](/TOC/101_DFA_NFA_RL.md)
+* [PDA CFG, Context Free Lnaguages](/TOC/120_PDA_CFG_CFL.md)
+* [Turing Machine](/TOC/301_TuringMachine.md)
+* [Decidability](/TOC/320_Decidability.md)
+* [Reducibility](/TOC/330_Reducibility.md)
+* [Time Complexity](/TOC/601_TimeComplexity.md)
+* [Space Complexity](/TOC/630_SpaceComplexity.md)
+* [Intractability](/TOC/660_Intractability.md)
+* [Advanced Topics](/TOC/670_AdvancedComplexity.md)
 
 
 
 ### Quantum Computing(./quantum_computing/010_Index.md)
-- [Classical Single Systems](/notes/QC/100_SS_Classical_Information)
-- [Quantum Single Systems](/notes/QC/101_SS_Quantum_Information.md)
-- [Classical Multiple Systems](/notes/QC/131_MS_Classical_Information.md)
-- [Quantum Multiple Systems](/notes/QC/132_MS_Quantum_Information.md)
+- [Classical Single Systems](/QC/100_SS_Classical_Information)
+- [Quantum Single Systems](/QC/101_SS_Quantum_Information.md)
+- [Classical Multiple Systems](/QC/131_MS_Classical_Information.md)
+- [Quantum Multiple Systems](/QC/132_MS_Quantum_Information.md)
 
 There are some other topics which are partial and not fully completed.
 
