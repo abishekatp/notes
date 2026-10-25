@@ -1,14 +1,14 @@
-# Getting Started
+# Notes from Lesson 1
 Deep learning has power, flexibility, and simplicity. That’s why we believe it should be applied across many disciplines. 
 
-## Goal
+### Goal
 - Build and train deep learning models for computer vision, natural language processing, tabular analysis, and collaborative filtering problems
 - Create random forests and regression models
 - Deploy models
 - Use PyTorch, the world’s fastest growing deep learning software, plus popular libraries like fastai and Hugging Face
 
 
-## Tools
+### Tools
 - Pytorch - works best as a low-level foundation library, providing the basic operations for higher-level functionality.
 - Fastai - adding this higher-level functionality on top of PyTorch.
 - Transformers - focused on natural language processing (NLP) using transformers models
@@ -25,19 +25,19 @@ Deep learning has power, flexibility, and simplicity. That’s why we believe it
     - Machine Learning or Deep Learning Models take input, do some mathematical computations and give some output number. 
     - The output number will be used probabilistically to describe out desired outputs.
 
-### Machine Learning(Manual Feature Detection)
-- This approach was slow because we needed to label the features explicitly and use them as input while training a machine learning model.
-- In future, if we want to make prediction, then we have to provide these features for our inputs
-- Sometimes we needed hundreds of such features based on the complexity of the task.
-- For example, if you train a machine learning model to predict bird image, then you have to define features like mouth, legs, body, surrounding, bird location on the image, etc.
+### Machine Learning
+- **Manual Feature Detection** This approach was slow because we needed to label the features explicitly and use them as input while training a machine learning model.
+    - In future, if we want to make prediction, then we have to provide these features for our inputs
+    - Sometimes we needed hundreds of such features based on the complexity of the task.
+    - **Future Input Features Needed** For example, if you train a machine learning model to predict bird image, then you have to define features like mouth, legs, body, surrounding, bird location on the image, etc.
 
-### Deep Learning or Deep Neural Networks(Automatic Feature Detection)
-- We feed in the inputs and model detects patterns or features in the input to make an accurate prediction. 
-- When researchers took a computer vision model and drew a pictures of their weights, each set of weights actually worked together to find a specific feature of a image. 
-- They automatically adapted to this technique to predict the correct final output.
-- We only needed to lebel the images as bird image or not. The neural network was able to locate birds coordinates and spot the patterns to predict whether an image is bird image or not.
-- If the first layer of the deep neural network detects small features like edges or colors, then the next layer combined those features to detect more visible patterns. As we go deeper other layers learn to recognise the patterns like part of the bird or other objects in the image.
-- In future, if you have some new image, then we can just imput that image to the model and the model will tell whether that image is bird image or not.
+### Deep Learning or Deep Neural Networks
+- **Automatic Feature Detection** We feed in the inputs and model detects patterns or features in the input to make an accurate prediction. 
+    - When researchers took a computer vision model and drew a pictures of their weights, each set of weights actually worked together to find a specific feature of a image. 
+    - They automatically adapted to this technique to predict the correct final output.
+    - We only needed to lebel the images as bird image or not. The neural network was able to locate birds coordinates and spot the patterns to predict whether an image is bird image or not.
+    - If the first layer of the deep neural network detects small features like edges or colors, then the next layer combined those features to detect more visible patterns. As we go deeper other layers learn to recognise the patterns like part of the bird or other objects in the image.
+    - **Future Input Features Not Needed** In future, if you have some new image, then we can just imput that image to the model and the model will tell whether that image is bird image or not.
 
 
 ## Deep Learning Traning Process
